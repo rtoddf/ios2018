@@ -35,6 +35,10 @@ class CategoryCell:UICollectionViewCell, UICollectionViewDataSource, UICollectio
         return CGSize(width: 100, height: frame.height)
     }
     
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets(top: 0, left: 14, bottom: 0, right: 14)
+    }
+    
     func setupViews(){
         backgroundColor = .white
         
