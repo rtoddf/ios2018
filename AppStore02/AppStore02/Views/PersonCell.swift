@@ -1,6 +1,20 @@
 import UIKit
 
-class AppCell:UICollectionViewCell {
+class PersonCell:UICollectionViewCell {
+    var person:Person? {
+        didSet {
+            guard let name = person?.name else { return }
+            guard let bio = person?.bio else { return }
+            guard let birthDate = person?.birthDate else { return }
+            guard let imageName = person?.imageName else { return }
+            
+            personNameLabel.text = name
+            personDescriptionLabel.text = bio
+            personBirthdateLabel.text = birthDate
+            personImageView.image = UIImage(named: imageName)
+        }
+    }
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupViews()

@@ -1,7 +1,16 @@
 import UIKit
 
 class CategoryCell:UICollectionViewCell, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
-    let appCellId = "appCellId"
+    
+//    var person:[Person]?
+    let personCellId = "personCellId"
+    
+    var category:Category? {
+        didSet {
+            guard let name = category?.name else { return }
+            categoryTitleLabel.text = name
+        }
+    }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -23,11 +32,16 @@ class CategoryCell:UICollectionViewCell, UICollectionViewDataSource, UICollectio
     }()
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        if let peeps = category?.people {
+            return peeps.count
+        }
+        return 0        
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: appCellId, for: indexPath)
+        // remember to cast!!!!!!
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: personCellId, for: indexPath) as! PersonCell
+        cell.person = category?.people![indexPath.item]
         return cell
     }
     
@@ -61,7 +75,7 @@ class CategoryCell:UICollectionViewCell, UICollectionViewDataSource, UICollectio
         addSubview(peopleCollectionView)
         peopleCollectionView.dataSource = self
         peopleCollectionView.delegate = self
-        peopleCollectionView.register(AppCell.self, forCellWithReuseIdentifier: appCellId)
+        peopleCollectionView.register(PersonCell.self, forCellWithReuseIdentifier: personCellId)
         
         addSubview(categoryTitleLabel)
         addSubview(dividerBarView)
@@ -72,14 +86,3 @@ class CategoryCell:UICollectionViewCell, UICollectionViewDataSource, UICollectio
         addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-4-[v2(30)]-4-[v0][v1(0.5)]|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": peopleCollectionView, "v1": dividerBarView, "v2": categoryTitleLabel]))
     }
 }
-
-
-
-
-
-
-
-
-
-
-

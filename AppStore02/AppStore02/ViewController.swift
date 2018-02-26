@@ -23,6 +23,11 @@ class FeaturedController: UICollectionViewController, UICollectionViewDelegateFl
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! CategoryCell
+        
+        if let cats = categories {
+            cell.category  = cats[indexPath.item]
+        }
+        
         return cell
     }
     
