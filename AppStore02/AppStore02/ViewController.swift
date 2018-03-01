@@ -15,9 +15,7 @@ class FeaturedController: UICollectionViewController, UICollectionViewDelegateFl
         
         Category.downloadData { (categories) in
             self.categories = categories
-            // this is where you'd do
             self.collectionView?.reloadData()
-            print("categories inside: \(self.categories)")
         }
     }
     

@@ -11,7 +11,6 @@ struct Category:Decodable {
     
     static func downloadData(completion: @escaping ([Category]) -> Void
         ){
-        //        var peopleCategories = [Category]()
         let urlString = "http://www.rtodd.net/swift/data/apps06.json"
         let url = URL(string: urlString)
         
@@ -23,8 +22,6 @@ struct Category:Decodable {
                     let feed = try JSONDecoder().decode(Feed.self, from: data)
                     
                     guard let categories = feed.categories else { return }
-                    //                    peopleCategories = categories
-                    
                     DispatchQueue.main.async {
                         completion(categories)
                     }
