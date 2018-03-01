@@ -15,7 +15,7 @@ class Header:CategoryCell {
     }
     
     override func setupViews() {
-        super.setupViews()
+        peopleCollectionView.register(LargePersonCell.self, forCellWithReuseIdentifier: largePersonCellId)
         
         peopleCollectionView.dataSource = self
         peopleCollectionView.delegate = self
