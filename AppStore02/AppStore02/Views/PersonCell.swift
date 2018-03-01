@@ -11,7 +11,7 @@ class PersonCell:UICollectionViewCell {
             personNameLabel.text = name
             personShortBioLabel.text = shiortBio
             personBirthdateLabel.text = birthDate
-            personImageView.image = UIImage(named: imageName)
+            personImageView.loadImageUsingUrlString(imageUrl: imageName)
         }
     }
     
