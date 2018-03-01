@@ -111,6 +111,12 @@
 					"short_bio": "Puerto Rican singer, actor and author",
 					"birth_date": "December 24, 1971",
 					"imageName": "http://www.rtodd.net/swift/images/apps/ricky-martin.jpg"
+				},
+				{
+					"name": "Troye Sivan",
+					"short_bio": "South African-born Australian singer, songwriter, actor, and YouTube personality",
+					"birth_date": "5 June 1995",
+					"imageName": "http://www.rtodd.net/swift/images/apps/troya-sivan.jpg"
 				}
 			]
 		},

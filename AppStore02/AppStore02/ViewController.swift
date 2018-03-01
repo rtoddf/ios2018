@@ -3,6 +3,7 @@ import UIKit
 class FeaturedController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     
     let cellId = "cellId"
+    let largeCellId = "largeCellId"
     var categories:[Category]?
 
     override func viewDidLoad() {
@@ -12,6 +13,7 @@ class FeaturedController: UICollectionViewController, UICollectionViewDelegateFl
         
         collectionView?.backgroundColor = .white
         collectionView?.register(CategoryCell.self, forCellWithReuseIdentifier: cellId)
+        collectionView?.register(LargeCategoryCell.self, forCellWithReuseIdentifier: largeCellId)
         
         Category.downloadData { (categories) in
             self.categories = categories
@@ -27,6 +29,17 @@ class FeaturedController: UICollectionViewController, UICollectionViewDelegateFl
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        if indexPath.item == 2 {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: largeCellId, for: indexPath) as! LargeCategoryCell
+            
+            if let cats = categories {
+                cell.category  = cats[indexPath.item]
+            }
+            
+            return cell
+        }
+        
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! CategoryCell
         
         if let cats = categories {
@@ -37,6 +50,11 @@ class FeaturedController: UICollectionViewController, UICollectionViewDelegateFl
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
+        if indexPath.item == 2 {
+            return CGSize(width: view.frame.width, height: 160)
+        }
+        
         return CGSize(width: view.frame.width, height: 230)
     }
 }

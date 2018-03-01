@@ -4,6 +4,7 @@ class CategoryCell:UICollectionViewCell, UICollectionViewDataSource, UICollectio
     
 //    var person:[Person]?
     let personCellId = "personCellId"
+    let largePersonCellId = "largePersonCellId"
     
     var category:Category? {
         didSet {
@@ -76,6 +77,7 @@ class CategoryCell:UICollectionViewCell, UICollectionViewDataSource, UICollectio
         peopleCollectionView.dataSource = self
         peopleCollectionView.delegate = self
         peopleCollectionView.register(PersonCell.self, forCellWithReuseIdentifier: personCellId)
+        peopleCollectionView.register(LargePersonCell.self, forCellWithReuseIdentifier: largePersonCellId)
         
         addSubview(categoryTitleLabel)
         addSubview(dividerBarView)
@@ -84,5 +86,18 @@ class CategoryCell:UICollectionViewCell, UICollectionViewDataSource, UICollectio
         addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-8-[v0]-8-|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": peopleCollectionView]))
         addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-14-[v0]-14-|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": dividerBarView]))
         addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-4-[v2(30)]-4-[v0][v1(0.5)]|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": peopleCollectionView, "v1": dividerBarView, "v2": categoryTitleLabel]))
+    }
+}
+
+class LargeCategoryCell:CategoryCell {
+    override func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: 200, height: frame.height - 30)
+    }
+    
+    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        // remember to cast!!!!!!
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: largePersonCellId, for: indexPath) as! LargePersonCell
+        cell.person = category?.people![indexPath.item]
+        return cell
     }
 }

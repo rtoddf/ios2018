@@ -81,3 +81,21 @@ class PersonCell:UICollectionViewCell {
         personBirthdateLabel.frame = CGRect(x: 0, y: frame.width + 52, width: frame.width, height: 22)
     }
 }
+
+class LargePersonCell:PersonCell {
+    override func setupViews() {
+        addSubview(personImageView)
+        personImageView.translatesAutoresizingMaskIntoConstraints = false
+        
+        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[v0]|", options: NSLayoutFormatOptions(), metrics: nil, views: [
+            "v0": personImageView]))
+        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-2-[v0]-14-|", options: NSLayoutFormatOptions(), metrics: nil, views: [
+            "v0": personImageView]))
+    }
+}
+
+
+
+
+
+
