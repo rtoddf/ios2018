@@ -6,7 +6,7 @@ class PersonCell:UICollectionViewCell {
             guard let name = person?.name else { return }
             guard let shiortBio = person?.short_bio else { return }
             guard let birthDate = person?.birth_date else { return }
-            guard let imageName = person?.image_name else { return }
+            guard let imageName = person?.imageName else { return }
             
             personNameLabel.text = name
             personShortBioLabel.text = shiortBio

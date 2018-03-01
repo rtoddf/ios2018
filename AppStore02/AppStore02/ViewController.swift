@@ -8,10 +8,17 @@ class FeaturedController: UICollectionViewController, UICollectionViewDelegateFl
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        categories = Category.samplePeopleCategories()
+//        categories = Category.samplePeopleCategories()
         
         collectionView?.backgroundColor = .white
         collectionView?.register(CategoryCell.self, forCellWithReuseIdentifier: cellId)
+        
+        Category.downloadData { (categories) in
+            self.categories = categories
+            // this is where you'd do
+            self.collectionView?.reloadData()
+            print("categories inside: \(self.categories)")
+        }
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
