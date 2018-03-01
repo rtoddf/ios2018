@@ -40,6 +40,7 @@ class PersonCell:UICollectionViewCell {
     
     let personShortBioLabel:UILabel = {
         let label = UILabel()
+        label.numberOfLines = 2
         label.font = UIFont.systemFont(ofSize: 12)
         label.textColor = UIColor(hexString: "#333333")
         return label
@@ -59,8 +60,8 @@ class PersonCell:UICollectionViewCell {
         addSubview(personBirthdateLabel)
         
         personImageView.frame = CGRect(x: 0, y: 0, width: frame.width, height: frame.width)
-        personNameLabel.frame = CGRect(x: 0, y: frame.width + 2, width: frame.width, height: 20)
-        personShortBioLabel.frame = CGRect(x: 0, y: frame.width + 18, width: frame.width, height: 22)
-        personBirthdateLabel.frame = CGRect(x: 0, y: frame.width + 34, width: frame.width, height: 22)
+        personNameLabel.frame = CGRect(x: 0, y: frame.width + 2, width: frame.width, height: 40)
+        personShortBioLabel.frame = CGRect(x: 0, y: frame.width + 30, width: frame.width, height: 32)
+        personBirthdateLabel.frame = CGRect(x: 0, y: frame.width + 52, width: frame.width, height: 22)
     }
 }
