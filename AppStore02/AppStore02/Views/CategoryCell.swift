@@ -91,7 +91,9 @@ class CategoryCell:UICollectionViewCell, UICollectionViewDataSource, UICollectio
 
 class LargeCategoryCell:CategoryCell {
     override func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 200, height: frame.height - 30)
+        
+        let width = (frame.height - 30) * (16 / 9)
+        return CGSize(width: width, height: frame.height - 30)
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
