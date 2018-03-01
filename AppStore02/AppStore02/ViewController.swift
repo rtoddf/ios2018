@@ -4,16 +4,16 @@ class FeaturedController: UICollectionViewController, UICollectionViewDelegateFl
     
     let cellId = "cellId"
     let largeCellId = "largeCellId"
+    let headerCellId = "headerCellId"
     var categories:[Category]?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-//        categories = Category.samplePeopleCategories()
-        
+
         collectionView?.backgroundColor = .white
         collectionView?.register(CategoryCell.self, forCellWithReuseIdentifier: cellId)
         collectionView?.register(LargeCategoryCell.self, forCellWithReuseIdentifier: largeCellId)
+        collectionView?.register(Header.self, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: headerCellId)
         
         Category.downloadData { (categories) in
             self.categories = categories
@@ -56,5 +56,20 @@ class FeaturedController: UICollectionViewController, UICollectionViewDelegateFl
         }
         
         return CGSize(width: view.frame.width, height: 230)
+    }
+    
+    // headerview
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+        return CGSize(width: view.frame.width, height: 150)
+    }
+    
+    override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        let cell = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: headerCellId, for: indexPath) as! Header
+    
+        if let cats = categories {
+            cell.category  = cats.first
+        }
+        
+        return cell
     }
 }

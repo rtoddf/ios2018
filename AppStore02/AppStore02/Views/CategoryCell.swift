@@ -1,5 +1,33 @@
 import UIKit
 
+class Header:CategoryCell {
+    override func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
+        let width = (frame.height - 30) * (16 / 9)
+        return CGSize(width: width, height: frame.height - 30)
+    }
+    
+    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        // remember to cast!!!!!!
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: largePersonCellId, for: indexPath) as! LargePersonCell
+        cell.person = category?.people![indexPath.item]
+        return cell
+    }
+    
+    override func setupViews() {
+        super.setupViews()
+        
+        peopleCollectionView.dataSource = self
+        peopleCollectionView.delegate = self
+        
+        addSubview(peopleCollectionView)
+        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[v0]|", options: NSLayoutFormatOptions(), metrics: nil, views: [
+            "v0": peopleCollectionView]))
+        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[v0]|", options: NSLayoutFormatOptions(), metrics: nil, views: [
+            "v0": peopleCollectionView]))
+    }
+}
+
 class CategoryCell:UICollectionViewCell, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
 //    var person:[Person]?
@@ -10,6 +38,8 @@ class CategoryCell:UICollectionViewCell, UICollectionViewDataSource, UICollectio
         didSet {
             guard let name = category?.name else { return }
             categoryTitleLabel.text = name
+            
+            peopleCollectionView.reloadData()
         }
     }
     
@@ -51,7 +81,7 @@ class CategoryCell:UICollectionViewCell, UICollectionViewDataSource, UICollectio
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top: 0, left: 14, bottom: 0, right: 14)
+        return UIEdgeInsets(top: 0, left: 7, bottom: 0, right: 7)
     }
     
     let categoryTitleLabel:UILabel = {
@@ -91,7 +121,6 @@ class CategoryCell:UICollectionViewCell, UICollectionViewDataSource, UICollectio
 
 class LargeCategoryCell:CategoryCell {
     override func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        
         let width = (frame.height - 30) * (16 / 9)
         return CGSize(width: width, height: frame.height - 30)
     }
