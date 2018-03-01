@@ -8,6 +8,7 @@ class FeaturedController: UICollectionViewController, UICollectionViewDelegateFl
     let largeCellId = "largeCellId"
     let headerCellId = "headerCellId"
     var categories:[Category]?
+    var banner:[Banner]?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +21,12 @@ class FeaturedController: UICollectionViewController, UICollectionViewDelegateFl
         Category.downloadData { (categories) in
             self.categories = categories
             self.collectionView?.reloadData()
+        }
+        
+        Banner.downloadData { (banner) in
+            self.banner = banner
+            self.collectionView?.reloadData()
+            print("banner: \(banner)")
         }
     }
     
