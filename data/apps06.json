@@ -1,4 +1,24 @@
 {
+	"banner": [
+		{
+			"name": "",
+			"description": "",
+			"people": [
+				{
+					"imageName": "http://www.rtodd.net/swift/images/apps/aaron-rhodes.jpg"
+				},
+				{
+					"imageName": "http://www.rtodd.net/swift/images/apps/connor-franta.jpg"
+				},
+				{
+					"imageName": "http://www.rtodd.net/swift/images/apps/colton-haynes.jpg"
+				},
+				{
+					"imageName": "http://www.rtodd.net/swift/images/apps/nick-jonas.jpg"
+				}
+			]
+		}
+	],
 	"categories": [
 		{
 			"name": "Actors",
