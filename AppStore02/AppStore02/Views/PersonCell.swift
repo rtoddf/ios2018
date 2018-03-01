@@ -9,9 +9,25 @@ class PersonCell:UICollectionViewCell {
             guard let imageName = person?.imageName else { return }
             
             personNameLabel.text = name
+            
+            let personNameLabelRect = NSString(string: name).boundingRect(with: CGSize(width:frame.width, height:1000), options: NSStringDrawingOptions.usesFontLeading.union(NSStringDrawingOptions.usesLineFragmentOrigin), attributes: [NSAttributedStringKey.font: UIFont.boldSystemFont(ofSize: 13)], context: nil)
+            
+            if personNameLabelRect.height > 22 {
+                personShortBioLabel.frame = CGRect(x: 0, y: frame.width + 30, width: frame.width, height: 32)
+                personBirthdateLabel.frame = CGRect(x: 0, y: frame.width + 52, width: frame.width, height: 22)
+            } else {
+                personShortBioLabel.frame = CGRect(x: 0, y: frame.width + 14, width: frame.width, height: 32)
+                personBirthdateLabel.frame = CGRect(x: 0, y: frame.width + 36, width: frame.width, height: 22)
+            }
+            
+            personNameLabel.frame = CGRect(x: 0, y: frame.width + 5, width: frame.width, height: 40)
+            personNameLabel.sizeToFit()
+            
             personShortBioLabel.text = shiortBio
             personBirthdateLabel.text = birthDate
             personImageView.loadImageUsingUrlString(imageUrl: imageName)
+            
+            
         }
     }
     
@@ -40,7 +56,7 @@ class PersonCell:UICollectionViewCell {
     
     let personShortBioLabel:UILabel = {
         let label = UILabel()
-        label.numberOfLines = 2
+//        label.numberOfLines = 2
         label.font = UIFont.systemFont(ofSize: 12)
         label.textColor = UIColor(hexString: "#333333")
         return label
