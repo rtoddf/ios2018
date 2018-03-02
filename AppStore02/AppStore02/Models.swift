@@ -1,40 +1,40 @@
 import UIKit
 
 struct Feed: Decodable {
-    let banner:[Banner]?
+//    let banner:[Banner]?
     let categories:[Category]?
 }
 
-struct Banner:Decodable {
-    let name:String?
-    let description:String?
-    let people:[Person]?
-    
-    static func downloadData(completion: @escaping ([Banner]) -> Void
-        ){
-        let urlString = "http://www.rtodd.net/swift/data/apps06.json"
-        let url = URL(string: urlString)
-        
-        if let urlObject = url {
-            URLSession.shared.dataTask(with: urlObject) { (data, response, error) in
-                guard let data = data else { return }
-                
-                do {
-                    let feed = try JSONDecoder().decode(Feed.self, from: data)
-                    
-                    guard let banner = feed.banner else { return }
-                    DispatchQueue.main.async {
-                        completion(banner)
-                    }
-                    
-                } catch let jsonErr {
-                    print("we got an error \(jsonErr)")
-                }
-                
-                }.resume()
-        }
-    }
-}
+//struct Banner:Decodable {
+//    let name:String?
+//    let description:String?
+//    let people:[Person]?
+//
+//    static func downloadData(completion: @escaping ([Banner]) -> Void
+//        ){
+//        let urlString = "http://www.rtodd.net/swift/data/apps06.json"
+//        let url = URL(string: urlString)
+//
+//        if let urlObject = url {
+//            URLSession.shared.dataTask(with: urlObject) { (data, response, error) in
+//                guard let data = data else { return }
+//
+//                do {
+//                    let feed = try JSONDecoder().decode(Feed.self, from: data)
+//
+//                    guard let banner = feed.banner else { return }
+//                    DispatchQueue.main.async {
+//                        completion(banner)
+//                    }
+//
+//                } catch let jsonErr {
+//                    print("we got an error \(jsonErr)")
+//                }
+//
+//                }.resume()
+//        }
+//    }
+//}
 
 struct Category:Decodable {
     let name:String?
@@ -52,6 +52,8 @@ struct Category:Decodable {
                 
                 do {
                     let feed = try JSONDecoder().decode(Feed.self, from: data)
+                    
+                    print(feed)
                     
                     guard let categories = feed.categories else { return }
                     DispatchQueue.main.async {

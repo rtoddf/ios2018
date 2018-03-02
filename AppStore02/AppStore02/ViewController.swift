@@ -8,7 +8,7 @@ class FeaturedController: UICollectionViewController, UICollectionViewDelegateFl
     let largeCellId = "largeCellId"
     let headerCellId = "headerCellId"
     var categories:[Category]?
-    var banner:[Banner]?
+//    var banner:[Banner]?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,11 +23,11 @@ class FeaturedController: UICollectionViewController, UICollectionViewDelegateFl
             self.collectionView?.reloadData()
         }
         
-        Banner.downloadData { (banner) in
-            self.banner = banner
-            self.collectionView?.reloadData()
-            print("banner: \(banner)")
-        }
+//        Banner.downloadData { (banner) in
+//            self.banner = banner
+//            self.collectionView?.reloadData()
+////            print("banner: \(banner)")
+//        }
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -39,7 +39,7 @@ class FeaturedController: UICollectionViewController, UICollectionViewDelegateFl
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        if indexPath.item == 2 {
+        if indexPath.item == 3 {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: largeCellId, for: indexPath) as! LargeCategoryCell
             
             if let cats = categories {
@@ -52,7 +52,7 @@ class FeaturedController: UICollectionViewController, UICollectionViewDelegateFl
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! CategoryCell
         
         if let cats = categories {
-            cell.category  = cats[indexPath.item]
+            cell.category  = cats[indexPath.item + 1]
         }
         
         return cell
@@ -81,4 +81,6 @@ class FeaturedController: UICollectionViewController, UICollectionViewDelegateFl
         
         return cell
     }
+    
+    
 }
