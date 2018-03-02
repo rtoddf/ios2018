@@ -11,7 +11,7 @@ struct Category:Decodable {
     
     static func downloadData(completion: @escaping ([Category]) -> Void
         ){
-        let urlString = "http://www.rtodd.net/swift/data/apps06.json"
+        let urlString = "http://www.rtodd.net/swift/data/guys.json"
         let url = URL(string: urlString)
         
         if let urlObject = url {
