@@ -8,7 +8,6 @@ class FeaturedController: UICollectionViewController, UICollectionViewDelegateFl
     let largeCellId = "largeCellId"
     let headerCellId = "headerCellId"
     var categories:[Category]?
-//    var banner:[Banner]?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,12 +21,6 @@ class FeaturedController: UICollectionViewController, UICollectionViewDelegateFl
             self.categories = categories
             self.collectionView?.reloadData()
         }
-        
-//        Banner.downloadData { (banner) in
-//            self.banner = banner
-//            self.collectionView?.reloadData()
-////            print("banner: \(banner)")
-//        }
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -52,7 +45,9 @@ class FeaturedController: UICollectionViewController, UICollectionViewDelegateFl
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! CategoryCell
         
         if let cats = categories {
-            cell.category  = cats[indexPath.item + 1]
+            // index out of range error
+//            cell.category  = cats[indexPath.item + 1]
+            cell.category  = cats[indexPath.item ]
         }
         
         return cell
@@ -69,7 +64,7 @@ class FeaturedController: UICollectionViewController, UICollectionViewDelegateFl
     
     // headerview
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
-        return CGSize(width: view.frame.width, height: 150)
+        return CGSize(width: view.frame.width, height: 140)
     }
     
     override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
@@ -81,6 +76,4 @@ class FeaturedController: UICollectionViewController, UICollectionViewDelegateFl
         
         return cell
     }
-    
-    
 }

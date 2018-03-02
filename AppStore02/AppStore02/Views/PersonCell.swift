@@ -26,8 +26,6 @@ class PersonCell:UICollectionViewCell {
             personShortBioLabel.text = shiortBio
             personBirthdateLabel.text = birthDate
             personImageView.loadImageUsingUrlString(imageUrl: imageName)
-            
-            
         }
     }
     
@@ -86,6 +84,8 @@ class LargePersonCell:PersonCell {
     override func setupViews() {
         addSubview(personImageView)
         personImageView.translatesAutoresizingMaskIntoConstraints = false
+        personImageView.layer.borderColor = UIColor(hexString: "#333333").cgColor
+        personImageView.layer.borderWidth = 0.5
         
         addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[v0]|", options: NSLayoutFormatOptions(), metrics: nil, views: [
             "v0": personImageView]))

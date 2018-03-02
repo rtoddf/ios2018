@@ -2,9 +2,11 @@ import UIKit
 
 class Header:CategoryCell {
     override func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+
+        let width = frame.width / 2
+        let height = (9 / 16) * width
         
-        let width = (frame.height - 30) * (16 / 9)
-        return CGSize(width: width, height: frame.height - 30)
+        return CGSize(width: width, height: height + 30)
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -12,6 +14,10 @@ class Header:CategoryCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: largePersonCellId, for: indexPath) as! LargePersonCell
         cell.person = category?.people![indexPath.item]
         return cell
+    }
+    
+    override func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsetsMake(0, 0, 0, 0)
     }
     
     override func setupViews() {
