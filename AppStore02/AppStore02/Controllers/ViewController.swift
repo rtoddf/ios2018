@@ -47,6 +47,7 @@ class FeaturedController: UICollectionViewController, UICollectionViewDelegateFl
                 cell.category  = cats[indexPath.item]
             }
             
+            cell.featuredPersonController = self
             return cell
         }
         
@@ -56,6 +57,7 @@ class FeaturedController: UICollectionViewController, UICollectionViewDelegateFl
             cell.category  = cats[indexPath.item]
         }
         
+        cell.featuredPersonController = self
         return cell
     }
     
@@ -67,6 +69,12 @@ class FeaturedController: UICollectionViewController, UICollectionViewDelegateFl
         return CGSize(width: view.frame.width, height: 230)
     }
     
+    func showPersonDetailForPerson(person: Person){
+        let layout = UICollectionViewFlowLayout()
+        let personViewController = PersonDetailController(collectionViewLayout: layout)
+        navigationController?.pushViewController(personViewController, animated: true)
+    }
+    
     // headerview
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
         return CGSize(width: view.frame.width, height: 140)
@@ -76,7 +84,6 @@ class FeaturedController: UICollectionViewController, UICollectionViewDelegateFl
         let cell = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: headerCellId, for: indexPath) as! Header
         
         if let ban = banner {
-            print("ban: \(ban[indexPath.item])")
             cell.banner = ban[indexPath.item]
         }
 

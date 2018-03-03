@@ -42,6 +42,7 @@ class Header:CategoryCell {
 }
 
 class CategoryCell:UICollectionViewCell, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+    var featuredPersonController: FeaturedController?
     
 //    var person:[Person]?
     let personCellId = "personCellId"
@@ -104,6 +105,11 @@ class CategoryCell:UICollectionViewCell, UICollectionViewDataSource, UICollectio
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return UIEdgeInsets(top: 0, left: 7, bottom: 0, right: 7)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let person = category?.people![indexPath.item] else { return }
+        featuredPersonController?.showPersonDetailForPerson(person: person)
     }
     
     let categoryTitleLabel:UILabel = {
