@@ -8,6 +8,7 @@ class FeaturedController: UICollectionViewController, UICollectionViewDelegateFl
     let largeCellId = "largeCellId"
     let headerCellId = "headerCellId"
     var categories:[Category]?
+    var banner:[Banner]?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,6 +19,11 @@ class FeaturedController: UICollectionViewController, UICollectionViewDelegateFl
         collectionView?.register(CategoryCell.self, forCellWithReuseIdentifier: cellId)
         collectionView?.register(LargeCategoryCell.self, forCellWithReuseIdentifier: largeCellId)
         collectionView?.register(Header.self, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: headerCellId)
+        
+        Banner.downloadData { (banner) in
+            self.banner = banner
+            self.collectionView?.reloadData()
+        }
         
         Category.downloadData { (categories) in
             self.categories = categories
@@ -34,7 +40,7 @@ class FeaturedController: UICollectionViewController, UICollectionViewDelegateFl
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        if indexPath.item == 3 {
+        if indexPath.item == 2 {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: largeCellId, for: indexPath) as! LargeCategoryCell
             
             if let cats = categories {
@@ -47,20 +53,17 @@ class FeaturedController: UICollectionViewController, UICollectionViewDelegateFl
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! CategoryCell
         
         if let cats = categories {
-            // index out of range error
-//            cell.category  = cats[indexPath.item + 1]
-            cell.category  = cats[indexPath.item ]
+            cell.category  = cats[indexPath.item]
         }
         
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        
         if indexPath.item == 2 {
             return CGSize(width: view.frame.width, height: 160)
         }
-        
+
         return CGSize(width: view.frame.width, height: 230)
     }
     
@@ -71,11 +74,12 @@ class FeaturedController: UICollectionViewController, UICollectionViewDelegateFl
     
     override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         let cell = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: headerCellId, for: indexPath) as! Header
-    
-        if let cats = categories {
-            cell.category  = cats.first
-        }
         
+        if let ban = banner {
+            print("ban: \(ban[indexPath.item])")
+            cell.banner = ban[indexPath.item]
+        }
+
         return cell
     }
 }

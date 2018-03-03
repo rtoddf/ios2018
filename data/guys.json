@@ -1,36 +1,6 @@
 {
 	"categories": [
 		{
-			"name": "Header",
-			"description": "",
-			"people": [
-				{
-					"name": "Ben Barnes",
-					"short_bio": "British actor and singer",
-					"birth_date": "20 August 1981",
-					"imageName": "http://www.rtodd.net/swift/images/guys/aaron-rhodes.jpg"
-				},
-				{
-					"name": "Ben Barnes",
-					"short_bio": "British actor and singer",
-					"birth_date": "20 August 1981",
-					"imageName": "http://www.rtodd.net/swift/images/guys/connor-franta.jpg"
-				},
-				{
-					"name": "Ben Barnes",
-					"short_bio": "British actor and singer",
-					"birth_date": "20 August 1981",
-					"imageName": "http://www.rtodd.net/swift/images/guys/colton-haynes.jpg"
-				},
-				{
-					"name": "Ben Barnes",
-					"short_bio": "British actor and singer",
-					"birth_date": "20 August 1981",
-					"imageName": "http://www.rtodd.net/swift/images/guys/nick-jonas.jpg"
-				}
-			]
-		},
-		{
 			"name": "Actors",
 			"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam egestas ligula justo, ac convallis nisl porta id. Nam maximus enim turpis, eu finibus est efficitur et.",
 			"people": [

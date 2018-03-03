@@ -93,9 +93,3 @@ class LargePersonCell:PersonCell {
             "v0": personImageView]))
     }
 }
-
-
-
-
-
-

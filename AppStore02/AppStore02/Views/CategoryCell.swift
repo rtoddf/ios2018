@@ -9,10 +9,19 @@ class Header:CategoryCell {
         return CGSize(width: width, height: height + 30)
     }
     
+    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        if let peeps = banner?.people {
+            return 1
+            // we only want one since it's the header collection view
+            // return peeps.count
+        }
+        return 0
+    }
+    
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         // remember to cast!!!!!!
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: largePersonCellId, for: indexPath) as! LargePersonCell
-        cell.person = category?.people![indexPath.item]
+        cell.person = banner?.people![indexPath.item]
         return cell
     }
     
@@ -43,6 +52,15 @@ class CategoryCell:UICollectionViewCell, UICollectionViewDataSource, UICollectio
     var category:Category? {
         didSet {
             guard let name = category?.name else { return }
+            categoryTitleLabel.text = name
+            
+            peopleCollectionView.reloadData()
+        }
+    }
+    
+    var banner:Banner? {
+        didSet {
+            guard let name = banner?.name else { return }
             categoryTitleLabel.text = name
             
             peopleCollectionView.reloadData()

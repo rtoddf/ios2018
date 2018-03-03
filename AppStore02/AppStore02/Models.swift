@@ -2,6 +2,37 @@ import UIKit
 
 struct Feed: Decodable {
     let categories:[Category]?
+    let banner:[Banner]?
+}
+
+struct Banner:Decodable {
+    let name:String?
+    let description:String?
+    let people:[Person]?
+    
+    static func downloadData(completion: @escaping ([Banner]) -> Void
+        ){
+        let urlString = "http://rtodd.net/swift/data/guys-banner.json"
+        let url = URL(string: urlString)
+        
+        if let urlObject = url {
+            URLSession.shared.dataTask(with: urlObject) { (data, response, error) in
+                guard let data = data else { return }
+                
+                do {
+                    let feed = try JSONDecoder().decode(Feed.self, from: data)
+                    guard let banner = feed.banner else { return }
+                    DispatchQueue.main.async {
+                        completion(banner)
+                    }
+                    
+                } catch let jsonErr {
+                    print("we got an error \(jsonErr)")
+                }
+                
+                }.resume()
+        }
+    }
 }
 
 struct Category:Decodable {
@@ -20,9 +51,6 @@ struct Category:Decodable {
                 
                 do {
                     let feed = try JSONDecoder().decode(Feed.self, from: data)
-                    
-                    print(feed)
-                    
                     guard let categories = feed.categories else { return }
                     DispatchQueue.main.async {
                         completion(categories)
