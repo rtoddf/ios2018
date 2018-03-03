@@ -11,9 +11,7 @@ class Header:CategoryCell {
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if let peeps = banner?.people {
-            return 1
-            // we only want one since it's the header collection view
-            // return peeps.count
+            return peeps.count
         }
         return 0
     }
@@ -145,8 +143,9 @@ class CategoryCell:UICollectionViewCell, UICollectionViewDataSource, UICollectio
 
 class LargeCategoryCell:CategoryCell {
     override func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let width = (frame.height - 30) * (16 / 9)
-        return CGSize(width: width, height: frame.height - 30)
+        let height = frame.height - 30
+        let width = height * (16 / 9)
+        return CGSize(width: width, height: height)
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
