@@ -1,4 +1,4 @@
-// 15:32
+// https://www.youtube.com/watch?v=70OhFMzRBZM&t=1530s - 19:16
 
 import UIKit
 
@@ -72,6 +72,7 @@ class FeaturedController: UICollectionViewController, UICollectionViewDelegateFl
     func showPersonDetailForPerson(person: Person){
         let layout = UICollectionViewFlowLayout()
         let personViewController = PersonDetailController(collectionViewLayout: layout)
+        personViewController.person = person
         navigationController?.pushViewController(personViewController, animated: true)
     }
     
