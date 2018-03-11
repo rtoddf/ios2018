@@ -36,6 +36,12 @@ class PersonDetailHeader:BaseCell {
         didSet {
             guard let imageName = person?.imageName else { return }
             imageView.loadImageUsingUrlString(imageUrl: imageName)
+            guard let personName = person?.name else { return }
+            nameLabel.text = personName
+            guard let shortBio = person?.short_bio else { return }
+            shortBioLabel.text = shortBio
+            guard let birthDate = person?.birth_date else { return }
+            birthDateLabel.text = birthDate
         }
     }
     
@@ -44,16 +50,56 @@ class PersonDetailHeader:BaseCell {
         iv.backgroundColor = .orange
         iv.contentMode = .scaleAspectFill
         iv.clipsToBounds = true
-        iv.translatesAutoresizingMaskIntoConstraints = false
         return iv
+    }()
+    
+    let nameLabel:UILabel = {
+        let label = UILabel()
+        label.font = UIFont.boldSystemFont(ofSize: 16)
+        return label
+    }()
+    
+    let shortBioLabel:UILabel = {
+        let label = UILabel()
+        label.font = UIFont.systemFont(ofSize: 14)
+        return label
+    }()
+    
+    let birthDateLabel:UILabel = {
+        let label = UILabel()
+        label.font = UIFont.systemFont(ofSize: 12)
+        return label
+    }()
+    
+    let segmentedControl:UISegmentedControl = {
+        let sc = UISegmentedControl(items: ["Details", "Reviews", "Related"])
+        sc.tintColor = UIColor(hexString: "#777777")
+        sc.selectedSegmentIndex = 0
+        return sc
+    }()
+    
+    let dividerLineView:UIView = {
+        let view = UIView()
+        view.backgroundColor = UIColor(hexString: "#666666")
+        return view
     }()
     
     override func setupViews() {
 
         addSubview(imageView)
-        
-        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-14-[v0(100)]", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": imageView]))
-        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-14-[v0(100)]", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": imageView]))
+        addSubview(nameLabel)
+        addSubview(shortBioLabel)
+        addSubview(birthDateLabel)
+        addSubview(segmentedControl)
+        addSubview(dividerLineView)
+
+        addConstraintsWithFormat(format: "H:|-14-[v0(100)]-14-[v1]", views: imageView, nameLabel)
+        addConstraintsWithFormat(format: "V:|-14-[v0]-2-[v1]-2-[v2]", views: nameLabel, shortBioLabel, birthDateLabel)
+        addConstraintsWithFormat(format: "H:|-128-[v0]", views: shortBioLabel)
+        addConstraintsWithFormat(format: "H:|-128-[v0]", views: birthDateLabel)
+        addConstraintsWithFormat(format: "H:|-14-[v0]-14-|", views: segmentedControl)
+        addConstraintsWithFormat(format: "H:|[v0]|", views: dividerLineView)
+        addConstraintsWithFormat(format: "V:|-14-[v0(100)]-16-[v1]-[v2(0.4)]|", views: imageView, segmentedControl, dividerLineView)
     }
 }
 
