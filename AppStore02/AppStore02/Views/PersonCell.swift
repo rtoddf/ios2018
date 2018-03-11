@@ -25,9 +25,6 @@ class PersonCell:UICollectionViewCell {
             
             personShortBioLabel.text = shiortBio
             personBirthdateLabel.text = birthDate
-            
-            
-            
             personImageView.loadImageUsingUrlString(imageUrl: imageName)
         }
     }
@@ -90,9 +87,7 @@ class LargePersonCell:PersonCell {
         personImageView.layer.borderColor = UIColor(hexString: "#333333").cgColor
         personImageView.layer.borderWidth = 0.5
         
-        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[v0]|", options: NSLayoutFormatOptions(), metrics: nil, views: [
-            "v0": personImageView]))
-        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-2-[v0]-14-|", options: NSLayoutFormatOptions(), metrics: nil, views: [
-            "v0": personImageView]))
+        addConstraintsWithFormat(format: "H:|[v0]|", views: personImageView)
+        addConstraintsWithFormat(format: "V:|-2-[v0]-14-|", views: personImageView)
     }
 }

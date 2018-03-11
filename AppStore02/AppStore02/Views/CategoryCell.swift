@@ -34,10 +34,8 @@ class Header:CategoryCell {
         peopleCollectionView.delegate = self
         
         addSubview(peopleCollectionView)
-        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[v0]|", options: NSLayoutFormatOptions(), metrics: nil, views: [
-            "v0": peopleCollectionView]))
-        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[v0]|", options: NSLayoutFormatOptions(), metrics: nil, views: [
-            "v0": peopleCollectionView]))
+        addConstraintsWithFormat(format: "H:|[v0]|", views: peopleCollectionView)
+        addConstraintsWithFormat(format: "V:|[v0]|", views: peopleCollectionView)
     }
 }
 
@@ -140,10 +138,10 @@ class CategoryCell:UICollectionViewCell, UICollectionViewDataSource, UICollectio
         addSubview(categoryTitleLabel)
         addSubview(dividerBarView)
         
-        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-14-[v0]-14-|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": categoryTitleLabel]))
-        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-8-[v0]-8-|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": peopleCollectionView]))
-        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-14-[v0]-14-|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": dividerBarView]))
-        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-4-[v2(30)]-4-[v0][v1(0.5)]|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": peopleCollectionView, "v1": dividerBarView, "v2": categoryTitleLabel]))
+        addConstraintsWithFormat(format: "H:|-14-[v0]-14-|", views: categoryTitleLabel)
+        addConstraintsWithFormat(format: "H:|-8-[v0]-8-|", views: peopleCollectionView)
+        addConstraintsWithFormat(format: "H:|-14-[v0]-14-|", views: dividerBarView)
+        addConstraintsWithFormat(format: "V:|-4-[v2(30)]-4-[v0][v1(0.5)]|", views: peopleCollectionView, dividerBarView, categoryTitleLabel)
     }
 }
 

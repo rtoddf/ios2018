@@ -3,7 +3,7 @@ import UIKit
 class PersonDetailController:UICollectionViewController, UICollectionViewDelegateFlowLayout {
     var person:Person? {
         didSet {
-            navigationItem.title = person?.name
+//            navigationItem.title = person?.name
         }
     }
     
@@ -39,7 +39,9 @@ class PersonDetailHeader:BaseCell {
             guard let personName = person?.name else { return }
             nameLabel.text = personName
             guard let shortBio = person?.short_bio else { return }
+            shortBioLabel.sizeToFit()
             shortBioLabel.text = shortBio
+            
             guard let birthDate = person?.birth_date else { return }
             birthDateLabel.text = birthDate
         }
@@ -62,6 +64,8 @@ class PersonDetailHeader:BaseCell {
     let shortBioLabel:UILabel = {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 14)
+        label.numberOfLines = 2
+        label.backgroundColor = .orange
         return label
     }()
     
@@ -94,7 +98,7 @@ class PersonDetailHeader:BaseCell {
         addSubview(dividerLineView)
 
         addConstraintsWithFormat(format: "H:|-14-[v0(100)]-14-[v1]", views: imageView, nameLabel)
-        addConstraintsWithFormat(format: "V:|-14-[v0]-2-[v1]-2-[v2]", views: nameLabel, shortBioLabel, birthDateLabel)
+        addConstraintsWithFormat(format: "V:|-14-[v0]-2-[v1(60)]-2-[v2]", views: nameLabel, shortBioLabel, birthDateLabel)
         addConstraintsWithFormat(format: "H:|-128-[v0]", views: shortBioLabel)
         addConstraintsWithFormat(format: "H:|-128-[v0]", views: birthDateLabel)
         addConstraintsWithFormat(format: "H:|-14-[v0]-14-|", views: segmentedControl)
