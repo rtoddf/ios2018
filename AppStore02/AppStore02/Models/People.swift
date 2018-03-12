@@ -66,10 +66,13 @@ struct Category:Decodable {
 }
 
 struct Person:Decodable {
+    let id:Int?
     let name:String?
     let short_bio:String?
+    let long_bio:String?
     let birth_date:String?
     let imageName:String?
+    let screen_shots:[String]?
 }
 
 //class Category:NSObject {
