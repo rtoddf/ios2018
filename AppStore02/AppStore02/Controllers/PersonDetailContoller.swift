@@ -3,7 +3,7 @@ import UIKit
 class PersonDetailController:UICollectionViewController, UICollectionViewDelegateFlowLayout {
     var person:Person? {
         didSet {
-//            navigationItem.title = person?.name
+
         }
     }
     
@@ -19,7 +19,6 @@ class PersonDetailController:UICollectionViewController, UICollectionViewDelegat
     
     override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: headerId, for: indexPath) as! PersonDetailHeader
-        
         header.person = person
         return header
     }
@@ -31,7 +30,6 @@ class PersonDetailController:UICollectionViewController, UICollectionViewDelegat
 
 
 class PersonDetailHeader:BaseCell {
-    
     var person:Person? {
         didSet {
             guard let imageName = person?.imageName else { return }
@@ -89,7 +87,6 @@ class PersonDetailHeader:BaseCell {
     }()
     
     override func setupViews() {
-
         addSubview(imageView)
         addSubview(nameLabel)
         addSubview(shortBioLabel)

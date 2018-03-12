@@ -2,7 +2,6 @@ import UIKit
 
 class Header:CategoryCell {
     override func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-
         let width = frame.width / 2
         let height = (9 / 16) * width
         
@@ -26,6 +25,13 @@ class Header:CategoryCell {
     override func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return UIEdgeInsetsMake(0, 0, 0, 0)
     }
+
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print("big cell")
+        guard let person = banner?.people![indexPath.item] else { return }
+//        print("person: \(person)")
+        featuredPersonController?.showPersonDetailForPerson(person: person)
+    }
     
     override func setupViews() {
         peopleCollectionView.register(LargePersonCell.self, forCellWithReuseIdentifier: largePersonCellId)
@@ -39,7 +45,7 @@ class Header:CategoryCell {
     }
 }
 
-class CategoryCell:UICollectionViewCell, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+class CategoryCell:BaseCell, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     var featuredPersonController: FeaturedController?
     
 //    var person:[Person]?
@@ -63,16 +69,7 @@ class CategoryCell:UICollectionViewCell, UICollectionViewDataSource, UICollectio
             peopleCollectionView.reloadData()
         }
     }
-    
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        setupViews()
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
+
     let peopleCollectionView:UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
@@ -126,7 +123,7 @@ class CategoryCell:UICollectionViewCell, UICollectionViewDataSource, UICollectio
         return view
     }()
     
-    func setupViews(){
+    override func setupViews(){
         backgroundColor = .white
         
         addSubview(peopleCollectionView)

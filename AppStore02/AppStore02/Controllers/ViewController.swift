@@ -1,4 +1,5 @@
 // https://www.youtube.com/watch?v=70OhFMzRBZM&t=1530s - 19:16
+// look at ep4 5:52 for why the banner cells aren't clicking through
 
 import UIKit
 
@@ -39,7 +40,6 @@ class FeaturedController: UICollectionViewController, UICollectionViewDelegateFl
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        
         if indexPath.item == 2 {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: largeCellId, for: indexPath) as! LargeCategoryCell
             
@@ -56,7 +56,7 @@ class FeaturedController: UICollectionViewController, UICollectionViewDelegateFl
         if let cats = categories {
             cell.category  = cats[indexPath.item]
         }
-        
+
         cell.featuredPersonController = self
         return cell
     }
@@ -70,6 +70,8 @@ class FeaturedController: UICollectionViewController, UICollectionViewDelegateFl
     }
     
     func showPersonDetailForPerson(person: Person){
+        print("person 2: \(person)")
+        
         let layout = UICollectionViewFlowLayout()
         let personViewController = PersonDetailController(collectionViewLayout: layout)
         personViewController.person = person

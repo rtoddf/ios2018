@@ -1,6 +1,6 @@
 import UIKit
 
-class PersonCell:UICollectionViewCell {
+class PersonCell:BaseCell {
     var person:Person? {
         didSet {
             guard let name = person?.name else { return }
@@ -28,16 +28,7 @@ class PersonCell:UICollectionViewCell {
             personImageView.loadImageUsingUrlString(imageUrl: imageName)
         }
     }
-    
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        setupViews()
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
+
     let personImageView:UIImageView = {
         let personIV = UIImageView()
         personIV.contentMode = .scaleAspectFill
@@ -67,7 +58,7 @@ class PersonCell:UICollectionViewCell {
         return label
     }()
     
-    func setupViews(){
+    override func setupViews(){
         addSubview(personImageView)
         addSubview(personNameLabel)
         addSubview(personShortBioLabel)
