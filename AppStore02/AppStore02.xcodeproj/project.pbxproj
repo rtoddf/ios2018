@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0045754B2057300300B98D71 /* ScreenShotsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0045754A2057300300B98D71 /* ScreenShotsCell.swift */; };
 		00AD280420445CF7008EF966 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00AD280320445CF7008EF966 /* AppDelegate.swift */; };
 		00AD280620445CF7008EF966 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00AD280520445CF7008EF966 /* ViewController.swift */; };
 		00AD280B20445CF7008EF966 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00AD280A20445CF7008EF966 /* Assets.xcassets */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0045754A2057300300B98D71 /* ScreenShotsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenShotsCell.swift; sourceTree = "<group>"; };
 		00AD280020445CF7008EF966 /* AppStore02.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppStore02.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		00AD280320445CF7008EF966 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		00AD280520445CF7008EF966 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 			children = (
 				00AD281620447619008EF966 /* CategoryCell.swift */,
 				00AD2818204482FE008EF966 /* PersonCell.swift */,
+				0045754A2057300300B98D71 /* ScreenShotsCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -180,6 +183,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				00AD281C20449972008EF966 /* Extensions.swift in Sources */,
+				0045754B2057300300B98D71 /* ScreenShotsCell.swift in Sources */,
 				00AD280620445CF7008EF966 /* ViewController.swift in Sources */,
 				758BB16E204A4CA10003EB42 /* PersonDetailContoller.swift in Sources */,
 				00AD2819204482FE008EF966 /* PersonCell.swift in Sources */,

@@ -1,5 +1,6 @@
 // https://www.youtube.com/watch?v=70OhFMzRBZM&t=1530s - 19:16
 // look at ep4 5:52 for why the banner cells aren't clicking through
+// ep 5 - 7:45
 
 import UIKit
 
