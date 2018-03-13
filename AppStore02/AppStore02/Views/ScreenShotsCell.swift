@@ -47,16 +47,24 @@ class ScreenShotsCell:BaseCell, UICollectionViewDataSource, UICollectionViewDele
         return UIEdgeInsets(top: 0, left: 14, bottom: 0, right: 14)
     }
     
+    let dividerLineView:UIView = {
+        let view = UIView()
+        view.backgroundColor = UIColor(hexString: "#666666")
+        return view
+    }()
+    
     override func setupViews() {
         super.setupViews()
         
         addSubview(collectionView)
+        addSubview(dividerLineView)
         
         collectionView.dataSource = self
         collectionView.delegate = self
         
         addConstraintsWithFormat(format: "H:|[v0]|", views: collectionView)
-        addConstraintsWithFormat(format: "V:|[v0]|", views: collectionView)
+        addConstraintsWithFormat(format: "H:|[v0]|", views: dividerLineView)
+        addConstraintsWithFormat(format: "V:|[v0][v1(0.5)]|", views: collectionView, dividerLineView)
         
         collectionView.register(ScreenShotImageCell.self, forCellWithReuseIdentifier: cellId)
     }
@@ -69,13 +77,17 @@ class ScreenShotImageCell:BaseCell {
         iv.clipsToBounds = true
         return iv
     }()
-    
+
     override func setupViews() {
         super.setupViews()
         
         addSubview(imageView)
-        
+
         addConstraintsWithFormat(format: "H:|[v0]|", views: imageView)
         addConstraintsWithFormat(format: "V:|[v0]|", views: imageView)
     }
 }
+
+
+
+

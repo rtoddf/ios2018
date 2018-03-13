@@ -9,6 +9,7 @@ class PersonDetailController:UICollectionViewController, UICollectionViewDelegat
     
     let cellId = "cellId"
     let headerId = "headerId"
+    let descriptionCellId = "descriptionCellId"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,13 +18,19 @@ class PersonDetailController:UICollectionViewController, UICollectionViewDelegat
         
         collectionView?.register(ScreenShotsCell.self, forCellWithReuseIdentifier: cellId)
         collectionView?.register(PersonDetailHeader.self, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: headerId)
+        collectionView?.register(PersonDetailDescriptionCell.self, forCellWithReuseIdentifier: descriptionCellId)
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 1
+        return 2
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        if indexPath.item == 1 {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: descriptionCellId, for: indexPath) as! PersonDetailDescriptionCell
+            cell.textView.attributedText = descriptionAtributedText()
+            return cell
+        }
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! ScreenShotsCell
         
         // remember to downcast and set cell.person
@@ -32,8 +39,23 @@ class PersonDetailController:UICollectionViewController, UICollectionViewDelegat
         return cell
     }
     
+    func descriptionAtributedText() -> NSAttributedString {
+        let style = NSMutableParagraphStyle()
+        style.lineSpacing = 4
+
+        let attributedText = NSMutableAttributedString(string: "Description\n", attributes: [NSAttributedStringKey.font: UIFont.boldSystemFont(ofSize: 14)])
+        if let longBio = person?.long_bio {
+            attributedText.append(NSMutableAttributedString(string: longBio, attributes: [NSAttributedStringKey.font: UIFont.systemFont(ofSize: 12), NSAttributedStringKey.foregroundColor: UIColor.darkGray]))
+        }
+        
+        let range = NSMakeRange(0, attributedText.string.count)
+        attributedText.addAttribute(NSAttributedStringKey.paragraphStyle, value: style, range: range)
+        
+        return attributedText
+    }
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: view.frame.width, height: 170)
+        return CGSize(width: view.frame.width, height: 130)
     }
     
     override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
@@ -120,6 +142,31 @@ class PersonDetailHeader:BaseCell {
         addConstraintsWithFormat(format: "H:|-14-[v0]-14-|", views: segmentedControl)
         addConstraintsWithFormat(format: "H:|[v0]|", views: dividerLineView)
         addConstraintsWithFormat(format: "V:|-14-[v0(100)]-16-[v1]-[v2(0.4)]|", views: imageView, segmentedControl, dividerLineView)
+    }
+}
+
+class PersonDetailDescriptionCell:BaseCell {
+    let textView:UITextView = {
+        let tv = UITextView()
+        tv.text = "Description"
+        return tv
+    }()
+    
+    let dividerLineView:UIView = {
+        let view = UIView()
+        view.backgroundColor = UIColor(hexString: "#666666")
+        return view
+    }()
+    
+    override func setupViews() {
+        super.setupViews()
+        
+        addSubview(textView)
+        addSubview(dividerLineView)
+        
+        addConstraintsWithFormat(format: "H:|-14-[v0]-14-|", views: textView)
+        addConstraintsWithFormat(format: "H:|[v0]|", views: dividerLineView)
+        addConstraintsWithFormat(format: "V:|-8-[v0]-8-[v1(0.5)]|", views: textView, dividerLineView)
     }
 }
 
