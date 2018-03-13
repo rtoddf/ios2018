@@ -186,33 +186,12 @@
 					"imageName": "http://www.rtodd.net/swift/images/guys/tom-daley.jpg",
 					"screen_shots": [
 						"http://www.rtodd.net/swift/images/guys/tom-daley01.jpg",
-						"http://www.rtodd.net/swift/images/guys/tom-daley01.jpg",
-						"http://www.rtodd.net/swift/images/guys/tom-daley01.jpg",
-						"http://www.rtodd.net/swift/images/guys/tom-daley01.jpg",
-						"http://www.rtodd.net/swift/images/guys/tom-daley01.jpg"
+						"http://www.rtodd.net/swift/images/guys/tom-daley02.jpg",
+						"http://www.rtodd.net/swift/images/guys/tom-daley03.jpg",
+						"http://www.rtodd.net/swift/images/guys/tom-daley04.jpg",
+						"http://www.rtodd.net/swift/images/guys/tom-daley05.jpg"
 					],
 					"long_bio": "Daley also competes in synchronised and team events. In 2015, he partnered Rebecca Gallantree to the inaugural mixed team World title, while in 2016 he won a second Olympic bronze in the men's synchronised 10 metre platform, with Daniel Goodfellow. In 2017, he won World silver with Grace Reid in the mixed 3 metre springboard synchronised event.",
-					"person_info": [
-						{
-							"name": "Something",
-							"value": "Value"
-						}
-					]
-				},
-				{
-					"id": 2002,
-					"name": "Robbie Rogers",
-					"short_bio": "American professional soccer player",
-					"birth_date": "May 12, 1987",
-					"imageName": "http://www.rtodd.net/swift/images/guys/robbie-rogers.jpg",
-					"screen_shots": [
-						"http://www.rtodd.net/swift/images/guys/ben-barnes01.jpg",
-						"http://www.rtodd.net/swift/images/guys/ben-barnes01.jpg",
-						"http://www.rtodd.net/swift/images/guys/ben-barnes01.jpg",
-						"http://www.rtodd.net/swift/images/guys/ben-barnes01.jpg",
-						"http://www.rtodd.net/swift/images/guys/ben-barnes01.jpg"
-					],
-					"long_bio": "In September 2006, Barnes was cast as Prince Caspian in The Chronicles of Narnia films Prince Caspian and The Voyage of the Dawn Treader. He has also played Tom Ward in the fantasy film Seventh Son, Dorian Gray in the 2009 adaptation of Oscar Wilde's The Picture of Dorian Gray, had supporting roles in The Words, and The Big Wedding, and portrayed Samuel Adams in the 2015 miniseries Sons of Liberty.",
 					"person_info": [
 						{
 							"name": "Something",
@@ -226,6 +205,27 @@
 					"short_bio": "British-born American freestyle skier",
 					"birth_date": "October 1, 1991",
 					"imageName": "http://www.rtodd.net/swift/images/guys/gus-kenworthy.jpg",
+					"screen_shots": [
+						"http://www.rtodd.net/swift/images/guys/gus-kenworthy01.jpg",
+						"http://www.rtodd.net/swift/images/guys/gus-kenworthy02.jpg",
+						"http://www.rtodd.net/swift/images/guys/gus-kenworthy03.jpg",
+						"http://www.rtodd.net/swift/images/guys/gus-kenworthy04.jpg",
+						"http://www.rtodd.net/swift/images/guys/gus-kenworthy05.jpg"
+					],
+					"long_bio": "Augustus Richard 'Gus' Kenworthy (born October 1, 1991) is a British-born American freestyle skier from Telluride, Colorado, a triple threat, who competes in slopestyle, halfpipe and big air. Kenworthy won the silver medal in Men's slopestyle at the 2014 Winter Olympics in Sochi. Kenworthy again represented the United States in slopestyle at the 2018 Winter Olympics in PyeongChang, where he qualified for the final and finished in 12th place.",
+					"person_info": [
+						{
+							"name": "Something",
+							"value": "Value"
+						}
+					]
+				},
+				{
+					"id": 2002,
+					"name": "Robbie Rogers",
+					"short_bio": "American professional soccer player",
+					"birth_date": "May 12, 1987",
+					"imageName": "http://www.rtodd.net/swift/images/guys/robbie-rogers.jpg",
 					"screen_shots": [
 						"http://www.rtodd.net/swift/images/guys/ben-barnes01.jpg",
 						"http://www.rtodd.net/swift/images/guys/ben-barnes01.jpg",
@@ -534,12 +534,12 @@
 					"imageName": "http://www.rtodd.net/swift/images/guys/andy-mientus.jpg",
 					"screen_shots": [
 						"http://www.rtodd.net/swift/images/guys/andy-mientus01.jpg",
-						"http://www.rtodd.net/swift/images/guys/andy-mientus01.jpg",
-						"http://www.rtodd.net/swift/images/guys/andy-mientus01.jpg",
-						"http://www.rtodd.net/swift/images/guys/andy-mientus01.jpg",
-						"http://www.rtodd.net/swift/images/guys/andy-mientus01.jpg"
+						"http://www.rtodd.net/swift/images/guys/andy-mientus02.jpg",
+						"http://www.rtodd.net/swift/images/guys/andy-mientus03.jpg",
+						"http://www.rtodd.net/swift/images/guys/andy-mientus04.jpg",
+						"http://www.rtodd.net/swift/images/guys/andy-mientus05.jpg"
 					],
-					"long_bio": "Andrew 'Andy' Michael Mientus (born November 10, 1986) is an American actor, musician, and writer. He is best known for starring in the Broadway musicals Spring Awakening, Les Misérables, and Wicked, and on television in the NBC musical drama Smash and as Hartley Rathaway, aka the Pied Piper, in the hit CW series The Flash.",
+					"long_bio": "Mientus is openly bisexual. He married fellow Broadway actor (and director) Michael Arden on August 18, 2016, at Babington House, Somerset, England. He and Arden planned proposals to each other the same day (June 23, 2014), without the other knowing. They have been together since November 14, 2010. The two first met on October 26, 2006 during the opening night party of the Broadway show The Times They Are-a-Changin', in which Arden was a performer.",
 					"person_info": [
 						{
 							"name": "Something",
@@ -657,7 +657,7 @@
 					"name": "Aaron Renfree",
 					"short_bio": "Performer",
 					"birth_date": "19 December 1987",
-					"imageName": "http://www.rtodd.net/swift/images/guys/travis-wall.jpg",
+					"imageName": "http://www.rtodd.net/swift/images/guys/aaron-renfree.jpg",
 					"screen_shots": [
 						"http://www.rtodd.net/swift/images/guys/ben-barnes01.jpg",
 						"http://www.rtodd.net/swift/images/guys/ben-barnes01.jpg",
