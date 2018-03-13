@@ -3,6 +3,12 @@ import UIKit
 class ScreenShotsCell:BaseCell, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     let cellId = "cellId"
     
+    var person:Person? {
+        didSet {
+            collectionView.reloadData()
+        }
+    }
+    
     let collectionView:UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
@@ -12,17 +18,29 @@ class ScreenShotsCell:BaseCell, UICollectionViewDataSource, UICollectionViewDele
     }()
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        guard let count = person?.screen_shots?.count else { return 0 }
+        return count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! ScreenShotImageCell
+
+        if let imageName = person?.screen_shots![indexPath.item] {
+            cell.imageView.loadImageUsingUrlString(imageUrl: imageName)
+        }
+        
+    //        guard let scrollImageName = person?.screen_shots![indexPath.item] else { return }
+        
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         // why subtract 28?
-        return CGSize(width: 200, height: frame.height - 28)
+        
+        let width = frame.width / 2
+        let height = (9 / 16) * width
+        
+        return CGSize(width: width, height: height)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
@@ -48,7 +66,7 @@ class ScreenShotImageCell:BaseCell {
     let imageView:UIImageView = {
         let iv = UIImageView()
         iv.contentMode = .scaleAspectFill
-        iv.backgroundColor = .purple
+        iv.clipsToBounds = true
         return iv
     }()
     
