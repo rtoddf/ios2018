@@ -1,6 +1,6 @@
 [
 	{
-		"title": "Steven Spielberg’s Ready Player One improves immensely on the book",
+		"headline": "Steven Spielberg’s Ready Player One improves immensely on the book",
 		"author": "Tasha Robinson",
 		"item_class": "review",
 		"guid": "f21f6d26-2163-11e8-8401-ed4dfe8ebc2c",
@@ -9,7 +9,7 @@
 		"lead_image": "http://www.rtodd.net/swift/images/events/ready-player-one.jpg"
 	},
 	{
-		"title": "Black Panther is the grown-up Marvel movie we’ve been waiting for",
+		"headline": "Black Panther is the grown-up Marvel movie we’ve been waiting for",
 		"author": "Bryan Bishop",
 		"item_class": "review",
 		"guid": "f21f6d26-aaaa-11e8-8401-ed4dfe8ebc2c",
@@ -18,7 +18,7 @@
 		"lead_image": "http://www.rtodd.net/swift/images/events/black-panther.jpg"
 	},
 	{
-		"title": "Review: A Boy’s Own Desire in ‘Call Me by Your Name’",
+		"headline": "Review: A Boy’s Own Desire in ‘Call Me by Your Name’",
 		"author": "Manohla Dargis",
 		"item_class": "review",
 		"guid": "f21f6d26-aaaa-1111-8401-ed4dfe8ebc2c",
@@ -27,7 +27,7 @@
 		"lead_image": "http://www.rtodd.net/swift/images/events/call-me-by-your-name.jpg"
 	},
 	{
-		"title": "Have You Seen ‘A Wrinkle in Time’? Let’s Talk.",
+		"headline": "Have You Seen ‘A Wrinkle in Time’? Let’s Talk.",
 		"author": "Reggie Ugwu",
 		"item_class": "review",
 		"guid": "f21f6d26-aaaa-1111-8888-ed4dfe8ebc2c",

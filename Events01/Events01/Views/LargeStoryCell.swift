@@ -1,6 +1,23 @@
 import UIKit
 
 class LargeStoryCell:UICollectionViewCell {
+    var article:Article? {
+        didSet {
+            guard let headline = article?.headline else { return }
+            guard let author = article?.author else { return }
+            guard let fullText = article?.full_text else { return }
+            guard let leadImage = article?.lead_image else { return }
+            
+            leadImageView.loadImageUsingUrlString(imageUrl: leadImage)
+            headlineLabel.text = headline
+            authorLabel.text = author
+
+            let attributedText = NSMutableAttributedString(string: fullText, attributes: [NSAttributedStringKey.font: UIFont.systemFont(ofSize: 14), NSAttributedStringKey.foregroundColor: UIColor.darkGray])
+            textLabel.attributedText = attributedText
+        }
+    }
+    
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupViews()
@@ -36,11 +53,8 @@ class LargeStoryCell:UICollectionViewCell {
     
     let textLabel:UILabel = {
         let label = UILabel()
-        
-        let text = "Steven Spielberg’s new film adaptation of Ready Player One prominently features that same car, but in a context that improves it immensely. Spielberg doesn’t have Wade talk audiences through it, and he doesn’t spell out the references. He just slaps the car down in the middle of a tremendous early action scene, where it’s prominent, distinctive, and memorable. Fans who want the full nostalgia trip, who want to wring every Easter egg out of the experience, will eventually be able to pause the movie and frame-by-frame through it, looking for the flux capacitor on the dashboard, checking the plates, and scanning for extra bonus material. But in the middle of the action, even to people who’ve never seen the Back to the Future movies and aren’t vibing on the connection, the car doesn’t need explaining. It’s just a sleek piece of visual energy, one breathless element among dozens of others. It’s not a citation or a list. It’s an effortless, integrated piece of the action."
-        
-        let attributedText = NSMutableAttributedString(string: text, attributes: [NSAttributedStringKey.font: UIFont.systemFont(ofSize: 14), NSAttributedStringKey.foregroundColor: UIColor.darkGray])
-        label.attributedText = attributedText
+        label.numberOfLines = 4
+        return label
         
         //        let style = NSMutableParagraphStyle()
         //        style.lineSpacing = 20
@@ -51,8 +65,7 @@ class LargeStoryCell:UICollectionViewCell {
         //        label.text = "Steven Spielberg’s new film adaptation of Ready Player One prominently features that same car, but in a context that improves it immensely. Spielberg doesn’t have Wade talk audiences through it, and he doesn’t spell out the references. He just slaps the car down in the middle of a tremendous early action scene, where it’s prominent, distinctive, and memorable. Fans who want the full nostalgia trip, who want to wring every Easter egg out of the experience, will eventually be able to pause the movie and frame-by-frame through it, looking for the flux capacitor on the dashboard, checking the plates, and scanning for extra bonus material. But in the middle of the action, even to people who’ve never seen the Back to the Future movies and aren’t vibing on the connection, the car doesn’t need explaining. It’s just a sleek piece of visual energy, one breathless element among dozens of others. It’s not a citation or a list. It’s an effortless, integrated piece of the action."
         //        label.font = UIFont.systemFont(ofSize: 14)
         //        label.textColor = UIColor(hexString: "#444444")
-        label.numberOfLines = 4
-        return label
+        
     }()
     
     let textView:UITextView = {
@@ -92,9 +105,3 @@ class LargeStoryCell:UICollectionViewCell {
         addConstraintsWithFormat(format: "V:|[v0(200)]-8-[v1]-4-[v2]-8-[v3]-12-[v4]", views: leadImageView, headlineLabel, authorLabel, textLabel, userInteractionStackView)
     }
 }
-
-
-
-
-
-
