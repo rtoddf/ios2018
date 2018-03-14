@@ -53,19 +53,29 @@ extension UIColor {
     }
 }
 
-func buttonGenerator(title:String, imageName:String) -> UIButton {
+//func buttonGenerator(title:String, imageName:String) -> UIButton {
+//    let button = UIButton()
+//    button.setTitle(title, for: .normal)
+//
+//    // image has to be at size
+//    button.setImage(UIImage(named: imageName)?.withRenderingMode(UIImageRenderingMode.alwaysTemplate), for: .normal)
+//    button.imageView?.tintColor = UIColor(hexString: "#ae0000")
+//    // top, left, bottom, right
+//    button.titleEdgeInsets = UIEdgeInsetsMake(2, 8, 0, 0)
+//    button.setTitleColor(UIColor(hexString: "#ae0000"), for: .normal)
+//    // button.titleEdgeInsets = UIEdgeInsets(top: 0,left: -30,bottom: 0,right: 34)
+//
+//    button.titleLabel?.font = UIFont.systemFont(ofSize: 14)
+//    return button
+//}
+
+func createButton(title:String) -> UIButton {
     let button = UIButton()
     button.setTitle(title, for: .normal)
-    
-    // image has to be at size
-    button.setImage(UIImage(named: imageName)?.withRenderingMode(UIImageRenderingMode.alwaysTemplate), for: .normal)
-    button.imageView?.tintColor = UIColor(hexString: "#ae0000")
-    // top, left, bottom, right
-    button.titleEdgeInsets = UIEdgeInsetsMake(2, 8, 0, 0)
     button.setTitleColor(UIColor(hexString: "#ae0000"), for: .normal)
-    // button.titleEdgeInsets = UIEdgeInsets(top: 0,left: -30,bottom: 0,right: 34)
-    
-    button.titleLabel?.font = UIFont.systemFont(ofSize: 14)
+    button.titleLabel?.font = UIFont.systemFont(ofSize: 12)
+//    button.layer.borderWidth = 0.5
+//    button.layer.borderColor = UIColor(hexString: "#ae0000").cgColor
     return button
 }
 
