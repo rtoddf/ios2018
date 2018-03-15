@@ -4,28 +4,6 @@ class EventsController: UICollectionViewController, UICollectionViewDelegateFlow
     
     let cellId = "cellId"
     var articles:[Article]?
-    
-    func downloadJSON() {
-        let jsonUrlString = "http://www.rtodd.net/swift/data/events.json"
-        let url = URL(string: jsonUrlString)
-        
-        URLSession.shared.dataTask(with: url!) { (data, response, err) in
-            // take care of error
-            
-            guard let data = data else { return }
-            
-            do {
-                let articles  = try JSONDecoder().decode([Article].self, from:data)
-                self.articles = articles
-                
-                DispatchQueue.main.async {
-                    self.collectionView?.reloadData()
-                }
-            } catch let jsonErr {
-                print("error serializing JSON:", jsonErr)
-            }
-            }.resume()
-    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,16 +12,12 @@ class EventsController: UICollectionViewController, UICollectionViewDelegateFlow
         collectionView?.backgroundColor = .white
         collectionView?.alwaysBounceVertical = true
         collectionView?.register(LargeStoryCell.self, forCellWithReuseIdentifier: cellId)
-        
-        downloadJSON()
-        
-//        Article.downloadData { (articles) in
-//            self.articles = articles
-//
-//            print("articles from event controller: \(articles.items.count)")
-//
-//            self.collectionView?.reloadData()
-//        }
+
+        Article.downloadData { (articles) in
+            self.articles = articles
+            print("articles from event controller: \(articles)")
+            self.collectionView?.reloadData()
+        }
         
         collectionView?.dataSource = self
         collectionView?.delegate = self
@@ -71,21 +45,6 @@ class EventsController: UICollectionViewController, UICollectionViewDelegateFlow
         collectionView?.collectionViewLayout.invalidateLayout()
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
