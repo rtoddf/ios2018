@@ -1,7 +1,6 @@
 import UIKit
 
 class EventsController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
-    
     let cellId = "cellId"
     var articles:[Article]?
 
@@ -15,7 +14,6 @@ class EventsController: UICollectionViewController, UICollectionViewDelegateFlow
 
         Article.downloadData { (articles) in
             self.articles = articles
-            print("articles from event controller: \(articles)")
             self.collectionView?.reloadData()
         }
         
@@ -40,9 +38,21 @@ class EventsController: UICollectionViewController, UICollectionViewDelegateFlow
         return CGSize(width: view.frame.width, height: 375)
     }
     
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let article = articles?[indexPath.item] else { return }
+        showArticleDetail(article: article)
+    }
+    
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         super.viewWillTransition(to: size, with: coordinator)
         collectionView?.collectionViewLayout.invalidateLayout()
+    }
+    
+    func showArticleDetail(article: Article){
+        let layout = UICollectionViewFlowLayout()
+        let articleDetailViewController = ArticleDetailController(collectionViewLayout: layout)
+        articleDetailViewController.article = article
+        navigationController?.pushViewController(articleDetailViewController, animated: true)
     }
 }
 

@@ -16,8 +16,6 @@ struct Article:Decodable {
                 
                 do {
                     let articles = try JSONDecoder().decode([Article].self, from: data)
-                    
-                    print("articles: \(articles)")
 
                     DispatchQueue.main.async {
                         completion(articles)

@@ -29,7 +29,6 @@ class LargeStoryCell:UICollectionViewCell {
     
     let leadImageView:UIImageView = {
         let iv = UIImageView()
-        iv.image = UIImage(named: "ready-player-one")
         iv.contentMode = .scaleAspectFill
         iv.clipsToBounds = true
         return iv
@@ -37,7 +36,6 @@ class LargeStoryCell:UICollectionViewCell {
     
     let headlineLabel:UILabel = {
         let label = UILabel()
-        label.text = "Steven Spielberg’s Ready Player One improves immensely on the book"
         label.font = UIFont.boldSystemFont(ofSize: 16)
         label.numberOfLines = 2
         return label
@@ -45,7 +43,6 @@ class LargeStoryCell:UICollectionViewCell {
     
     let authorLabel:UILabel = {
         let label = UILabel()
-        label.text = "By: Tasha Robinson"
         label.font = UIFont.systemFont(ofSize: 12)
         label.textColor = UIColor(hexString: "#777777")
         return label
@@ -70,7 +67,6 @@ class LargeStoryCell:UICollectionViewCell {
     
     let textView:UITextView = {
         let textView = UITextView()
-        textView.text = "Ernest Cline’s fast-moving novel was a treasure trove for pop-culture junkies, but the endless references work better on the screen"
         textView.font = UIFont.systemFont(ofSize: 14)
         return textView
     }()

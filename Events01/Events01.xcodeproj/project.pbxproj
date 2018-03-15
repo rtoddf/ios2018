@@ -12,6 +12,7 @@
 		0026C98D20598ADA00EED444 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0026C98C20598ADA00EED444 /* Assets.xcassets */; };
 		0026C99020598ADA00EED444 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0026C98E20598ADA00EED444 /* LaunchScreen.storyboard */; };
 		0026C99A205991B500EED444 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0026C999205991B500EED444 /* Helpers.swift */; };
+		00838E66205B1E5B00E80B08 /* ArticleDetailContoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00838E65205B1E5B00E80B08 /* ArticleDetailContoller.swift */; };
 		00D48A612059B9B8006697A5 /* LargeStoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D48A602059B9B8006697A5 /* LargeStoryCell.swift */; };
 		00D48A642059C87B006697A5 /* Articles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D48A632059C87B006697A5 /* Articles.swift */; };
 /* End PBXBuildFile section */
@@ -24,6 +25,7 @@
 		0026C98F20598ADA00EED444 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0026C99120598ADA00EED444 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0026C999205991B500EED444 /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
+		00838E65205B1E5B00E80B08 /* ArticleDetailContoller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleDetailContoller.swift; sourceTree = "<group>"; };
 		00D48A602059B9B8006697A5 /* LargeStoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeStoryCell.swift; sourceTree = "<group>"; };
 		00D48A632059C87B006697A5 /* Articles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Articles.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -74,6 +76,7 @@
 			isa = PBXGroup;
 			children = (
 				0026C98720598ADA00EED444 /* EventsController.swift */,
+				00838E65205B1E5B00E80B08 /* ArticleDetailContoller.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -177,6 +180,7 @@
 				00D48A642059C87B006697A5 /* Articles.swift in Sources */,
 				0026C98820598ADA00EED444 /* EventsController.swift in Sources */,
 				0026C99A205991B500EED444 /* Helpers.swift in Sources */,
+				00838E66205B1E5B00E80B08 /* ArticleDetailContoller.swift in Sources */,
 				0026C98620598ADA00EED444 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
