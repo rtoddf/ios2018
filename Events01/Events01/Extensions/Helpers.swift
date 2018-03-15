@@ -135,3 +135,43 @@ extension UIImageView {
         task.resume()
     }
 }
+
+extension String {
+    func wrapHTML() -> String {
+        let fontSize:String = "24px"
+        
+        var headHtml = """
+        <html>
+        <head>
+        <meta name=\"viewport\" content=\"width=device-width, user-scalable=no, shrink-to-fit=no\">
+        <style type=\"text/css\">
+        body {
+        -webkit-text-size-adjust: %ld%;
+        font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+        width: 100%;
+        font-size: \(fontSize);
+        word-wrap: break-word;
+        height: auto;
+        margin: 0;
+        padding: 0;
+        }
+        table {width: 100%;}
+        img {
+        width: 100%;
+        height: auto;
+        }
+        iframe {
+        width: 100%;
+        height: auto;
+        }
+        </style>
+        </head>
+        """
+        
+        //        .wp-caption[style]{width:100% !important;height:auto;}
+        //        .wp-caption-text{color:#7a7a7a;font-style:italic;-webkit-text-size-adjust:%ld%;}
+        
+        headHtml.append("<body>\(self)</body></html>")
+        return headHtml
+    }
+}

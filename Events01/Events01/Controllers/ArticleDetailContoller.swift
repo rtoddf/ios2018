@@ -30,7 +30,7 @@ class ArticleDetailController:UICollectionViewController, UICollectionViewDelega
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: view.frame.width, height: 1000)
+        return CGSize(width: view.frame.width, height: 1200)
     }
 }
 
@@ -45,14 +45,28 @@ class DetailCell:BaseCell {
             leadImageView.loadImageUsingUrlString(imageUrl: leadImage)
             headlineLabel.text = headline
             authorLabel.text = author
-            
-            var html = "<style>p{margin:10px}</style>"
-            html.append(fullText)
-            
-            let rawHTML = Data(html.utf8)
+
+            let rawHTML = Data(fullText.utf8)
+            let textAttributes: [NSAttributedStringKey: Any] = [
+//                .strokeColor : UIColor.black,
+//                .foregroundColor : UIColor.white,
+//                .strokeWidth : -2.0,
+                .font : UIFont.systemFont(ofSize: 14),
+                .foregroundColor: UIColor(hexString: "#777777")
+            ]
 
             guard let attributedString = try? NSMutableAttributedString(data: rawHTML, options: [.documentType: NSAttributedString.DocumentType.html], documentAttributes: nil) else { return }
-            let attributedText = NSMutableAttributedString(string: attributedString.string, attributes: [NSAttributedStringKey.font: UIFont.systemFont(ofSize: 14), NSAttributedStringKey.foregroundColor: UIColor.darkGray])
+            let attributedText = NSMutableAttributedString(string: attributedString.string, attributes: textAttributes)
+            
+            // *** Create instance of `NSMutableParagraphStyle`
+            let paragraphStyle = NSMutableParagraphStyle()
+            
+            // *** set LineSpacing property in points ***
+            paragraphStyle.lineSpacing = 3 // Whatever line spacing you want in points
+            
+            // *** Apply attribute to string ***
+            attributedText.addAttribute(NSAttributedStringKey.paragraphStyle, value:paragraphStyle, range:NSMakeRange(0, attributedText.length))
+            
             textView.attributedText = attributedText
         }
     }
@@ -86,6 +100,7 @@ class DetailCell:BaseCell {
         textView.contentInset = UIEdgeInsetsMake(0, -5, 0, 0)
         textView.isSelectable = false
         textView.isEditable = false
+        textView.isScrollEnabled = false
         return textView
     }()
     
