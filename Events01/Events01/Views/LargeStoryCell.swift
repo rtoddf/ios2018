@@ -4,6 +4,7 @@ class LargeStoryCell:UICollectionViewCell {
     var article:Article? {
         didSet {
             guard let headline = article?.headline else { return }
+            guard let publishedDate = article?.pub_date else { return }
             guard let author = article?.author else { return }
             guard let summary = article?.summary else { return }
             guard let leadImage = article?.lead_image else { return }
