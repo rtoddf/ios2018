@@ -5,14 +5,14 @@ class LargeStoryCell:UICollectionViewCell {
         didSet {
             guard let headline = article?.headline else { return }
             guard let author = article?.author else { return }
-            guard let fullText = article?.full_text else { return }
+            guard let summary = article?.summary else { return }
             guard let leadImage = article?.lead_image else { return }
             
             leadImageView.loadImageUsingUrlString(imageUrl: leadImage)
             headlineLabel.text = headline
             authorLabel.text = author
 
-            let attributedText = NSMutableAttributedString(string: fullText, attributes: [NSAttributedStringKey.font: UIFont.systemFont(ofSize: 14), NSAttributedStringKey.foregroundColor: UIColor.darkGray])
+            let attributedText = NSMutableAttributedString(string: summary, attributes: [NSAttributedStringKey.font: UIFont.systemFont(ofSize: 14), NSAttributedStringKey.foregroundColor: UIColor.darkGray])
             textLabel.attributedText = attributedText
         }
     }
