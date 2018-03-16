@@ -11,7 +11,10 @@ class LargeStoryCell:UICollectionViewCell {
             
             leadImageView.loadImageUsingUrlString(imageUrl: leadImage)
             headlineLabel.text = headline
-            authorLabel.text = author
+            
+            var authorText = "By "
+            authorText.append("\(author) | \(publishedDate)")
+            authorLabel.text = authorText
 
             let attributedText = NSMutableAttributedString(string: summary, attributes: [NSAttributedStringKey.font: UIFont.systemFont(ofSize: 14), NSAttributedStringKey.foregroundColor: UIColor.darkGray])
             textLabel.attributedText = attributedText

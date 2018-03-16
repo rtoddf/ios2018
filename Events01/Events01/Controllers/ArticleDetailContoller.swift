@@ -38,13 +38,17 @@ class DetailCell:BaseCell {
     var article:Article? {
         didSet {
             guard let leadImage = article?.lead_image else { return }
+            guard let publishedDate = article?.pub_date else { return }
             guard let headline = article?.headline else { return }
             guard let author = article?.author else { return }
             guard let fullText = article?.full_text else { return }
 
             leadImageView.loadImageUsingUrlString(imageUrl: leadImage)
             headlineLabel.text = headline
-            authorLabel.text = author
+            
+            var authorText = "By "
+            authorText.append("\(author) | \(publishedDate)")
+            authorLabel.text = authorText
 
             let rawHTML = Data(fullText.utf8)
             let textAttributes: [NSAttributedStringKey: Any] = [
