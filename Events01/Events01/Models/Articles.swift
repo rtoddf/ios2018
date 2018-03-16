@@ -2,7 +2,9 @@ import UIKit
 
 struct Article:Decodable {
     let headline:String?
+    let pubDate:String?
     let author:String?
+    let summary:String?
     let full_text:String?
     let lead_image:String?
     
