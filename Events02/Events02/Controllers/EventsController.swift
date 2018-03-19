@@ -43,5 +43,18 @@ class EventsController: UICollectionViewController, UICollectionViewDelegateFlow
         super.viewWillTransition(to: size, with: coordinator)
         collectionView?.collectionViewLayout.invalidateLayout()
     }
+    
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let article = articles?[indexPath.item] else { return }
+        showArticleDetail(article: article)
+    }
+    
+    func showArticleDetail(article:Article) {
+        print("click: \(article)")
+        let layout = UICollectionViewFlowLayout()
+        let articleDetailViewController = ArticleDetailController(collectionViewLayout: layout)
+        articleDetailViewController.article = article
+        navigationController?.pushViewController(articleDetailViewController, animated: true)
+    }
 }
 
