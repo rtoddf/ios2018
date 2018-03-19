@@ -105,3 +105,18 @@ class LargeStoryCell:UICollectionViewCell {
         addConstraintsWithFormat(format: "V:|[v0(200)]-8-[v1]-4-[v2]-8-[v3]-12-[v4]", views: leadImageView, headlineLabel, authorLabel, textLabel, userInteractionStackView)
     }
 }
+
+class BaseCell:UICollectionViewCell {
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        setupViews()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    func setupViews() {
+        
+    }
+}

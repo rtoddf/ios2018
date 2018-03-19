@@ -50,7 +50,6 @@ class EventsController: UICollectionViewController, UICollectionViewDelegateFlow
     }
     
     func showArticleDetail(article:Article) {
-        print("click: \(article)")
         let layout = UICollectionViewFlowLayout()
         let articleDetailViewController = ArticleDetailController(collectionViewLayout: layout)
         articleDetailViewController.article = article

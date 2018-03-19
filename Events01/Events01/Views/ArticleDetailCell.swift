@@ -79,6 +79,7 @@ class ArticleDetailCell:BaseCell {
         addSubview(authorLabel)
         addSubview(textView)
         
+        
         addConstraintsWithFormat(format: "H:|[v0]|", views: leadImageView)
         addConstraintsWithFormat(format: "H:|-14-[v0]-14-|", views: headlineLabel)
         addConstraintsWithFormat(format: "H:|-14-[v0]-14-|", views: authorLabel)
