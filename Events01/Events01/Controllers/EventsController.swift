@@ -38,6 +38,10 @@ class EventsController: UICollectionViewController, UICollectionViewDelegateFlow
         return CGSize(width: view.frame.width, height: 375)
     }
     
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 0
+    }
+    
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         guard let article = articles?[indexPath.item] else { return }
         showArticleDetail(article: article)

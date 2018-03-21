@@ -23,8 +23,10 @@ class ArticleCell:BaseCell {
     
     let headlineLabel:UILabel = {
         let label = UILabel()
-        label.font = UIFont.boldSystemFont(ofSize: 16)
-        label.text = "This is the headline"
+        label.backgroundColor = .red
+        label.translatesAutoresizingMaskIntoConstraints = false
+//        label.font = UIFont.boldSystemFont(ofSize: 16)
+//        label.text = "This is the headline"
         label.numberOfLines = 2
         return label
     }()
@@ -47,17 +49,27 @@ class ArticleCell:BaseCell {
     override func setupViews() {
         backgroundColor = UIColor(hexString: "#dedede")
         
-        addSubview(headlineLabel)
-        addSubview(textLabel)
         addSubview(leadImageView)
+        addSubview(headlineLabel)
+//        addSubview(textLabel)
+        
         
         let imageWidth = frame.width / 3
         let textWidth = imageWidth * 2
         
-        addConstraintsWithFormat(format: "H:|-16-[v0]-16-[v1(\(imageWidth))]-16-|", views: headlineLabel, leadImageView)
-        addConstraintsWithFormat(format: "V:|-16-[v0]-8-[v1]", views: headlineLabel, textLabel)
-        addConstraintsWithFormat(format: "H:|-16-[v0(\(textWidth))]", views: textLabel)
+        addConstraintsWithFormat(format: "H:|-16-[v0(\(imageWidth))]-16-|", views: leadImageView)
         addConstraintsWithFormat(format: "V:|-16-[v0]-16-|", views: leadImageView)
+        
+        addConstraint(NSLayoutConstraint(item: headlineLabel,  attribute: .left, relatedBy: .equal, toItem: leadImageView, attribute: .right, multiplier: 1, constant: 8))
+        addConstraint(NSLayoutConstraint(item: headlineLabel,  attribute: .right, relatedBy: .equal, toItem: self, attribute: .right, multiplier: 1, constant: 8))
+        
+//        addConstraintsWithFormat(format: "H:|-16-[v0]-16-|", views: headlineLabel)
+        addConstraintsWithFormat(format: "V:|-16-[v0]", views: headlineLabel)
+        
+//        addConstraintsWithFormat(format: "H:|-16-[v0]-16-[v1(\(imageWidth))]-16-|", views: headlineLabel, leadImageView)
+//        addConstraintsWithFormat(format: "V:|-16-[v0]-8-[v1]", views: headlineLabel, textLabel)
+//        addConstraintsWithFormat(format: "H:|-16-[v0(\(textWidth))]", views: textLabel)
+//        addConstraintsWithFormat(format: "V:|-16-[v0]-16-|", views: leadImageView)
         
         // top constraint
 //        addConstraint(NSLayoutConstraint(item: textLabel,  attribute: .top, relatedBy: .equal, toItem: headlineLabel, attribute: .bottom, multiplier: 1, constant: 2))
