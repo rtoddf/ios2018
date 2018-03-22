@@ -6,13 +6,10 @@ class ArticleImageLeftCell:BaseCell {
             guard let leadImage = article?.lead_image else { return }
             guard let headline = article?.headline else { return }
             guard let publishedDate = article?.pub_date else { return }
-            guard let author = article?.author else { return }
             guard let summary = article?.summary else { return }
             
             leadImageView.loadImageUsingUrlString(imageUrl: leadImage)
             headlineLabel.text = headline
-//            var authorText = "By "
-//            authorText.append("\(author) | \(publishedDate)")
             authorLabel.text = publishedDate
             
             let attributedText = NSMutableAttributedString(string: summary, attributes: [NSAttributedStringKey.font: UIFont.systemFont(ofSize: 12), NSAttributedStringKey.foregroundColor: UIColor.darkGray])
@@ -22,7 +19,6 @@ class ArticleImageLeftCell:BaseCell {
     
     let headlineLabel:UILabel = {
         let label = UILabel()
-//        label.backgroundColor = .white
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = UIFont.boldSystemFont(ofSize: 14)
         label.numberOfLines = 2
@@ -66,10 +62,9 @@ class ArticleImageLeftCell:BaseCell {
         addSubview(textLabel)
         addSubview(authorLabel)
         addSubview(dividerView)
-        
-        
+
         let imageWidth = frame.width / 3
-        let textWidth = imageWidth * 2
+        let textWidth = (imageWidth * 2) - 36
         
         addConstraintsWithFormat(format: "H:|-12-[v0(\(imageWidth))]-12-|", views: leadImageView)
         addConstraintsWithFormat(format: "H:|[v0]|", views: dividerView)
@@ -77,32 +72,15 @@ class ArticleImageLeftCell:BaseCell {
         
         addConstraint(NSLayoutConstraint(item: headlineLabel,  attribute: .left, relatedBy: .equal, toItem: leadImageView, attribute: .right, multiplier: 1, constant: 12))
         addConstraint(NSLayoutConstraint(item: headlineLabel,  attribute: .top, relatedBy: .equal, toItem: leadImageView, attribute: .top, multiplier: 1, constant: 0))
-        addConstraint(NSLayoutConstraint(item: headlineLabel,  attribute: .width, relatedBy: .equal, toItem: nil, attribute: .width, multiplier: 1, constant: textWidth-36))
+        addConstraint(NSLayoutConstraint(item: headlineLabel,  attribute: .width, relatedBy: .equal, toItem: nil, attribute: .width, multiplier: 1, constant: textWidth))
         
         addConstraint(NSLayoutConstraint(item: textLabel,  attribute: .left, relatedBy: .equal, toItem: headlineLabel, attribute: .left, multiplier: 1, constant: 0))
         addConstraint(NSLayoutConstraint(item: textLabel,  attribute: .top, relatedBy: .equal, toItem: headlineLabel, attribute: .bottom, multiplier: 1, constant: 4))
-        addConstraint(NSLayoutConstraint(item: textLabel,  attribute: .width, relatedBy: .equal, toItem: nil, attribute: .width, multiplier: 1, constant: textWidth-36))
+        addConstraint(NSLayoutConstraint(item: textLabel,  attribute: .width, relatedBy: .equal, toItem: nil, attribute: .width, multiplier: 1, constant: textWidth))
         
         addConstraint(NSLayoutConstraint(item: authorLabel,  attribute: .left, relatedBy: .equal, toItem: headlineLabel, attribute: .left, multiplier: 1, constant: 0))
         addConstraint(NSLayoutConstraint(item: authorLabel,  attribute: .bottom, relatedBy: .equal, toItem: leadImageView, attribute: .bottom, multiplier: 1, constant: 0))
-        addConstraint(NSLayoutConstraint(item: authorLabel,  attribute: .width, relatedBy: .equal, toItem: nil, attribute: .width, multiplier: 1, constant: textWidth-36))
-        
-
-//        addConstraintsWithFormat(format: "V:|-16-[v0]", views: headlineLabel)
-        
-//        addConstraintsWithFormat(format: "H:|-16-[v0]-16-[v1(\(imageWidth))]-16-|", views: headlineLabel, leadImageView)
-//        addConstraintsWithFormat(format: "V:|-16-[v0]-8-[v1]", views: headlineLabel, textLabel)
-//        addConstraintsWithFormat(format: "H:|-16-[v0(\(textWidth))]", views: textLabel)
-//        addConstraintsWithFormat(format: "V:|-16-[v0]-16-|", views: leadImageView)
-        
-        // top constraint
-//        addConstraint(NSLayoutConstraint(item: textLabel,  attribute: .top, relatedBy: .equal, toItem: headlineLabel, attribute: .bottom, multiplier: 1, constant: 2))
-//        // left constraint
-//        addConstraint(NSLayoutConstraint(item: textLabel,  attribute: .left, relatedBy: .equal, toItem: headlineLabel, attribute: .left, multiplier: 0, constant: 0))
-//        // right constraint
-//        addConstraint(NSLayoutConstraint(item: textLabel,  attribute: .right, relatedBy: .equal, toItem: headlineLabel, attribute: .right, multiplier: 0, constant: 0))
-//        // height constraint
-//        addConstraint(NSLayoutConstraint(item: textLabel,  attribute: .height, relatedBy: .equal, toItem: self, attribute: .height, multiplier: 0, constant: 100))
+        addConstraint(NSLayoutConstraint(item: authorLabel,  attribute: .width, relatedBy: .equal, toItem: nil, attribute: .width, multiplier: 1, constant: textWidth))
     }
     
 }
