@@ -8,7 +8,7 @@ class EventsController: UICollectionViewController, UICollectionViewDelegateFlow
         super.viewDidLoad()
 
         collectionView?.backgroundColor = UIColor(hexString: "#ffffff")
-        collectionView?.register(ArticleCell.self, forCellWithReuseIdentifier: cellId)
+        collectionView?.register(ArticleImageLeftCell.self, forCellWithReuseIdentifier: cellId)
         
         navigationItem.title = "Movie Reviews"
 
@@ -29,7 +29,7 @@ class EventsController: UICollectionViewController, UICollectionViewDelegateFlow
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! ArticleCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! ArticleImageLeftCell
         cell.article = articles?[indexPath.item]
         return cell
     }

@@ -12,7 +12,7 @@
 		003639F320618726000C19E5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 003639F220618726000C19E5 /* Assets.xcassets */; };
 		003639F620618726000C19E5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 003639F420618726000C19E5 /* LaunchScreen.storyboard */; };
 		00363A00206188F1000C19E5 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003639FF206188F1000C19E5 /* Helpers.swift */; };
-		00363A0320618B74000C19E5 /* ArticleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00363A0220618B74000C19E5 /* ArticleCell.swift */; };
+		00363A0320618B74000C19E5 /* ArticleImageLeftCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00363A0220618B74000C19E5 /* ArticleImageLeftCell.swift */; };
 		00363A062061B345000C19E5 /* Articles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00363A052061B345000C19E5 /* Articles.swift */; };
 /* End PBXBuildFile section */
 
@@ -24,7 +24,7 @@
 		003639F520618726000C19E5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		003639F720618726000C19E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		003639FF206188F1000C19E5 /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
-		00363A0220618B74000C19E5 /* ArticleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleCell.swift; sourceTree = "<group>"; };
+		00363A0220618B74000C19E5 /* ArticleImageLeftCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleImageLeftCell.swift; sourceTree = "<group>"; };
 		00363A052061B345000C19E5 /* Articles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Articles.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -89,7 +89,7 @@
 		00363A0120618B5B000C19E5 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				00363A0220618B74000C19E5 /* ArticleCell.swift */,
+				00363A0220618B74000C19E5 /* ArticleImageLeftCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -173,7 +173,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				00363A0320618B74000C19E5 /* ArticleCell.swift in Sources */,
+				00363A0320618B74000C19E5 /* ArticleImageLeftCell.swift in Sources */,
 				00363A062061B345000C19E5 /* Articles.swift in Sources */,
 				003639EE20618726000C19E5 /* EventsController.swift in Sources */,
 				00363A00206188F1000C19E5 /* Helpers.swift in Sources */,

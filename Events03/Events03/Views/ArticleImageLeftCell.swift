@@ -1,6 +1,6 @@
 import UIKit
 
-class ArticleCell:BaseCell {
+class ArticleImageLeftCell:BaseCell {
     var article:Article? {
         didSet {
             guard let leadImage = article?.lead_image else { return }
@@ -11,10 +11,9 @@ class ArticleCell:BaseCell {
             
             leadImageView.loadImageUsingUrlString(imageUrl: leadImage)
             headlineLabel.text = headline
-            var authorText = "By "
-            authorText.append(author)
-//            authorLabel.text = authorText
-//            dateLabel.text = publishedDate
+//            var authorText = "By "
+//            authorText.append("\(author) | \(publishedDate)")
+            authorLabel.text = publishedDate
             
             let attributedText = NSMutableAttributedString(string: summary, attributes: [NSAttributedStringKey.font: UIFont.systemFont(ofSize: 12), NSAttributedStringKey.foregroundColor: UIColor.darkGray])
             textLabel.attributedText = attributedText
@@ -26,15 +25,22 @@ class ArticleCell:BaseCell {
 //        label.backgroundColor = .white
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = UIFont.boldSystemFont(ofSize: 14)
-        label.numberOfLines = 3
+        label.numberOfLines = 2
         return label
     }()
     
     let textLabel:UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "This is the headline"
         label.numberOfLines = 2
+        return label
+    }()
+    
+    let authorLabel:UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.font = UIFont.systemFont(ofSize: 12)
+        label.textColor = UIColor(hexString: "#777777")
         return label
     }()
     
@@ -58,6 +64,7 @@ class ArticleCell:BaseCell {
         addSubview(leadImageView)
         addSubview(headlineLabel)
         addSubview(textLabel)
+        addSubview(authorLabel)
         addSubview(dividerView)
         
         
@@ -75,6 +82,10 @@ class ArticleCell:BaseCell {
         addConstraint(NSLayoutConstraint(item: textLabel,  attribute: .left, relatedBy: .equal, toItem: headlineLabel, attribute: .left, multiplier: 1, constant: 0))
         addConstraint(NSLayoutConstraint(item: textLabel,  attribute: .top, relatedBy: .equal, toItem: headlineLabel, attribute: .bottom, multiplier: 1, constant: 4))
         addConstraint(NSLayoutConstraint(item: textLabel,  attribute: .width, relatedBy: .equal, toItem: nil, attribute: .width, multiplier: 1, constant: textWidth-36))
+        
+        addConstraint(NSLayoutConstraint(item: authorLabel,  attribute: .left, relatedBy: .equal, toItem: headlineLabel, attribute: .left, multiplier: 1, constant: 0))
+        addConstraint(NSLayoutConstraint(item: authorLabel,  attribute: .bottom, relatedBy: .equal, toItem: leadImageView, attribute: .bottom, multiplier: 1, constant: 0))
+        addConstraint(NSLayoutConstraint(item: authorLabel,  attribute: .width, relatedBy: .equal, toItem: nil, attribute: .width, multiplier: 1, constant: textWidth-36))
         
 
 //        addConstraintsWithFormat(format: "V:|-16-[v0]", views: headlineLabel)
