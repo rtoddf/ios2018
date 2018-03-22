@@ -56,16 +56,16 @@ class EventsController: UICollectionViewController, UICollectionViewDelegateFlow
         collectionView?.collectionViewLayout.invalidateLayout()
     }
     
-//    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        guard let article = articles?[indexPath.item] else { return }
-//        showArticleDetail(article: article)
-//    }
-//    
-//    func showArticleDetail(article:Article) {
-//        let layout = UICollectionViewFlowLayout()
-//        let articleDetailViewController = ArticleDetailController(collectionViewLayout: layout)
-//        articleDetailViewController.article = article
-//        navigationController?.pushViewController(articleDetailViewController, animated: true)
-//    }
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let article = articles?[indexPath.item] else { return }
+        showArticleDetail(article: article)
+    }
+    
+    func showArticleDetail(article:Article) {
+        let layout = UICollectionViewFlowLayout()
+        let articleDetailViewController = ArticleDetailController(collectionViewLayout: layout)
+        articleDetailViewController.article = article
+        navigationController?.pushViewController(articleDetailViewController, animated: true)
+    }
 }
 
