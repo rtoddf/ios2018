@@ -102,7 +102,7 @@ class LargeStoryCell:UICollectionViewCell {
         addConstraintsWithFormat(format: "H:|-14-[v0]-14-|", views: authorLabel)
         addConstraintsWithFormat(format: "H:|-14-[v0]-14-|", views: textLabel)
         addConstraintsWithFormat(format: "H:|[v0]|", views: userInteractionStackView)
-        addConstraintsWithFormat(format: "V:|[v0(200)]-8-[v1]-4-[v2]-8-[v3]-12-[v4]", views: leadImageView, headlineLabel, authorLabel, textLabel, userInteractionStackView)
+        addConstraintsWithFormat(format: "V:|[v0(200)]-8-[v1]-4-[v2]-8-[v3]-12-[v4]-12-|", views: leadImageView, headlineLabel, authorLabel, textLabel, userInteractionStackView)
     }
 }
 

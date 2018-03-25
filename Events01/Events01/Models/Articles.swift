@@ -9,7 +9,7 @@ struct Article:Decodable {
     let lead_image:String?
     
     static func downloadData(completion: @escaping ([Article]) -> Void) {
-        let urlString = "http://rtodd.net/swift/data/movie-reviews.json"
+        let urlString = "http://rtodd.net/swift/data/music-reviews.json"
         let url = URL(string: urlString)
         
         if let urlObject = url {
