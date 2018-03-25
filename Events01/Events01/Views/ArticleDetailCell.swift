@@ -38,6 +38,12 @@ class ArticleDetailCell:BaseCell {
             attributedText.addAttribute(NSAttributedStringKey.paragraphStyle, value:paragraphStyle, range:NSMakeRange(0, attributedText.length))
             
             textView.attributedText = attributedText
+            
+//            let personNameLabelRect = NSString(string: attributedText.string).boundingRect(with: CGSize(width:frame.width, height:1000), options: NSStringDrawingOptions.usesFontLeading.union(NSStringDrawingOptions.usesLineFragmentOrigin), attributes: [NSAttributedStringKey.font: UIFont.boldSystemFont(ofSize: 13)], context: nil)
+//            print("personNameLabelRect: \(personNameLabelRect.height)")
+//            
+//            textView.frame = CGRect(x: 14, y: 200 + 40 + 32 + 14, width: frame.width - 28, height: 200)
+//            textView.sizeToFit()
         }
     }
     
@@ -79,12 +85,17 @@ class ArticleDetailCell:BaseCell {
         addSubview(authorLabel)
         addSubview(textView)
         
+        leadImageView.frame = CGRect(x: 0, y: 0, width: frame.width, height: 200)
+        headlineLabel.frame = CGRect(x: 14, y: 200 + 14, width: frame.width - 28, height: 40)
+        authorLabel.frame = CGRect(x: 14, y: 200 + 40 + 14, width: frame.width - 28, height: 32)
+        textView.frame = CGRect(x: 14, y: 200 + 40 + 32 + 14, width: frame.width - 28, height: 22)
         
-        addConstraintsWithFormat(format: "H:|[v0]|", views: leadImageView)
-        addConstraintsWithFormat(format: "H:|-14-[v0]-14-|", views: headlineLabel)
-        addConstraintsWithFormat(format: "H:|-14-[v0]-14-|", views: authorLabel)
-        addConstraintsWithFormat(format: "H:|-14-[v0]-14-|", views: textView)
         
-        addConstraintsWithFormat(format: "V:|[v0(200)]-8-[v1(50)]-4-[v2(20)]-8-[v3]|", views: leadImageView, headlineLabel, authorLabel, textView)
+//        addConstraintsWithFormat(format: "H:|[v0]|", views: leadImageView)
+//        addConstraintsWithFormat(format: "H:|-14-[v0]-14-|", views: headlineLabel)
+//        addConstraintsWithFormat(format: "H:|-14-[v0]-14-|", views: authorLabel)
+//        addConstraintsWithFormat(format: "H:|-14-[v0]-14-|", views: textView)
+//
+//        addConstraintsWithFormat(format: "V:|[v0(200)]-8-[v1(50)]-4-[v2(20)]-8-[v3]|", views: leadImageView, headlineLabel, authorLabel, textView)
     }
 }

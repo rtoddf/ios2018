@@ -29,7 +29,8 @@ class ArticleDetailController:UICollectionViewController, UICollectionViewDelega
         return cell
     }
     
+    // this needs to be resized
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: view.frame.width, height: 1200)
+        return CGSize(width: view.frame.width, height: 1000)
     }
 }
