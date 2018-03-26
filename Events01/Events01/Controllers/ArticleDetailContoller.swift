@@ -2,6 +2,7 @@ import UIKit
 
 class ArticleDetailController:UICollectionViewController, UICollectionViewDelegateFlowLayout {
     let cellId = "cellId"
+    // set a default var for cellHeight
     var cellHeight:CGFloat = 22.0
     
     var article:Article? {
@@ -19,14 +20,14 @@ class ArticleDetailController:UICollectionViewController, UICollectionViewDelega
         
         self.navigationController?.navigationBar.tintColor = .white
         
+        // create the notification and add observer
         NotificationCenter.default.addObserver(self, selector: #selector(updateArticleHeight), name: NSNotification.Name(rawValue: "UpdateArticleHeight"), object: nil)
     }
     
     @objc func updateArticleHeight(notification: Notification) {
         guard let height = notification.object as? CGFloat else { return }
-        
         cellHeight = height
-        print("cellHeight: \(cellHeight)")
+        // redraw the collectionView using invalidateLayout
         collectionView?.collectionViewLayout.invalidateLayout()
     }
     
@@ -43,6 +44,7 @@ class ArticleDetailController:UICollectionViewController, UICollectionViewDelega
     
     // this needs to be resized
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        // use the var for the height to be set after notification sent
         return CGSize(width: view.frame.width, height: cellHeight)
     }
     
