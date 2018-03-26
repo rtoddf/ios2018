@@ -43,7 +43,7 @@ class ArticleImageRightCell:BaseCell {
     let leadImageView:UIImageView = {
         let iv = UIImageView()
         iv.backgroundColor = UIColor(hexString: "#333333")
-        iv.contentMode = .scaleAspectFit
+        iv.contentMode = .scaleAspectFill
         iv.clipsToBounds = true
         return iv
     }()

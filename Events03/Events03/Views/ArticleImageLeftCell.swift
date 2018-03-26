@@ -43,7 +43,7 @@ class ArticleImageLeftCell:BaseCell {
     let leadImageView:UIImageView = {
         let iv = UIImageView()
         iv.backgroundColor = UIColor(hexString: "#333333")
-        iv.contentMode = .scaleAspectFit
+        iv.contentMode = .scaleAspectFill
         iv.clipsToBounds = true
         return iv
     }()
@@ -64,6 +64,7 @@ class ArticleImageLeftCell:BaseCell {
         addSubview(dividerView)
 
         let imageWidth = frame.width / 3
+        let imageHeight = (9 / 16) * imageWidth
         let textWidth = (imageWidth * 2) - 36
         
         addConstraintsWithFormat(format: "H:|-12-[v0(\(imageWidth))]-12-|", views: leadImageView)
