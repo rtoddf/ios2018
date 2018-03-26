@@ -25,15 +25,13 @@ class ArticleDetailCell:BaseCell {
             let paragraphStyle = NSMutableParagraphStyle()
             // *** set LineSpacing property in points ***
             paragraphStyle.lineSpacing = 5   // Whatever line spacing you want in points
-            
-            
+
             let textAttributes: [NSAttributedStringKey: Any] = [
                 .paragraphStyle: paragraphStyle,
                 .font : UIFont.systemFont(ofSize: 14),
                 .foregroundColor: UIColor(hexString: "#777777")
             ]
-            
-            
+
             let rawHTML = Data(fullText.utf8)
             guard let attributedString = try? NSMutableAttributedString(data: rawHTML, options: [.documentType: NSAttributedString.DocumentType.html], documentAttributes: nil) else { return }
             let attributedText = NSMutableAttributedString(string: attributedString.string, attributes: textAttributes)
