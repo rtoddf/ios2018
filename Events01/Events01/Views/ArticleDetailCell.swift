@@ -34,27 +34,31 @@ class ArticleDetailCell:BaseCell {
             let attributedText = NSMutableAttributedString(string: attributedString.string, attributes: textAttributes)
             
             // *** Create instance of `NSMutableParagraphStyle`
-//            let paragraphStyle = NSMutableParagraphStyle()
-            
+            let paragraphStyle = NSMutableParagraphStyle()
             // *** set LineSpacing property in points ***
-//            paragraphStyle.lineSpacing = 3 // Whatever line spacing you want in points
-            
+            paragraphStyle.lineSpacing = 5   // Whatever line spacing you want in points
             // *** Apply attribute to string ***
-//            attributedText.addAttribute(NSAttributedStringKey.paragraphStyle, value:paragraphStyle, range:NSMakeRange(0, attributedText.length))
+            attributedText.addAttribute(NSAttributedStringKey.paragraphStyle, value:paragraphStyle, range:NSMakeRange(0, attributedText.length))
             
+            // make a var so we can use it easily in the boundingRect calculations
+            let attributes: [NSAttributedStringKey: Any] = [
+                .font: UIFont.systemFont(ofSize: 14),
+                .paragraphStyle: paragraphStyle
+            ]
+            
+            // add the styled attributed text to the textView
             textView.attributedText = attributedText
-            
-            let personNameLabelRect = NSString(string: attributedText.string).boundingRect(with: CGSize(width:frame.width, height:.infinity), options: NSStringDrawingOptions.usesFontLeading.union(NSStringDrawingOptions.usesLineFragmentOrigin), attributes: [NSAttributedStringKey.font: UIFont.systemFont(ofSize: 14)], context: nil)
-            
-            print("headline: \(headline)")
-            print("personNameLabelRect: \(personNameLabelRect.height)")
-            
-            textView.frame = CGRect(x: 14, y: 200 + 40 + 32 + 14, width: frame.width - 28, height: personNameLabelRect.height)
+
+            let textViewRect = NSString(string: attributedText.string).boundingRect(with: CGSize(width:frame.width, height:.infinity), options: NSStringDrawingOptions.usesFontLeading.union(NSStringDrawingOptions.usesLineFragmentOrigin), attributes: attributes, context: nil)
+
+            // resize the textView with the new height
+            textView.frame = CGRect(x: 14, y: 200 + 40 + 32 + 14, width: frame.width - 28, height: textViewRect.height)
             textView.sizeToFit()
             
 //            delegate.newHeight()
             
-            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "UpdateArticleHeight"), object: personNameLabelRect.height + CGFloat(572))
+            // send a noticication back to the cell to resize
+            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "UpdateArticleHeight"), object: textViewRect.height + CGFloat(420))
         }
     }
     
