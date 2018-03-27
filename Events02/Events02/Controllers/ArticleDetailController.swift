@@ -50,7 +50,7 @@ class ArticleDetailController:UICollectionViewController, UICollectionViewDelega
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         if indexPath.item == 0 {
-            return CGSize(width: view.frame.width, height: 265)
+            return CGSize(width: view.frame.width, height: 300)
         }
         
         // use the var for the height to be set after notification sent

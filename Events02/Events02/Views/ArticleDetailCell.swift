@@ -43,11 +43,14 @@ class ArticleDetailCell:BaseCell {
         addSubview(headlineLabel)
         addSubview(authorLabel)
         
+        let imageWidth = frame.width
+        let imageHeight = (9 / 16) * imageWidth
+        
         addConstraintsWithFormat(format: "H:|[v0]|", views: leadImageView)
         addConstraintsWithFormat(format: "H:|-14-[v0]-14-|", views: headlineLabel)
         addConstraintsWithFormat(format: "H:|-14-[v0]-14-|", views: authorLabel)
         
-        addConstraintsWithFormat(format: "V:|[v0(200)]-8-[v1(40)]-14-[v2]", views: leadImageView, headlineLabel, authorLabel)
+        addConstraintsWithFormat(format: "V:|[v0(\(imageHeight))]-8-[v1(40)]-14-[v2]", views: leadImageView, headlineLabel, authorLabel)
     }
 }
 
