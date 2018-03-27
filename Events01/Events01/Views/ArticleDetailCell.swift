@@ -96,6 +96,12 @@ class ArticleDetailCell:BaseCell {
     }
 }
 
+class ArticleDetailTextCell:BaseCell {
+    override func setupViews() {
+        backgroundColor = .green
+    }
+}
+
 
 // extra code
 

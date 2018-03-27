@@ -2,6 +2,7 @@ import UIKit
 
 class ArticleDetailController:UICollectionViewController, UICollectionViewDelegateFlowLayout {
     let cellId = "cellId"
+    let cellTextId = "cellTextid"
     // set a default var for cellHeight
     var cellHeight:CGFloat = 22.0
     
@@ -17,6 +18,7 @@ class ArticleDetailController:UICollectionViewController, UICollectionViewDelega
         collectionView?.backgroundColor = .white
         collectionView?.alwaysBounceVertical = true
         collectionView?.register(ArticleDetailCell.self, forCellWithReuseIdentifier: cellId)
+        collectionView?.register(ArticleDetailTextCell.self, forCellWithReuseIdentifier: cellTextId)
         
         self.navigationController?.navigationBar.tintColor = .white
         
@@ -32,20 +34,31 @@ class ArticleDetailController:UICollectionViewController, UICollectionViewDelega
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 1
+        return 2
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! ArticleDetailCell
-        cell.article = article
-//        cell.delegate = self
+        if indexPath.item == 0 {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! ArticleDetailCell
+            cell.article = article
+    //        cell.delegate = self
+            return cell
+        }
+        
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellTextId, for: indexPath) as! ArticleDetailTextCell
+//        cell.article = article
+        //        cell.delegate = self
         return cell
     }
     
     // this needs to be resized
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        // use the var for the height to be set after notification sent
-        return CGSize(width: view.frame.width, height: cellHeight)
+        if indexPath.item == 0 {
+            // use the var for the height to be set after notification sent
+            return CGSize(width: view.frame.width, height: cellHeight)
+        }
+        
+        return CGSize(width: view.frame.width, height: 200)
     }
     
     
