@@ -2,6 +2,7 @@ import UIKit
 
 class ArticleDetailController:UICollectionViewController, UICollectionViewDelegateFlowLayout {
     let cellId = "cellId"
+    let cellTextId = "cellTextid"
     var cellHeight:CGFloat = 22.0
     
     var article:Article? {
@@ -15,6 +16,8 @@ class ArticleDetailController:UICollectionViewController, UICollectionViewDelega
         
         collectionView?.backgroundColor = .white
         collectionView?.register(ArticleDetailCell.self, forCellWithReuseIdentifier: cellId)
+        collectionView?.register(ArticleDetailTextCell.self, forCellWithReuseIdentifier: cellTextId)
+
         self.navigationController?.navigationBar.tintColor = .white
         
         // create the notification and add observer
@@ -29,16 +32,27 @@ class ArticleDetailController:UICollectionViewController, UICollectionViewDelega
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 1
+        return 2
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! ArticleDetailCell
+        if indexPath.item == 0 {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! ArticleDetailCell
+            cell.article = article
+            return cell
+        }
+        
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellTextId, for: indexPath) as! ArticleDetailTextCell
         cell.article = article
+        //        cell.delegate = self
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        if indexPath.item == 0 {
+            return CGSize(width: view.frame.width, height: 265)
+        }
+        
         // use the var for the height to be set after notification sent
         return CGSize(width: view.frame.width, height: cellHeight)
     }
