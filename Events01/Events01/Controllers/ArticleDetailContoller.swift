@@ -41,7 +41,6 @@ class ArticleDetailController:UICollectionViewController, UICollectionViewDelega
         if indexPath.item == 0 {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! ArticleDetailCell
             cell.article = article
-    //        cell.delegate = self
             return cell
         }
         
@@ -54,7 +53,6 @@ class ArticleDetailController:UICollectionViewController, UICollectionViewDelega
     // this needs to be resized
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         if indexPath.item == 0 {
-            // use the var for the height to be set after notification sent
             return CGSize(width: view.frame.width, height: 265)
         }
         
