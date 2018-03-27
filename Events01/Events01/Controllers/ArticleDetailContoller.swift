@@ -46,7 +46,7 @@ class ArticleDetailController:UICollectionViewController, UICollectionViewDelega
         }
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellTextId, for: indexPath) as! ArticleDetailTextCell
-//        cell.article = article
+        cell.article = article
         //        cell.delegate = self
         return cell
     }
@@ -55,10 +55,11 @@ class ArticleDetailController:UICollectionViewController, UICollectionViewDelega
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         if indexPath.item == 0 {
             // use the var for the height to be set after notification sent
-            return CGSize(width: view.frame.width, height: cellHeight)
+            return CGSize(width: view.frame.width, height: 265)
         }
         
-        return CGSize(width: view.frame.width, height: 200)
+        // use the var for the height to be set after notification sent
+        return CGSize(width: view.frame.width, height: cellHeight)
     }
     
     
