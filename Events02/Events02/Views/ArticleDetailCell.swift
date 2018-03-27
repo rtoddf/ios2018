@@ -38,16 +38,6 @@ class ArticleDetailCell:BaseCell {
         return label
     }()
     
-    let textView:UITextView = {
-        let textView = UITextView()
-        textView.font = UIFont.systemFont(ofSize: 14)
-        textView.contentInset = UIEdgeInsetsMake(0, -5, 0, 0)
-        textView.isSelectable = false
-        textView.isEditable = false
-        textView.isScrollEnabled = false
-        return textView
-    }()
-    
     override func setupViews() {
         addSubview(leadImageView)
         addSubview(headlineLabel)
@@ -99,7 +89,6 @@ class ArticleDetailTextCell:BaseCell {
     let textView:UITextView = {
         let textView = UITextView()
         textView.font = UIFont.systemFont(ofSize: 14)
-        textView.text = "Some text"
         //        textView.textContainerInset = .zero
         textView.contentInset = UIEdgeInsetsMake(0, -5, 0, 0)
         textView.isSelectable = false
