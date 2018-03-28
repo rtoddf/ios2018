@@ -9,6 +9,12 @@ class ArticleImagesCell:BaseCell, UICollectionViewDataSource, UICollectionViewDe
         }
     }
     
+    let dividerView:UIView = {
+        let view = UIView()
+        view.backgroundColor = UIColor(hexString: "#ae0000")
+        return view
+    }()
+    
     let collectionView:UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
@@ -36,7 +42,7 @@ class ArticleImagesCell:BaseCell, UICollectionViewDataSource, UICollectionViewDe
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let width = frame.width / 2
+        let width = frame.width * 0.40
         let height = (9 / 16) * width
         
         return CGSize(width: width, height: height)
@@ -54,9 +60,11 @@ class ArticleImagesCell:BaseCell, UICollectionViewDataSource, UICollectionViewDe
         collectionView.register(ImageCell.self, forCellWithReuseIdentifier: cellId)
         
         addSubview(collectionView)
+        addSubview(dividerView)
         
+        addConstraintsWithFormat(format: "H:|[v0]|", views: dividerView)
         addConstraintsWithFormat(format: "H:|[v0]|", views: collectionView)
-        addConstraintsWithFormat(format: "V:|[v0]|", views: collectionView)
+        addConstraintsWithFormat(format: "V:|[v0(0.5)][v1]|", views: dividerView, collectionView)
     }
 }
 

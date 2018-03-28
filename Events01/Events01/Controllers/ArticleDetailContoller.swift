@@ -64,7 +64,8 @@ class ArticleDetailController:UICollectionViewController, UICollectionViewDelega
         }
         
         if indexPath.item == 2 {
-            return CGSize(width: view.frame.width, height: 120)
+            let height = (9 / 16) * (view.frame.width * 0.40) + 28
+            return CGSize(width: view.frame.width, height: height)
         }
         
         // use the var for the height to be set after notification sent
