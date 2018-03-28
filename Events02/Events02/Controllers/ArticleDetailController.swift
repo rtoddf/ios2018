@@ -2,7 +2,8 @@ import UIKit
 
 class ArticleDetailController:UICollectionViewController, UICollectionViewDelegateFlowLayout {
     let cellId = "cellId"
-    let cellTextId = "cellTextid"
+    let cellTextId = "cellTextId"
+    let cellImagesId = "cellImagesId"
     var cellHeight:CGFloat = 22.0
     
     var article:Article? {
@@ -17,6 +18,7 @@ class ArticleDetailController:UICollectionViewController, UICollectionViewDelega
         collectionView?.backgroundColor = .white
         collectionView?.register(ArticleDetailCell.self, forCellWithReuseIdentifier: cellId)
         collectionView?.register(ArticleDetailTextCell.self, forCellWithReuseIdentifier: cellTextId)
+        collectionView?.register(ArticleImagesCell.self, forCellWithReuseIdentifier: cellImagesId)
 
         self.navigationController?.navigationBar.tintColor = .white
         
@@ -32,12 +34,18 @@ class ArticleDetailController:UICollectionViewController, UICollectionViewDelega
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 2
+        return 3
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if indexPath.item == 0 {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! ArticleDetailCell
+            cell.article = article
+            return cell
+        }
+        
+        if indexPath.item == 2 {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellImagesId, for: indexPath) as! ArticleImagesCell
             cell.article = article
             return cell
         }
@@ -50,7 +58,12 @@ class ArticleDetailController:UICollectionViewController, UICollectionViewDelega
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         if indexPath.item == 0 {
-            return CGSize(width: view.frame.width, height: 300)
+            return CGSize(width: view.frame.width, height: 265)
+        }
+        
+        if indexPath.item == 2 {
+            let height = (9 / 16) * (view.frame.width * 0.40) + 28
+            return CGSize(width: view.frame.width, height: height)
         }
         
         // use the var for the height to be set after notification sent
