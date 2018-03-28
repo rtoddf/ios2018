@@ -5,7 +5,7 @@ class ArticleImagesCell:BaseCell, UICollectionViewDataSource, UICollectionViewDe
     
     var article:Article? {
         didSet {
-            
+            collectionView.reloadData()
         }
     }
     
@@ -18,11 +18,20 @@ class ArticleImagesCell:BaseCell, UICollectionViewDataSource, UICollectionViewDe
     }()
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 4
+        if let count = article?.images?.count {
+            return count
+        }
+
+        return 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellId", for: indexPath) as! ImageCell
+        
+        if let image = article?.images![indexPath.item].path {
+            cell.articleImageView.loadImageUsingUrlString(imageUrl: image)
+        }
+        
         return cell
     }
 

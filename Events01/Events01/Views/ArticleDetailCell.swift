@@ -13,8 +13,6 @@ class ArticleDetailCell:BaseCell {
             guard let headline = article?.headline else { return }
             guard let author = article?.author else { return }
             
-            print("article: \(article?.images)")
-            
             leadImageView.loadImageUsingUrlString(imageUrl: leadImage)
             headlineLabel.text = headline
             
