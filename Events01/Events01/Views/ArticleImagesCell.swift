@@ -71,7 +71,9 @@ class ArticleImagesCell:BaseCell, UICollectionViewDataSource, UICollectionViewDe
 private class ImageCell:BaseCell {
     let articleImageView:UIImageView = {
         let iv = UIImageView()
-        iv.backgroundColor = UIColor(hexString: "#baba71")
+        iv.contentMode = .scaleAspectFit
+        iv.clipsToBounds = true
+        iv.backgroundColor = UIColor(hexString: "#333333")
         return iv
     }()
     
