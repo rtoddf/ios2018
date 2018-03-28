@@ -16,6 +16,7 @@
 		00D12FEE20606FFE00875BB8 /* ArticleDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D12FED20606FFD00875BB8 /* ArticleDetailCell.swift */; };
 		00D48A612059B9B8006697A5 /* LargeStoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D48A602059B9B8006697A5 /* LargeStoryCell.swift */; };
 		00D48A642059C87B006697A5 /* Articles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D48A632059C87B006697A5 /* Articles.swift */; };
+		00D9E9A5206BF684004E064E /* ArticleImagesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D9E9A4206BF684004E064E /* ArticleImagesCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		00D12FED20606FFD00875BB8 /* ArticleDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleDetailCell.swift; sourceTree = "<group>"; };
 		00D48A602059B9B8006697A5 /* LargeStoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeStoryCell.swift; sourceTree = "<group>"; };
 		00D48A632059C87B006697A5 /* Articles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Articles.swift; sourceTree = "<group>"; };
+		00D9E9A4206BF684004E064E /* ArticleImagesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleImagesCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 			children = (
 				00D48A602059B9B8006697A5 /* LargeStoryCell.swift */,
 				00D12FED20606FFD00875BB8 /* ArticleDetailCell.swift */,
+				00D9E9A4206BF684004E064E /* ArticleImagesCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -183,6 +186,7 @@
 				00D48A642059C87B006697A5 /* Articles.swift in Sources */,
 				0026C98820598ADA00EED444 /* EventsController.swift in Sources */,
 				00D12FEE20606FFE00875BB8 /* ArticleDetailCell.swift in Sources */,
+				00D9E9A5206BF684004E064E /* ArticleImagesCell.swift in Sources */,
 				0026C99A205991B500EED444 /* Helpers.swift in Sources */,
 				00838E66205B1E5B00E80B08 /* ArticleDetailContoller.swift in Sources */,
 				0026C98620598ADA00EED444 /* AppDelegate.swift in Sources */,

@@ -114,7 +114,6 @@ class ArticleDetailTextCell:BaseCell {
     }
 }
 
-
 // extra code
 
 //let textAttributes: [NSAttributedStringKey: Any] = [

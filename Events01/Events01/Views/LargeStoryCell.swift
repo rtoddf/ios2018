@@ -89,7 +89,7 @@ class LargeStoryCell:UICollectionViewCell {
         return stackView
     }()
 
-    func setupViews(){
+    func setupViews(){        
         addSubview(leadImageView)
         addSubview(headlineLabel)
         addSubview(authorLabel)
