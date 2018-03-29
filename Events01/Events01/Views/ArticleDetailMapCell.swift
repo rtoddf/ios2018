@@ -2,22 +2,27 @@ import UIKit
 import MapKit
 import CoreLocation
 
-class ArticleDetailMapCell:BaseCell, MKMapViewDelegate {    
+var latitude:CLLocationDegrees = 35.4823225
+var longitude:CLLocationDegrees = -97.7600733
+let longitudnalMeters:CLLocationDistance = 50000
+let location:CLLocationCoordinate2D = CLLocationCoordinate2D(latitude:CLLocationDegrees(latitude), longitude:CLLocationDegrees(longitude))
+let region:MKCoordinateRegion = MKCoordinateRegionMakeWithDistance(location, longitudnalMeters, longitudnalMeters)
+
+class ArticleDetailMapCell:BaseCell, MKMapViewDelegate {
     var article:Article? {
         didSet {
-            guard let latitude = article?.locations![0].latitude else { return }
-            guard let longitude = article?.locations![0].longitude else { return }
-            guard let name = article?.locations![0].name else { return }
-            
-            let longitudnalMeters:CLLocationDistance = 50000
-            let location:CLLocationCoordinate2D = CLLocationCoordinate2D(latitude:CLLocationDegrees(latitude), longitude:CLLocationDegrees(longitude))
-            let region:MKCoordinateRegion = MKCoordinateRegionMakeWithDistance(location, longitudnalMeters, longitudnalMeters)
+            guard let articleLatitude = article?.locations![0].latitude else { return }
+            guard let articleLongitude = article?.locations![0].longitude else { return }
+            guard let articleName = article?.locations![0].name else { return }
 
-            articleMap.setRegion(region, animated: true)
+            let articleLocation:CLLocationCoordinate2D = CLLocationCoordinate2D(latitude:CLLocationDegrees(articleLatitude), longitude:CLLocationDegrees(articleLongitude))
+            let articleRegion:MKCoordinateRegion = MKCoordinateRegionMakeWithDistance(articleLocation, longitudnalMeters, longitudnalMeters)
+
+            articleMap.setRegion(articleRegion, animated: true)
             
             let annotation = MKPointAnnotation()
-            annotation.title = name
-            annotation.coordinate = location
+            annotation.title = articleName
+            annotation.coordinate = articleLocation
             articleMap.addAnnotation(annotation)
             
             let yourAnnotationAtIndex = 0
@@ -29,16 +34,8 @@ class ArticleDetailMapCell:BaseCell, MKMapViewDelegate {
         let map = MKMapView()
         map.translatesAutoresizingMaskIntoConstraints = false
         
-        let latitude:CLLocationDegrees = 35.4823225
-        let longitude:CLLocationDegrees = -97.7600733
-        
-        let latDelta = 0.025
-        let lonDelta = 0.025
-        
-        let span:MKCoordinateSpan = MKCoordinateSpan(latitudeDelta:latDelta, longitudeDelta:lonDelta)
-        let location:CLLocationCoordinate2D = CLLocationCoordinate2D(latitude:latitude, longitude:longitude)
-        
-        let region:MKCoordinateRegion = MKCoordinateRegion(center:location, span:span)
+//        let location:CLLocationCoordinate2D = CLLocationCoordinate2D(latitude:CLLocationDegrees(latitude), longitude:CLLocationDegrees(longitude))
+//        let region:MKCoordinateRegion = MKCoordinateRegionMakeWithDistance(location, longitudnalMeters, longitudnalMeters)
         map.setRegion(region, animated: true)
         
         let annotation = MKPointAnnotation()
