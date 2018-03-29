@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		000F7898206D7C8600AE7928 /* ArticleDetailMapCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000F7897206D7C8600AE7928 /* ArticleDetailMapCell.swift */; };
 		0026C98620598ADA00EED444 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0026C98520598ADA00EED444 /* AppDelegate.swift */; };
 		0026C98820598ADA00EED444 /* EventsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0026C98720598ADA00EED444 /* EventsController.swift */; };
 		0026C98D20598ADA00EED444 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0026C98C20598ADA00EED444 /* Assets.xcassets */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		000F7897206D7C8600AE7928 /* ArticleDetailMapCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleDetailMapCell.swift; sourceTree = "<group>"; };
 		0026C98220598ADA00EED444 /* Events01.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Events01.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0026C98520598ADA00EED444 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0026C98720598ADA00EED444 /* EventsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsController.swift; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 				00D48A602059B9B8006697A5 /* LargeStoryCell.swift */,
 				00D12FED20606FFD00875BB8 /* ArticleDetailCell.swift */,
 				00D9E9A4206BF684004E064E /* ArticleImagesCell.swift */,
+				000F7897206D7C8600AE7928 /* ArticleDetailMapCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -188,6 +191,7 @@
 				00D12FEE20606FFE00875BB8 /* ArticleDetailCell.swift in Sources */,
 				00D9E9A5206BF684004E064E /* ArticleImagesCell.swift in Sources */,
 				0026C99A205991B500EED444 /* Helpers.swift in Sources */,
+				000F7898206D7C8600AE7928 /* ArticleDetailMapCell.swift in Sources */,
 				00838E66205B1E5B00E80B08 /* ArticleDetailContoller.swift in Sources */,
 				0026C98620598ADA00EED444 /* AppDelegate.swift in Sources */,
 			);
