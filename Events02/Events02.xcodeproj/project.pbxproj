@@ -16,6 +16,7 @@
 		007CEEB1205C36470050A4F4 /* Articles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007CEEB0205C36470050A4F4 /* Articles.swift */; };
 		00D12FEA2060000600875BB8 /* ArticleDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D12FE92060000600875BB8 /* ArticleDetailController.swift */; };
 		00D12FEC2060065700875BB8 /* ArticleDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D12FEB2060065700875BB8 /* ArticleDetailCell.swift */; };
+		00D9E9A7206C37B7004E064E /* ArticleImagesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D9E9A6206C37B7004E064E /* ArticleImagesCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		007CEEB0205C36470050A4F4 /* Articles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Articles.swift; sourceTree = "<group>"; };
 		00D12FE92060000600875BB8 /* ArticleDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleDetailController.swift; sourceTree = "<group>"; };
 		00D12FEB2060065700875BB8 /* ArticleDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleDetailCell.swift; sourceTree = "<group>"; };
+		00D9E9A6206C37B7004E064E /* ArticleImagesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleImagesCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 			children = (
 				000F9EB1205C2685008A9077 /* ArticleCell.swift */,
 				00D12FEB2060065700875BB8 /* ArticleDetailCell.swift */,
+				00D9E9A6206C37B7004E064E /* ArticleImagesCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -183,6 +186,7 @@
 				007CEEB1205C36470050A4F4 /* Articles.swift in Sources */,
 				000F9E9D205C1F85008A9077 /* EventsController.swift in Sources */,
 				00D12FEC2060065700875BB8 /* ArticleDetailCell.swift in Sources */,
+				00D9E9A7206C37B7004E064E /* ArticleImagesCell.swift in Sources */,
 				00D12FEA2060000600875BB8 /* ArticleDetailController.swift in Sources */,
 				000F9EAF205C2421008A9077 /* Helpers.swift in Sources */,
 				000F9E9B205C1F85008A9077 /* AppDelegate.swift in Sources */,

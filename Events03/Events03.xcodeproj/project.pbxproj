@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0029E9CE206D663F00BE6791 /* ArticleImagesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0029E9CD206D663F00BE6791 /* ArticleImagesCell.swift */; };
 		003639EC20618726000C19E5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003639EB20618726000C19E5 /* AppDelegate.swift */; };
 		003639EE20618726000C19E5 /* EventsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003639ED20618726000C19E5 /* EventsController.swift */; };
 		003639F320618726000C19E5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 003639F220618726000C19E5 /* Assets.xcassets */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0029E9CD206D663F00BE6791 /* ArticleImagesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleImagesCell.swift; sourceTree = "<group>"; };
 		003639E820618726000C19E5 /* Events03.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Events03.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		003639EB20618726000C19E5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		003639ED20618726000C19E5 /* EventsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsController.swift; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 				00363A0220618B74000C19E5 /* ArticleImageLeftCell.swift */,
 				00D99B332064501300E71C55 /* ArticleImageRightCell.swift */,
 				00D99B3720646C2300E71C55 /* ArticleDetailCell.swift */,
+				0029E9CD206D663F00BE6791 /* ArticleImagesCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -189,6 +192,7 @@
 				00D99B3620646BE500E71C55 /* ArticleDetailController.swift in Sources */,
 				00363A00206188F1000C19E5 /* Helpers.swift in Sources */,
 				003639EC20618726000C19E5 /* AppDelegate.swift in Sources */,
+				0029E9CE206D663F00BE6791 /* ArticleImagesCell.swift in Sources */,
 				00D99B342064501300E71C55 /* ArticleImageRightCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
