@@ -81,23 +81,22 @@ class ArticleDetailTextCell:BaseCell {
             // add the styled attributed text to the textView
             textView.attributedText = attributedText
             
-            let textViewRect = NSString(string: attributedText.string).boundingRect(with: CGSize(width:frame.width, height:.infinity), options: NSStringDrawingOptions.usesFontLeading.union(NSStringDrawingOptions.usesLineFragmentOrigin), attributes: textAttributes, context: nil)
+            let textViewRect = NSString(string: attributedText.string).boundingRect(with: CGSize(width:frame.width - 28, height:.infinity), options: NSStringDrawingOptions.usesFontLeading.union(NSStringDrawingOptions.usesLineFragmentOrigin), attributes: textAttributes, context: nil)
             
             // resize the textView with the new height
-            textView.frame = CGRect(x: 14, y: 14, width: frame.width - 28, height: textViewRect.height)
+            textView.frame = CGRect(x: 14, y: 14, width: frame.width - 28, height: textViewRect.height + CGFloat(48))
             textView.sizeToFit()
             
             //            delegate.newHeight()
             
             // send a noticication back to the cell to resize
-            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "UpdateArticleHeight"), object: textViewRect.height + CGFloat(125))
+            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "UpdateArticleHeight"), object: textViewRect.height + CGFloat(48))
         }
     }
     
     let textView:UITextView = {
         let textView = UITextView()
         textView.font = UIFont.systemFont(ofSize: 14)
-        //        textView.textContainerInset = .zero
         textView.contentInset = UIEdgeInsetsMake(0, -5, 0, 0)
         textView.isSelectable = false
         textView.isEditable = false

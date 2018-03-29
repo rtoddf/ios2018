@@ -51,7 +51,7 @@ class ArticleDetailCell:BaseCell {
         addConstraintsWithFormat(format: "H:|-14-[v0]-14-|", views: headlineLabel)
         addConstraintsWithFormat(format: "H:|-14-[v0]-14-|", views: authorLabel)
         
-        addConstraintsWithFormat(format: "V:|[v0(\(imageHeight))]-14-[v1(40)]-14-[v2]", views: leadImageView, headlineLabel, authorLabel)
+        addConstraintsWithFormat(format: "V:|[v0(\(imageHeight))]-8-[v1(40)]-14-[v2]", views: leadImageView, headlineLabel, authorLabel)
     }
 }
 
@@ -77,16 +77,16 @@ class ArticleDetailTextCell:BaseCell {
             // add the styled attributed text to the textView
             textView.attributedText = attributedText
             
-            let textViewRect = NSString(string: attributedText.string).boundingRect(with: CGSize(width:frame.width, height:.infinity), options: NSStringDrawingOptions.usesFontLeading.union(NSStringDrawingOptions.usesLineFragmentOrigin), attributes: textAttributes, context: nil)
+            let textViewRect = NSString(string: attributedText.string).boundingRect(with: CGSize(width:frame.width - 28, height:.infinity), options: NSStringDrawingOptions.usesFontLeading.union(NSStringDrawingOptions.usesLineFragmentOrigin), attributes: textAttributes, context: nil)
             
             // resize the textView with the new height
-            textView.frame = CGRect(x: 14, y: 14, width: frame.width - 28, height: textViewRect.height)
+            textView.frame = CGRect(x: 14, y: 14, width: frame.width - 28, height: textViewRect.height + CGFloat(48))
             textView.sizeToFit()
             
             //            delegate.newHeight()
             
             // send a noticication back to the cell to resize
-            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "UpdateArticleHeight"), object: textViewRect.height + CGFloat(125))
+            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "UpdateArticleHeight"), object: textViewRect.height + CGFloat(48))
         }
     }
     
