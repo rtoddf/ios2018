@@ -5,7 +5,23 @@ import CoreLocation
 class ArticleDetailMapCell:BaseCell, MKMapViewDelegate {    
     var article:Article? {
         didSet {
+            guard let latitude = article?.locations![0].latitude else { return }
+            guard let longitude = article?.locations![0].longitude else { return }
+            guard let name = article?.locations![0].name else { return }
             
+            let longitudnalMeters:CLLocationDistance = 50000
+            let location:CLLocationCoordinate2D = CLLocationCoordinate2D(latitude:CLLocationDegrees(latitude), longitude:CLLocationDegrees(longitude))
+            let region:MKCoordinateRegion = MKCoordinateRegionMakeWithDistance(location, longitudnalMeters, longitudnalMeters)
+
+            articleMap.setRegion(region, animated: true)
+            
+            let annotation = MKPointAnnotation()
+            annotation.title = name
+            annotation.coordinate = location
+            articleMap.addAnnotation(annotation)
+            
+            let yourAnnotationAtIndex = 0
+            articleMap.selectAnnotation(articleMap.annotations[yourAnnotationAtIndex], animated: true)
         }
     }
     
@@ -26,8 +42,6 @@ class ArticleDetailMapCell:BaseCell, MKMapViewDelegate {
         map.setRegion(region, animated: true)
         
         let annotation = MKPointAnnotation()
-        annotation.title = "Jimmy Carter Presidential Library and Museum"
-        annotation.subtitle = "The museum includes photographs"
         annotation.coordinate = location
         map.addAnnotation(annotation)
 
@@ -42,3 +56,9 @@ class ArticleDetailMapCell:BaseCell, MKMapViewDelegate {
     }
     
 }
+
+
+//            let latDelta = 50.0
+//            let lonDelta = 50.0
+//            let span:MKCoordinateSpan = MKCoordinateSpan(latitudeDelta:latDelta, longitudeDelta:lonDelta)
+//                MKCoordinateRegion(center:location, span:span)

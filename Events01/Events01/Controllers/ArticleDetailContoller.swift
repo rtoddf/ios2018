@@ -56,7 +56,7 @@ class ArticleDetailController:UICollectionViewController, UICollectionViewDelega
         
         if indexPath.item == 3 {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellMapId, for: indexPath) as! ArticleDetailMapCell
-//            cell.article = article
+            cell.article = article
             return cell
         }
 
