@@ -38,13 +38,19 @@
 				"title": "Ready Player One",
 				"caption": "Improves immensely on the book",
 				"credit": "Some Magazine"
+			},
+			{
+				"path": "http://www.rtodd.net/swift/images/events/movie-reviews/ready-player-one06.jpg",
+				"title": "Ready Player One",
+				"caption": "Improves immensely on the book",
+				"credit": "Some Magazine"
 			}
 		],
 		"locations": [
 			{
-				"latitude": 28.4736135,
-				"longitude": -81.4653626,
-				"name": "Universal Studios Florida"
+				"latitude": 35.4823225,
+				"longitude": -97.7600733,
+				"name": "Oklahoma City, OK"
 			}
 		]
 	},
@@ -91,9 +97,9 @@
 		],
 		"locations": [
 			{
-				"latitude": 28.4736135,
-				"longitude": -81.4653626,
-				"name": "Universal Studios Florida"
+				"latitude": -33.9142626,
+				"longitude": 18.0942285,
+				"name": "Cape Town, South Africa"
 			}
 		]
 	},
@@ -108,37 +114,43 @@
 		"lead_image": "http://www.rtodd.net/swift/images/events/movie-reviews/call-me-by-your-name.jpg",
 		"images": [
 			{
-				"path": "http://www.rtodd.net/swift/images/events/movie-reviews/call-me-by-your-name.jpg",
+				"path": "http://www.rtodd.net/swift/images/events/movie-reviews/call-me-by-your-name01.jpg",
 				"title": "Call Me by Your Name",
 				"caption": "A Boy's Own Desire",
 				"credit": "Some Magazine"
 			},
 			{
-				"path": "http://www.rtodd.net/swift/images/events/movie-reviews/call-me-by-your-name.jpg",
+				"path": "http://www.rtodd.net/swift/images/events/movie-reviews/call-me-by-your-name02.jpg",
 				"title": "Call Me by Your Name",
 				"caption": "A Boy's Own Desire",
 				"credit": "Some Magazine"
 			},
 			{
-				"path": "http://www.rtodd.net/swift/images/events/movie-reviews/call-me-by-your-name.jpg",
+				"path": "http://www.rtodd.net/swift/images/events/movie-reviews/call-me-by-your-name03.jpg",
 				"title": "Call Me by Your Name",
 				"caption": "A Boy's Own Desire",
 				"credit": "Some Magazine"
 			},
 			{
-				"path": "http://www.rtodd.net/swift/images/events/movie-reviews/call-me-by-your-name.jpg",
+				"path": "http://www.rtodd.net/swift/images/events/movie-reviews/call-me-by-your-name04.jpg",
 				"title": "Call Me by Your Name",
 				"caption": "A Boy's Own Desire",
 				"credit": "Some Magazine"
 			},
 			{
-				"path": "http://www.rtodd.net/swift/images/events/movie-reviews/call-me-by-your-name.jpg",
+				"path": "http://www.rtodd.net/swift/images/events/movie-reviews/call-me-by-your-name05.jpg",
 				"title": "Call Me by Your Name",
 				"caption": "A Boy's Own Desire",
 				"credit": "Some Magazine"
 			},
 			{
-				"path": "http://www.rtodd.net/swift/images/events/movie-reviews/call-me-by-your-name.jpg",
+				"path": "http://www.rtodd.net/swift/images/events/movie-reviews/call-me-by-your-name06.jpg",
+				"title": "Call Me by Your Name",
+				"caption": "A Boy's Own Desire",
+				"credit": "Some Magazine"
+			},
+			{
+				"path": "http://www.rtodd.net/swift/images/events/movie-reviews/call-me-by-your-name07.jpg",
 				"title": "Call Me by Your Name",
 				"caption": "A Boy's Own Desire",
 				"credit": "Some Magazine"
@@ -146,9 +158,9 @@
 		],
 		"locations": [
 			{
-				"latitude": 28.4736135,
-				"longitude": -81.4653626,
-				"name": "Universal Studios Florida"
+				"latitude": 45.6519074,
+				"longitude": 8.8389465,
+				"name": "Lombardy, Italy"
 			}
 		]
 	},
@@ -163,25 +175,25 @@
 		"lead_image": "http://www.rtodd.net/swift/images/events/movie-reviews/a-wrinkle-in-time.jpg",
 		"images": [
 			{
-				"path": "http://www.rtodd.net/swift/images/events/movie-reviews/a-wrinkle-in-time.jpg",
+				"path": "http://www.rtodd.net/swift/images/events/movie-reviews/a-wrinkle-in-time01.jpg",
 				"title": "A Wrinkle in Time",
 				"caption": "Let's Talk",
 				"credit": "Some Magazine"
 			},
 			{
-				"path": "http://www.rtodd.net/swift/images/events/movie-reviews/a-wrinkle-in-time.jpg",
+				"path": "http://www.rtodd.net/swift/images/events/movie-reviews/a-wrinkle-in-time02.jpg",
 				"title": "A Wrinkle in Time",
 				"caption": "Let's Talk",
 				"credit": "Some Magazine"
 			},
 			{
-				"path": "http://www.rtodd.net/swift/images/events/movie-reviews/a-wrinkle-in-time.jpg",
+				"path": "http://www.rtodd.net/swift/images/events/movie-reviews/a-wrinkle-in-time03.jpg",
 				"title": "A Wrinkle in Time",
 				"caption": "Let's Talk",
 				"credit": "Some Magazine"
 			},
 			{
-				"path": "http://www.rtodd.net/swift/images/events/movie-reviews/a-wrinkle-in-time.jpg",
+				"path": "http://www.rtodd.net/swift/images/events/movie-reviews/a-wrinkle-in-time04.jpg",
 				"title": "A Wrinkle in Time",
 				"caption": "Let's Talk",
 				"credit": "Some Magazine"
@@ -189,9 +201,9 @@
 		],
 		"locations": [
 			{
-				"latitude": 28.4736135,
-				"longitude": -81.4653626,
-				"name": "Universal Studios Florida"
+				"latitude": 41.5666486,
+				"longitude": -93.6767277,
+				"name": "Des Moines, IA"
 			}
 		]
 	},
@@ -206,31 +218,31 @@
 		"lead_image": "http://www.rtodd.net/swift/images/events/movie-reviews/love-simon.jpg",
 		"images": [
 			{
-				"path": "http://www.rtodd.net/swift/images/events/movie-reviews/love-simon.jpg",
+				"path": "http://www.rtodd.net/swift/images/events/movie-reviews/love-simon01.jpg",
 				"title": "Love, Simon",
 				"caption": "A mainstream-styled teenage rom-com",
 				"credit": "Some Magazine"
 			},
 			{
-				"path": "http://www.rtodd.net/swift/images/events/movie-reviews/love-simon.jpg",
+				"path": "http://www.rtodd.net/swift/images/events/movie-reviews/love-simon02.jpg",
 				"title": "Love, Simon",
 				"caption": "A mainstream-styled teenage rom-com",
 				"credit": "Some Magazine"
 			},
 			{
-				"path": "http://www.rtodd.net/swift/images/events/movie-reviews/love-simon.jpg",
+				"path": "http://www.rtodd.net/swift/images/events/movie-reviews/love-simon03.jpg",
 				"title": "Love, Simon",
 				"caption": "A mainstream-styled teenage rom-com",
 				"credit": "Some Magazine"
 			},
 			{
-				"path": "http://www.rtodd.net/swift/images/events/movie-reviews/love-simon.jpg",
+				"path": "http://www.rtodd.net/swift/images/events/movie-reviews/love-simon04.jpg",
 				"title": "Love, Simon",
 				"caption": "A mainstream-styled teenage rom-com",
 				"credit": "Some Magazine"
 			},
 			{
-				"path": "http://www.rtodd.net/swift/images/events/movie-reviews/love-simon.jpg",
+				"path": "http://www.rtodd.net/swift/images/events/movie-reviews/love-simon05.jpg",
 				"title": "Love, Simon",
 				"caption": "A mainstream-styled teenage rom-com",
 				"credit": "Some Magazine"
@@ -238,9 +250,9 @@
 		],
 		"locations": [
 			{
-				"latitude": 28.4736135,
-				"longitude": -81.4653626,
-				"name": "Universal Studios Florida"
+				"latitude": 33.7676334,
+				"longitude": -84.5610326,
+				"name": "Atlanta, GA"
 			}
 		]
 	},
@@ -255,19 +267,19 @@
 		"lead_image": "http://www.rtodd.net/swift/images/events/movie-reviews/tomb-raider.jpg",
 		"images": [
 			{
-				"path": "http://www.rtodd.net/swift/images/events/movie-reviews/tomb-raider.jpg",
+				"path": "http://www.rtodd.net/swift/images/events/movie-reviews/tomb-raider01.jpg",
 				"title": "Tomb Raider",
 				"caption": "Featuring Alicia Vikanderas",
 				"credit": "Some Magazine"
 			},
 			{
-				"path": "http://www.rtodd.net/swift/images/events/movie-reviews/tomb-raider.jpg",
+				"path": "http://www.rtodd.net/swift/images/events/movie-reviews/tomb-raider02.jpg",
 				"title": "Tomb Raider",
 				"caption": "Featuring Alicia Vikanderas",
 				"credit": "Some Magazine"
 			},
 			{
-				"path": "http://www.rtodd.net/swift/images/events/movie-reviews/tomb-raider.jpg",
+				"path": "http://www.rtodd.net/swift/images/events/movie-reviews/tomb-raider03.jpg",
 				"title": "Tomb Raider",
 				"caption": "Featuring Alicia Vikanderas",
 				"credit": "Some Magazine"
@@ -275,9 +287,9 @@
 		],
 		"locations": [
 			{
-				"latitude": 28.4736135,
-				"longitude": -81.4653626,
-				"name": "Universal Studios Florida"
+				"latitude": 34.0201597,
+				"longitude": -118.6926091,
+				"name": "Los Angeles, CA"
 			}
 		]
 	}
