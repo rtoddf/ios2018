@@ -1,0 +1,77 @@
+[
+	{
+		"headline": "Universal's Islands of Adventure",
+		"author": "Tasha Robinson",
+		"item_class": "place",
+		"guid": "f21f6d26-2163-11e8-8401-ed4dfe8ebc2c",
+		"pub_date": "Apr 2, 2018 12:33:00 EST",
+		"summary": "Universal's Islands of Adventure (formally Universal Studios Islands of Adventure, and commonly known as Islands of Adventure) is a theme park in Orlando, Florida. It opened on May 28, 1999, along with CityWalk, as part of an expansion that converted Universal Studios Florida into the Universal Orlando Resort. The slogan for this theme park, along with Universal Studios Florida, is Vacation Like You Mean It, introduced in 2013 as Universal Orlando Resort.",
+		"full_text": "<p>Universal's Islands of Adventure (formally Universal Studios Islands of Adventure, and commonly known as Islands of Adventure) is a theme park in Orlando, Florida. It opened on May 28, 1999, along with CityWalk, as part of an expansion that converted Universal Studios Florida into the Universal Orlando Resort. The slogan for this theme park, along with Universal Studios Florida, is Vacation Like You Mean It, introduced in 2013 as Universal Orlando Resort.</p><p>The park's overall theme is that of a journey of exploration, where guests depart from a main port to visit themed islands, all emphasizing adventure. Initially, the park had six islands. On June 18, 2010, the seventh island, The Wizarding World of Harry Potter (themed to the popular Harry Potter franchise), officially opened at the park. This is Universal's largest investment since opening. In 2013, Islands of Adventure hosted approximately 8.1 million guests, ranking it seventh among United States parks and eleventh worldwide. The eighth island, Skull Island, opened on July 13, 2016.</p><p>Marvel Super Hero Island is based on the superhero characters featured in Marvel Comics. The area features comic-book styled architecture; many of the building interiors are created in comic book perspective, with exaggerated lines and angles. Many exteriors are painted in a special paint which appears to change color based on the angle from which it is viewed – sometimes purple, sometimes orange. The buildings are all labelled generically: \"Store,\" \"Shop,\" \"Food,\" and \"Comics\", etc.</p><p>Toon Lagoon is based on the cartoon characters of King Features Syndicate and Jay Ward. The area focuses on water-based rides (hence the name) and features three counter-service restaurants.</p><p>Skull Island is the most recently opened island at the theme park. The area's sole attraction, Skull Island: Reign of Kong, opened on July 13, 2016. This attraction and island marks the return of the King Kong character to the Universal Orlando Resort, after the Kongfrontation attraction closed at Universal Studios Florida in 2002.</p><p>Jurassic Park is themed to the film series of the same name. Set after the events of the first film, the area undertakes the guise of the John Hammond's dinosaur theme park featured in the series. As such, the area is filled with the attractions and exhibits one would find in the \"real\" Jurassic Park, including thrill rides and discovery-based exhibits.</p>",
+		"lead_image": "http://www.rtodd.net/swift/images/events/places/islands-of-adventure.jpg",
+		"images": [
+			{
+				"path": "http://www.rtodd.net/swift/images/events/places/islands-of-adventure.jpg",
+				"title": "Universal's Islands of Adventure",
+				"caption": "Universal's Islands of Adventure",
+				"credit": "Universal"
+			}
+		],
+		"locations": [
+			{
+				"latitude": 28.474321,
+				"longitude": -81.467819,
+				"name": "Universal's Islands of Adventure"
+			}
+		]
+	},
+	{
+		"headline": "Epcot International Food & Wine Festival",
+		"author": "Tasha Robinson",
+		"item_class": "place",
+		"guid": "f21f6d26-2163-11e8-8401-ed4dfe8ebc2c",
+		"pub_date": "Apr 2, 2018 12:33:00 EST",
+		"summary": "The Epcot International Food & Wine Festival is an annual food festival at Epcot, in the Walt Disney World Resort in Orlando, Florida, typically from late September to mid-November, though in recent years the start date has moved forward to late August. Special kiosks are set up around the World Showcase with food and drinks that reflect various countries. The activities, themes and corporate sponsors have changed over the years since the festival began in 1995.",
+		"full_text": "<p>The Epcot International Food & Wine Festival is an annual food festival at Epcot, in the Walt Disney World Resort in Orlando, Florida, typically from late September to mid-November, though in recent years the start date has moved forward to late August. Special kiosks are set up around the World Showcase with food and drinks that reflect various countries. The activities, themes and corporate sponsors have changed over the years since the festival began in 1995.</p><p>Admission to the basic festival is included with park admission, but guests must purchase the food and drink separately. Activities have included concerts, books signings and demonstrations. Certain special events require a separate admission pass.</p>",
+		"lead_image": "http://www.rtodd.net/swift/images/events/places/epcot-food-and-wine.jpg",
+		"images": [
+			{
+				"path": "http://www.rtodd.net/swift/images/events/places/epcot-food-and-wine.jpg",
+				"title": "Epcot International Food & Wine Festival",
+				"caption": "Epcot International Food & Wine Festival",
+				"credit": "Disney"
+			}
+		],
+		"locations": [
+			{
+				"latitude": 28.374694, 
+				"longitude": -81.549404,
+				"name": "Epcot International Food & Wine Festival"
+			}
+		]
+	},
+	{
+		"headline": "Epcot International Food & Wine Festival",
+		"author": "Tasha Robinson",
+		"item_class": "place",
+		"guid": "f21f6d26-2163-11e8-8401-ed4dfe8ebc2c",
+		"pub_date": "Apr 2, 2018 12:33:00 EST",
+		"summary": "The Epcot International Food & Wine Festival is an annual food festival at Epcot, in the Walt Disney World Resort in Orlando, Florida, typically from late September to mid-November, though in recent years the start date has moved forward to late August. Special kiosks are set up around the World Showcase with food and drinks that reflect various countries. The activities, themes and corporate sponsors have changed over the years since the festival began in 1995.",
+		"full_text": "<p>The Epcot International Food & Wine Festival is an annual food festival at Epcot, in the Walt Disney World Resort in Orlando, Florida, typically from late September to mid-November, though in recent years the start date has moved forward to late August. Special kiosks are set up around the World Showcase with food and drinks that reflect various countries. The activities, themes and corporate sponsors have changed over the years since the festival began in 1995.</p><p>Admission to the basic festival is included with park admission, but guests must purchase the food and drink separately. Activities have included concerts, books signings and demonstrations. Certain special events require a separate admission pass.</p>",
+		"lead_image": "http://www.rtodd.net/swift/images/events/places/epcot-food-and-wine.jpg",
+		"images": [
+			{
+				"path": "http://www.rtodd.net/swift/images/events/places/epcot-food-and-wine.jpg",
+				"title": "Epcot International Food & Wine Festival",
+				"caption": "Epcot International Food & Wine Festival",
+				"credit": "Disney"
+			}
+		],
+		"locations": [
+			{
+				"latitude": 28.374694, 
+				"longitude": -81.549404,
+				"name": "Epcot International Food & Wine Festival"
+			}
+		]
+	}
+]
