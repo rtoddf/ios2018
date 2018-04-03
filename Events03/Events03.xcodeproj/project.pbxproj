@@ -18,6 +18,7 @@
 		00D99B342064501300E71C55 /* ArticleImageRightCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D99B332064501300E71C55 /* ArticleImageRightCell.swift */; };
 		00D99B3620646BE500E71C55 /* ArticleDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D99B3520646BE500E71C55 /* ArticleDetailController.swift */; };
 		00D99B3820646C2300E71C55 /* ArticleDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D99B3720646C2300E71C55 /* ArticleDetailCell.swift */; };
+		ADDA3BF32073C6E0001FFA50 /* ArticleDetailMapCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDA3BF22073C6E0001FFA50 /* ArticleDetailMapCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		00D99B332064501300E71C55 /* ArticleImageRightCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleImageRightCell.swift; sourceTree = "<group>"; };
 		00D99B3520646BE500E71C55 /* ArticleDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleDetailController.swift; sourceTree = "<group>"; };
 		00D99B3720646C2300E71C55 /* ArticleDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleDetailCell.swift; sourceTree = "<group>"; };
+		ADDA3BF22073C6E0001FFA50 /* ArticleDetailMapCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleDetailMapCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 				00D99B332064501300E71C55 /* ArticleImageRightCell.swift */,
 				00D99B3720646C2300E71C55 /* ArticleDetailCell.swift */,
 				0029E9CD206D663F00BE6791 /* ArticleImagesCell.swift */,
+				ADDA3BF22073C6E0001FFA50 /* ArticleDetailMapCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -187,6 +190,7 @@
 			files = (
 				00363A0320618B74000C19E5 /* ArticleImageLeftCell.swift in Sources */,
 				00D99B3820646C2300E71C55 /* ArticleDetailCell.swift in Sources */,
+				ADDA3BF32073C6E0001FFA50 /* ArticleDetailMapCell.swift in Sources */,
 				00363A062061B345000C19E5 /* Articles.swift in Sources */,
 				003639EE20618726000C19E5 /* EventsController.swift in Sources */,
 				00D99B3620646BE500E71C55 /* ArticleDetailController.swift in Sources */,
