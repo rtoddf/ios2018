@@ -9,15 +9,7 @@ class ArticleDetailCell:BaseCell {
     var articleDetailContoller:ArticleDetailController?
     
     @objc func animateView(){
-        print("click one")
         articleDetailContoller?.animate(leadImageView: leadImageView)
-        
-        //        UIView.animate(withDuration: 0.75) {
-        //            let height = (self.view.frame.width / self.startingFrame.width) * self.startingFrame.height
-        //            let y = (self.view.frame.height / 2) - (height / 2)
-        //
-        //            self.zoomImageView.frame = CGRect(x: 0, y: y, width: self.view.frame.width, height: height)
-        //        }
     }
     
     var article:Article? {
@@ -123,7 +115,6 @@ class ArticleDetailTextCell:BaseCell {
 
     override func setupViews() {
         addSubview(textView)
-        
         textView.frame = CGRect(x: 14, y: 14, width: frame.width - 28, height: 200)
     }
 }

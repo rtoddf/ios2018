@@ -84,13 +84,44 @@ class ArticleDetailController:UICollectionViewController, UICollectionViewDelega
         // use the var for the height to be set after notification sent
         return CGSize(width: view.frame.width, height: cellHeight)
     }
-
+    
+    let zoomedImageBackgroundView = UIView()
+    var leadImageView:UIImageView?
+    let zoomImageView = UIImageView()
+    
     func animate(leadImageView:UIImageView){
-        print("click two")
-        let zoomImageView = UIView()
-        zoomImageView.backgroundColor = .purple
-        zoomImageView.frame = leadImageView.frame
+        self.leadImageView = leadImageView
+        
+        leadImageView.alpha = 0
+        zoomedImageBackgroundView.frame = self.view.frame
+        zoomedImageBackgroundView.backgroundColor = UIColor(hexString: "#333333")
+        zoomedImageBackgroundView.alpha = 0
+        view.addSubview(zoomedImageBackgroundView)
+        
+        guard let startingFrame = leadImageView.superview?.convert(leadImageView.frame, to: nil) else { return }
+        
+        zoomImageView.isUserInteractionEnabled = true
+        zoomImageView.image = leadImageView.image
+        zoomImageView.frame = startingFrame
         view.addSubview(zoomImageView)
+        zoomImageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.animateOut)))
+        
+        UIView.animate(withDuration: 0.5) {
+            let height = (startingFrame.width / startingFrame.width) * startingFrame.height
+            let y = (self.view.frame.height / 2) - (height / 2)
+
+            self.zoomImageView.frame = CGRect(x: 0, y: y, width: self.view.frame.width, height: height)
+            self.zoomedImageBackgroundView.alpha = 1
+        }
+    }
+    
+    @objc func animateOut(){
+        guard let startingFrame = leadImageView?.superview?.convert((leadImageView?.frame)!, to: nil) else { return }
+    
+        UIView.animate(withDuration: 0.5) {
+            self.zoomImageView.frame = startingFrame
+            self.zoomedImageBackgroundView.alpha = 0
+        }
     }
 }
 
