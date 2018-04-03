@@ -45,6 +45,7 @@ class ArticleDetailController:UICollectionViewController, UICollectionViewDelega
         if indexPath.item == 0 {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! ArticleDetailCell
             cell.article = article
+            cell.articleDetailContoller = self
             return cell
         }
         
@@ -83,8 +84,14 @@ class ArticleDetailController:UICollectionViewController, UICollectionViewDelega
         // use the var for the height to be set after notification sent
         return CGSize(width: view.frame.width, height: cellHeight)
     }
-    
-    
+
+    func animate(leadImageView:UIImageView){
+        print("click two")
+        let zoomImageView = UIView()
+        zoomImageView.backgroundColor = .purple
+        zoomImageView.frame = leadImageView.frame
+        view.addSubview(zoomImageView)
+    }
 }
 
 //extension ArticleDetailController: UpdateArticleHeight {
