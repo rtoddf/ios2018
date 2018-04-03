@@ -1,10 +1,10 @@
 import UIKit
 
-// https://www.youtube.com/watch?v=kzdI2aiTX4k&t=1370s - 14:39
+// https://www.youtube.com/watch?v=kzdI2aiTX4k&t=1370s - 17:11
 
 class ArticleImagesCell:BaseCell, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     let cellId = "cellId"
-    
+
     var article:Article? {
         didSet {
             collectionView.reloadData()
@@ -70,20 +70,7 @@ class ArticleImagesCell:BaseCell, UICollectionViewDataSource, UICollectionViewDe
     }
 }
 
-private class ImageCell:BaseCell {
-    @objc func animateView(){
-        let view = UIView()
-        view.backgroundColor = .purple
-        view.frame = articleImageView.frame
-        addSubview(view)
-//        UIView.animate(withDuration: 0.75) {
-//            let height = (self.view.frame.width / self.startingFrame.width) * self.startingFrame.height
-//            let y = (self.view.frame.height / 2) - (height / 2)
-//
-//            self.zoomImageView.frame = CGRect(x: 0, y: y, width: self.view.frame.width, height: height)
-//        }
-    }
-    
+class ImageCell:BaseCell {
     let articleImageView:UIImageView = {
         let iv = UIImageView()
         iv.contentMode = .scaleAspectFit
@@ -96,9 +83,7 @@ private class ImageCell:BaseCell {
     override func setupViews() {
         super.setupViews()
         addSubview(articleImageView)
-        
-        articleImageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.animateView)))
-        
+
         addConstraintsWithFormat(format: "H:|[v0]|", views: articleImageView)
         addConstraintsWithFormat(format: "V:|[v0]|", views: articleImageView)
     }
