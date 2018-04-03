@@ -52,6 +52,11 @@ class ArticleDetailController:UICollectionViewController, UICollectionViewDelega
         if indexPath.item == 2 {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellImagesId, for: indexPath) as! ArticleImagesCell
             cell.article = article
+//            cell.articleDetailContoller = self
+            
+            var imageCell:ImageCell?
+            imageCell?.articleDetailContoller = self
+            
             return cell
         }
         
@@ -92,8 +97,10 @@ class ArticleDetailController:UICollectionViewController, UICollectionViewDelega
     
     // if you have a tab bar
     // https://www.youtube.com/watch?v=kzdI2aiTX4k&t=1370s - 32:30
-    
+
     func animate(leadImageView:UIImageView){
+        print("doobie")
+        
         self.leadImageView = leadImageView
         
         leadImageView.alpha = 0
