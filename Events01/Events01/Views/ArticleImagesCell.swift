@@ -1,8 +1,19 @@
 import UIKit
 
+// https://www.youtube.com/watch?v=kzdI2aiTX4k&t=1370s - 17:11
+
 class ArticleImagesCell:BaseCell, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
-    let cellId = "cellId"
     
+//    var articleDetailContoller:ArticleDetailController?
+//    var imageCell = ImageCell()
+    
+    @objc func animateView(){
+        print("noo one")
+//        articleDetailContoller?.animate(leadImageView: articleImageView)
+    }
+    
+    let cellId = "cellId"
+
     var article:Article? {
         didSet {
             collectionView.reloadData()
@@ -68,12 +79,21 @@ class ArticleImagesCell:BaseCell, UICollectionViewDataSource, UICollectionViewDe
     }
 }
 
-private class ImageCell:BaseCell {
+class ImageCell:BaseCell {
+    var articleDetailContoller:ArticleDetailController?
+    var cv:ArticleImagesCell?
+    
+    @objc func animateView(){
+        print("noo one")
+            articleDetailContoller?.animate(leadImageView: articleImageView)
+    }
+    
     let articleImageView:UIImageView = {
         let iv = UIImageView()
         iv.contentMode = .scaleAspectFit
         iv.clipsToBounds = true
         iv.backgroundColor = UIColor(hexString: "#333333")
+        iv.isUserInteractionEnabled = true
         return iv
     }()
     
@@ -81,18 +101,9 @@ private class ImageCell:BaseCell {
         super.setupViews()
         addSubview(articleImageView)
         
+        articleImageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.animateView)))
+
         addConstraintsWithFormat(format: "H:|[v0]|", views: articleImageView)
         addConstraintsWithFormat(format: "V:|[v0]|", views: articleImageView)
     }
 }
-
-
-
-
-
-
-
-
-
-
-

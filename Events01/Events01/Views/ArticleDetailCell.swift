@@ -6,6 +6,12 @@ import UIKit
 
 class ArticleDetailCell:BaseCell {
 //    var delegate: UpdateArticleHeight!
+    var articleDetailContoller:ArticleDetailController?
+    
+    @objc func animateView(){
+        articleDetailContoller?.animate(leadImageView: leadImageView)
+    }
+    
     var article:Article? {
         didSet {
             guard let leadImage = article?.lead_image else { return }
@@ -26,6 +32,7 @@ class ArticleDetailCell:BaseCell {
         let iv = UIImageView()
         iv.contentMode = .scaleAspectFill
         iv.clipsToBounds = true
+        iv.isUserInteractionEnabled = true
         return iv
     }()
     
@@ -50,6 +57,8 @@ class ArticleDetailCell:BaseCell {
         
         let imageWidth = frame.width
         let imageHeight = (9 / 16) * imageWidth
+        
+        leadImageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.animateView)))
         
         addConstraintsWithFormat(format: "H:|[v0]|", views: leadImageView)
         addConstraintsWithFormat(format: "H:|-14-[v0]-14-|", views: headlineLabel)
@@ -106,7 +115,6 @@ class ArticleDetailTextCell:BaseCell {
 
     override func setupViews() {
         addSubview(textView)
-        
         textView.frame = CGRect(x: 14, y: 14, width: frame.width - 28, height: 200)
     }
 }
