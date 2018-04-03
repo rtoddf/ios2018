@@ -6,11 +6,11 @@ class EventsController: UICollectionViewController, UICollectionViewDelegateFlow
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         navigationItem.title = "Movie Reviews"
-        collectionView?.backgroundColor = .white
-        collectionView?.alwaysBounceVertical = true
+        
+        collectionView?.backgroundColor = UIColor(hexString: "#ffffff")
         collectionView?.register(LargeStoryCell.self, forCellWithReuseIdentifier: cellId)
+        collectionView?.alwaysBounceVertical = true
 
         Article.downloadData { (articles) in
             self.articles = articles

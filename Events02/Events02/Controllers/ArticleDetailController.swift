@@ -17,6 +17,7 @@ class ArticleDetailController:UICollectionViewController, UICollectionViewDelega
         super.viewDidLoad()
         
         collectionView?.backgroundColor = .white
+        collectionView?.alwaysBounceVertical = true
         collectionView?.register(ArticleDetailCell.self, forCellWithReuseIdentifier: cellId)
         collectionView?.register(ArticleDetailTextCell.self, forCellWithReuseIdentifier: cellTextId)
         collectionView?.register(ArticleImagesCell.self, forCellWithReuseIdentifier: cellImagesId)

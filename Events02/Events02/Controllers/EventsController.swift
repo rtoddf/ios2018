@@ -10,6 +10,7 @@ class EventsController: UICollectionViewController, UICollectionViewDelegateFlow
         
         collectionView?.backgroundColor = UIColor(hexString: "#ffffff")
         collectionView?.register(ArticleCell.self, forCellWithReuseIdentifier: cellId)
+        collectionView?.alwaysBounceVertical = true
     
         Article.downloadData { (articles) in
             self.articles = articles

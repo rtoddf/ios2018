@@ -9,7 +9,7 @@ class ArticleDetailController:UICollectionViewController, UICollectionViewDelega
     
     var article:Article? {
         didSet {
-            collectionView?.reloadData()
+            
         }
     }
     
