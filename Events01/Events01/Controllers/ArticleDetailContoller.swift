@@ -86,8 +86,12 @@ class ArticleDetailController:UICollectionViewController, UICollectionViewDelega
     }
     
     let zoomedImageBackgroundView = UIView()
+    let navCoverView = UIView()
     var leadImageView:UIImageView?
     let zoomImageView = UIImageView()
+    
+    // if you have a tab bar
+    // https://www.youtube.com/watch?v=kzdI2aiTX4k&t=1370s - 32:30
     
     func animate(leadImageView:UIImageView){
         self.leadImageView = leadImageView
@@ -98,6 +102,14 @@ class ArticleDetailController:UICollectionViewController, UICollectionViewDelega
         zoomedImageBackgroundView.alpha = 0
         view.addSubview(zoomedImageBackgroundView)
         
+        navCoverView.frame = CGRect(x: 0, y: 0, width: 1000, height: 20 + 44)
+        navCoverView.backgroundColor = UIColor(hexString: "#333333")
+        navCoverView.alpha = 0
+        
+        // the nav at the top is above the view, so we have to get it to add the subview
+        guard let keyWindow = UIApplication.shared.keyWindow else { return }
+        keyWindow.addSubview(navCoverView)
+        
         guard let startingFrame = leadImageView.superview?.convert(leadImageView.frame, to: nil) else { return }
         
         zoomImageView.isUserInteractionEnabled = true
@@ -106,21 +118,42 @@ class ArticleDetailController:UICollectionViewController, UICollectionViewDelega
         view.addSubview(zoomImageView)
         zoomImageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.animateOut)))
         
-        UIView.animate(withDuration: 0.5) {
+        UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 0.5, options: .curveEaseOut, animations: {
             let height = (startingFrame.width / startingFrame.width) * startingFrame.height
             let y = (self.view.frame.height / 2) - (height / 2)
-
+            
             self.zoomImageView.frame = CGRect(x: 0, y: y, width: self.view.frame.width, height: height)
             self.zoomedImageBackgroundView.alpha = 1
-        }
+            self.navCoverView.alpha = 1
+        })
+        
+//        UIView.animate(withDuration: 0.5) {
+//            let height = (startingFrame.width / startingFrame.width) * startingFrame.height
+//            let y = (self.view.frame.height / 2) - (height / 2)
+//
+//            self.zoomImageView.frame = CGRect(x: 0, y: y, width: self.view.frame.width, height: height)
+//            self.zoomedImageBackgroundView.alpha = 1
+//            self.navCoverView.alpha = 1
+//        }
     }
     
     @objc func animateOut(){
         guard let startingFrame = leadImageView?.superview?.convert((leadImageView?.frame)!, to: nil) else { return }
     
-        UIView.animate(withDuration: 0.5) {
+//        UIView.animate(withDuration: 0.5) {
+//            self.zoomImageView.frame = startingFrame
+//            self.zoomedImageBackgroundView.alpha = 0
+//        }
+        
+        UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 0.5, options: .curveEaseOut, animations: {
             self.zoomImageView.frame = startingFrame
             self.zoomedImageBackgroundView.alpha = 0
+            self.navCoverView.alpha = 0
+        }) { (didComplete) in
+            self.zoomImageView.removeFromSuperview()
+            self.zoomedImageBackgroundView.removeFromSuperview()
+            self.navCoverView.removeFromSuperview()
+            self.leadImageView?.alpha = 1
         }
     }
 }
