@@ -1,15 +1,14 @@
 import UIKit
 
-// https://www.youtube.com/watch?v=kzdI2aiTX4k&t=1370s - 17:11
-
 class ArticleImagesCell:BaseCell, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+    var articleDetailContoller:ArticleDetailController?
     
-//    var articleDetailContoller:ArticleDetailController?
-//    var imageCell = ImageCell()
-    
-    @objc func animateView(){
-        print("noo one")
-//        articleDetailContoller?.animate(leadImageView: articleImageView)
+    @objc func animateView(sender: MyTapGesture){
+        guard let imageView = sender.view else { return }
+        guard let title = sender.title else { return }
+        guard let caption = sender.caption else { return }
+        guard let credit = sender.credit else { return }
+        articleDetailContoller?.animate(image: imageView as! UIImageView, title: title, caption: caption, credit: credit)
     }
     
     let cellId = "cellId"
@@ -44,12 +43,28 @@ class ArticleImagesCell:BaseCell, UICollectionViewDataSource, UICollectionViewDe
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellId", for: indexPath) as! ImageCell
-        
-        if let image = article?.images![indexPath.item].path {
+
+        if let image = article?.images![indexPath.item].path,
+            let title = article?.images![indexPath.item].title,
+            let caption = article?.images![indexPath.item].caption,
+            let credit = article?.images![indexPath.item].credit {
+            
             cell.articleImageView.loadImageUsingUrlString(imageUrl: image)
+            let tappy = MyTapGesture(target: self, action: #selector(self.animateView))
+            tappy.title = title
+            tappy.caption = caption
+            tappy.credit = credit
+            
+            cell.articleImageView.addGestureRecognizer(tappy)
         }
         
         return cell
+    }
+    
+    class MyTapGesture: UITapGestureRecognizer {
+        var title:String?
+        var caption:String?
+        var credit:String?
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -70,6 +85,8 @@ class ArticleImagesCell:BaseCell, UICollectionViewDataSource, UICollectionViewDe
         collectionView.delegate = self
         collectionView.register(ImageCell.self, forCellWithReuseIdentifier: cellId)
         
+        collectionView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.animateView)))
+        
         addSubview(collectionView)
         addSubview(dividerView)
         
@@ -80,14 +97,6 @@ class ArticleImagesCell:BaseCell, UICollectionViewDataSource, UICollectionViewDe
 }
 
 class ImageCell:BaseCell {
-    var articleDetailContoller:ArticleDetailController?
-    var cv:ArticleImagesCell?
-    
-    @objc func animateView(){
-        print("noo one")
-            articleDetailContoller?.animate(leadImageView: articleImageView)
-    }
-    
     let articleImageView:UIImageView = {
         let iv = UIImageView()
         iv.contentMode = .scaleAspectFit
@@ -97,12 +106,15 @@ class ImageCell:BaseCell {
         return iv
     }()
     
+    var captionLabel:UILabel = {
+        let caption = UILabel()
+        caption.text = "bob"
+        return caption
+    }()
+    
     override func setupViews() {
         super.setupViews()
         addSubview(articleImageView)
-        
-        articleImageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.animateView)))
-
         addConstraintsWithFormat(format: "H:|[v0]|", views: articleImageView)
         addConstraintsWithFormat(format: "V:|[v0]|", views: articleImageView)
     }

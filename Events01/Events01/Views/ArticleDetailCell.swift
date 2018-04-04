@@ -6,11 +6,12 @@ import UIKit
 
 class ArticleDetailCell:BaseCell {
 //    var delegate: UpdateArticleHeight!
-    var articleDetailContoller:ArticleDetailController?
-    
-    @objc func animateView(){
-        articleDetailContoller?.animate(leadImageView: leadImageView)
-    }
+//    var articleDetailContoller:ArticleDetailController?
+//
+//    @objc func animateView(){
+//        print("type: \(type(of: leadImageView))")
+//        articleDetailContoller?.animate(image: leadImageView)
+//    }
     
     var article:Article? {
         didSet {
@@ -58,7 +59,7 @@ class ArticleDetailCell:BaseCell {
         let imageWidth = frame.width
         let imageHeight = (9 / 16) * imageWidth
         
-        leadImageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.animateView)))
+//        leadImageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.animateView)))
         
         addConstraintsWithFormat(format: "H:|[v0]|", views: leadImageView)
         addConstraintsWithFormat(format: "H:|-14-[v0]-14-|", views: headlineLabel)
