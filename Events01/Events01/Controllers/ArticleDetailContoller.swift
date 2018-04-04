@@ -88,18 +88,18 @@ class ArticleDetailController:UICollectionViewController, UICollectionViewDelega
     
     let zoomedImageBackgroundView = UIView()
     let navCoverView = UIView()
-    var leadImageView:UIImageView?
+    var image:UIImageView?
     let zoomImageView = UIImageView()
     
     // if you have a tab bar
     // https://www.youtube.com/watch?v=kzdI2aiTX4k&t=1370s - 32:30
 
-    func animate(leadImageView:UIImageView){
+    func animate(image:UIImageView){
         print("doobie")
         
-        self.leadImageView = leadImageView
+        self.image = image
         
-        leadImageView.alpha = 0
+        image.alpha = 0
         zoomedImageBackgroundView.frame = self.view.frame
         zoomedImageBackgroundView.backgroundColor = UIColor(hexString: "#333333")
         zoomedImageBackgroundView.alpha = 0
@@ -113,10 +113,10 @@ class ArticleDetailController:UICollectionViewController, UICollectionViewDelega
         guard let keyWindow = UIApplication.shared.keyWindow else { return }
         keyWindow.addSubview(navCoverView)
         
-        guard let startingFrame = leadImageView.superview?.convert(leadImageView.frame, to: nil) else { return }
+        guard let startingFrame = image.superview?.convert(image.frame, to: nil) else { return }
         
         zoomImageView.isUserInteractionEnabled = true
-        zoomImageView.image = leadImageView.image
+        zoomImageView.image = image.image
         zoomImageView.frame = startingFrame
         view.addSubview(zoomImageView)
         zoomImageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.animateOut)))
@@ -141,7 +141,7 @@ class ArticleDetailController:UICollectionViewController, UICollectionViewDelega
     }
     
     @objc func animateOut(){
-        guard let startingFrame = leadImageView?.superview?.convert((leadImageView?.frame)!, to: nil) else { return }
+        guard let startingFrame = image?.superview?.convert((image?.frame)!, to: nil) else { return }
     
 //        UIView.animate(withDuration: 0.5) {
 //            self.zoomImageView.frame = startingFrame
@@ -156,7 +156,7 @@ class ArticleDetailController:UICollectionViewController, UICollectionViewDelega
             self.zoomImageView.removeFromSuperview()
             self.zoomedImageBackgroundView.removeFromSuperview()
             self.navCoverView.removeFromSuperview()
-            self.leadImageView?.alpha = 1
+            self.image?.alpha = 1
         }
     }
 }

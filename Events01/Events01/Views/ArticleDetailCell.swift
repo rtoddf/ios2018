@@ -10,7 +10,7 @@ class ArticleDetailCell:BaseCell {
     
     @objc func animateView(){
         print("type: \(type(of: leadImageView))")
-        articleDetailContoller?.animate(leadImageView: leadImageView)
+        articleDetailContoller?.animate(image: leadImageView)
     }
     
     var article:Article? {
