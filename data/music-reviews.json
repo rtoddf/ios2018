@@ -10,31 +10,31 @@
 		"lead_image": "http://www.rtodd.net/swift/images/events/music-reviews/everybodys-lonely.jpg",
 		"images": [
 			{
-				"path": "http://www.rtodd.net/swift/images/events/music-reviews/everybodys-lonely.jpg",
+				"path": "http://www.rtodd.net/swift/images/events/music-reviews/jukebox-the-ghost01.jpg",
 				"title": "Jukebox the Ghost",
 				"caption": "Jukebox the Ghost share the Origins of their new single",
 				"credit": "Some Magazine"
 			},
 			{
-				"path": "http://www.rtodd.net/swift/images/events/music-reviews/everybodys-lonely.jpg",
+				"path": "http://www.rtodd.net/swift/images/events/music-reviews/jukebox-the-ghost02.jpg",
 				"title": "Jukebox the Ghost",
 				"caption": "Jukebox the Ghost share the Origins of their new single",
 				"credit": "Some Magazine"
 			},
 			{
-				"path": "http://www.rtodd.net/swift/images/events/music-reviews/everybodys-lonely.jpg",
+				"path": "http://www.rtodd.net/swift/images/events/music-reviews/jukebox-the-ghost03.jpg",
 				"title": "Jukebox the Ghost",
 				"caption": "Jukebox the Ghost share the Origins of their new single",
 				"credit": "Some Magazine"
 			},
 			{
-				"path": "http://www.rtodd.net/swift/images/events/music-reviews/everybodys-lonely.jpg",
+				"path": "http://www.rtodd.net/swift/images/events/music-reviews/jukebox-the-ghost04.jpg",
 				"title": "Jukebox the Ghost",
 				"caption": "Jukebox the Ghost share the Origins of their new single",
 				"credit": "Some Magazine"
 			},
 			{
-				"path": "http://www.rtodd.net/swift/images/events/music-reviews/everybodys-lonely.jpg",
+				"path": "http://www.rtodd.net/swift/images/events/music-reviews/jukebox-the-ghost05.jpg",
 				"title": "Jukebox the Ghost",
 				"caption": "Jukebox the Ghost share the Origins of their new single",
 				"credit": "Some Magazine"
@@ -42,9 +42,9 @@
 		],
 		"locations": [
 			{
-				"latitude": 28.4736135,
-				"longitude": -81.4653626,
-				"name": "Universal Studios Florida"
+				"latitude": 38.896769,
+				"longitude": -77.017536,
+				"name": "DC metro-area"
 			}
 		]
 	},
@@ -59,31 +59,25 @@
 		"lead_image": "http://www.rtodd.net/swift/images/events/music-reviews/farmhouse-sessions.jpg",
 		"images": [
 			{
-				"path": "http://www.rtodd.net/swift/images/events/music-reviews/farmhouse-sessions.jpg",
+				"path": "http://www.rtodd.net/swift/images/events/music-reviews/high-valley01.jpg",
 				"title": "High Valley",
 				"caption": "Farmhouse Sessions With Ashley Homestore",
 				"credit": "Some Magazine"
 			},
 			{
-				"path": "http://www.rtodd.net/swift/images/events/music-reviews/farmhouse-sessions.jpg",
+				"path": "http://www.rtodd.net/swift/images/events/music-reviews/high-valley02.jpg",
 				"title": "High Valley",
 				"caption": "Farmhouse Sessions With Ashley Homestore",
 				"credit": "Some Magazine"
 			},
 			{
-				"path": "http://www.rtodd.net/swift/images/events/music-reviews/farmhouse-sessions.jpg",
+				"path": "http://www.rtodd.net/swift/images/events/music-reviews/high-valley03.jpg",
 				"title": "High Valley",
 				"caption": "Farmhouse Sessions With Ashley Homestore",
 				"credit": "Some Magazine"
 			},
 			{
-				"path": "http://www.rtodd.net/swift/images/events/music-reviews/farmhouse-sessions.jpg",
-				"title": "High Valley",
-				"caption": "Farmhouse Sessions With Ashley Homestore",
-				"credit": "Some Magazine"
-			},
-			{
-				"path": "http://www.rtodd.net/swift/images/events/music-reviews/farmhouse-sessions.jpg",
+				"path": "http://www.rtodd.net/swift/images/events/music-reviews/high-valley04.jpg",
 				"title": "High Valley",
 				"caption": "Farmhouse Sessions With Ashley Homestore",
 				"credit": "Some Magazine"
@@ -91,9 +85,9 @@
 		],
 		"locations": [
 			{
-				"latitude": 28.4736135,
-				"longitude": -81.4653626,
-				"name": "Universal Studios Florida"
+				"latitude": 58.187466,
+				"longitude": -116.406999,
+				"name": "La Crete, Alberta, Canada"
 			}
 		]
 	},
