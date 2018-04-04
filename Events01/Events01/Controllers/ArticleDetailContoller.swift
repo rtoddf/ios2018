@@ -45,7 +45,7 @@ class ArticleDetailController:UICollectionViewController, UICollectionViewDelega
         if indexPath.item == 0 {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! ArticleDetailCell
             cell.article = article
-            cell.articleDetailContoller = self
+//            cell.articleDetailContoller = self
             return cell
         }
         
@@ -95,8 +95,6 @@ class ArticleDetailController:UICollectionViewController, UICollectionViewDelega
     // https://www.youtube.com/watch?v=kzdI2aiTX4k&t=1370s - 32:30
 
     func animate(image:UIImageView){
-        print("doobie")
-        
         self.image = image
         
         image.alpha = 0
@@ -122,7 +120,7 @@ class ArticleDetailController:UICollectionViewController, UICollectionViewDelega
         zoomImageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.animateOut)))
         
         UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 0.5, options: .curveEaseOut, animations: {
-            let height = (startingFrame.width / startingFrame.width) * startingFrame.height
+            let height = (self.view.frame.width / startingFrame.width) * startingFrame.height
             let y = (self.view.frame.height / 2) - (height / 2)
             
             self.zoomImageView.frame = CGRect(x: 0, y: y, width: self.view.frame.width, height: height)

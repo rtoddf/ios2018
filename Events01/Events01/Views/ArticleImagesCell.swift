@@ -7,7 +7,7 @@ class ArticleImagesCell:BaseCell, UICollectionViewDataSource, UICollectionViewDe
     
     @objc func animateView(sender: UIGestureRecognizer){
         guard let imageView = sender.view else { return }
-        print("article image cell type: \(type(of: imageView))")
+//        print("article image cell type: \(type(of: imageView))")
         articleDetailContoller?.animate(image: imageView as! UIImageView)
     }
     
