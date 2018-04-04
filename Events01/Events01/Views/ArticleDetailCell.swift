@@ -9,6 +9,7 @@ class ArticleDetailCell:BaseCell {
     var articleDetailContoller:ArticleDetailController?
     
     @objc func animateView(){
+        print("type: \(type(of: leadImageView))")
         articleDetailContoller?.animate(leadImageView: leadImageView)
     }
     

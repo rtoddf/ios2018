@@ -3,13 +3,12 @@ import UIKit
 // https://www.youtube.com/watch?v=kzdI2aiTX4k&t=1370s - 17:11
 
 class ArticleImagesCell:BaseCell, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+    var articleDetailContoller:ArticleDetailController?
     
-//    var articleDetailContoller:ArticleDetailController?
-//    var imageCell = ImageCell()
-    
-    @objc func animateView(){
-        print("noo one")
-//        articleDetailContoller?.animate(leadImageView: articleImageView)
+    @objc func animateView(sender: UIGestureRecognizer){
+        guard let imageView = sender.view else { return }
+        print("article image cell type: \(type(of: imageView))")
+        articleDetailContoller?.animate(leadImageView: imageView as! UIImageView)
     }
     
     let cellId = "cellId"
@@ -44,9 +43,10 @@ class ArticleImagesCell:BaseCell, UICollectionViewDataSource, UICollectionViewDe
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellId", for: indexPath) as! ImageCell
-        
+
         if let image = article?.images![indexPath.item].path {
             cell.articleImageView.loadImageUsingUrlString(imageUrl: image)
+            cell.articleImageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.animateView)))
         }
         
         return cell
@@ -70,6 +70,8 @@ class ArticleImagesCell:BaseCell, UICollectionViewDataSource, UICollectionViewDe
         collectionView.delegate = self
         collectionView.register(ImageCell.self, forCellWithReuseIdentifier: cellId)
         
+        collectionView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.animateView)))
+        
         addSubview(collectionView)
         addSubview(dividerView)
         
@@ -80,14 +82,6 @@ class ArticleImagesCell:BaseCell, UICollectionViewDataSource, UICollectionViewDe
 }
 
 class ImageCell:BaseCell {
-    var articleDetailContoller:ArticleDetailController?
-    var cv:ArticleImagesCell?
-    
-    @objc func animateView(){
-        print("noo one")
-            articleDetailContoller?.animate(leadImageView: articleImageView)
-    }
-    
     let articleImageView:UIImageView = {
         let iv = UIImageView()
         iv.contentMode = .scaleAspectFit
@@ -100,9 +94,6 @@ class ImageCell:BaseCell {
     override func setupViews() {
         super.setupViews()
         addSubview(articleImageView)
-        
-        articleImageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.animateView)))
-
         addConstraintsWithFormat(format: "H:|[v0]|", views: articleImageView)
         addConstraintsWithFormat(format: "V:|[v0]|", views: articleImageView)
     }

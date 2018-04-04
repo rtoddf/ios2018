@@ -52,11 +52,7 @@ class ArticleDetailController:UICollectionViewController, UICollectionViewDelega
         if indexPath.item == 2 {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellImagesId, for: indexPath) as! ArticleImagesCell
             cell.article = article
-//            cell.articleDetailContoller = self
-            
-            var imageCell:ImageCell?
-            imageCell?.articleDetailContoller = self
-            
+            cell.articleDetailContoller = self
             return cell
         }
         
