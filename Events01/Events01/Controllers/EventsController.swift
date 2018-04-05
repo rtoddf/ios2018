@@ -19,6 +19,11 @@ class EventsController: UICollectionViewController, UICollectionViewDelegateFlow
         
         collectionView?.dataSource = self
         collectionView?.delegate = self
+        
+//        printFonts()
+
+        let stringDate:String = "Thu, 05 Apr 2018 16:21:00 EDT"
+        print("time: \(stringDate.timeAgoDisplay())")
     }
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

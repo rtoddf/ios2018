@@ -106,12 +106,6 @@ class ImageCell:BaseCell {
         return iv
     }()
     
-    var captionLabel:UILabel = {
-        let caption = UILabel()
-        caption.text = "bob"
-        return caption
-    }()
-    
     override func setupViews() {
         super.setupViews()
         addSubview(articleImageView)

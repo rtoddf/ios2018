@@ -53,32 +53,6 @@ extension UIColor {
     }
 }
 
-//func buttonGenerator(title:String, imageName:String) -> UIButton {
-//    let button = UIButton()
-//    button.setTitle(title, for: .normal)
-//
-//    // image has to be at size
-//    button.setImage(UIImage(named: imageName)?.withRenderingMode(UIImageRenderingMode.alwaysTemplate), for: .normal)
-//    button.imageView?.tintColor = UIColor(hexString: "#ae0000")
-//    // top, left, bottom, right
-//    button.titleEdgeInsets = UIEdgeInsetsMake(2, 8, 0, 0)
-//    button.setTitleColor(UIColor(hexString: "#ae0000"), for: .normal)
-//    // button.titleEdgeInsets = UIEdgeInsets(top: 0,left: -30,bottom: 0,right: 34)
-//
-//    button.titleLabel?.font = UIFont.systemFont(ofSize: 14)
-//    return button
-//}
-
-func createButton(title:String) -> UIButton {
-    let button = UIButton()
-    button.setTitle(title, for: .normal)
-    button.setTitleColor(UIColor(hexString: "#ae0000"), for: .normal)
-    button.titleLabel?.font = UIFont.systemFont(ofSize: 12)
-//    button.layer.borderWidth = 0.5
-//    button.layer.borderColor = UIColor(hexString: "#ae0000").cgColor
-    return button
-}
-
 extension UIImageView {
     func loadImageUsingUrlString(imageUrl:String) {
         let imageNameSplit = imageUrl.components(separatedBy: "/")
@@ -136,6 +110,25 @@ extension UIImageView {
     }
 }
 
+extension NSMutableAttributedString {
+    @discardableResult func format(string:String, font:String, textSize:CGFloat, textColor:UIColor, linespacing: CGFloat) -> NSMutableAttributedString {
+        let paragraphStyle = NSMutableParagraphStyle()
+        paragraphStyle.lineSpacing = linespacing  // Whatever line spacing you want in points
+        let font:UIFont = (UIFont(name: font, size: textSize))!
+        
+        let attrs: [NSAttributedStringKey: Any] = [
+            .paragraphStyle: paragraphStyle,
+            .font : font,
+            .foregroundColor: textColor
+        ]
+        
+        let boldString = NSMutableAttributedString(string: string, attributes: attrs)
+        append(boldString)
+        
+        return self
+    }
+}
+
 extension String {
     func wrapHTML() -> String {
         let fontSize:String = "24px"
@@ -175,3 +168,90 @@ extension String {
         return headHtml
     }
 }
+
+extension String {
+    func timeAgoDisplay() -> String {
+        
+        let calendar = Calendar.current
+        let minuteAgo = calendar.date(byAdding: .minute, value: -1, to: Date())!
+        let hourAgo = calendar.date(byAdding: .hour, value: -1, to: Date())!
+        let dayAgo = calendar.date(byAdding: .day, value: -1, to: Date())!
+        let weekAgo = calendar.date(byAdding: .day, value: -7, to: Date())!
+        
+        print("self: \(self)")
+        
+        let dateFormatter = DateFormatter()
+        let stringDate:String = "Thu, 05 Apr 2018 16:21:00 EDT"
+        dateFormatter.dateFormat = "E, dd MMM yyyy HH:mm:ss z"
+        dateFormatter.locale = Locale(identifier: "en_US_POSIX") // set locale to reliable US_POSIX
+        let date = dateFormatter.date(from:self)!
+        
+        print("date: \(date)")
+        
+        if minuteAgo < date {
+            let diff = Calendar.current.dateComponents([.second], from: date, to: Date()).second ?? 0
+            return "\(diff) sec ago"
+        } else if hourAgo < date {
+            let diff = Calendar.current.dateComponents([.minute], from: date, to: Date()).minute ?? 0
+            return "\(diff) min ago"
+        } else if dayAgo < date {
+            let diff = Calendar.current.dateComponents([.hour], from: date, to: Date()).hour ?? 0
+            return "\(diff) hrs ago"
+        } else if weekAgo < date {
+            let diff = Calendar.current.dateComponents([.day], from: date, to: Date()).day ?? 0
+            return "\(diff) days ago"
+        }
+        let diff = Calendar.current.dateComponents([.weekOfYear], from: date, to: Date()).weekOfYear ?? 0
+        return "\(diff) weeks ago"
+    }
+}
+
+//http://nsdateformatter.com/
+//https://stackoverflow.com/questions/36861732/swift-convert-string-to-date
+//https://stackoverflow.com/questions/44086555/swift-time-ago-from-parse-createdat-date
+//
+//Thu, 05 Apr 2018 16:21:00 EDT
+//
+//guard let pubdate = article?.pub_date?.toDateString(inputDateFormat: "EE, dd MMM YYYY HH:mm:ss z", ouputDateFormat: "hh:mm a EEEE, MMMM dd, YYYY") else { return }
+//
+//extension String {
+//    func toDateString( inputDateFormat inputFormat  : String,  ouputDateFormat outputFormat  : String ) -> String {
+//        let dateFormatter = DateFormatter()
+//        dateFormatter.dateFormat = inputFormat
+//        let date = dateFormatter.date(from: self)
+//        dateFormatter.dateFormat = outputFormat
+//        return dateFormatter.string(from: date!)
+//    }
+//}
+
+//let now = Date()
+//print("time: \(now.timeAgoDisplay())")
+//
+//extension Date {
+//    func timeAgoDisplay() -> String {
+//        
+//        let calendar = Calendar.current
+//        let minuteAgo = calendar.date(byAdding: .minute, value: -1, to: Date())!
+//        let hourAgo = calendar.date(byAdding: .hour, value: -1, to: Date())!
+//        let dayAgo = calendar.date(byAdding: .day, value: -1, to: Date())!
+//        let weekAgo = calendar.date(byAdding: .day, value: -7, to: Date())!
+//        
+//        print("self: \(self)")
+//        
+//        if minuteAgo < self {
+//            let diff = Calendar.current.dateComponents([.second], from: self, to: Date()).second ?? 0
+//            return "\(diff) sec ago"
+//        } else if hourAgo < self {
+//            let diff = Calendar.current.dateComponents([.minute], from: self, to: Date()).minute ?? 0
+//            return "\(diff) min ago"
+//        } else if dayAgo < self {
+//            let diff = Calendar.current.dateComponents([.hour], from: self, to: Date()).hour ?? 0
+//            return "\(diff) hrs ago"
+//        } else if weekAgo < self {
+//            let diff = Calendar.current.dateComponents([.day], from: self, to: Date()).day ?? 0
+//            return "\(diff) days ago"
+//        }
+//        let diff = Calendar.current.dateComponents([.weekOfYear], from: self, to: Date()).weekOfYear ?? 0
+//        return "\(diff) weeks ago"
+//    }
+//}
