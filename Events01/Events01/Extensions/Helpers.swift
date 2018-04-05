@@ -53,32 +53,6 @@ extension UIColor {
     }
 }
 
-//func buttonGenerator(title:String, imageName:String) -> UIButton {
-//    let button = UIButton()
-//    button.setTitle(title, for: .normal)
-//
-//    // image has to be at size
-//    button.setImage(UIImage(named: imageName)?.withRenderingMode(UIImageRenderingMode.alwaysTemplate), for: .normal)
-//    button.imageView?.tintColor = UIColor(hexString: "#ae0000")
-//    // top, left, bottom, right
-//    button.titleEdgeInsets = UIEdgeInsetsMake(2, 8, 0, 0)
-//    button.setTitleColor(UIColor(hexString: "#ae0000"), for: .normal)
-//    // button.titleEdgeInsets = UIEdgeInsets(top: 0,left: -30,bottom: 0,right: 34)
-//
-//    button.titleLabel?.font = UIFont.systemFont(ofSize: 14)
-//    return button
-//}
-
-func createButton(title:String) -> UIButton {
-    let button = UIButton()
-    button.setTitle(title, for: .normal)
-    button.setTitleColor(UIColor(hexString: "#ae0000"), for: .normal)
-    button.titleLabel?.font = UIFont.systemFont(ofSize: 12)
-//    button.layer.borderWidth = 0.5
-//    button.layer.borderColor = UIColor(hexString: "#ae0000").cgColor
-    return button
-}
-
 extension UIImageView {
     func loadImageUsingUrlString(imageUrl:String) {
         let imageNameSplit = imageUrl.components(separatedBy: "/")
@@ -136,26 +110,11 @@ extension UIImageView {
     }
 }
 
-func formatAttributedText(string:String, textSize:CGFloat, textColor:UIColor, linespacing: CGFloat) -> NSMutableAttributedString {
-    // *** Create instance of `NSMutableParagraphStyle`
-    let paragraphStyle = NSMutableParagraphStyle()
-    paragraphStyle.lineSpacing = linespacing  // Whatever line spacing you want in points
-    let font:UIFont = UIFont.systemFont(ofSize: textSize)
-    
-    let textAttributes: [NSAttributedStringKey: Any] = [
-        .paragraphStyle: paragraphStyle,
-        .font : font,
-        .foregroundColor: textColor
-    ]
-    
-    return NSMutableAttributedString(string: string + "\n", attributes: textAttributes)
-}
-
 extension NSMutableAttributedString {
-    @discardableResult func bold(string:String, textSize:CGFloat, textColor:UIColor, linespacing: CGFloat) -> NSMutableAttributedString {
+    @discardableResult func format(string:String, font:String, textSize:CGFloat, textColor:UIColor, linespacing: CGFloat) -> NSMutableAttributedString {
         let paragraphStyle = NSMutableParagraphStyle()
         paragraphStyle.lineSpacing = linespacing  // Whatever line spacing you want in points
-        let font:UIFont = (UIFont(name: "AvenirNext-Medium", size: textSize))!
+        let font:UIFont = (UIFont(name: font, size: textSize))!
         
         let attrs: [NSAttributedStringKey: Any] = [
             .paragraphStyle: paragraphStyle,
@@ -169,22 +128,39 @@ extension NSMutableAttributedString {
         return self
     }
     
-    @discardableResult func normal(string:String, textSize:CGFloat, textColor:UIColor, linespacing: CGFloat) -> NSMutableAttributedString {
-        let paragraphStyle = NSMutableParagraphStyle()
-        paragraphStyle.lineSpacing = linespacing  // Whatever line spacing you want in points
-        let font:UIFont = (UIFont(name: "AvenirNext-Medium", size: textSize))!
-        
-        let attrs: [NSAttributedStringKey: Any] = [
-            .paragraphStyle: paragraphStyle,
-            .font : font,
-            .foregroundColor: textColor
-        ]
-        
-        let normal = NSMutableAttributedString(string: string, attributes: attrs)
-        append(normal)
-        
-        return self
-    }
+//    @discardableResult func normal(string:String, font:String, textSize:CGFloat, textColor:UIColor, linespacing: CGFloat) -> NSMutableAttributedString {
+//        let paragraphStyle = NSMutableParagraphStyle()
+//        paragraphStyle.lineSpacing = linespacing  // Whatever line spacing you want in points
+//        let font:UIFont = (UIFont(name: font, size: textSize))!
+//
+//        let attrs: [NSAttributedStringKey: Any] = [
+//            .paragraphStyle: paragraphStyle,
+//            .font : font,
+//            .foregroundColor: textColor
+//        ]
+//
+//        let normal = NSMutableAttributedString(string: string, attributes: attrs)
+//        append(normal)
+//
+//        return self
+//    }
+//
+//    @discardableResult func italic(string:String, font:String, textSize:CGFloat, textColor:UIColor, linespacing: CGFloat) -> NSMutableAttributedString {
+//        let paragraphStyle = NSMutableParagraphStyle()
+//        paragraphStyle.lineSpacing = linespacing  // Whatever line spacing you want in points
+//        let font:UIFont = (UIFont(name: font, size: textSize))!
+//
+//        let attrs: [NSAttributedStringKey: Any] = [
+//            .paragraphStyle: paragraphStyle,
+//            .font : font,
+//            .foregroundColor: textColor
+//        ]
+//
+//        let italic = NSMutableAttributedString(string: string, attributes: attrs)
+//        append(italic)
+//
+//        return self
+//    }
 }
 
 extension String {
