@@ -104,6 +104,9 @@ class ArticleDetailController:UICollectionViewController, UICollectionViewDelega
         // can you create ane extension for this?
         // you need to take care of the vertical vs horizontal images - https://stackoverflow.com/questions/23068862/how-to-detect-if-image-is-landscape-from-uiimagepicker
         // do an attributed text box for the title, caption, and credit
+        
+        
+        
         // pick a better name than MyTapGesture and move it to Helpers if possible
         // your date and author are running into the text - fix this
         // try passing the image rather than the view - this might help with the dimensions
@@ -133,7 +136,8 @@ class ArticleDetailController:UICollectionViewController, UICollectionViewDelega
         view.addSubview(zoomImageView)
         zoomImageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.animateOut)))
         
-        captionLabel.frame = CGRect(x: 14, y: view.frame.height - 80, width: view.frame.width - 18, height: 80)
+        captionLabel.frame = CGRect(x: 14, y: view.frame.height - 120, width: view.frame.width - 18, height: 120)
+        captionLabel.numberOfLines = 3
         captionLabel.text = caption
         captionLabel.textColor = UIColor(hexString: "#ffffff")
         captionLabel.font = UIFont.systemFont(ofSize: 14)
