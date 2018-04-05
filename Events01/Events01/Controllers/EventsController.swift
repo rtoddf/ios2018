@@ -20,7 +20,7 @@ class EventsController: UICollectionViewController, UICollectionViewDelegateFlow
         collectionView?.dataSource = self
         collectionView?.delegate = self
         
-        printFonts()
+//        printFonts()
     }
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

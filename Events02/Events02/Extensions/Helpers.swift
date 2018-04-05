@@ -53,32 +53,6 @@ extension UIColor {
     }
 }
 
-//func buttonGenerator(title:String, imageName:String) -> UIButton {
-//    let button = UIButton()
-//    button.setTitle(title, for: .normal)
-//
-//    // image has to be at size
-//    button.setImage(UIImage(named: imageName)?.withRenderingMode(UIImageRenderingMode.alwaysTemplate), for: .normal)
-//    button.imageView?.tintColor = UIColor(hexString: "#ae0000")
-//    // top, left, bottom, right
-//    button.titleEdgeInsets = UIEdgeInsetsMake(2, 8, 0, 0)
-//    button.setTitleColor(UIColor(hexString: "#ae0000"), for: .normal)
-//    // button.titleEdgeInsets = UIEdgeInsets(top: 0,left: -30,bottom: 0,right: 34)
-//
-//    button.titleLabel?.font = UIFont.systemFont(ofSize: 14)
-//    return button
-//}
-
-func createButton(title:String) -> UIButton {
-    let button = UIButton()
-    button.setTitle(title, for: .normal)
-    button.setTitleColor(UIColor(hexString: "#ae0000"), for: .normal)
-    button.titleLabel?.font = UIFont.systemFont(ofSize: 12)
-    //    button.layer.borderWidth = 0.5
-    //    button.layer.borderColor = UIColor(hexString: "#ae0000").cgColor
-    return button
-}
-
 extension UIImageView {
     func loadImageUsingUrlString(imageUrl:String) {
         let imageNameSplit = imageUrl.components(separatedBy: "/")
@@ -133,6 +107,25 @@ extension UIImageView {
             }
         }
         task.resume()
+    }
+}
+
+extension NSMutableAttributedString {
+    @discardableResult func format(string:String, font:String, textSize:CGFloat, textColor:UIColor, linespacing: CGFloat) -> NSMutableAttributedString {
+        let paragraphStyle = NSMutableParagraphStyle()
+        paragraphStyle.lineSpacing = linespacing  // Whatever line spacing you want in points
+        let font:UIFont = (UIFont(name: font, size: textSize))!
+        
+        let attrs: [NSAttributedStringKey: Any] = [
+            .paragraphStyle: paragraphStyle,
+            .font : font,
+            .foregroundColor: textColor
+        ]
+        
+        let boldString = NSMutableAttributedString(string: string, attributes: attrs)
+        append(boldString)
+        
+        return self
     }
 }
 

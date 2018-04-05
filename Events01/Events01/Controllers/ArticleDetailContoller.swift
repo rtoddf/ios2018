@@ -53,7 +53,6 @@ class ArticleDetailController:UICollectionViewController, UICollectionViewDelega
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellImagesId, for: indexPath) as! ArticleImagesCell
             cell.article = article
             cell.articleDetailContoller = self
-            
             return cell
         }
         

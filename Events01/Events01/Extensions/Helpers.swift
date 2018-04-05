@@ -127,40 +127,6 @@ extension NSMutableAttributedString {
         
         return self
     }
-    
-//    @discardableResult func normal(string:String, font:String, textSize:CGFloat, textColor:UIColor, linespacing: CGFloat) -> NSMutableAttributedString {
-//        let paragraphStyle = NSMutableParagraphStyle()
-//        paragraphStyle.lineSpacing = linespacing  // Whatever line spacing you want in points
-//        let font:UIFont = (UIFont(name: font, size: textSize))!
-//
-//        let attrs: [NSAttributedStringKey: Any] = [
-//            .paragraphStyle: paragraphStyle,
-//            .font : font,
-//            .foregroundColor: textColor
-//        ]
-//
-//        let normal = NSMutableAttributedString(string: string, attributes: attrs)
-//        append(normal)
-//
-//        return self
-//    }
-//
-//    @discardableResult func italic(string:String, font:String, textSize:CGFloat, textColor:UIColor, linespacing: CGFloat) -> NSMutableAttributedString {
-//        let paragraphStyle = NSMutableParagraphStyle()
-//        paragraphStyle.lineSpacing = linespacing  // Whatever line spacing you want in points
-//        let font:UIFont = (UIFont(name: font, size: textSize))!
-//
-//        let attrs: [NSAttributedStringKey: Any] = [
-//            .paragraphStyle: paragraphStyle,
-//            .font : font,
-//            .foregroundColor: textColor
-//        ]
-//
-//        let italic = NSMutableAttributedString(string: string, attributes: attrs)
-//        append(italic)
-//
-//        return self
-//    }
 }
 
 extension String {
