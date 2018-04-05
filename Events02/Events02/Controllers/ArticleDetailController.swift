@@ -4,6 +4,7 @@ class ArticleDetailController:UICollectionViewController, UICollectionViewDelega
     let cellId = "cellId"
     let cellTextId = "cellTextId"
     let cellImagesId = "cellImagesId"
+    let cellMapId = "cellMapId"
     var cellHeight:CGFloat = 22.0
     
     var article:Article? {
@@ -16,9 +17,11 @@ class ArticleDetailController:UICollectionViewController, UICollectionViewDelega
         super.viewDidLoad()
         
         collectionView?.backgroundColor = .white
+        collectionView?.alwaysBounceVertical = true
         collectionView?.register(ArticleDetailCell.self, forCellWithReuseIdentifier: cellId)
         collectionView?.register(ArticleDetailTextCell.self, forCellWithReuseIdentifier: cellTextId)
         collectionView?.register(ArticleImagesCell.self, forCellWithReuseIdentifier: cellImagesId)
+        collectionView?.register(ArticleDetailMapCell.self, forCellWithReuseIdentifier: cellMapId)
 
         self.navigationController?.navigationBar.tintColor = .white
         
@@ -34,7 +37,7 @@ class ArticleDetailController:UICollectionViewController, UICollectionViewDelega
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 3
+        return 4
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -46,6 +49,12 @@ class ArticleDetailController:UICollectionViewController, UICollectionViewDelega
         
         if indexPath.item == 2 {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellImagesId, for: indexPath) as! ArticleImagesCell
+            cell.article = article
+            return cell
+        }
+        
+        if indexPath.item == 3 {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellMapId, for: indexPath) as! ArticleDetailMapCell
             cell.article = article
             return cell
         }
@@ -64,6 +73,10 @@ class ArticleDetailController:UICollectionViewController, UICollectionViewDelega
         if indexPath.item == 2 {
             let height = (9 / 16) * (view.frame.width * 0.40) + 28
             return CGSize(width: view.frame.width, height: height)
+        }
+        
+        if indexPath.item == 3 {
+            return CGSize(width: view.frame.width, height: 200)
         }
         
         // use the var for the height to be set after notification sent

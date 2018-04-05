@@ -11,7 +11,7 @@ struct Article:Decodable {
     let locations:[Location]?
     
     static func downloadData(completion: @escaping ([Article]) -> Void) {
-        let urlString = "http://rtodd.net/swift/data/movie-reviews.json"
+        let urlString = "http://rtodd.net/swift/data/places.json"
         let url = URL(string: urlString)
         
         if let urlObject = url {
