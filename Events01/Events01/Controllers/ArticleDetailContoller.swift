@@ -136,11 +136,24 @@ class ArticleDetailController:UICollectionViewController, UICollectionViewDelega
         view.addSubview(zoomImageView)
         zoomImageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.animateOut)))
         
-        captionLabel.frame = CGRect(x: 14, y: view.frame.height - 120, width: view.frame.width - 18, height: 120)
-        captionLabel.numberOfLines = 3
-        captionLabel.text = caption
-        captionLabel.textColor = UIColor(hexString: "#ffffff")
-        captionLabel.font = UIFont.systemFont(ofSize: 14)
+        captionLabel.frame = CGRect(x: 14, y: view.frame.height - 160, width: view.frame.width - 18, height: 160)
+        captionLabel.numberOfLines = 4
+        
+//        let titleAttributedText = formatAttributedText(string: title, textSize: 14, textColor: UIColor(hexString: "#dedede"), linespacing: 1)
+//        let captionAttributedText = formatAttributedText(string: caption, textSize: 13, textColor: UIColor(hexString: "#dedede"), linespacing: 1)
+//        let creditAttributedText = formatAttributedText(string: credit, textSize: 12, textColor: UIColor(hexString: "#dedede"), linespacing: 1)
+        
+        let combination = NSMutableAttributedString()
+        combination
+            .bold(string: title + "\n", textSize: 14, textColor: UIColor(hexString: "#dedede"), linespacing: 1)
+            .normal(string: caption + "\n", textSize: 13, textColor: UIColor(hexString: "#dedede"), linespacing: 1)
+            .normal(string: credit, textSize: 12, textColor: UIColor(hexString: "#dedede"), linespacing: 1)
+        
+//        combination.append(titleAttributedText)
+//        combination.append(captionAttributedText)
+//        combination.append(creditAttributedText)
+        
+        captionLabel.attributedText = combination
         captionLabel.alpha = 0
         view.addSubview(captionLabel)
         

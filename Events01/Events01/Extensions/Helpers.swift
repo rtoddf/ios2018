@@ -136,6 +136,57 @@ extension UIImageView {
     }
 }
 
+func formatAttributedText(string:String, textSize:CGFloat, textColor:UIColor, linespacing: CGFloat) -> NSMutableAttributedString {
+    // *** Create instance of `NSMutableParagraphStyle`
+    let paragraphStyle = NSMutableParagraphStyle()
+    paragraphStyle.lineSpacing = linespacing  // Whatever line spacing you want in points
+    let font:UIFont = UIFont.systemFont(ofSize: textSize)
+    
+    let textAttributes: [NSAttributedStringKey: Any] = [
+        .paragraphStyle: paragraphStyle,
+        .font : font,
+        .foregroundColor: textColor
+    ]
+    
+    return NSMutableAttributedString(string: string + "\n", attributes: textAttributes)
+}
+
+extension NSMutableAttributedString {
+    @discardableResult func bold(string:String, textSize:CGFloat, textColor:UIColor, linespacing: CGFloat) -> NSMutableAttributedString {
+        let paragraphStyle = NSMutableParagraphStyle()
+        paragraphStyle.lineSpacing = linespacing  // Whatever line spacing you want in points
+        let font:UIFont = (UIFont(name: "AvenirNext-Medium", size: textSize))!
+        
+        let attrs: [NSAttributedStringKey: Any] = [
+            .paragraphStyle: paragraphStyle,
+            .font : font,
+            .foregroundColor: textColor
+        ]
+        
+        let boldString = NSMutableAttributedString(string: string, attributes: attrs)
+        append(boldString)
+        
+        return self
+    }
+    
+    @discardableResult func normal(string:String, textSize:CGFloat, textColor:UIColor, linespacing: CGFloat) -> NSMutableAttributedString {
+        let paragraphStyle = NSMutableParagraphStyle()
+        paragraphStyle.lineSpacing = linespacing  // Whatever line spacing you want in points
+        let font:UIFont = (UIFont(name: "AvenirNext-Medium", size: textSize))!
+        
+        let attrs: [NSAttributedStringKey: Any] = [
+            .paragraphStyle: paragraphStyle,
+            .font : font,
+            .foregroundColor: textColor
+        ]
+        
+        let normal = NSMutableAttributedString(string: string, attributes: attrs)
+        append(normal)
+        
+        return self
+    }
+}
+
 extension String {
     func wrapHTML() -> String {
         let fontSize:String = "24px"
