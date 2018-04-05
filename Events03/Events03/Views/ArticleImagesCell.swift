@@ -1,6 +1,16 @@
 import UIKit
 
 class ArticleImagesCell:BaseCell, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+    var articleDetailContoller:ArticleDetailController?
+    
+    @objc func animateView(sender: MyTapGesture){
+        guard let imageView = sender.view else { return }
+        guard let title = sender.title else { return }
+        guard let caption = sender.caption else { return }
+        guard let credit = sender.credit else { return }
+        articleDetailContoller?.animate(image: imageView as! UIImageView, title: title, caption: caption, credit: credit)
+    }
+    
     let cellId = "cellId"
     
     var article:Article? {
@@ -34,11 +44,27 @@ class ArticleImagesCell:BaseCell, UICollectionViewDataSource, UICollectionViewDe
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellId", for: indexPath) as! ImageCell
         
-        if let image = article?.images![indexPath.item].path {
+        if let image = article?.images![indexPath.item].path,
+            let title = article?.images![indexPath.item].title,
+            let caption = article?.images![indexPath.item].caption,
+            let credit = article?.images![indexPath.item].credit {
+            
             cell.articleImageView.loadImageUsingUrlString(imageUrl: image)
+            let tappy = MyTapGesture(target: self, action: #selector(self.animateView))
+            tappy.title = title
+            tappy.caption = caption
+            tappy.credit = credit
+            
+            cell.articleImageView.addGestureRecognizer(tappy)
         }
         
         return cell
+    }
+    
+    class MyTapGesture: UITapGestureRecognizer {
+        var title:String?
+        var caption:String?
+        var credit:String?
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -59,6 +85,8 @@ class ArticleImagesCell:BaseCell, UICollectionViewDataSource, UICollectionViewDe
         collectionView.delegate = self
         collectionView.register(ImageCell.self, forCellWithReuseIdentifier: cellId)
         
+        collectionView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.animateView)))
+        
         addSubview(collectionView)
         addSubview(dividerView)
         
@@ -74,13 +102,13 @@ private class ImageCell:BaseCell {
         iv.contentMode = .scaleAspectFit
         iv.clipsToBounds = true
         iv.backgroundColor = UIColor(hexString: "#333333")
+        iv.isUserInteractionEnabled = true
         return iv
     }()
     
     override func setupViews() {
         super.setupViews()
         addSubview(articleImageView)
-        
         addConstraintsWithFormat(format: "H:|[v0]|", views: articleImageView)
         addConstraintsWithFormat(format: "V:|[v0]|", views: articleImageView)
     }
