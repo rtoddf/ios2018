@@ -136,19 +136,6 @@ class ArticleDetailController:UICollectionViewController, UICollectionViewDelega
         zoomImageView.frame = startingFrame
         view.addSubview(zoomImageView)
         zoomImageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.animateOut)))
-        
-        var orientation:String
-        
-        print("height: \(image.image?.size.height)")
-        print("width: \(image.image?.size.width)")
-        
-        if Int((image.image?.size.height)!) > Int((image.image?.size.width)!) {
-            print("portrait: \(image.image?.size.height)")
-            orientation = "portrait"
-        } else {
-            print("landscape: \(image.image?.size.width)")
-            orientation = "landscape"
-        }
 
         // imageInfoLabel
         imageInfoLabel.frame = CGRect(x: 14, y: view.frame.height, width: view.frame.width - 28, height: imageInfoLabel.bounds.size.height)
@@ -167,26 +154,22 @@ class ArticleDetailController:UICollectionViewController, UICollectionViewDelega
         view.addSubview(imageInfoLabel)
         
         UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 0.5, options: .curveEaseOut, animations: {
-            print("orientation: \(orientation)")
-            
+
             let width:CGFloat
             let height:CGFloat
             let x:CGFloat
             let y:CGFloat
             
-//            let guide = self.view.safeAreaLayoutGuide
-//            let ht = self.view.safeAreaLayoutGuide.layoutFrame.size.height
-
-            if orientation == "landscape" {
-                width = self.view.frame.width
-                height = (self.view.frame.width / startingFrame.width) * startingFrame.height
-                x = 0
-                y = (self.view.frame.height / 2) - (height / 2)
-            } else {
+            if Int((self.zoomImageView.image?.size.height)!) > Int((self.zoomImageView.image?.size.width)!) {
                 width = (self.view.safeAreaLayoutGuide.layoutFrame.size.height / (image.image?.size.height)!) * (image.image?.size.width)!
                 height = self.view.safeAreaLayoutGuide.layoutFrame.size.height
                 x = (self.view.frame.width / 2) - (width / 2)
                 y = self.navCoverView.frame.height
+            } else {
+                width = self.view.frame.width
+                height = (self.view.frame.width / startingFrame.width) * startingFrame.height
+                x = 0
+                y = (self.view.frame.height / 2) - (height / 2)
             }
             
             self.zoomImageView.frame = CGRect(x: x, y: y, width: width, height: height)
