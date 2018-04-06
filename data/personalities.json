@@ -96,5 +96,54 @@
 				"name": "Pittsburgh, Pennsylvania"
 			}
 		]
+	},
+	{
+		"headline": "Nico Tortorella - American actor and model",
+		"author": "Eddie Fuon",
+		"item_class": "personality",
+		"guid": "f21f6d26-aaaa-1111-8401-ed4dfe8ebc2c",
+		"pub_date": "Fri, 06 Mar 2018 09:25:00 EDT",
+		"summary": "Speaking to the New York Post's Page Six in June 2016, Tortorella declared himself to be sexually fluid. He later identified as bisexual in an interview with Vulture on October 30, 2016. In November 2017 he talked about being in a polyamorous relationship, a revelation that has gotten him uninvited from his partner's family's Thanksgiving dinner.",
+		"full_text": "<p>Speaking to the New York Post's Page Six in June 2016, Tortorella declared himself to be sexually fluid. He later identified as bisexual in an interview with Vulture on October 30, 2016. In November 2017 he talked about being in a polyamorous relationship, a revelation that has gotten him uninvited from his partner's family's Thanksgiving dinner.</p>",
+		"lead_image": "http://www.rtodd.net/swift/images/events/personalities/nico-tortorella01.jpg",
+		"images": [
+			{
+				"path": "http://www.rtodd.net/swift/images/events/personalities/nico-tortorella01.jpg",
+				"title": "Nico Tortorella",
+				"caption": "Speaking to the New York Post's Page Six in June 2016, Tortorella declared himself to be sexually fluid. He later identified as bisexual in an interview with Vulture on October 30, 2016. In November 2017 he talked about being in a polyamorous relationship, a revelation that has gotten him uninvited from his partner's family's Thanksgiving dinner.",
+				"credit": "ABC"
+			},
+			{
+				"path": "http://www.rtodd.net/swift/images/events/personalities/nico-tortorella02.jpg",
+				"title": "Nico Tortorella",
+				"caption": "Speaking to the New York Post's Page Six in June 2016, Tortorella declared himself to be sexually fluid. He later identified as bisexual in an interview with Vulture on October 30, 2016. In November 2017 he talked about being in a polyamorous relationship, a revelation that has gotten him uninvited from his partner's family's Thanksgiving dinner.",
+				"credit": "ABC"
+			},
+			{
+				"path": "http://www.rtodd.net/swift/images/events/personalities/nico-tortorella03.jpg",
+				"title": "Nico Tortorella",
+				"caption": "Speaking to the New York Post's Page Six in June 2016, Tortorella declared himself to be sexually fluid. He later identified as bisexual in an interview with Vulture on October 30, 2016. In November 2017 he talked about being in a polyamorous relationship, a revelation that has gotten him uninvited from his partner's family's Thanksgiving dinner.",
+				"credit": "ABC"
+			},
+			{
+				"path": "http://www.rtodd.net/swift/images/events/personalities/nico-tortorella04.jpg",
+				"title": "Nico Tortorella",
+				"caption": "Speaking to the New York Post's Page Six in June 2016, Tortorella declared himself to be sexually fluid. He later identified as bisexual in an interview with Vulture on October 30, 2016. In November 2017 he talked about being in a polyamorous relationship, a revelation that has gotten him uninvited from his partner's family's Thanksgiving dinner.",
+				"credit": "ABC"
+			},
+			{
+				"path": "http://www.rtodd.net/swift/images/events/personalities/nico-tortorella05.jpg",
+				"title": "Nico Tortorella",
+				"caption": "Speaking to the New York Post's Page Six in June 2016, Tortorella declared himself to be sexually fluid. He later identified as bisexual in an interview with Vulture on October 30, 2016. In November 2017 he talked about being in a polyamorous relationship, a revelation that has gotten him uninvited from his partner's family's Thanksgiving dinner.",
+				"credit": "ABC"
+			}
+		],
+		"locations": [
+			{
+				"latitude": 42.072251,
+				"longitude": -87.722838,
+				"name": "Wilmette, Illinois"
+			}
+		]
 	}
 ]
