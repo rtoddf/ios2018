@@ -1,0 +1,100 @@
+[
+	{
+		"headline": "Ben Barnes - British actor and singer",
+		"author": "Eddie Fuon",
+		"item_class": "personality",
+		"guid": "f21f6d26-aaaa-1111-8401-ed4dfe8ebc2c",
+		"pub_date": "Fri, 06 Apr 2018 09:25:00 EDT",
+		"summary": "In September 2006, Barnes was cast as Prince Caspian in The Chronicles of Narnia films Prince Caspian and The Voyage of the Dawn Treader. He has also played Tom Ward in the fantasy film Seventh Son, Dorian Gray in the 2009 adaptation of Oscar Wilde's The Picture of Dorian Gray, had supporting roles in The Words, and The Big Wedding, and portrayed Samuel Adams in the 2015 miniseries Sons of Liberty.",
+		"full_text": "<p>In September 2006, Barnes was cast as Prince Caspian in The Chronicles of Narnia films Prince Caspian and The Voyage of the Dawn Treader. He has also played Tom Ward in the fantasy film Seventh Son, Dorian Gray in the 2009 adaptation of Oscar Wilde's The Picture of Dorian Gray, had supporting roles in The Words, and The Big Wedding, and portrayed Samuel Adams in the 2015 miniseries Sons of Liberty.</p>",
+		"lead_image": "http://www.rtodd.net/swift/images/events/personalities/ben-barnes05.jpg",
+		"images": [
+			{
+				"path": "http://www.rtodd.net/swift/images/events/personalities/ben-barnes01.jpg",
+				"title": "Ben Barnes",
+				"caption": "Barnes was born in London, to Tricia, a relationship therapist, and Thomas Barnes, a professor of psychiatry.",
+				"credit": "HBO"
+			},
+			{
+				"path": "http://www.rtodd.net/swift/images/events/personalities/ben-barnes02.jpg",
+				"title": "Ben Barnes",
+				"caption": "Barnes was born in London, to Tricia, a relationship therapist, and Thomas Barnes, a professor of psychiatry.",
+				"credit": "HBO"
+			},
+			{
+				"path": "http://www.rtodd.net/swift/images/events/personalities/ben-barnes03.jpg",
+				"title": "Ben Barnes",
+				"caption": "Barnes was born in London, to Tricia, a relationship therapist, and Thomas Barnes, a professor of psychiatry.",
+				"credit": "HBO"
+			},
+			{
+				"path": "http://www.rtodd.net/swift/images/events/personalities/ben-barnes04.jpg",
+				"title": "Ben Barnes",
+				"caption": "Barnes was born in London, to Tricia, a relationship therapist, and Thomas Barnes, a professor of psychiatry.",
+				"credit": "HBO"
+			},
+			{
+				"path": "http://www.rtodd.net/swift/images/events/personalities/ben-barnes05.jpg",
+				"title": "Ben Barnes",
+				"caption": "Barnes was born in London, to Tricia, a relationship therapist, and Thomas Barnes, a professor of psychiatry.",
+				"credit": "HBO"
+			}
+		],
+		"locations": [
+			{
+				"latitude": 51.507351,
+				"longitude": -0.127758,
+				"name": "London, England"
+			}
+		]
+	},
+	{
+		"headline": "Andy Mientus - American stage and television actor and singer",
+		"author": "Eddie Fuon",
+		"item_class": "personality",
+		"guid": "f21f6d26-aaaa-1111-8401-ed4dfe8ebc2c",
+		"pub_date": "Fri, 06 Apr 2018 09:25:00 EDT",
+		"summary": "Mientus is openly bisexual. He married fellow Broadway actor (and director) Michael Arden on August 18, 2016, at Babington House, Somerset, England. He and Arden planned proposals to each other the same day (June 23, 2014), without the other knowing. They have been together since November 14, 2010. The two first met on October 26, 2006 during the opening night party of the Broadway show The Times They Are-a-Changin', in which Arden was a performer.",
+		"full_text": "<p>Mientus is openly bisexual. He married fellow Broadway actor (and director) Michael Arden on August 18, 2016, at Babington House, Somerset, England. He and Arden planned proposals to each other the same day (June 23, 2014), without the other knowing. They have been together since November 14, 2010. The two first met on October 26, 2006 during the opening night party of the Broadway show The Times They Are-a-Changin', in which Arden was a performer.</p>",
+		"lead_image": "http://www.rtodd.net/swift/images/events/personalities/andy-mientus05.jpg",
+		"images": [
+			{
+				"path": "http://www.rtodd.net/swift/images/events/personalities/andy-mientus01.jpg",
+				"title": "Andy Mientus",
+				"caption": "On March 9, 2018 Amulet Books, an imprint of ABRAMS, announced that Mientus has written a middle-grade fiction series called The Backstagers",
+				"credit": "Playbill Magazine"
+			},
+			{
+				"path": "http://www.rtodd.net/swift/images/events/personalities/andy-mientus02.jpg",
+				"title": "Andy Mientus",
+				"caption": "On March 9, 2018 Amulet Books, an imprint of ABRAMS, announced that Mientus has written a middle-grade fiction series called The Backstagers",
+				"credit": "Playbill Magazine"
+			},
+			{
+				"path": "http://www.rtodd.net/swift/images/events/personalities/andy-mientus03.jpg",
+				"title": "Andy Mientus",
+				"caption": "On March 9, 2018 Amulet Books, an imprint of ABRAMS, announced that Mientus has written a middle-grade fiction series called The Backstagers",
+				"credit": "Playbill Magazine"
+			},
+			{
+				"path": "http://www.rtodd.net/swift/images/events/personalities/andy-mientus04.jpg",
+				"title": "Andy Mientus",
+				"caption": "On March 9, 2018 Amulet Books, an imprint of ABRAMS, announced that Mientus has written a middle-grade fiction series called The Backstagers",
+				"credit": "Playbill Magazine"
+			},
+			{
+				"path": "http://www.rtodd.net/swift/images/events/personalities/andy-mientus05.jpg",
+				"title": "Andy Mientus",
+				"caption": "On March 9, 2018 Amulet Books, an imprint of ABRAMS, announced that Mientus has written a middle-grade fiction series called The Backstagers",
+				"credit": "Playbill Magazine"
+			}
+		],
+		"locations": [
+			{
+				"latitude": 40.440625,
+				"longitude": -79.995886,
+				"name": "Pittsburgh, Pennsylvania"
+			}
+		]
+	}
+]
