@@ -132,6 +132,7 @@ class ArticleDetailController:UICollectionViewController, UICollectionViewDelega
         
         // imageInfoLabel
         imageInfoLabel.frame = CGRect(x: 14, y: view.frame.height, width: view.frame.width - 28, height: imageInfoLabel.bounds.size.height)
+        imageInfoLabel.backgroundColor = UIColor(hexString: "#333333").withAlphaComponent(0.7)
         imageInfoLabel.numberOfLines = 0
         imageInfoLabel.lineBreakMode = NSLineBreakMode.byWordWrapping
         imageInfoLabel.alpha = 0
@@ -147,10 +148,24 @@ class ArticleDetailController:UICollectionViewController, UICollectionViewDelega
         view.addSubview(imageInfoLabel)
         
         UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 0.5, options: .curveEaseOut, animations: {
-            let height = (self.view.frame.width / startingFrame.width) * startingFrame.height
-            let y = (self.view.frame.height / 2) - (height / 2)
+            let width:CGFloat
+            let height:CGFloat
+            let x:CGFloat
+            let y:CGFloat
             
-            self.zoomImageView.frame = CGRect(x: 0, y: y, width: self.view.frame.width, height: height)
+            if Int((self.zoomImageView.image?.size.height)!) > Int((self.zoomImageView.image?.size.width)!) {
+                width = (self.view.safeAreaLayoutGuide.layoutFrame.size.height / (image.image?.size.height)!) * (image.image?.size.width)!
+                height = self.view.safeAreaLayoutGuide.layoutFrame.size.height
+                x = (self.view.frame.width / 2) - (width / 2)
+                y = self.navCoverView.frame.height
+            } else {
+                width = self.view.frame.width
+                height = (self.view.frame.width / startingFrame.width) * startingFrame.height
+                x = 0
+                y = (self.view.frame.height / 2) - (height / 2)
+            }
+            
+            self.zoomImageView.frame = CGRect(x: x, y: y, width: width, height: height)
             self.imageInfoLabel.alpha = 1
             self.imageInfoLabel.frame = CGRect(x: 14, y: self.view.frame.height - self.imageInfoLabel.bounds.size.height - 14, width: self.view.frame.width - 28, height: self.imageInfoLabel.bounds.size.height)
             self.zoomedImageBackgroundView.alpha = 1

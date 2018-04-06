@@ -24,7 +24,7 @@ class ArticleDetailCell:BaseCell {
             headlineLabel.text = headline
             
             var authorText = "By "
-            authorText.append("\(author) | \(publishedDate)")
+            authorText.append("\(author) | \(publishedDate.timeAgoDisplay())")
             authorLabel.text = authorText
         }
     }

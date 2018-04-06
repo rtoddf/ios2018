@@ -13,7 +13,7 @@ class LargeStoryCell:UICollectionViewCell {
             headlineLabel.text = headline
             
             var authorText = "By "
-            authorText.append("\(author) | \(publishedDate)")
+            authorText.append("\(author) | \(publishedDate.timeAgoDisplay())")
             authorLabel.text = authorText
 
             let attributedText = NSMutableAttributedString(string: summary, attributes: [NSAttributedStringKey.font: UIFont.systemFont(ofSize: 14), NSAttributedStringKey.foregroundColor: UIColor.darkGray])

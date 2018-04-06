@@ -181,7 +181,7 @@ extension String {
         print("self: \(self)")
         
         let dateFormatter = DateFormatter()
-        let stringDate:String = "Thu, 05 Apr 2018 16:21:00 EDT"
+//        let stringDate:String = "Thu, 05 Apr 2018 16:21:00 EDT"
         dateFormatter.dateFormat = "E, dd MMM yyyy HH:mm:ss z"
         dateFormatter.locale = Locale(identifier: "en_US_POSIX") // set locale to reliable US_POSIX
         let date = dateFormatter.date(from:self)!

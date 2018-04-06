@@ -102,10 +102,13 @@ class ArticleDetailController:UICollectionViewController, UICollectionViewDelega
     func animate(image:UIImageView, title:String, caption:String, credit:String){
         // can you create ane extension for this?
 
-        // you need to take care of the vertical vs horizontal images - https://stackoverflow.com/questions/23068862/how-to-detect-if-image-is-landscape-from-uiimagepicker
+        // tweak zoomed images for animateOut and ratios
+        // try passing the image rather than the view - this might help with the dimensions
+        // padding on UILabel - https://gist.github.com/danielkagemann/f2e9a069a910dc92ddbc94f889f137a5
+        
         // pick a better name than MyTapGesture and move it to Helpers if possible
         // your date and author are running into the text - fix this
-        // try passing the image rather than the view - this might help with the dimensions
+        
         // you found the answer to myTapGesture here: https://stackoverflow.com/questions/38445262/pass-parameter-with-uitapgesturerecognizer
         
         // see if you can tweak the attributedtext stuff
@@ -139,6 +142,7 @@ class ArticleDetailController:UICollectionViewController, UICollectionViewDelega
 
         // imageInfoLabel
         imageInfoLabel.frame = CGRect(x: 14, y: view.frame.height, width: view.frame.width - 28, height: imageInfoLabel.bounds.size.height)
+        imageInfoLabel.backgroundColor = UIColor(hexString: "#333333").withAlphaComponent(0.7)
         imageInfoLabel.numberOfLines = 0
         imageInfoLabel.lineBreakMode = NSLineBreakMode.byWordWrapping
         imageInfoLabel.alpha = 0
@@ -154,7 +158,6 @@ class ArticleDetailController:UICollectionViewController, UICollectionViewDelega
         view.addSubview(imageInfoLabel)
         
         UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 0.5, options: .curveEaseOut, animations: {
-
             let width:CGFloat
             let height:CGFloat
             let x:CGFloat
