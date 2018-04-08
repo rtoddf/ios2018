@@ -9,6 +9,7 @@ struct Article:Decodable {
     let lead_image:String?
     let images:[Image]?
     let locations:[Location]?
+    let related_content:[Item]?
     
     static func downloadData(completion: @escaping ([Article]) -> Void) {
         let urlString = "http://rtodd.net/swift/data/personalities.json"
@@ -45,4 +46,12 @@ struct Location:Decodable {
     let latitude:Float?
     let longitude:Float?
     let name:String?
+}
+
+struct Item:Decodable {
+    let headline:String?
+    let summary:String?
+    let pub_date:String?
+    let lead_image:String?
+    let guid:String?
 }
