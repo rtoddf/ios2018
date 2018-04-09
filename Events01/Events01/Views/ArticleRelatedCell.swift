@@ -28,23 +28,30 @@ class ArticleRelatedCell:BaseCell, UITableViewDataSource, UITableViewDelegate {
         let displayHeight: CGFloat = 200
         
         let tv = UITableView(frame: CGRect(x: 0, y: barHeight, width: displayWidth, height: displayHeight - barHeight))
-        tv.backgroundColor = .orange
 //        tableView.
         return tv
     }()
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if let count = article?.related_content?.count {
+            if count <= 4 {
+                return count
+            }
+        }
         return 4
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell  = tableView.dequeueReusableCell(withIdentifier: storyCellId, for: indexPath) as! RelatedTableCell
-        
+        let cell = tableView.dequeueReusableCell(withIdentifier: storyCellId, for: indexPath) as! RelatedTableCell
+        if let headline = article?.related_content![indexPath.item].headline {
+            cell.nameLabel.text = headline
+        }
+//        if let image = article?.images![indexPath.item].path
         return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 40.0
+        return 50.0
     }
     
     override func setupViews() {
@@ -58,7 +65,7 @@ class ArticleRelatedCell:BaseCell, UITableViewDataSource, UITableViewDelegate {
         
         addConstraintsWithFormat(format: "H:|[v0]|", views: dividerView)
         addConstraintsWithFormat(format: "H:|-14-[v0]-14-|", views: headerLabel)
-        addConstraintsWithFormat(format: "H:|-14-[v0]-14-|", views: tableView)
+        addConstraintsWithFormat(format: "H:|[v0]|", views: tableView)
         addConstraintsWithFormat(format: "V:|[v0(0.5)]-8-[v1]-8-[v2(200)]", views: dividerView, headerLabel, tableView)
     }
 }
@@ -75,18 +82,15 @@ class RelatedTableCell:UITableViewCell {
     
     var nameLabel:UILabel = {
         let label = UILabel()
-        label.text = "Sample Answer"
         label.font = UIFont(name: "AvenirNext-Medium", size: 14)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
     
     func setupViews(){
-        print("tableviewCell")
-        
         addSubview(nameLabel)
         
-        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-16-[v0]|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": nameLabel]))
+        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-14-[v0]|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": nameLabel]))
         addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[v0]|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": nameLabel]))
     }
 }
