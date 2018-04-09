@@ -43,15 +43,17 @@ class ArticleRelatedCell:BaseCell, UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: storyCellId, for: indexPath) as! RelatedTableCell
-        if let headline = article?.related_content![indexPath.item].headline {
+        if let headline = article?.related_content![indexPath.item].headline,
+            let image = article?.related_content![indexPath.item].lead_image {
             cell.nameLabel.text = headline
+            cell.articleImageView.loadImageUsingUrlString(imageUrl: image)
         }
 //        if let image = article?.images![indexPath.item].path
         return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 50.0
+        return 80.0
     }
     
     override func setupViews() {
@@ -83,14 +85,24 @@ class RelatedTableCell:UITableViewCell {
     var nameLabel:UILabel = {
         let label = UILabel()
         label.font = UIFont(name: "AvenirNext-Medium", size: 14)
-        label.translatesAutoresizingMaskIntoConstraints = false
+        label.numberOfLines = 2
         return label
+    }()
+
+    let articleImageView:UIImageView = {
+        let iv = UIImageView()
+        iv.contentMode = .scaleAspectFit
+        iv.clipsToBounds = true
+        iv.backgroundColor = UIColor(hexString: "#333333")
+        return iv
     }()
     
     func setupViews(){
         addSubview(nameLabel)
+        addSubview(articleImageView)
         
-        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-14-[v0]|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": nameLabel]))
-        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[v0]|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": nameLabel]))
+        addConstraintsWithFormat(format: "H:|-14-[v0]-14-[v1(50)]-14-|", views: nameLabel, articleImageView)
+        addConstraintsWithFormat(format: "V:|[v0(80)]|", views: nameLabel)
+        addConstraintsWithFormat(format: "V:|-8-[v0(50)]", views: articleImageView)
     }
 }
