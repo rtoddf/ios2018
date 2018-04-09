@@ -5,7 +5,12 @@ class ArticleRelatedCell:BaseCell, UITableViewDataSource, UITableViewDelegate {
     
     var article:Article? {
         didSet {
-            
+            let count = article?.related_content?.count
+
+            if count == nil {
+                headerLabel.isHidden = true
+                tableView.isHidden = true
+            }
         }
     }
     
@@ -27,8 +32,12 @@ class ArticleRelatedCell:BaseCell, UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if let count = article?.related_content?.count {
-            if count <= 4 {
-                return count
+//            if count <= 4 {
+//                return count
+//            }
+            
+            if count == 0 {
+                print("empty")
             }
         }
         return 4
