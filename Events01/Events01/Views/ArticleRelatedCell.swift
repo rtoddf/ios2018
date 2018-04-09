@@ -59,7 +59,7 @@ class ArticleRelatedCell:BaseCell, UITableViewDataSource, UITableViewDelegate {
         addConstraintsWithFormat(format: "H:|[v0]|", views: dividerView)
         addConstraintsWithFormat(format: "H:|-14-[v0]-14-|", views: headerLabel)
         addConstraintsWithFormat(format: "H:|-14-[v0]-14-|", views: tableView)
-        addConstraintsWithFormat(format: "V:|[v0(0.5)]-8-[v1]-8-[v2]", views: dividerView, headerLabel, tableView)
+        addConstraintsWithFormat(format: "V:|[v0(0.5)]-8-[v1]-8-[v2(200)]", views: dividerView, headerLabel, tableView)
     }
 }
 
