@@ -19,10 +19,11 @@ class ArticleImagesCell:BaseCell, UICollectionViewDataSource, UICollectionViewDe
         }
     }
     
-    let dividerView:UIView = {
-        let view = UIView()
-        view.backgroundColor = UIColor(hexString: "#ae0000")
-        return view
+    let headerLabel:UILabel = {
+        let label = UILabel()
+        label.text = "Media"
+        label.font = UIFont(name: "AvenirNext-Bold", size: 18.0)
+        return label
     }()
     
     let collectionView:UICollectionView = {
@@ -43,8 +44,6 @@ class ArticleImagesCell:BaseCell, UICollectionViewDataSource, UICollectionViewDe
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellId", for: indexPath) as! ImageCell
-        
-
 
         if let image = article?.images![indexPath.item].path,
             let title = article?.images![indexPath.item].title,
@@ -89,12 +88,12 @@ class ArticleImagesCell:BaseCell, UICollectionViewDataSource, UICollectionViewDe
         
         collectionView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.animateView)))
         
+        addSubview(headerLabel)
         addSubview(collectionView)
-        addSubview(dividerView)
-        
-        addConstraintsWithFormat(format: "H:|[v0]|", views: dividerView)
+
+        addConstraintsWithFormat(format: "H:|-14-[v0]-14-|", views: headerLabel)
         addConstraintsWithFormat(format: "H:|[v0]|", views: collectionView)
-        addConstraintsWithFormat(format: "V:|[v0(0.5)][v1]|", views: dividerView, collectionView)
+        addConstraintsWithFormat(format: "V:|[v0]-8-[v1]|", views: headerLabel, collectionView)
     }
 }
 

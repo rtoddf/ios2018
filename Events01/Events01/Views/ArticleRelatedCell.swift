@@ -9,12 +9,6 @@ class ArticleRelatedCell:BaseCell, UITableViewDataSource, UITableViewDelegate {
         }
     }
     
-    let dividerView:UIView = {
-        let view = UIView()
-        view.backgroundColor = UIColor(hexString: "#ae0000")
-        return view
-    }()
-    
     let headerLabel:UILabel = {
         let label = UILabel()
         label.text = "Related Content"
@@ -57,18 +51,16 @@ class ArticleRelatedCell:BaseCell, UITableViewDataSource, UITableViewDelegate {
 //    }
     
     override func setupViews() {
-        addSubview(dividerView)
         addSubview(headerLabel)
         addSubview(tableView)
 
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(RelatedTableCell.self, forCellReuseIdentifier: storyCellId)
-        
-        addConstraintsWithFormat(format: "H:|[v0]|", views: dividerView)
+
         addConstraintsWithFormat(format: "H:|-14-[v0]-14-|", views: headerLabel)
         addConstraintsWithFormat(format: "H:|[v0]|", views: tableView)
-        addConstraintsWithFormat(format: "V:|[v0(0.5)]-8-[v1]-8-[v2(320)]", views: dividerView, headerLabel, tableView)
+        addConstraintsWithFormat(format: "V:|[v0]-8-[v1(320)]", views: headerLabel, tableView)
     }
 }
 
