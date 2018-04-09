@@ -102,7 +102,7 @@ class RelatedTableCell:UITableViewCell {
         addSubview(articleImageView)
         
         addConstraintsWithFormat(format: "H:|-14-[v0]-14-[v1(50)]-14-|", views: nameLabel, articleImageView)
-        addConstraintsWithFormat(format: "V:|[v0(80)]|", views: nameLabel)
+        addConstraintsWithFormat(format: "V:|-8-[v0]", views: nameLabel)
         addConstraintsWithFormat(format: "V:|-8-[v0(50)]", views: articleImageView)
     }
 }
