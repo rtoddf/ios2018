@@ -91,7 +91,7 @@ class ArticleDetailController:UICollectionViewController, UICollectionViewDelega
         }
         
         if indexPath.item == 4 {
-            return CGSize(width: view.frame.width, height: 250)
+            return CGSize(width: view.frame.width, height: 360)
         }
         
         // use the var for the height to be set after notification sent

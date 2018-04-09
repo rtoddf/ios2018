@@ -9,12 +9,6 @@ class ArticleRelatedCell:BaseCell, UITableViewDataSource, UITableViewDelegate {
         }
     }
     
-    let dividerView:UIView = {
-        let view = UIView()
-        view.backgroundColor = UIColor(hexString: "#ae0000")
-        return view
-    }()
-    
     let headerLabel:UILabel = {
         let label = UILabel()
         label.text = "Related Content"
@@ -23,12 +17,11 @@ class ArticleRelatedCell:BaseCell, UITableViewDataSource, UITableViewDelegate {
     }()
     
     let tableView:UITableView = {
-        let barHeight: CGFloat = UIApplication.shared.statusBarFrame.size.height
         let displayWidth: CGFloat = 200
-        let displayHeight: CGFloat = 200
+        let displayHeight: CGFloat = 480
         
-        let tv = UITableView(frame: CGRect(x: 0, y: barHeight, width: displayWidth, height: displayHeight - barHeight))
-//        tableView.
+        let tv = UITableView()
+
         return tv
     }()
     
@@ -43,36 +36,41 @@ class ArticleRelatedCell:BaseCell, UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: storyCellId, for: indexPath) as! RelatedTableCell
+        
         if let headline = article?.related_content![indexPath.item].headline,
             let image = article?.related_content![indexPath.item].lead_image {
-            cell.nameLabel.text = headline
+            cell.headlineLabel.text = headline
             cell.articleImageView.loadImageUsingUrlString(imageUrl: image)
         }
-//        if let image = article?.images![indexPath.item].path
+
         return cell
     }
     
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 80.0
-    }
+//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//        return 80.0
+//    }
     
     override func setupViews() {
-        addSubview(dividerView)
         addSubview(headerLabel)
         addSubview(tableView)
 
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(RelatedTableCell.self, forCellReuseIdentifier: storyCellId)
-        
-        addConstraintsWithFormat(format: "H:|[v0]|", views: dividerView)
+
         addConstraintsWithFormat(format: "H:|-14-[v0]-14-|", views: headerLabel)
         addConstraintsWithFormat(format: "H:|[v0]|", views: tableView)
-        addConstraintsWithFormat(format: "V:|[v0(0.5)]-8-[v1]-8-[v2(200)]", views: dividerView, headerLabel, tableView)
+        addConstraintsWithFormat(format: "V:|[v0]-8-[v1(320)]", views: headerLabel, tableView)
     }
 }
 
 class RelatedTableCell:UITableViewCell {
+    var article:Article? {
+        didSet {
+            
+        }
+    }
+    
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         setupViews()
@@ -82,7 +80,7 @@ class RelatedTableCell:UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    var nameLabel:UILabel = {
+    var headlineLabel:UILabel = {
         let label = UILabel()
         label.font = UIFont(name: "AvenirNext-Medium", size: 14)
         label.numberOfLines = 2
@@ -98,11 +96,11 @@ class RelatedTableCell:UITableViewCell {
     }()
     
     func setupViews(){
-        addSubview(nameLabel)
+        addSubview(headlineLabel)
         addSubview(articleImageView)
         
-        addConstraintsWithFormat(format: "H:|-14-[v0]-14-[v1(50)]-14-|", views: nameLabel, articleImageView)
-        addConstraintsWithFormat(format: "V:|-8-[v0]", views: nameLabel)
-        addConstraintsWithFormat(format: "V:|-8-[v0(50)]", views: articleImageView)
+        addConstraintsWithFormat(format: "H:|-14-[v0]-14-[v1(64)]-14-|", views: headlineLabel, articleImageView)
+        addConstraintsWithFormat(format: "V:|-8-[v0]", views: headlineLabel)
+        addConstraintsWithFormat(format: "V:|-8-[v0(64)]-8-|", views: articleImageView)
     }
 }

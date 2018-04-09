@@ -30,6 +30,13 @@ class ArticleDetailMapCell:BaseCell, MKMapViewDelegate {
         }
     }
     
+    let headerLabel:UILabel = {
+        let label = UILabel()
+        label.text = "Location Data"
+        label.font = UIFont(name: "AvenirNext-Bold", size: 18.0)
+        return label
+    }()
+    
     let articleMap:MKMapView = {
         let map = MKMapView()
         map.translatesAutoresizingMaskIntoConstraints = false
@@ -46,10 +53,12 @@ class ArticleDetailMapCell:BaseCell, MKMapViewDelegate {
     }()
     
     override func setupViews() {
+        addSubview(headerLabel)
         addSubview(articleMap)
         
+        addConstraintsWithFormat(format: "H:|-14-[v0]-14-|", views: headerLabel)
         addConstraintsWithFormat(format: "H:|[v0]|", views: articleMap)
-        addConstraintsWithFormat(format: "V:|[v0]|", views: articleMap)
+        addConstraintsWithFormat(format: "V:|[v0]-8-[v1]|", views: headerLabel, articleMap)
     }
     
 }
