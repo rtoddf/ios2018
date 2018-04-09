@@ -5,6 +5,7 @@ class ArticleDetailController:UICollectionViewController, UICollectionViewDelega
     let cellTextId = "cellTextid"
     let cellImagesId = "cellImagesId"
     let cellMapId = "cellMapId"
+    let cellRelatedId = "cellRelatedId"
     // set a default var for cellHeight
     var cellHeight:CGFloat = 22.0
     
@@ -23,6 +24,7 @@ class ArticleDetailController:UICollectionViewController, UICollectionViewDelega
         collectionView?.register(ArticleDetailTextCell.self, forCellWithReuseIdentifier: cellTextId)
         collectionView?.register(ArticleImagesCell.self, forCellWithReuseIdentifier: cellImagesId)
         collectionView?.register(ArticleDetailMapCell.self, forCellWithReuseIdentifier: cellMapId)
+        collectionView?.register(ArticleRelatedCell.self, forCellWithReuseIdentifier: cellRelatedId)
         
         self.navigationController?.navigationBar.tintColor = .white
         
@@ -38,7 +40,7 @@ class ArticleDetailController:UICollectionViewController, UICollectionViewDelega
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 4
+        return 5
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -61,6 +63,12 @@ class ArticleDetailController:UICollectionViewController, UICollectionViewDelega
             cell.article = article
             return cell
         }
+        
+        if indexPath.item == 4 {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellRelatedId, for: indexPath) as! ArticleRelatedCell
+            cell.article = article
+            return cell
+        }
 
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellTextId, for: indexPath) as! ArticleDetailTextCell
         cell.article = article
@@ -80,6 +88,10 @@ class ArticleDetailController:UICollectionViewController, UICollectionViewDelega
         
         if indexPath.item == 3 {
             return CGSize(width: view.frame.width, height: 200)
+        }
+        
+        if indexPath.item == 4 {
+            return CGSize(width: view.frame.width, height: 250)
         }
         
         // use the var for the height to be set after notification sent
