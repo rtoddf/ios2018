@@ -11,7 +11,7 @@ class ArticleDetailController:UICollectionViewController, UICollectionViewDelega
     
     var article:Article? {
         didSet {
-            
+
         }
     }
 
@@ -66,6 +66,12 @@ class ArticleDetailController:UICollectionViewController, UICollectionViewDelega
         
         if indexPath.item == 4 {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellRelatedId, for: indexPath) as! ArticleRelatedCell
+            
+            let count = article?.related_content?.count
+            if count == nil {
+                cell.isHidden = true
+            }
+            
             cell.article = article
             return cell
         }
@@ -91,6 +97,11 @@ class ArticleDetailController:UICollectionViewController, UICollectionViewDelega
         }
         
         if indexPath.item == 4 {
+            let count = article?.related_content?.count
+            if count == nil {
+                return CGSize(width: 0, height: 0)
+            }
+
             return CGSize(width: view.frame.width, height: 360)
         }
         
@@ -124,6 +135,8 @@ class ArticleDetailController:UICollectionViewController, UICollectionViewDelega
         // you found the answer to myTapGesture here: https://stackoverflow.com/questions/38445262/pass-parameter-with-uitapgesturerecognizer
         
         // see if you can tweak the attributedtext stuff
+        
+        // what if the data is nil? is the way you've done it correct?
         
         self.image = image
         

@@ -5,7 +5,12 @@ class ArticleRelatedCell:BaseCell, UITableViewDataSource, UITableViewDelegate {
     
     var article:Article? {
         didSet {
-            
+            let count = article?.related_content?.count
+
+            if count == nil {
+                headerLabel.isHidden = true
+                tableView.isHidden = true
+            }
         }
     }
     
@@ -27,8 +32,12 @@ class ArticleRelatedCell:BaseCell, UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if let count = article?.related_content?.count {
-            if count <= 4 {
-                return count
+//            if count <= 4 {
+//                return count
+//            }
+            
+            if count == 0 {
+                print("empty")
             }
         }
         return 4
@@ -37,10 +46,8 @@ class ArticleRelatedCell:BaseCell, UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: storyCellId, for: indexPath) as! RelatedTableCell
         
-        if let headline = article?.related_content![indexPath.item].headline,
-            let image = article?.related_content![indexPath.item].lead_image {
-            cell.headlineLabel.text = headline
-            cell.articleImageView.loadImageUsingUrlString(imageUrl: image)
+        if let relatedContent = article?.related_content {
+            cell.item = relatedContent[indexPath.item]
         }
 
         return cell
@@ -65,9 +72,13 @@ class ArticleRelatedCell:BaseCell, UITableViewDataSource, UITableViewDelegate {
 }
 
 class RelatedTableCell:UITableViewCell {
-    var article:Article? {
+    var item:Item? {
         didSet {
+            guard let headline = item?.headline else { return }
+            guard let image = item?.lead_image else { return }
             
+            headlineLabel.text = headline
+            articleImageView.loadImageUsingUrlString(imageUrl: image)
         }
     }
     

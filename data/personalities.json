@@ -46,7 +46,8 @@
 				"longitude": -0.127758,
 				"name": "London, England"
 			}
-		]
+		],
+		"related_content": []
 	},
 	{
 		"headline": "Ellen Page - Canadian actress",
@@ -89,7 +90,8 @@
 				"longitude": -63.575239,
 				"name": "Halifax, Nova Scotia, Canada"
 			}
-		]
+		],
+		"related_content": []
 	},
 	{
 		"headline": "Nico Tortorella - American actor and model",
@@ -138,7 +140,8 @@
 				"longitude": -87.722838,
 				"name": "Wilmette, Illinois"
 			}
-		]
+		],
+		"related_content": []
 	},
 	{
 		"headline": "Gillian Anderson - American-British film, television and theatre actress, activist and writer",
@@ -187,7 +190,8 @@
 				"longitude": -0.127758,
 				"name": "London, England, UK"
 			}
-		]
+		],
+		"related_content": []
 	},
 	{
 		"headline": "Andy Mientus - American stage and television actor and singer",
@@ -236,7 +240,8 @@
 				"longitude": -79.995886,
 				"name": "Pittsburgh, Pennsylvania"
 			}
-		]
+		],
+		"related_content": []
 	},
 	{
 		"headline": "Jonathan Groff - American actor and singer",
@@ -285,6 +290,7 @@
 				"longitude": -76.305514,
 				"name": "Lancaster, Pennsylvania"
 			}
-		]
+		],
+		"related_content": []
 	}
 ]
