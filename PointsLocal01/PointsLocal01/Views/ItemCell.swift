@@ -3,6 +3,7 @@ import UIKit
 class ItemCell:BaseCell {
     var item:Item? {
         didSet {
+            guard let parentId = item?.parent_id else { return }
             guard let title = item?.title else { return }
             guard let date = item?.date else { return }
             guard let startTime = item?.start_time else { return }
@@ -10,6 +11,7 @@ class ItemCell:BaseCell {
             guard let venueName = item?.venue_name else { return }
             guard let parentCategoryName = item?.parent_category_name else { return }
             
+            imageView.loadImageUsingUrlString(imageUrl: parentId)
             categoryLabel.text = parentCategoryName
             titleLabel.text = title
             detailsLabel.text = date + "\n" + startTime + "-" + endTime + "\n" + venueName
@@ -19,11 +21,19 @@ class ItemCell:BaseCell {
         }
     }
     
+    let imageView:UIImageView = {
+        let iv = UIImageView()
+        iv.contentMode = .scaleAspectFit
+        iv.clipsToBounds = true
+        iv.backgroundColor = UIColor(hexString: "#333333")
+        return iv
+    }()
+    
     let categoryLabel:InsetLabel = {
         let label = InsetLabel()
-        label.backgroundColor = UIColor(hexString: "#003264")
+        label.backgroundColor = UIColor(hexString: "#222222")
         label.textColor = UIColor(hexString: "#ffffff")
-        label.font = UIFont.systemFont(ofSize: 13)
+        label.font = UIFont.boldSystemFont(ofSize: 13)
 //        label.textAlignment = .center
         
         return label
@@ -31,7 +41,7 @@ class ItemCell:BaseCell {
     
     let titleLabel:UILabel = {
         let label = UILabel()
-        label.font = UIFont.boldSystemFont(ofSize: 16)
+        label.font = UIFont.boldSystemFont(ofSize: 14)
         label.numberOfLines = 3
         return label
     }()
@@ -48,13 +58,18 @@ class ItemCell:BaseCell {
 //        backgroundColor = UIColor(hexString: "#ae0000")
         
         addSubview(categoryLabel)
+        addSubview(imageView)
         addSubview(titleLabel)
         addSubview(detailsLabel)
         
+        let imageWidth = frame.width
+        let imageHeight = (9 / 16) * imageWidth
+        
         addConstraintsWithFormat(format: "H:|[v0]|", views: categoryLabel)
-        addConstraintsWithFormat(format: "H:|-14-[v0]-14-|", views: titleLabel)
-        addConstraintsWithFormat(format: "H:|-14-[v0]-14-|", views: detailsLabel)
-        addConstraintsWithFormat(format: "V:|[v0]-14-[v1]-8-[v2]", views: categoryLabel, titleLabel, detailsLabel)
+        addConstraintsWithFormat(format: "H:|[v0]|", views: imageView)
+        addConstraintsWithFormat(format: "H:|-8-[v0]-8-|", views: titleLabel)
+        addConstraintsWithFormat(format: "H:|-8-[v0]-8-|", views: detailsLabel)
+        addConstraintsWithFormat(format: "V:|[v0][v1(\(imageHeight))]-8-[v2]-4-[v3]", views: categoryLabel, imageView, titleLabel, detailsLabel)
     }
 }
 

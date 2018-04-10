@@ -56,8 +56,8 @@ extension UIColor {
 class InsetLabel: UILabel {
     let topInset = CGFloat(5)
     let bottomInset = CGFloat(5)
-    let leftInset = CGFloat(10)
-    let rightInset = CGFloat(10)
+    let leftInset = CGFloat(5)
+    let rightInset = CGFloat(5)
     
     override func drawText(in rect: CGRect) {
         let insets: UIEdgeInsets = UIEdgeInsets(top: topInset, left: leftInset, bottom: bottomInset, right: rightInset)
@@ -69,5 +69,63 @@ class InsetLabel: UILabel {
         intrinsicSuperViewContentSize.height += topInset + bottomInset
         intrinsicSuperViewContentSize.width += leftInset + rightInset
         return intrinsicSuperViewContentSize
+    }
+}
+
+extension UIImageView {
+    func loadImageUsingUrlString(imageUrl:String) {
+        let savedImageName = "image-\(imageUrl)"
+        
+        let urlString = "https://thingstodo.dayton.com/image?method=image.icrop&context=event.yield&id=\(imageUrl)&w=350&h=196"
+        
+        let url = URL(string: urlString)!
+        let request = NSMutableURLRequest(url: url)
+        
+        // restores from memory if downloaded
+        let documentsPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
+        if documentsPath.count > 0 {
+            let documentsDirectory = documentsPath[0]
+//            guard let savedImageName = savedImageName else { return }
+            
+            let restorePath = documentsDirectory + savedImageName
+            self.image = UIImage(contentsOfFile: restorePath)
+        }
+        
+        // downloads the image the first time
+        let task = URLSession.shared.dataTask(with: request as URLRequest) {
+            data, response, error in
+            
+            if error != nil {
+                print(error as Any)
+            } else {
+                guard let data = data else { return }
+                guard let image = UIImage(data: data) else { return }
+                
+                DispatchQueue.main.async { // Correct - https://developer.apple.com/documentation/code_diagnostics/main_thread_checker
+                    self.image = image
+                    
+                    // searches for documents path
+                    let documentsPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
+                    // should return one, but we just make sure
+                    if documentsPath.count > 0 {
+//                        guard let savedImageName = savedImageName else { return }
+                        
+                        let documentsDirectory = documentsPath[0]
+                        let savePath = documentsDirectory + savedImageName
+                        
+                        do {
+                            try UIImageJPEGRepresentation(image, 1)?.write(to: URL(fileURLWithPath: savePath))
+                        } catch {
+                            // process the error
+                        }
+                        
+                        // another way
+                        // FileManager.default.createFile(atPath: savePath, contents: data, attributes: nil)
+                    }
+                }
+                
+            }
+        }
+        task.resume()
     }
 }
