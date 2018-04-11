@@ -14,7 +14,6 @@ class PointsLocalController:UICollectionViewController, UICollectionViewDelegate
         
         Item.downloadData { (items) in
             self.items = items
-//            print("items: \(self.items)")
             self.collectionView?.reloadData()
         }
 
@@ -52,7 +51,6 @@ class PointsLocalController:UICollectionViewController, UICollectionViewDelegate
     }
     
     func showArticleDetail(item: Item){
-        print("item: \(item)")
         let layout = UICollectionViewFlowLayout()
         let itemDetailViewController = ItemDetailViewController(collectionViewLayout: layout)
         itemDetailViewController.item = item

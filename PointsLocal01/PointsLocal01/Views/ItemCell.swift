@@ -11,7 +11,7 @@ class ItemCell:BaseCell {
             guard let venueName = item?.venue_name else { return }
             guard let parentCategoryName = item?.parent_category_name else { return }
             
-            imageView.loadImageUsingUrlString(imageUrl: parentId)
+            imageView.loadPointsLocalImageUsingParentId(imageId: parentId)
             categoryLabel.text = parentCategoryName
             titleLabel.text = title
             detailsLabel.text = date + "\n" + startTime + "-" + endTime + "\n" + venueName

@@ -73,10 +73,10 @@ class InsetLabel: UILabel {
 }
 
 extension UIImageView {
-    func loadImageUsingUrlString(imageUrl:String) {
-        let savedImageName = "image-\(imageUrl)"
+    func loadPointsLocalImageUsingParentId(imageId:String) {
+        let savedImageName = "image-\(imageId)"
         
-        let urlString = "https://thingstodo.dayton.com/image?method=image.icrop&context=event.yield&id=\(imageUrl)&w=350&h=196"
+        let urlString = "https://thingstodo.dayton.com/image?method=image.icrop&context=event.yield&id=\(imageId)&w=1200&h=-1"
         
         let url = URL(string: urlString)!
         let request = NSMutableURLRequest(url: url)
