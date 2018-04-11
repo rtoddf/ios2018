@@ -45,5 +45,18 @@ class PointsLocalController:UICollectionViewController, UICollectionViewDelegate
         super.viewWillTransition(to: size, with: coordinator)
         collectionView?.collectionViewLayout.invalidateLayout()
     }
+    
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let item = items?[indexPath.item] else { return }
+        showArticleDetail(item: item)
+    }
+    
+    func showArticleDetail(item: Item){
+        print("item: \(item)")
+        let layout = UICollectionViewFlowLayout()
+        let itemDetailViewController = ItemDetailViewController(collectionViewLayout: layout)
+        itemDetailViewController.item = item
+        navigationController?.pushViewController(itemDetailViewController, animated: true)
+    }
 }
 
