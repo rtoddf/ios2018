@@ -12,7 +12,7 @@ class PointsLocalController:UICollectionViewController, UICollectionViewDelegate
         
         collectionView?.register(ItemCell.self, forCellWithReuseIdentifier: cellId)
         
-        Item.downloadData { (items) in
+        Feed.downloadData { (items) in
             self.items = items
             self.collectionView?.reloadData()
         }
