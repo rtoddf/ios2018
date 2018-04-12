@@ -32,7 +32,9 @@ struct Item:Decodable {
     let title:String?
     let date:String?
     let venue_name:String?
+    let venue_address:String?
     let start_time:String?
     let end_time:String?
     let parent_category_name:String?
+    let description:String?
 }

@@ -9,11 +9,13 @@ class ItemDetailHeaderCell:BaseCell {
             guard let startTime = item?.start_time else { return }
             guard let endTime = item?.end_time else { return }
             guard let venueName = item?.venue_name else { return }
+            guard let venueAddress = item?.venue_address else { return }
+            
             guard let parentCategoryName = item?.parent_category_name else { return }
             
             imageView.loadPointsLocalImageUsingParentId(imageId: parentId)
             titleLabel.text = title
-            detailsLabel.text = date + " | " + startTime + "-" + endTime + "\n" + venueName
+            detailsLabel.text = date + " | " + startTime + "-" + endTime + "\n" + venueName + "\n" + venueAddress
         }
     }
     
@@ -46,8 +48,8 @@ class ItemDetailHeaderCell:BaseCell {
         addSubview(detailsLabel)
         
         addConstraintsWithFormat(format: "H:|[v0]|", views: imageView)
-        addConstraintsWithFormat(format: "H:|-8-[v0]-8-|", views: titleLabel)
-        addConstraintsWithFormat(format: "H:|-8-[v0]-8-|", views: detailsLabel)
+        addConstraintsWithFormat(format: "H:|-14-[v0]-14-|", views: titleLabel)
+        addConstraintsWithFormat(format: "H:|-14-[v0]-14-|", views: detailsLabel)
         addConstraintsWithFormat(format: "V:|[v0(\((9 / 16) * frame.width))]-8-[v1]-8-[v2]", views: imageView, titleLabel, detailsLabel)
     }
     

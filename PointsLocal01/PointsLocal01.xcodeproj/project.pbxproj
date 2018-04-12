@@ -16,6 +16,7 @@
 		AD14892E207D5B5D00867CF4 /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD14892D207D5B5D00867CF4 /* ItemCell.swift */; };
 		ADA77BAA207E6E170051FC23 /* ItemDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA77BA9207E6E170051FC23 /* ItemDetailViewController.swift */; };
 		ADA77BAC207E7A0D0051FC23 /* ItemDetailHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA77BAB207E7A0D0051FC23 /* ItemDetailHeaderCell.swift */; };
+		ADE7A48820801454000D3B3B /* ItemDetailTextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE7A48720801454000D3B3B /* ItemDetailTextCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		AD14892D207D5B5D00867CF4 /* ItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
 		ADA77BA9207E6E170051FC23 /* ItemDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailViewController.swift; sourceTree = "<group>"; };
 		ADA77BAB207E7A0D0051FC23 /* ItemDetailHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailHeaderCell.swift; sourceTree = "<group>"; };
+		ADE7A48720801454000D3B3B /* ItemDetailTextCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailTextCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 			children = (
 				AD14892D207D5B5D00867CF4 /* ItemCell.swift */,
 				ADA77BAB207E7A0D0051FC23 /* ItemDetailHeaderCell.swift */,
+				ADE7A48720801454000D3B3B /* ItemDetailTextCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -180,6 +183,7 @@
 			files = (
 				AD148916207D524300867CF4 /* PointsLocalController.swift in Sources */,
 				ADA77BAC207E7A0D0051FC23 /* ItemDetailHeaderCell.swift in Sources */,
+				ADE7A48820801454000D3B3B /* ItemDetailTextCell.swift in Sources */,
 				AD14892B207D543500867CF4 /* Feed.swift in Sources */,
 				ADA77BAA207E6E170051FC23 /* ItemDetailViewController.swift in Sources */,
 				AD148928207D538900867CF4 /* Extensions.swift in Sources */,
