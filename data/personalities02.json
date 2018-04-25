@@ -1,6 +1,7 @@
 [
 	{
-		"headline": "Ben Barnes - British actor and singer",
+		"headline": "Ben Barnes",
+		"subhead": "British actor and singer",
 		"author": "Eddie Fuon",
 		"item_class": "personality",
 		"guid": "f21f6d26-aaaa-1111-8401-ed4dfe8ebc2c",
@@ -50,7 +51,8 @@
 		"related_content": []
 	},
 	{
-		"headline": "Nico Tortorella - American actor and model",
+		"headline": "Nico Tortorella",
+		"subhead": "American actor and model",
 		"author": "Eddie Fuon",
 		"item_class": "personality",
 		"guid": "f21f6d26-aaaa-1111-8401-ed4dfe8ebc2c",
@@ -100,7 +102,8 @@
 		"related_content": []
 	},
 	{
-		"headline": "Andy Mientus - American stage and television actor and singer",
+		"headline": "Andy Mientus",
+		"subhead": "American stage and television actor and singer",
 		"author": "Eddie Fuon",
 		"item_class": "personality",
 		"guid": "f21f6d26-aaaa-1111-8401-ed4dfe8ebc2c",
@@ -150,7 +153,8 @@
 		"related_content": []
 	},
 	{
-		"headline": "Jonathan Groff - American actor and singer",
+		"headline": "Jonathan Groff",
+		"subhead": "American actor and singer",
 		"author": "Eddie Fuon",
 		"item_class": "personality",
 		"guid": "f21f6d26-aaaa-1111-8401-ed4dfe8ebc2c",
@@ -200,7 +204,8 @@
 		"related_content": []
 	},
 	{
-		"headline": "Charlie Carver - American actor",
+		"headline": "Charlie Carver",
+		"subhead": "American actor",
 		"author": "Eddie Fuon",
 		"item_class": "personality",
 		"guid": "f21f6d26-aaaa-1111-8401-ed4dfe8ebc2c",
@@ -232,7 +237,8 @@
 		"related_content": []
 	},
 	{
-		"headline": "Rami Malek - Egyptian-American actor",
+		"headline": "Rami Malek",
+		"subhead": "Egyptian-American actor",
 		"author": "Eddie Fuon",
 		"item_class": "personality",
 		"guid": "f21f6d26-aaaa-1111-8401-ed4dfe8ebc2c",
@@ -258,7 +264,8 @@
 		"related_content": []
 	},
 	{
-		"headline": "Timothee Chalamet - American actor",
+		"headline": "Timothee Chalamet",
+		"subhead": "American actor",
 		"author": "Eddie Fuon",
 		"item_class": "personality",
 		"guid": "f21f6d26-aaaa-1111-8401-ed4dfe8ebc2c",
