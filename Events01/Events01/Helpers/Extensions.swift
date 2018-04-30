@@ -207,10 +207,10 @@ extension String {
 }
 
 class InsetLabel: UILabel {
-    let topInset = CGFloat(5)
-    let bottomInset = CGFloat(5)
-    let leftInset = CGFloat(10)
-    let rightInset = CGFloat(10)
+    var topInset = CGFloat(5)
+    var bottomInset = CGFloat(5)
+    var leftInset = CGFloat(10)
+    var rightInset = CGFloat(10)
     
     override func drawText(in rect: CGRect) {
         let insets: UIEdgeInsets = UIEdgeInsets(top: topInset, left: leftInset, bottom: bottomInset, right: rightInset)

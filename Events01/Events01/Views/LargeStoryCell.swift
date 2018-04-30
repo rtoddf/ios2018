@@ -54,6 +54,7 @@ class LargeStoryCell:UICollectionViewCell {
         label.numberOfLines = 2
         label.backgroundColor = UIColor(hexString: "#444444")
         label.textColor = UIColor(hexString: "#ffffff")
+        label.bottomInset = 0
         return label
     }()
     
@@ -62,6 +63,7 @@ class LargeStoryCell:UICollectionViewCell {
         label.font = UIFont.systemFont(ofSize: 11)
         label.backgroundColor = UIColor(hexString: "#444444")
         label.textColor = UIColor(hexString: "#ffffff")
+        label.topInset = 0
         return label
     }()
     
@@ -117,7 +119,7 @@ class LargeStoryCell:UICollectionViewCell {
         addConstraintsWithFormat(format: "H:|[v0]|", views: authorLabel)
 //        addConstraintsWithFormat(format: "H:|-14-[v0]-14-|", views: textLabel)
 //        addConstraintsWithFormat(format: "H:|[v0]|", views: userInteractionStackView)
-        addConstraintsWithFormat(format: "V:|[v0(200)][v1(20)][v2][v3(25)]-20-|", views: leadImageView, categoryLabel, headlineLabel, authorLabel)
+        addConstraintsWithFormat(format: "V:|[v0(200)][v1(20)][v2(45)][v3(25)]-20-|", views: leadImageView, categoryLabel, headlineLabel, authorLabel)
 //        addConstraintsWithFormat(format: "V:|[v0(200)][v1(20)]-8-[v2]-4-[v3]-8-[v4]-12-[v5]-12-|", views: leadImageView, categoryLabel, headlineLabel, authorLabel, textLabel, userInteractionStackView)
     }
 }
