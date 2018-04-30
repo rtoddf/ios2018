@@ -12,7 +12,7 @@ class EventsController: UICollectionViewController, UICollectionViewDelegateFlow
         collectionView?.register(ArticleImageLeftCell.self, forCellWithReuseIdentifier: cellId)
         collectionView?.register(ArticleImageRightCell.self, forCellWithReuseIdentifier: cellIdRight)
         
-        navigationItem.title = "Movie Reviews"
+        navigationItem.title = "Heading"
 
         Article.downloadData { (articles) in
             self.articles = articles
