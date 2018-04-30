@@ -4,6 +4,7 @@ class LargeStoryCell:UICollectionViewCell {
     var article:Article? {
         didSet {
             guard let headline = article?.headline else { return }
+            guard let category = article?.category else { return }
             guard let publishedDate = article?.pub_date else { return }
             guard let author = article?.author else { return }
             guard let summary = article?.summary else { return }
@@ -11,6 +12,7 @@ class LargeStoryCell:UICollectionViewCell {
             
             leadImageView.loadImageUsingUrlString(imageUrl: leadImage)
             headlineLabel.text = headline
+            categoryLabel.text = category.uppercased()
             
             var authorText = "By "
             authorText.append("\(author) | \(publishedDate.timeAgoDisplay())")
@@ -38,17 +40,28 @@ class LargeStoryCell:UICollectionViewCell {
         return iv
     }()
     
-    let headlineLabel:UILabel = {
-        let label = UILabel()
-        label.font = UIFont.boldSystemFont(ofSize: 16)
-        label.numberOfLines = 2
+    let categoryLabel:InsetLabel = {
+        let label = InsetLabel()
+        label.font = UIFont.boldSystemFont(ofSize: 11)
+        label.backgroundColor = UIColor(hexString: "#d31c1e")
+        label.textColor = UIColor(hexString: "#ffffff")
         return label
     }()
     
-    let authorLabel:UILabel = {
-        let label = UILabel()
-        label.font = UIFont.systemFont(ofSize: 12)
-        label.textColor = UIColor(hexString: "#777777")
+    let headlineLabel:InsetLabel = {
+        let label = InsetLabel()
+        label.font = UIFont.boldSystemFont(ofSize: 14)
+        label.numberOfLines = 2
+        label.backgroundColor = UIColor(hexString: "#444444")
+        label.textColor = UIColor(hexString: "#ffffff")
+        return label
+    }()
+    
+    let authorLabel:InsetLabel = {
+        let label = InsetLabel()
+        label.font = UIFont.systemFont(ofSize: 11)
+        label.backgroundColor = UIColor(hexString: "#444444")
+        label.textColor = UIColor(hexString: "#ffffff")
         return label
     }()
     
@@ -91,18 +104,21 @@ class LargeStoryCell:UICollectionViewCell {
 
     func setupViews(){        
         addSubview(leadImageView)
+        addSubview(categoryLabel)
         addSubview(headlineLabel)
         addSubview(authorLabel)
-        addSubview(textLabel)
-        addSubview(userInteractionStackView)
+//        addSubview(textLabel)
+//        addSubview(userInteractionStackView)
         //        addSubview(textView)
         
         addConstraintsWithFormat(format: "H:|[v0]|", views: leadImageView)
-        addConstraintsWithFormat(format: "H:|-14-[v0]-14-|", views: headlineLabel)
-        addConstraintsWithFormat(format: "H:|-14-[v0]-14-|", views: authorLabel)
-        addConstraintsWithFormat(format: "H:|-14-[v0]-14-|", views: textLabel)
-        addConstraintsWithFormat(format: "H:|[v0]|", views: userInteractionStackView)
-        addConstraintsWithFormat(format: "V:|[v0(200)]-8-[v1]-4-[v2]-8-[v3]-12-[v4]-12-|", views: leadImageView, headlineLabel, authorLabel, textLabel, userInteractionStackView)
+        addConstraintsWithFormat(format: "H:|[v0]|", views: categoryLabel)
+        addConstraintsWithFormat(format: "H:|[v0]|", views: headlineLabel)
+        addConstraintsWithFormat(format: "H:|[v0]|", views: authorLabel)
+//        addConstraintsWithFormat(format: "H:|-14-[v0]-14-|", views: textLabel)
+//        addConstraintsWithFormat(format: "H:|[v0]|", views: userInteractionStackView)
+        addConstraintsWithFormat(format: "V:|[v0(200)][v1(20)][v2][v3(25)]-20-|", views: leadImageView, categoryLabel, headlineLabel, authorLabel)
+//        addConstraintsWithFormat(format: "V:|[v0(200)][v1(20)]-8-[v2]-4-[v3]-8-[v4]-12-[v5]-12-|", views: leadImageView, categoryLabel, headlineLabel, authorLabel, textLabel, userInteractionStackView)
     }
 }
 

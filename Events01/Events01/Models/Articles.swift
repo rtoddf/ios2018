@@ -1,6 +1,7 @@
 import UIKit
 
 struct Article:Decodable {
+    let category:String?
     let headline:String?
     let pub_date:String?
     let author:String?
