@@ -6,7 +6,7 @@ class EventsController: UICollectionViewController, UICollectionViewDelegateFlow
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.title = "Movie Reviews"
+        navigationItem.title = "Heading"
         
         collectionView?.backgroundColor = UIColor(hexString: "#ffffff")
         collectionView?.register(LargeStoryCell.self, forCellWithReuseIdentifier: cellId)
