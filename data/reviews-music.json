@@ -1,6 +1,9 @@
 {
 	"version": "2.0",
 	"title": "Music",
+	"branding": {
+		"logo": "http://www.rtodd.net/swift/images/reviews-movies/logo.png"
+	},
 	"items": [
 		{
 			"headline": "Thirty Seconds To Mars - America",
