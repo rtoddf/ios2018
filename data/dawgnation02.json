@@ -1,6 +1,9 @@
 {
 	"version": "2.0",
 	"title": "Dawgnation",
+	"branding": {
+		"logo": "http://www.rtodd.net/swift/images/dawgnation/theme-logo.png"
+	},
 	"items": [
 		{
 			"headline": "UGA recruiting: What will nation's No. 1 class mean to 2018 team?",
