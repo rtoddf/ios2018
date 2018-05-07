@@ -4,6 +4,60 @@
 	"branding": {
 		"logo": "http://www.rtodd.net/swift/images/reviews-movies/logo.png"
 	},
+	"menu_items": [
+		{
+			"title": "Home",
+			"view": ""
+		},
+		{
+			"title": "Football",
+			"view": ""
+		},
+		{
+			"title": "Recruiting",
+			"view": ""
+		},
+		{
+			"title": "DN Daily Podcast",
+			"view": ""
+		},
+		{
+			"title": "Dawgnation Invasion ATL",
+			"view": ""
+		},
+		{
+			"title": "2018 Recruits",
+			"view": ""
+		},
+		{
+			"title": "Dawgnation Forum",
+			"view": ""
+		},
+		{
+			"title": "Shop",
+			"view": ""
+		},
+		{
+			"title": "Feedback",
+			"view": ""
+		},
+		{
+			"title": "Contact Us",
+			"view": ""
+		},
+		{
+			"title": "Terms of Service",
+			"view": ""
+		},
+		{
+			"title": "Privacy Policy",
+			"view": ""
+		},
+		{
+			"title": "Notifications",
+			"view": ""
+		}
+	],
 	"items": [
 		{
 			"headline": "Steven Spielberg's Ready Player One improves immensely on the book",
