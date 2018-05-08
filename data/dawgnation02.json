@@ -2,7 +2,8 @@
 	"version": "2.0",
 	"title": "Dawgnation",
 	"branding": {
-		"logo": "http://www.rtodd.net/swift/images/dawgnation/theme-logo.png"
+		"logo": "http://www.rtodd.net/swift/images/dawgnation/theme-logo.png",
+		"color_main": "#d31c1e"
 	},
 	"menu_items": [
 		{
