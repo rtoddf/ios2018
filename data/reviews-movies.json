@@ -92,7 +92,7 @@
 					"type": "image",
 					"path": "http://www.rtodd.net/swift/images/reviews-movies/ready-player-one.jpg",
 					"title": "Ready Player One",
-					"caption": "Improves immensely on the book",
+					"caption": "Steven Spielberg's new film adaptation of Ready Player One prominently features that same car, but in a context that improves it immensely.",
 					"credit": "Some Magazine"
 			},
 			"media": [
@@ -260,7 +260,7 @@
 				"type": "image",
 				"path": "http://www.rtodd.net/swift/images/reviews-movies/black-panther.jpg",
 				"title": "Black Panther",
-				"caption": "Marvel movie we've been waiting for",
+				"caption": "Throughout the history of its cinematic universe, Marvel Studios has excelled at creating engaging, entertaining diversions, bringing dozens of characters to life in a string of blockbusters that feed into one another",
 				"credit": "Some Magazine"
 			},
 			"media": [
@@ -420,7 +420,7 @@
 				"type": "image",
 				"path": "http://www.rtodd.net/swift/images/reviews-movies/call-me-by-your-name.jpg",
 				"title": "Call Me by Your Name",
-				"caption": "A Boy's Own Desire",
+				"caption": "You don't just watch Luca Guadagnino's movies, you swoon into them",
 				"credit": "Some Magazine"
 			},
 			"media": [
@@ -594,7 +594,7 @@
 				"type": "image",
 				"path": "http://www.rtodd.net/swift/images/reviews-movies/a-wrinkle-in-time.jpg",
 				"title": "A Wrinkle in Time",
-				"caption": "Let's Talk",
+				"caption": "More than 50 years since it first captured the hearts and expanded the minds of bookish young misfits, dreamers and in-betweeners around the world",
 				"credit": "Some Magazine"
 			},
 			"media": [
@@ -747,7 +747,7 @@
 				"type": "image",
 				"path": "http://www.rtodd.net/swift/images/reviews-movies/love-simon.jpg",
 				"title": "Love, Simon",
-				"caption": "A mainstream-styled teenage rom-com",
+				"caption": "\"Love, Simon\" is a mainstream-styled teenage rom-com that uses every cliche in the book",
 				"credit": "Some Magazine"
 			},
 			"media": [
@@ -907,7 +907,7 @@
 				"type": "image",
 				"path": "http://www.rtodd.net/swift/images/reviews-movies/tomb-raider.jpg",
 				"title": "Tomb Raider",
-				"caption": "Featuring Alicia Vikanderas",
+				"caption": "Based on the 2013 video game, and featuring Alicia Vikanderas the latest incarnation of a character who's been around for 22 years",
 				"credit": "Some Magazine"
 			},
 			"media": [
