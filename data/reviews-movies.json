@@ -83,7 +83,11 @@
 				]
 			},
 			"item_class": "review",
-			"category": "",
+			"category": {
+				"title": "",
+				"background_color": "",
+				"text_color": ""
+			},
 			"guid": "f21f6d26-2163-11e8-8401-ed4dfe8ebc2c",
 			"pub_date": "Fri, 06 Apr 2018 09:25:00 EDT",
 			"summary": "Steven Spielberg's new film adaptation of Ready Player One prominently features that same car, but in a context that improves it immensely. Spielberg doesn't have Wade talk audiences through it, and he doesn't spell out the references. He just slaps the car down in the middle of a tremendous early action scene, where it's prominent, distinctive, and memorable. Fans who want the full nostalgia trip, who want to wring every Easter egg out of the experience, will eventually be able to pause the movie and frame-by-frame through it, looking for the flux capacitor on the dashboard, checking the plates, and scanning for extra bonus material. But in the middle of the action, even to people who've never seen the Back to the Future movies and aren't vibing on the connection, the car doesn't need explaining. It's just a sleek piece of visual energy, one breathless element among dozens of others. It's not a citation or a list. It's an effortless, integrated piece of the action.",
@@ -146,86 +150,89 @@
 					"name": "Oklahoma City, OK"
 				}
 			],
-			"related_content": [
-				{
-					"headline": "Venom",
-					"summary": "When Eddie Brock acquires the powers of a symbiote, he will have to release his alter-ego \"Venom\" to save his life.",
-					"pub_date": "Tue, 08 May 2018 09:00:00 EDT",
-					"lead_media": {
-						"type": "image",
-						"path": "http://www.rtodd.net/swift/images/reviews-movies/related/venom01.jpg",
-						"title": "Venom",
-						"caption": "When Eddie Brock acquires the powers of a symbiote, he will have to release his alter-ego \"Venom\" to save his life.",
-						"credit": "USA Today"
+			"related_content": {
+				"title": "More Movies",
+				"items": [
+					{
+						"headline": "Venom",
+						"summary": "When Eddie Brock acquires the powers of a symbiote, he will have to release his alter-ego \"Venom\" to save his life.",
+						"pub_date": "Tue, 08 May 2018 09:00:00 EDT",
+						"lead_media": {
+							"type": "image",
+							"path": "http://www.rtodd.net/swift/images/reviews-movies/related/venom01.jpg",
+							"title": "Venom",
+							"caption": "When Eddie Brock acquires the powers of a symbiote, he will have to release his alter-ego \"Venom\" to save his life.",
+							"credit": "USA Today"
+						},
+						"guid": "f21f6d26-2163-11e8-8401-ed4dfe8ebc2c"
 					},
-					"guid": "f21f6d26-2163-11e8-8401-ed4dfe8ebc2c"
-				},
-				{
-					"headline": "Solo: A Star Wars Story",
-					"summary": "During an adventure into a dark criminal underworld, Han Solo meets his future copilot Chewbacca and encounters Lando Calrissian years before joining the Rebellion.",
-					"pub_date": "Tue, 08 May 2018 09:00:00 EDT",
-					"lead_media": {
-						"type": "image",
-						"path": "http://www.rtodd.net/swift/images/reviews-movies/related/solo01.jpg",
-						"title": "Solo: A Star Wars Story",
-						"caption": "During an adventure into a dark criminal underworld, Han Solo meets his future copilot Chewbacca and encounters Lando Calrissian years before joining the Rebellion.",
-						"credit": "USA Today"
+					{
+						"headline": "Solo: A Star Wars Story",
+						"summary": "During an adventure into a dark criminal underworld, Han Solo meets his future copilot Chewbacca and encounters Lando Calrissian years before joining the Rebellion.",
+						"pub_date": "Tue, 08 May 2018 09:00:00 EDT",
+						"lead_media": {
+							"type": "image",
+							"path": "http://www.rtodd.net/swift/images/reviews-movies/related/solo01.jpg",
+							"title": "Solo: A Star Wars Story",
+							"caption": "During an adventure into a dark criminal underworld, Han Solo meets his future copilot Chewbacca and encounters Lando Calrissian years before joining the Rebellion.",
+							"credit": "USA Today"
+						},
+						"guid": "f21f6d26-2163-11e8-8401-ed4dfe8ebc2c"
 					},
-					"guid": "f21f6d26-2163-11e8-8401-ed4dfe8ebc2c"
-				},
-				{
-					"headline": "Robin Hood",
-					"summary": "A war-hardened Crusader and his Moorish commander mount an audacious revolt against the corrupt English crown in a thrilling action-adventure packed with gritty battlefield exploits, mind-blowing fight choreography, and a timeless romance.",
-					"pub_date": "Tue, 08 May 2018 09:00:00 EDT",
-					"lead_media": {
-						"type": "image",
-						"path": "http://www.rtodd.net/swift/images/reviews-movies/related/robin_hood01.jpg",
-						"title": "Robin Hood",
-						"caption": "A war-hardened Crusader and his Moorish commander mount an audacious revolt against the corrupt English crown in a thrilling action-adventure packed with gritty battlefield exploits, mind-blowing fight choreography, and a timeless romance.",
-						"credit": "USA Today"
+					{
+						"headline": "Robin Hood",
+						"summary": "A war-hardened Crusader and his Moorish commander mount an audacious revolt against the corrupt English crown in a thrilling action-adventure packed with gritty battlefield exploits, mind-blowing fight choreography, and a timeless romance.",
+						"pub_date": "Tue, 08 May 2018 09:00:00 EDT",
+						"lead_media": {
+							"type": "image",
+							"path": "http://www.rtodd.net/swift/images/reviews-movies/related/robin_hood01.jpg",
+							"title": "Robin Hood",
+							"caption": "A war-hardened Crusader and his Moorish commander mount an audacious revolt against the corrupt English crown in a thrilling action-adventure packed with gritty battlefield exploits, mind-blowing fight choreography, and a timeless romance.",
+							"credit": "USA Today"
+						},
+						"guid": "f21f6d26-2163-11e8-8401-ed4dfe8ebc2c"
 					},
-					"guid": "f21f6d26-2163-11e8-8401-ed4dfe8ebc2c"
-				},
-				{
-					"headline": "Ant-Man and the Wasp",
-					"summary": "As Scott Lang balances being both a Super Hero and a father, Hope van Dyne and Dr. Hank Pym present an urgent new mission that finds the Ant-Man fighting alongside The Wasp to uncover secrets from their past.",
-					"pub_date": "Tue, 08 May 2018 09:00:00 EDT",
-					"lead_media": {
-						"type": "image",
-						"path": "http://www.rtodd.net/swift/images/reviews-movies/related/antman01.jpg",
-						"title": "Ant-Man and the Wasp",
-						"caption": "As Scott Lang balances being both a Super Hero and a father, Hope van Dyne and Dr. Hank Pym present an urgent new mission that finds the Ant-Man fighting alongside The Wasp to uncover secrets from their past.",
-						"credit": "USA Today"
+					{
+						"headline": "Ant-Man and the Wasp",
+						"summary": "As Scott Lang balances being both a Super Hero and a father, Hope van Dyne and Dr. Hank Pym present an urgent new mission that finds the Ant-Man fighting alongside The Wasp to uncover secrets from their past.",
+						"pub_date": "Tue, 08 May 2018 09:00:00 EDT",
+						"lead_media": {
+							"type": "image",
+							"path": "http://www.rtodd.net/swift/images/reviews-movies/related/antman01.jpg",
+							"title": "Ant-Man and the Wasp",
+							"caption": "As Scott Lang balances being both a Super Hero and a father, Hope van Dyne and Dr. Hank Pym present an urgent new mission that finds the Ant-Man fighting alongside The Wasp to uncover secrets from their past.",
+							"credit": "USA Today"
+						},
+						"guid": "f21f6d26-2163-11e8-8401-ed4dfe8ebc2c"
 					},
-					"guid": "f21f6d26-2163-11e8-8401-ed4dfe8ebc2c"
-				},
-				{
-					"headline": "Deadpool 2",
-					"summary": "After surviving a near fatal bovine attack, a disfigured cafeteria chef (Wade Wilson) struggles to fulfill his dream of becoming Mayberry's hottest bartender while also learning to cope with his lost sense of taste.",
-					"pub_date": "Tue, 08 May 2018 09:00:00 EDT",
-					"lead_media": {
-						"type": "image",
-						"path": "http://www.rtodd.net/swift/images/reviews-movies/related/deadpool01.jpg",
-						"title": "Deadpool 2",
-						"caption": "After surviving a near fatal bovine attack, a disfigured cafeteria chef (Wade Wilson) struggles to fulfill his dream of becoming Mayberry's hottest bartender while also learning to cope with his lost sense of taste.",
-						"credit": "USA Today"
+					{
+						"headline": "Deadpool 2",
+						"summary": "After surviving a near fatal bovine attack, a disfigured cafeteria chef (Wade Wilson) struggles to fulfill his dream of becoming Mayberry's hottest bartender while also learning to cope with his lost sense of taste.",
+						"pub_date": "Tue, 08 May 2018 09:00:00 EDT",
+						"lead_media": {
+							"type": "image",
+							"path": "http://www.rtodd.net/swift/images/reviews-movies/related/deadpool01.jpg",
+							"title": "Deadpool 2",
+							"caption": "After surviving a near fatal bovine attack, a disfigured cafeteria chef (Wade Wilson) struggles to fulfill his dream of becoming Mayberry's hottest bartender while also learning to cope with his lost sense of taste.",
+							"credit": "USA Today"
+						},
+						"guid": "f21f6d26-2163-11e8-8401-ed4dfe8ebc2c"
 					},
-					"guid": "f21f6d26-2163-11e8-8401-ed4dfe8ebc2c"
-				},
-				{
-					"headline": "Incredibles 2",
-					"summary": "Bob Parr (Mr. Incredible) is left to care for Jack-Jack while Helen (Elastigirl) is out saving the world.",
-					"pub_date": "Tue, 08 May 2018 09:00:00 EDT",
-					"lead_media": {
-						"type": "image",
-						"path": "http://www.rtodd.net/swift/images/reviews-movies/related/incredibles01.jpg",
-						"title": "Incredibles 2",
-						"caption": "Bob Parr (Mr. Incredible) is left to care for Jack-Jack while Helen (Elastigirl) is out saving the world.",
-						"credit": "USA Today"
-					},
-					"guid": "f21f6d26-2163-11e8-8401-ed4dfe8ebc2c"
-				}
-			]
+					{
+						"headline": "Incredibles 2",
+						"summary": "Bob Parr (Mr. Incredible) is left to care for Jack-Jack while Helen (Elastigirl) is out saving the world.",
+						"pub_date": "Tue, 08 May 2018 09:00:00 EDT",
+						"lead_media": {
+							"type": "image",
+							"path": "http://www.rtodd.net/swift/images/reviews-movies/related/incredibles01.jpg",
+							"title": "Incredibles 2",
+							"caption": "Bob Parr (Mr. Incredible) is left to care for Jack-Jack while Helen (Elastigirl) is out saving the world.",
+							"credit": "USA Today"
+						},
+						"guid": "f21f6d26-2163-11e8-8401-ed4dfe8ebc2c"
+					}
+				]
+			}
 		},
 		{
 			"headline": "Black Panther is the grown-up Marvel movie we've been waiting for",
@@ -250,7 +257,11 @@
 				]
 			},
 			"item_class": "review",
-			"category": "",
+			"category": {
+				"title": "",
+				"background_color": "",
+				"text_color": ""
+			},
 			"guid": "f21f6d26-aaaa-11e8-8401-ed4dfe8ebc2c",
 			"pub_date": "Fri, 06 Apr 2018 09:25:00 EDT",
 			"summary": "Throughout the history of its cinematic universe, Marvel Studios has excelled at creating engaging, entertaining diversions, bringing dozens of characters to life in a string of blockbusters that feed into one another, like a cinematic perpetual-motion machine. What it hasn't done is make movies that feel consequential. Sure, there was some commentary about war profiteering early on in the Iron Man films, and Captain America: The Winter Soldier glanced upon the idea of selling out privacy and freedom in the name of security. But more often than not, the studio's films are primarily concerned with keeping all the narrative plates spinning on the long march toward the Thanos showdown that will finally start in Avengers: Infinity War.",
@@ -307,86 +318,89 @@
 					"name": "Cape Town, South Africa"
 				}
 			],
-			"related_content": [
-				{
-					"headline": "Venom",
-					"summary": "When Eddie Brock acquires the powers of a symbiote, he will have to release his alter-ego \"Venom\" to save his life.",
-					"pub_date": "Tue, 08 May 2018 09:00:00 EDT",
-					"lead_media": {
-						"type": "image",
-						"path": "http://www.rtodd.net/swift/images/reviews-movies/related/venom01.jpg",
-						"title": "Venom",
-						"caption": "When Eddie Brock acquires the powers of a symbiote, he will have to release his alter-ego \"Venom\" to save his life.",
-						"credit": "USA Today"
+			"related_content": {
+				"title": "More Movies",
+				"items": [
+					{
+						"headline": "Venom",
+						"summary": "When Eddie Brock acquires the powers of a symbiote, he will have to release his alter-ego \"Venom\" to save his life.",
+						"pub_date": "Tue, 08 May 2018 09:00:00 EDT",
+						"lead_media": {
+							"type": "image",
+							"path": "http://www.rtodd.net/swift/images/reviews-movies/related/venom01.jpg",
+							"title": "Venom",
+							"caption": "When Eddie Brock acquires the powers of a symbiote, he will have to release his alter-ego \"Venom\" to save his life.",
+							"credit": "USA Today"
+						},
+						"guid": "f21f6d26-2163-11e8-8401-ed4dfe8ebc2c"
 					},
-					"guid": "f21f6d26-2163-11e8-8401-ed4dfe8ebc2c"
-				},
-				{
-					"headline": "Solo: A Star Wars Story",
-					"summary": "During an adventure into a dark criminal underworld, Han Solo meets his future copilot Chewbacca and encounters Lando Calrissian years before joining the Rebellion.",
-					"pub_date": "Tue, 08 May 2018 09:00:00 EDT",
-					"lead_media": {
-						"type": "image",
-						"path": "http://www.rtodd.net/swift/images/reviews-movies/related/solo01.jpg",
-						"title": "Solo: A Star Wars Story",
-						"caption": "During an adventure into a dark criminal underworld, Han Solo meets his future copilot Chewbacca and encounters Lando Calrissian years before joining the Rebellion.",
-						"credit": "USA Today"
+					{
+						"headline": "Solo: A Star Wars Story",
+						"summary": "During an adventure into a dark criminal underworld, Han Solo meets his future copilot Chewbacca and encounters Lando Calrissian years before joining the Rebellion.",
+						"pub_date": "Tue, 08 May 2018 09:00:00 EDT",
+						"lead_media": {
+							"type": "image",
+							"path": "http://www.rtodd.net/swift/images/reviews-movies/related/solo01.jpg",
+							"title": "Solo: A Star Wars Story",
+							"caption": "During an adventure into a dark criminal underworld, Han Solo meets his future copilot Chewbacca and encounters Lando Calrissian years before joining the Rebellion.",
+							"credit": "USA Today"
+						},
+						"guid": "f21f6d26-2163-11e8-8401-ed4dfe8ebc2c"
 					},
-					"guid": "f21f6d26-2163-11e8-8401-ed4dfe8ebc2c"
-				},
-				{
-					"headline": "Robin Hood",
-					"summary": "A war-hardened Crusader and his Moorish commander mount an audacious revolt against the corrupt English crown in a thrilling action-adventure packed with gritty battlefield exploits, mind-blowing fight choreography, and a timeless romance.",
-					"pub_date": "Tue, 08 May 2018 09:00:00 EDT",
-					"lead_media": {
-						"type": "image",
-						"path": "http://www.rtodd.net/swift/images/reviews-movies/related/robin_hood01.jpg",
-						"title": "Robin Hood",
-						"caption": "A war-hardened Crusader and his Moorish commander mount an audacious revolt against the corrupt English crown in a thrilling action-adventure packed with gritty battlefield exploits, mind-blowing fight choreography, and a timeless romance.",
-						"credit": "USA Today"
+					{
+						"headline": "Robin Hood",
+						"summary": "A war-hardened Crusader and his Moorish commander mount an audacious revolt against the corrupt English crown in a thrilling action-adventure packed with gritty battlefield exploits, mind-blowing fight choreography, and a timeless romance.",
+						"pub_date": "Tue, 08 May 2018 09:00:00 EDT",
+						"lead_media": {
+							"type": "image",
+							"path": "http://www.rtodd.net/swift/images/reviews-movies/related/robin_hood01.jpg",
+							"title": "Robin Hood",
+							"caption": "A war-hardened Crusader and his Moorish commander mount an audacious revolt against the corrupt English crown in a thrilling action-adventure packed with gritty battlefield exploits, mind-blowing fight choreography, and a timeless romance.",
+							"credit": "USA Today"
+						},
+						"guid": "f21f6d26-2163-11e8-8401-ed4dfe8ebc2c"
 					},
-					"guid": "f21f6d26-2163-11e8-8401-ed4dfe8ebc2c"
-				},
-				{
-					"headline": "Ant-Man and the Wasp",
-					"summary": "As Scott Lang balances being both a Super Hero and a father, Hope van Dyne and Dr. Hank Pym present an urgent new mission that finds the Ant-Man fighting alongside The Wasp to uncover secrets from their past.",
-					"pub_date": "Tue, 08 May 2018 09:00:00 EDT",
-					"lead_media": {
-						"type": "image",
-						"path": "http://www.rtodd.net/swift/images/reviews-movies/related/antman01.jpg",
-						"title": "Ant-Man and the Wasp",
-						"caption": "As Scott Lang balances being both a Super Hero and a father, Hope van Dyne and Dr. Hank Pym present an urgent new mission that finds the Ant-Man fighting alongside The Wasp to uncover secrets from their past.",
-						"credit": "USA Today"
+					{
+						"headline": "Ant-Man and the Wasp",
+						"summary": "As Scott Lang balances being both a Super Hero and a father, Hope van Dyne and Dr. Hank Pym present an urgent new mission that finds the Ant-Man fighting alongside The Wasp to uncover secrets from their past.",
+						"pub_date": "Tue, 08 May 2018 09:00:00 EDT",
+						"lead_media": {
+							"type": "image",
+							"path": "http://www.rtodd.net/swift/images/reviews-movies/related/antman01.jpg",
+							"title": "Ant-Man and the Wasp",
+							"caption": "As Scott Lang balances being both a Super Hero and a father, Hope van Dyne and Dr. Hank Pym present an urgent new mission that finds the Ant-Man fighting alongside The Wasp to uncover secrets from their past.",
+							"credit": "USA Today"
+						},
+						"guid": "f21f6d26-2163-11e8-8401-ed4dfe8ebc2c"
 					},
-					"guid": "f21f6d26-2163-11e8-8401-ed4dfe8ebc2c"
-				},
-				{
-					"headline": "Deadpool 2",
-					"summary": "After surviving a near fatal bovine attack, a disfigured cafeteria chef (Wade Wilson) struggles to fulfill his dream of becoming Mayberry's hottest bartender while also learning to cope with his lost sense of taste.",
-					"pub_date": "Tue, 08 May 2018 09:00:00 EDT",
-					"lead_media": {
-						"type": "image",
-						"path": "http://www.rtodd.net/swift/images/reviews-movies/related/deadpool01.jpg",
-						"title": "Deadpool 2",
-						"caption": "After surviving a near fatal bovine attack, a disfigured cafeteria chef (Wade Wilson) struggles to fulfill his dream of becoming Mayberry's hottest bartender while also learning to cope with his lost sense of taste.",
-						"credit": "USA Today"
+					{
+						"headline": "Deadpool 2",
+						"summary": "After surviving a near fatal bovine attack, a disfigured cafeteria chef (Wade Wilson) struggles to fulfill his dream of becoming Mayberry's hottest bartender while also learning to cope with his lost sense of taste.",
+						"pub_date": "Tue, 08 May 2018 09:00:00 EDT",
+						"lead_media": {
+							"type": "image",
+							"path": "http://www.rtodd.net/swift/images/reviews-movies/related/deadpool01.jpg",
+							"title": "Deadpool 2",
+							"caption": "After surviving a near fatal bovine attack, a disfigured cafeteria chef (Wade Wilson) struggles to fulfill his dream of becoming Mayberry's hottest bartender while also learning to cope with his lost sense of taste.",
+							"credit": "USA Today"
+						},
+						"guid": "f21f6d26-2163-11e8-8401-ed4dfe8ebc2c"
 					},
-					"guid": "f21f6d26-2163-11e8-8401-ed4dfe8ebc2c"
-				},
-				{
-					"headline": "Incredibles 2",
-					"summary": "Bob Parr (Mr. Incredible) is left to care for Jack-Jack while Helen (Elastigirl) is out saving the world.",
-					"pub_date": "Tue, 08 May 2018 09:00:00 EDT",
-					"lead_media": {
-						"type": "image",
-						"path": "http://www.rtodd.net/swift/images/reviews-movies/related/incredibles01.jpg",
-						"title": "Incredibles 2",
-						"caption": "Bob Parr (Mr. Incredible) is left to care for Jack-Jack while Helen (Elastigirl) is out saving the world.",
-						"credit": "USA Today"
-					},
-					"guid": "f21f6d26-2163-11e8-8401-ed4dfe8ebc2c"
-				}
-			]
+					{
+						"headline": "Incredibles 2",
+						"summary": "Bob Parr (Mr. Incredible) is left to care for Jack-Jack while Helen (Elastigirl) is out saving the world.",
+						"pub_date": "Tue, 08 May 2018 09:00:00 EDT",
+						"lead_media": {
+							"type": "image",
+							"path": "http://www.rtodd.net/swift/images/reviews-movies/related/incredibles01.jpg",
+							"title": "Incredibles 2",
+							"caption": "Bob Parr (Mr. Incredible) is left to care for Jack-Jack while Helen (Elastigirl) is out saving the world.",
+							"credit": "USA Today"
+						},
+						"guid": "f21f6d26-2163-11e8-8401-ed4dfe8ebc2c"
+					}
+				]
+			}
 		},
 		{
 			"headline": "Review: A Boy's Own Desire in ‘Call Me by Your Name'",
@@ -411,7 +425,11 @@
 				]
 			},
 			"item_class": "review",
-			"category": "",
+			"category": {
+				"title": "",
+				"background_color": "",
+				"text_color": ""
+			},
 			"guid": "f21f6d26-aaaa-1111-8401-ed4dfe8ebc2c",
 			"pub_date": "Fri, 06 Apr 2018 09:25:00 EDT",
 			"summary": "You don't just watch Luca Guadagnino's movies, you swoon into them. His best-known titles, 'I Am Love' and 'A Bigger Splash,' feature beautiful people with impeccable taste experiencing haute-bourgeois life intensely. Passion and drama upend those lives, but what's most striking about these movies is their extraordinary palpable quality. In Mr. Guadagnino's work, passion and drama are expressed in words, deeds and surging music but also in the vibrant, visceral textures that envelop his characters - the cool marble, succulent fruit, shadow and light, sheens of sweat. These are movies that turn your gaze into near-touch, inviting you to see and almost caress their sun-warmed bodies.",
@@ -481,86 +499,89 @@
 					"name": "Lombardy, Italy"
 				}
 			],
-			"related_content": [
-				{
-					"headline": "Venom",
-					"summary": "When Eddie Brock acquires the powers of a symbiote, he will have to release his alter-ego \"Venom\" to save his life.",
-					"pub_date": "Tue, 08 May 2018 09:00:00 EDT",
-					"lead_media": {
-						"type": "image",
-						"path": "http://www.rtodd.net/swift/images/reviews-movies/related/venom01.jpg",
-						"title": "Venom",
-						"caption": "When Eddie Brock acquires the powers of a symbiote, he will have to release his alter-ego \"Venom\" to save his life.",
-						"credit": "USA Today"
+			"related_content": {
+				"title": "More Movies",
+				"items": [
+					{
+						"headline": "Venom",
+						"summary": "When Eddie Brock acquires the powers of a symbiote, he will have to release his alter-ego \"Venom\" to save his life.",
+						"pub_date": "Tue, 08 May 2018 09:00:00 EDT",
+						"lead_media": {
+							"type": "image",
+							"path": "http://www.rtodd.net/swift/images/reviews-movies/related/venom01.jpg",
+							"title": "Venom",
+							"caption": "When Eddie Brock acquires the powers of a symbiote, he will have to release his alter-ego \"Venom\" to save his life.",
+							"credit": "USA Today"
+						},
+						"guid": "f21f6d26-2163-11e8-8401-ed4dfe8ebc2c"
 					},
-					"guid": "f21f6d26-2163-11e8-8401-ed4dfe8ebc2c"
-				},
-				{
-					"headline": "Solo: A Star Wars Story",
-					"summary": "During an adventure into a dark criminal underworld, Han Solo meets his future copilot Chewbacca and encounters Lando Calrissian years before joining the Rebellion.",
-					"pub_date": "Tue, 08 May 2018 09:00:00 EDT",
-					"lead_media": {
-						"type": "image",
-						"path": "http://www.rtodd.net/swift/images/reviews-movies/related/solo01.jpg",
-						"title": "Solo: A Star Wars Story",
-						"caption": "During an adventure into a dark criminal underworld, Han Solo meets his future copilot Chewbacca and encounters Lando Calrissian years before joining the Rebellion.",
-						"credit": "USA Today"
+					{
+						"headline": "Solo: A Star Wars Story",
+						"summary": "During an adventure into a dark criminal underworld, Han Solo meets his future copilot Chewbacca and encounters Lando Calrissian years before joining the Rebellion.",
+						"pub_date": "Tue, 08 May 2018 09:00:00 EDT",
+						"lead_media": {
+							"type": "image",
+							"path": "http://www.rtodd.net/swift/images/reviews-movies/related/solo01.jpg",
+							"title": "Solo: A Star Wars Story",
+							"caption": "During an adventure into a dark criminal underworld, Han Solo meets his future copilot Chewbacca and encounters Lando Calrissian years before joining the Rebellion.",
+							"credit": "USA Today"
+						},
+						"guid": "f21f6d26-2163-11e8-8401-ed4dfe8ebc2c"
 					},
-					"guid": "f21f6d26-2163-11e8-8401-ed4dfe8ebc2c"
-				},
-				{
-					"headline": "Robin Hood",
-					"summary": "A war-hardened Crusader and his Moorish commander mount an audacious revolt against the corrupt English crown in a thrilling action-adventure packed with gritty battlefield exploits, mind-blowing fight choreography, and a timeless romance.",
-					"pub_date": "Tue, 08 May 2018 09:00:00 EDT",
-					"lead_media": {
-						"type": "image",
-						"path": "http://www.rtodd.net/swift/images/reviews-movies/related/robin_hood01.jpg",
-						"title": "Robin Hood",
-						"caption": "A war-hardened Crusader and his Moorish commander mount an audacious revolt against the corrupt English crown in a thrilling action-adventure packed with gritty battlefield exploits, mind-blowing fight choreography, and a timeless romance.",
-						"credit": "USA Today"
+					{
+						"headline": "Robin Hood",
+						"summary": "A war-hardened Crusader and his Moorish commander mount an audacious revolt against the corrupt English crown in a thrilling action-adventure packed with gritty battlefield exploits, mind-blowing fight choreography, and a timeless romance.",
+						"pub_date": "Tue, 08 May 2018 09:00:00 EDT",
+						"lead_media": {
+							"type": "image",
+							"path": "http://www.rtodd.net/swift/images/reviews-movies/related/robin_hood01.jpg",
+							"title": "Robin Hood",
+							"caption": "A war-hardened Crusader and his Moorish commander mount an audacious revolt against the corrupt English crown in a thrilling action-adventure packed with gritty battlefield exploits, mind-blowing fight choreography, and a timeless romance.",
+							"credit": "USA Today"
+						},
+						"guid": "f21f6d26-2163-11e8-8401-ed4dfe8ebc2c"
 					},
-					"guid": "f21f6d26-2163-11e8-8401-ed4dfe8ebc2c"
-				},
-				{
-					"headline": "Ant-Man and the Wasp",
-					"summary": "As Scott Lang balances being both a Super Hero and a father, Hope van Dyne and Dr. Hank Pym present an urgent new mission that finds the Ant-Man fighting alongside The Wasp to uncover secrets from their past.",
-					"pub_date": "Tue, 08 May 2018 09:00:00 EDT",
-					"lead_media": {
-						"type": "image",
-						"path": "http://www.rtodd.net/swift/images/reviews-movies/related/antman01.jpg",
-						"title": "Ant-Man and the Wasp",
-						"caption": "As Scott Lang balances being both a Super Hero and a father, Hope van Dyne and Dr. Hank Pym present an urgent new mission that finds the Ant-Man fighting alongside The Wasp to uncover secrets from their past.",
-						"credit": "USA Today"
+					{
+						"headline": "Ant-Man and the Wasp",
+						"summary": "As Scott Lang balances being both a Super Hero and a father, Hope van Dyne and Dr. Hank Pym present an urgent new mission that finds the Ant-Man fighting alongside The Wasp to uncover secrets from their past.",
+						"pub_date": "Tue, 08 May 2018 09:00:00 EDT",
+						"lead_media": {
+							"type": "image",
+							"path": "http://www.rtodd.net/swift/images/reviews-movies/related/antman01.jpg",
+							"title": "Ant-Man and the Wasp",
+							"caption": "As Scott Lang balances being both a Super Hero and a father, Hope van Dyne and Dr. Hank Pym present an urgent new mission that finds the Ant-Man fighting alongside The Wasp to uncover secrets from their past.",
+							"credit": "USA Today"
+						},
+						"guid": "f21f6d26-2163-11e8-8401-ed4dfe8ebc2c"
 					},
-					"guid": "f21f6d26-2163-11e8-8401-ed4dfe8ebc2c"
-				},
-				{
-					"headline": "Deadpool 2",
-					"summary": "After surviving a near fatal bovine attack, a disfigured cafeteria chef (Wade Wilson) struggles to fulfill his dream of becoming Mayberry's hottest bartender while also learning to cope with his lost sense of taste.",
-					"pub_date": "Tue, 08 May 2018 09:00:00 EDT",
-					"lead_media": {
-						"type": "image",
-						"path": "http://www.rtodd.net/swift/images/reviews-movies/related/deadpool01.jpg",
-						"title": "Deadpool 2",
-						"caption": "After surviving a near fatal bovine attack, a disfigured cafeteria chef (Wade Wilson) struggles to fulfill his dream of becoming Mayberry's hottest bartender while also learning to cope with his lost sense of taste.",
-						"credit": "USA Today"
+					{
+						"headline": "Deadpool 2",
+						"summary": "After surviving a near fatal bovine attack, a disfigured cafeteria chef (Wade Wilson) struggles to fulfill his dream of becoming Mayberry's hottest bartender while also learning to cope with his lost sense of taste.",
+						"pub_date": "Tue, 08 May 2018 09:00:00 EDT",
+						"lead_media": {
+							"type": "image",
+							"path": "http://www.rtodd.net/swift/images/reviews-movies/related/deadpool01.jpg",
+							"title": "Deadpool 2",
+							"caption": "After surviving a near fatal bovine attack, a disfigured cafeteria chef (Wade Wilson) struggles to fulfill his dream of becoming Mayberry's hottest bartender while also learning to cope with his lost sense of taste.",
+							"credit": "USA Today"
+						},
+						"guid": "f21f6d26-2163-11e8-8401-ed4dfe8ebc2c"
 					},
-					"guid": "f21f6d26-2163-11e8-8401-ed4dfe8ebc2c"
-				},
-				{
-					"headline": "Incredibles 2",
-					"summary": "Bob Parr (Mr. Incredible) is left to care for Jack-Jack while Helen (Elastigirl) is out saving the world.",
-					"pub_date": "Tue, 08 May 2018 09:00:00 EDT",
-					"lead_media": {
-						"type": "image",
-						"path": "http://www.rtodd.net/swift/images/reviews-movies/related/incredibles01.jpg",
-						"title": "Incredibles 2",
-						"caption": "Bob Parr (Mr. Incredible) is left to care for Jack-Jack while Helen (Elastigirl) is out saving the world.",
-						"credit": "USA Today"
-					},
-					"guid": "f21f6d26-2163-11e8-8401-ed4dfe8ebc2c"
-				}
-			]
+					{
+						"headline": "Incredibles 2",
+						"summary": "Bob Parr (Mr. Incredible) is left to care for Jack-Jack while Helen (Elastigirl) is out saving the world.",
+						"pub_date": "Tue, 08 May 2018 09:00:00 EDT",
+						"lead_media": {
+							"type": "image",
+							"path": "http://www.rtodd.net/swift/images/reviews-movies/related/incredibles01.jpg",
+							"title": "Incredibles 2",
+							"caption": "Bob Parr (Mr. Incredible) is left to care for Jack-Jack while Helen (Elastigirl) is out saving the world.",
+							"credit": "USA Today"
+						},
+						"guid": "f21f6d26-2163-11e8-8401-ed4dfe8ebc2c"
+					}
+				]
+			}
 		},
 		{
 			"headline": "Have You Seen 'A Wrinkle in Time'? Let's Talk.",
@@ -585,7 +606,11 @@
 				]
 			},
 			"item_class": "review",
-			"category": "",
+			"category": {
+				"title": "",
+				"background_color": "",
+				"text_color": ""
+			},
 			"guid": "f21f6d26-aaaa-1111-8888-ed4dfe8ebc2c",
 			"pub_date": "Fri, 06 Apr 2018 09:25:00 EDT",
 			"summary": "More than 50 years since it first captured the hearts and expanded the minds of bookish young misfits, dreamers and in-betweeners around the world, \"A Wrinkle in Time,\" Madeleine L'Engle's 1962 coming-of-age-as-interdimensional-odyssey novel, has finally materialized in theaters. The director Ava DuVernay's adaptation, of a fantastical and cerebral story that many readers over the years had deemed unfilmable is one of the most anticipated movie events of the year - and one of the most polarizing.",
@@ -634,86 +659,89 @@
 					"name": "Des Moines, IA"
 				}
 			],
-			"related_content": [
-				{
-					"headline": "Venom",
-					"summary": "When Eddie Brock acquires the powers of a symbiote, he will have to release his alter-ego \"Venom\" to save his life.",
-					"pub_date": "Tue, 08 May 2018 09:00:00 EDT",
-					"lead_media": {
-						"type": "image",
-						"path": "http://www.rtodd.net/swift/images/reviews-movies/related/venom01.jpg",
-						"title": "Venom",
-						"caption": "When Eddie Brock acquires the powers of a symbiote, he will have to release his alter-ego \"Venom\" to save his life.",
-						"credit": "USA Today"
+			"related_content": {
+				"title": "More Movies",
+				"items": [
+					{
+						"headline": "Venom",
+						"summary": "When Eddie Brock acquires the powers of a symbiote, he will have to release his alter-ego \"Venom\" to save his life.",
+						"pub_date": "Tue, 08 May 2018 09:00:00 EDT",
+						"lead_media": {
+							"type": "image",
+							"path": "http://www.rtodd.net/swift/images/reviews-movies/related/venom01.jpg",
+							"title": "Venom",
+							"caption": "When Eddie Brock acquires the powers of a symbiote, he will have to release his alter-ego \"Venom\" to save his life.",
+							"credit": "USA Today"
+						},
+						"guid": "f21f6d26-2163-11e8-8401-ed4dfe8ebc2c"
 					},
-					"guid": "f21f6d26-2163-11e8-8401-ed4dfe8ebc2c"
-				},
-				{
-					"headline": "Solo: A Star Wars Story",
-					"summary": "During an adventure into a dark criminal underworld, Han Solo meets his future copilot Chewbacca and encounters Lando Calrissian years before joining the Rebellion.",
-					"pub_date": "Tue, 08 May 2018 09:00:00 EDT",
-					"lead_media": {
-						"type": "image",
-						"path": "http://www.rtodd.net/swift/images/reviews-movies/related/solo01.jpg",
-						"title": "Solo: A Star Wars Story",
-						"caption": "During an adventure into a dark criminal underworld, Han Solo meets his future copilot Chewbacca and encounters Lando Calrissian years before joining the Rebellion.",
-						"credit": "USA Today"
+					{
+						"headline": "Solo: A Star Wars Story",
+						"summary": "During an adventure into a dark criminal underworld, Han Solo meets his future copilot Chewbacca and encounters Lando Calrissian years before joining the Rebellion.",
+						"pub_date": "Tue, 08 May 2018 09:00:00 EDT",
+						"lead_media": {
+							"type": "image",
+							"path": "http://www.rtodd.net/swift/images/reviews-movies/related/solo01.jpg",
+							"title": "Solo: A Star Wars Story",
+							"caption": "During an adventure into a dark criminal underworld, Han Solo meets his future copilot Chewbacca and encounters Lando Calrissian years before joining the Rebellion.",
+							"credit": "USA Today"
+						},
+						"guid": "f21f6d26-2163-11e8-8401-ed4dfe8ebc2c"
 					},
-					"guid": "f21f6d26-2163-11e8-8401-ed4dfe8ebc2c"
-				},
-				{
-					"headline": "Robin Hood",
-					"summary": "A war-hardened Crusader and his Moorish commander mount an audacious revolt against the corrupt English crown in a thrilling action-adventure packed with gritty battlefield exploits, mind-blowing fight choreography, and a timeless romance.",
-					"pub_date": "Tue, 08 May 2018 09:00:00 EDT",
-					"lead_media": {
-						"type": "image",
-						"path": "http://www.rtodd.net/swift/images/reviews-movies/related/robin_hood01.jpg",
-						"title": "Robin Hood",
-						"caption": "A war-hardened Crusader and his Moorish commander mount an audacious revolt against the corrupt English crown in a thrilling action-adventure packed with gritty battlefield exploits, mind-blowing fight choreography, and a timeless romance.",
-						"credit": "USA Today"
+					{
+						"headline": "Robin Hood",
+						"summary": "A war-hardened Crusader and his Moorish commander mount an audacious revolt against the corrupt English crown in a thrilling action-adventure packed with gritty battlefield exploits, mind-blowing fight choreography, and a timeless romance.",
+						"pub_date": "Tue, 08 May 2018 09:00:00 EDT",
+						"lead_media": {
+							"type": "image",
+							"path": "http://www.rtodd.net/swift/images/reviews-movies/related/robin_hood01.jpg",
+							"title": "Robin Hood",
+							"caption": "A war-hardened Crusader and his Moorish commander mount an audacious revolt against the corrupt English crown in a thrilling action-adventure packed with gritty battlefield exploits, mind-blowing fight choreography, and a timeless romance.",
+							"credit": "USA Today"
+						},
+						"guid": "f21f6d26-2163-11e8-8401-ed4dfe8ebc2c"
 					},
-					"guid": "f21f6d26-2163-11e8-8401-ed4dfe8ebc2c"
-				},
-				{
-					"headline": "Ant-Man and the Wasp",
-					"summary": "As Scott Lang balances being both a Super Hero and a father, Hope van Dyne and Dr. Hank Pym present an urgent new mission that finds the Ant-Man fighting alongside The Wasp to uncover secrets from their past.",
-					"pub_date": "Tue, 08 May 2018 09:00:00 EDT",
-					"lead_media": {
-						"type": "image",
-						"path": "http://www.rtodd.net/swift/images/reviews-movies/related/antman01.jpg",
-						"title": "Ant-Man and the Wasp",
-						"caption": "As Scott Lang balances being both a Super Hero and a father, Hope van Dyne and Dr. Hank Pym present an urgent new mission that finds the Ant-Man fighting alongside The Wasp to uncover secrets from their past.",
-						"credit": "USA Today"
+					{
+						"headline": "Ant-Man and the Wasp",
+						"summary": "As Scott Lang balances being both a Super Hero and a father, Hope van Dyne and Dr. Hank Pym present an urgent new mission that finds the Ant-Man fighting alongside The Wasp to uncover secrets from their past.",
+						"pub_date": "Tue, 08 May 2018 09:00:00 EDT",
+						"lead_media": {
+							"type": "image",
+							"path": "http://www.rtodd.net/swift/images/reviews-movies/related/antman01.jpg",
+							"title": "Ant-Man and the Wasp",
+							"caption": "As Scott Lang balances being both a Super Hero and a father, Hope van Dyne and Dr. Hank Pym present an urgent new mission that finds the Ant-Man fighting alongside The Wasp to uncover secrets from their past.",
+							"credit": "USA Today"
+						},
+						"guid": "f21f6d26-2163-11e8-8401-ed4dfe8ebc2c"
 					},
-					"guid": "f21f6d26-2163-11e8-8401-ed4dfe8ebc2c"
-				},
-				{
-					"headline": "Deadpool 2",
-					"summary": "After surviving a near fatal bovine attack, a disfigured cafeteria chef (Wade Wilson) struggles to fulfill his dream of becoming Mayberry's hottest bartender while also learning to cope with his lost sense of taste.",
-					"pub_date": "Tue, 08 May 2018 09:00:00 EDT",
-					"lead_media": {
-						"type": "image",
-						"path": "http://www.rtodd.net/swift/images/reviews-movies/related/deadpool01.jpg",
-						"title": "Deadpool 2",
-						"caption": "After surviving a near fatal bovine attack, a disfigured cafeteria chef (Wade Wilson) struggles to fulfill his dream of becoming Mayberry's hottest bartender while also learning to cope with his lost sense of taste.",
-						"credit": "USA Today"
+					{
+						"headline": "Deadpool 2",
+						"summary": "After surviving a near fatal bovine attack, a disfigured cafeteria chef (Wade Wilson) struggles to fulfill his dream of becoming Mayberry's hottest bartender while also learning to cope with his lost sense of taste.",
+						"pub_date": "Tue, 08 May 2018 09:00:00 EDT",
+						"lead_media": {
+							"type": "image",
+							"path": "http://www.rtodd.net/swift/images/reviews-movies/related/deadpool01.jpg",
+							"title": "Deadpool 2",
+							"caption": "After surviving a near fatal bovine attack, a disfigured cafeteria chef (Wade Wilson) struggles to fulfill his dream of becoming Mayberry's hottest bartender while also learning to cope with his lost sense of taste.",
+							"credit": "USA Today"
+						},
+						"guid": "f21f6d26-2163-11e8-8401-ed4dfe8ebc2c"
 					},
-					"guid": "f21f6d26-2163-11e8-8401-ed4dfe8ebc2c"
-				},
-				{
-					"headline": "Incredibles 2",
-					"summary": "Bob Parr (Mr. Incredible) is left to care for Jack-Jack while Helen (Elastigirl) is out saving the world.",
-					"pub_date": "Tue, 08 May 2018 09:00:00 EDT",
-					"lead_media": {
-						"type": "image",
-						"path": "http://www.rtodd.net/swift/images/reviews-movies/related/incredibles01.jpg",
-						"title": "Incredibles 2",
-						"caption": "Bob Parr (Mr. Incredible) is left to care for Jack-Jack while Helen (Elastigirl) is out saving the world.",
-						"credit": "USA Today"
-					},
-					"guid": "f21f6d26-2163-11e8-8401-ed4dfe8ebc2c"
-				}
-			]
+					{
+						"headline": "Incredibles 2",
+						"summary": "Bob Parr (Mr. Incredible) is left to care for Jack-Jack while Helen (Elastigirl) is out saving the world.",
+						"pub_date": "Tue, 08 May 2018 09:00:00 EDT",
+						"lead_media": {
+							"type": "image",
+							"path": "http://www.rtodd.net/swift/images/reviews-movies/related/incredibles01.jpg",
+							"title": "Incredibles 2",
+							"caption": "Bob Parr (Mr. Incredible) is left to care for Jack-Jack while Helen (Elastigirl) is out saving the world.",
+							"credit": "USA Today"
+						},
+						"guid": "f21f6d26-2163-11e8-8401-ed4dfe8ebc2c"
+					}
+				]
+			}
 		},
 		{
 			"headline": "Love, Simon",
@@ -738,7 +766,11 @@
 				]
 			},
 			"item_class": "review",
-			"category": "",
+			"category": {
+				"title": "",
+				"background_color": "",
+				"text_color": ""
+			},
 			"guid": "f21f6d26-aaaa-2222-8888-ed4dfe8ebc2c",
 			"pub_date": "Fri, 06 Apr 2018 09:25:00 EDT",
 			"summary": "\"Love, Simon\" is a mainstream-styled teenage rom-com that uses every cliche in the book. There's the nerdy Vice Principal, the bacchanalian high school party, supportive yet somewhat clueless parents, witty voiceover from the protagonist, public declarations of love in front of the whole school, all held together by a stream of catchy pop tunes. But \"Love, Simon\"'s use of these cliches represents a huge first, because it is the story of a young closeted gay kid's difficult and often humorous march towards coming out. Director Greg Berlanti, who has helmed a string of hit television shows as producer and writer, uses the familiar teenage romance genre to tell an LGBTQ story, and in so doing makes these tropes feel fresh, fun, entertaining. Based on Becky Albertalli's YA novel Simon vs. the Homo Sapiens Agenda, \"Love, Simon\" is a radically inclusive act.",
@@ -794,86 +826,89 @@
 					"name": "Atlanta, GA"
 				}
 			],
-			"related_content": [
-				{
-					"headline": "Venom",
-					"summary": "When Eddie Brock acquires the powers of a symbiote, he will have to release his alter-ego \"Venom\" to save his life.",
-					"pub_date": "Tue, 08 May 2018 09:00:00 EDT",
-					"lead_media": {
-						"type": "image",
-						"path": "http://www.rtodd.net/swift/images/reviews-movies/related/venom01.jpg",
-						"title": "Venom",
-						"caption": "When Eddie Brock acquires the powers of a symbiote, he will have to release his alter-ego \"Venom\" to save his life.",
-						"credit": "USA Today"
+			"related_content": {
+				"title": "More Movies",
+				"items": [
+					{
+						"headline": "Venom",
+						"summary": "When Eddie Brock acquires the powers of a symbiote, he will have to release his alter-ego \"Venom\" to save his life.",
+						"pub_date": "Tue, 08 May 2018 09:00:00 EDT",
+						"lead_media": {
+							"type": "image",
+							"path": "http://www.rtodd.net/swift/images/reviews-movies/related/venom01.jpg",
+							"title": "Venom",
+							"caption": "When Eddie Brock acquires the powers of a symbiote, he will have to release his alter-ego \"Venom\" to save his life.",
+							"credit": "USA Today"
+						},
+						"guid": "f21f6d26-2163-11e8-8401-ed4dfe8ebc2c"
 					},
-					"guid": "f21f6d26-2163-11e8-8401-ed4dfe8ebc2c"
-				},
-				{
-					"headline": "Solo: A Star Wars Story",
-					"summary": "During an adventure into a dark criminal underworld, Han Solo meets his future copilot Chewbacca and encounters Lando Calrissian years before joining the Rebellion.",
-					"pub_date": "Tue, 08 May 2018 09:00:00 EDT",
-					"lead_media": {
-						"type": "image",
-						"path": "http://www.rtodd.net/swift/images/reviews-movies/related/solo01.jpg",
-						"title": "Solo: A Star Wars Story",
-						"caption": "During an adventure into a dark criminal underworld, Han Solo meets his future copilot Chewbacca and encounters Lando Calrissian years before joining the Rebellion.",
-						"credit": "USA Today"
+					{
+						"headline": "Solo: A Star Wars Story",
+						"summary": "During an adventure into a dark criminal underworld, Han Solo meets his future copilot Chewbacca and encounters Lando Calrissian years before joining the Rebellion.",
+						"pub_date": "Tue, 08 May 2018 09:00:00 EDT",
+						"lead_media": {
+							"type": "image",
+							"path": "http://www.rtodd.net/swift/images/reviews-movies/related/solo01.jpg",
+							"title": "Solo: A Star Wars Story",
+							"caption": "During an adventure into a dark criminal underworld, Han Solo meets his future copilot Chewbacca and encounters Lando Calrissian years before joining the Rebellion.",
+							"credit": "USA Today"
+						},
+						"guid": "f21f6d26-2163-11e8-8401-ed4dfe8ebc2c"
 					},
-					"guid": "f21f6d26-2163-11e8-8401-ed4dfe8ebc2c"
-				},
-				{
-					"headline": "Robin Hood",
-					"summary": "A war-hardened Crusader and his Moorish commander mount an audacious revolt against the corrupt English crown in a thrilling action-adventure packed with gritty battlefield exploits, mind-blowing fight choreography, and a timeless romance.",
-					"pub_date": "Tue, 08 May 2018 09:00:00 EDT",
-					"lead_media": {
-						"type": "image",
-						"path": "http://www.rtodd.net/swift/images/reviews-movies/related/robin_hood01.jpg",
-						"title": "Robin Hood",
-						"caption": "A war-hardened Crusader and his Moorish commander mount an audacious revolt against the corrupt English crown in a thrilling action-adventure packed with gritty battlefield exploits, mind-blowing fight choreography, and a timeless romance.",
-						"credit": "USA Today"
+					{
+						"headline": "Robin Hood",
+						"summary": "A war-hardened Crusader and his Moorish commander mount an audacious revolt against the corrupt English crown in a thrilling action-adventure packed with gritty battlefield exploits, mind-blowing fight choreography, and a timeless romance.",
+						"pub_date": "Tue, 08 May 2018 09:00:00 EDT",
+						"lead_media": {
+							"type": "image",
+							"path": "http://www.rtodd.net/swift/images/reviews-movies/related/robin_hood01.jpg",
+							"title": "Robin Hood",
+							"caption": "A war-hardened Crusader and his Moorish commander mount an audacious revolt against the corrupt English crown in a thrilling action-adventure packed with gritty battlefield exploits, mind-blowing fight choreography, and a timeless romance.",
+							"credit": "USA Today"
+						},
+						"guid": "f21f6d26-2163-11e8-8401-ed4dfe8ebc2c"
 					},
-					"guid": "f21f6d26-2163-11e8-8401-ed4dfe8ebc2c"
-				},
-				{
-					"headline": "Ant-Man and the Wasp",
-					"summary": "As Scott Lang balances being both a Super Hero and a father, Hope van Dyne and Dr. Hank Pym present an urgent new mission that finds the Ant-Man fighting alongside The Wasp to uncover secrets from their past.",
-					"pub_date": "Tue, 08 May 2018 09:00:00 EDT",
-					"lead_media": {
-						"type": "image",
-						"path": "http://www.rtodd.net/swift/images/reviews-movies/related/antman01.jpg",
-						"title": "Ant-Man and the Wasp",
-						"caption": "As Scott Lang balances being both a Super Hero and a father, Hope van Dyne and Dr. Hank Pym present an urgent new mission that finds the Ant-Man fighting alongside The Wasp to uncover secrets from their past.",
-						"credit": "USA Today"
+					{
+						"headline": "Ant-Man and the Wasp",
+						"summary": "As Scott Lang balances being both a Super Hero and a father, Hope van Dyne and Dr. Hank Pym present an urgent new mission that finds the Ant-Man fighting alongside The Wasp to uncover secrets from their past.",
+						"pub_date": "Tue, 08 May 2018 09:00:00 EDT",
+						"lead_media": {
+							"type": "image",
+							"path": "http://www.rtodd.net/swift/images/reviews-movies/related/antman01.jpg",
+							"title": "Ant-Man and the Wasp",
+							"caption": "As Scott Lang balances being both a Super Hero and a father, Hope van Dyne and Dr. Hank Pym present an urgent new mission that finds the Ant-Man fighting alongside The Wasp to uncover secrets from their past.",
+							"credit": "USA Today"
+						},
+						"guid": "f21f6d26-2163-11e8-8401-ed4dfe8ebc2c"
 					},
-					"guid": "f21f6d26-2163-11e8-8401-ed4dfe8ebc2c"
-				},
-				{
-					"headline": "Deadpool 2",
-					"summary": "After surviving a near fatal bovine attack, a disfigured cafeteria chef (Wade Wilson) struggles to fulfill his dream of becoming Mayberry's hottest bartender while also learning to cope with his lost sense of taste.",
-					"pub_date": "Tue, 08 May 2018 09:00:00 EDT",
-					"lead_media": {
-						"type": "image",
-						"path": "http://www.rtodd.net/swift/images/reviews-movies/related/deadpool01.jpg",
-						"title": "Deadpool 2",
-						"caption": "After surviving a near fatal bovine attack, a disfigured cafeteria chef (Wade Wilson) struggles to fulfill his dream of becoming Mayberry's hottest bartender while also learning to cope with his lost sense of taste.",
-						"credit": "USA Today"
+					{
+						"headline": "Deadpool 2",
+						"summary": "After surviving a near fatal bovine attack, a disfigured cafeteria chef (Wade Wilson) struggles to fulfill his dream of becoming Mayberry's hottest bartender while also learning to cope with his lost sense of taste.",
+						"pub_date": "Tue, 08 May 2018 09:00:00 EDT",
+						"lead_media": {
+							"type": "image",
+							"path": "http://www.rtodd.net/swift/images/reviews-movies/related/deadpool01.jpg",
+							"title": "Deadpool 2",
+							"caption": "After surviving a near fatal bovine attack, a disfigured cafeteria chef (Wade Wilson) struggles to fulfill his dream of becoming Mayberry's hottest bartender while also learning to cope with his lost sense of taste.",
+							"credit": "USA Today"
+						},
+						"guid": "f21f6d26-2163-11e8-8401-ed4dfe8ebc2c"
 					},
-					"guid": "f21f6d26-2163-11e8-8401-ed4dfe8ebc2c"
-				},
-				{
-					"headline": "Incredibles 2",
-					"summary": "Bob Parr (Mr. Incredible) is left to care for Jack-Jack while Helen (Elastigirl) is out saving the world.",
-					"pub_date": "Tue, 08 May 2018 09:00:00 EDT",
-					"lead_media": {
-						"type": "image",
-						"path": "http://www.rtodd.net/swift/images/reviews-movies/related/incredibles01.jpg",
-						"title": "Incredibles 2",
-						"caption": "Bob Parr (Mr. Incredible) is left to care for Jack-Jack while Helen (Elastigirl) is out saving the world.",
-						"credit": "USA Today"
-					},
-					"guid": "f21f6d26-2163-11e8-8401-ed4dfe8ebc2c"
-				}
-			]
+					{
+						"headline": "Incredibles 2",
+						"summary": "Bob Parr (Mr. Incredible) is left to care for Jack-Jack while Helen (Elastigirl) is out saving the world.",
+						"pub_date": "Tue, 08 May 2018 09:00:00 EDT",
+						"lead_media": {
+							"type": "image",
+							"path": "http://www.rtodd.net/swift/images/reviews-movies/related/incredibles01.jpg",
+							"title": "Incredibles 2",
+							"caption": "Bob Parr (Mr. Incredible) is left to care for Jack-Jack while Helen (Elastigirl) is out saving the world.",
+							"credit": "USA Today"
+						},
+						"guid": "f21f6d26-2163-11e8-8401-ed4dfe8ebc2c"
+					}
+				]
+			}
 		},
 		{
 			"headline": "Tomb Raider",
@@ -898,7 +933,11 @@
 				]
 			},
 			"item_class": "review",
-			"category": "",
+			"category": {
+				"title": "",
+				"background_color": "",
+				"text_color": ""
+			},
 			"guid": "f21f6d66-aaaa-2222-8888-ed4dfe8ebc2c",
 			"pub_date": "Fri, 06 Apr 2018 09:25:00 EDT",
 			"summary": "Based on the 2013 video game, and featuring Alicia Vikanderas the latest incarnation of a character who's been around for 22 years, \"Tomb Raider\" surprisingly plays like a throwback to the classic late-'80s/early '90s era of action filmmaking, represented by the likes of \"Cliffhanger,\" \"The Last of the Mohicans,\" the first couple of Indiana Jones films, and Jackie Chan's \"Armour of God\" series. From the animated prologue, wherein the title character's archeologist father, Lord Richard Croft (Dominic West), tells of an ancient, cursed tomb supposedly containing the all-powerful, weaponizable remains of the Japanese shaman queen Himiko, through its gracefully executed series of chases and emotional moments, to its finale set on a Pacific island riddled with booby-trapped ruins, \"Tomb Raider\" is much better and more original than anyone could have expected.",
@@ -940,86 +979,89 @@
 					"name": "Los Angeles, CA"
 				}
 			],
-			"related_content": [
-				{
-					"headline": "Venom",
-					"summary": "When Eddie Brock acquires the powers of a symbiote, he will have to release his alter-ego \"Venom\" to save his life.",
-					"pub_date": "Tue, 08 May 2018 09:00:00 EDT",
-					"lead_media": {
-						"type": "image",
-						"path": "http://www.rtodd.net/swift/images/reviews-movies/related/venom01.jpg",
-						"title": "Venom",
-						"caption": "When Eddie Brock acquires the powers of a symbiote, he will have to release his alter-ego \"Venom\" to save his life.",
-						"credit": "USA Today"
+			"related_content": {
+				"title": "More Movies",
+				"items": [
+					{
+						"headline": "Venom",
+						"summary": "When Eddie Brock acquires the powers of a symbiote, he will have to release his alter-ego \"Venom\" to save his life.",
+						"pub_date": "Tue, 08 May 2018 09:00:00 EDT",
+						"lead_media": {
+							"type": "image",
+							"path": "http://www.rtodd.net/swift/images/reviews-movies/related/venom01.jpg",
+							"title": "Venom",
+							"caption": "When Eddie Brock acquires the powers of a symbiote, he will have to release his alter-ego \"Venom\" to save his life.",
+							"credit": "USA Today"
+						},
+						"guid": "f21f6d26-2163-11e8-8401-ed4dfe8ebc2c"
 					},
-					"guid": "f21f6d26-2163-11e8-8401-ed4dfe8ebc2c"
-				},
-				{
-					"headline": "Solo: A Star Wars Story",
-					"summary": "During an adventure into a dark criminal underworld, Han Solo meets his future copilot Chewbacca and encounters Lando Calrissian years before joining the Rebellion.",
-					"pub_date": "Tue, 08 May 2018 09:00:00 EDT",
-					"lead_media": {
-						"type": "image",
-						"path": "http://www.rtodd.net/swift/images/reviews-movies/related/solo01.jpg",
-						"title": "Solo: A Star Wars Story",
-						"caption": "During an adventure into a dark criminal underworld, Han Solo meets his future copilot Chewbacca and encounters Lando Calrissian years before joining the Rebellion.",
-						"credit": "USA Today"
+					{
+						"headline": "Solo: A Star Wars Story",
+						"summary": "During an adventure into a dark criminal underworld, Han Solo meets his future copilot Chewbacca and encounters Lando Calrissian years before joining the Rebellion.",
+						"pub_date": "Tue, 08 May 2018 09:00:00 EDT",
+						"lead_media": {
+							"type": "image",
+							"path": "http://www.rtodd.net/swift/images/reviews-movies/related/solo01.jpg",
+							"title": "Solo: A Star Wars Story",
+							"caption": "During an adventure into a dark criminal underworld, Han Solo meets his future copilot Chewbacca and encounters Lando Calrissian years before joining the Rebellion.",
+							"credit": "USA Today"
+						},
+						"guid": "f21f6d26-2163-11e8-8401-ed4dfe8ebc2c"
 					},
-					"guid": "f21f6d26-2163-11e8-8401-ed4dfe8ebc2c"
-				},
-				{
-					"headline": "Robin Hood",
-					"summary": "A war-hardened Crusader and his Moorish commander mount an audacious revolt against the corrupt English crown in a thrilling action-adventure packed with gritty battlefield exploits, mind-blowing fight choreography, and a timeless romance.",
-					"pub_date": "Tue, 08 May 2018 09:00:00 EDT",
-					"lead_media": {
-						"type": "image",
-						"path": "http://www.rtodd.net/swift/images/reviews-movies/related/robin_hood01.jpg",
-						"title": "Robin Hood",
-						"caption": "A war-hardened Crusader and his Moorish commander mount an audacious revolt against the corrupt English crown in a thrilling action-adventure packed with gritty battlefield exploits, mind-blowing fight choreography, and a timeless romance.",
-						"credit": "USA Today"
+					{
+						"headline": "Robin Hood",
+						"summary": "A war-hardened Crusader and his Moorish commander mount an audacious revolt against the corrupt English crown in a thrilling action-adventure packed with gritty battlefield exploits, mind-blowing fight choreography, and a timeless romance.",
+						"pub_date": "Tue, 08 May 2018 09:00:00 EDT",
+						"lead_media": {
+							"type": "image",
+							"path": "http://www.rtodd.net/swift/images/reviews-movies/related/robin_hood01.jpg",
+							"title": "Robin Hood",
+							"caption": "A war-hardened Crusader and his Moorish commander mount an audacious revolt against the corrupt English crown in a thrilling action-adventure packed with gritty battlefield exploits, mind-blowing fight choreography, and a timeless romance.",
+							"credit": "USA Today"
+						},
+						"guid": "f21f6d26-2163-11e8-8401-ed4dfe8ebc2c"
 					},
-					"guid": "f21f6d26-2163-11e8-8401-ed4dfe8ebc2c"
-				},
-				{
-					"headline": "Ant-Man and the Wasp",
-					"summary": "As Scott Lang balances being both a Super Hero and a father, Hope van Dyne and Dr. Hank Pym present an urgent new mission that finds the Ant-Man fighting alongside The Wasp to uncover secrets from their past.",
-					"pub_date": "Tue, 08 May 2018 09:00:00 EDT",
-					"lead_media": {
-						"type": "image",
-						"path": "http://www.rtodd.net/swift/images/reviews-movies/related/antman01.jpg",
-						"title": "Ant-Man and the Wasp",
-						"caption": "As Scott Lang balances being both a Super Hero and a father, Hope van Dyne and Dr. Hank Pym present an urgent new mission that finds the Ant-Man fighting alongside The Wasp to uncover secrets from their past.",
-						"credit": "USA Today"
+					{
+						"headline": "Ant-Man and the Wasp",
+						"summary": "As Scott Lang balances being both a Super Hero and a father, Hope van Dyne and Dr. Hank Pym present an urgent new mission that finds the Ant-Man fighting alongside The Wasp to uncover secrets from their past.",
+						"pub_date": "Tue, 08 May 2018 09:00:00 EDT",
+						"lead_media": {
+							"type": "image",
+							"path": "http://www.rtodd.net/swift/images/reviews-movies/related/antman01.jpg",
+							"title": "Ant-Man and the Wasp",
+							"caption": "As Scott Lang balances being both a Super Hero and a father, Hope van Dyne and Dr. Hank Pym present an urgent new mission that finds the Ant-Man fighting alongside The Wasp to uncover secrets from their past.",
+							"credit": "USA Today"
+						},
+						"guid": "f21f6d26-2163-11e8-8401-ed4dfe8ebc2c"
 					},
-					"guid": "f21f6d26-2163-11e8-8401-ed4dfe8ebc2c"
-				},
-				{
-					"headline": "Deadpool 2",
-					"summary": "After surviving a near fatal bovine attack, a disfigured cafeteria chef (Wade Wilson) struggles to fulfill his dream of becoming Mayberry's hottest bartender while also learning to cope with his lost sense of taste.",
-					"pub_date": "Tue, 08 May 2018 09:00:00 EDT",
-					"lead_media": {
-						"type": "image",
-						"path": "http://www.rtodd.net/swift/images/reviews-movies/related/deadpool01.jpg",
-						"title": "Deadpool 2",
-						"caption": "After surviving a near fatal bovine attack, a disfigured cafeteria chef (Wade Wilson) struggles to fulfill his dream of becoming Mayberry's hottest bartender while also learning to cope with his lost sense of taste.",
-						"credit": "USA Today"
+					{
+						"headline": "Deadpool 2",
+						"summary": "After surviving a near fatal bovine attack, a disfigured cafeteria chef (Wade Wilson) struggles to fulfill his dream of becoming Mayberry's hottest bartender while also learning to cope with his lost sense of taste.",
+						"pub_date": "Tue, 08 May 2018 09:00:00 EDT",
+						"lead_media": {
+							"type": "image",
+							"path": "http://www.rtodd.net/swift/images/reviews-movies/related/deadpool01.jpg",
+							"title": "Deadpool 2",
+							"caption": "After surviving a near fatal bovine attack, a disfigured cafeteria chef (Wade Wilson) struggles to fulfill his dream of becoming Mayberry's hottest bartender while also learning to cope with his lost sense of taste.",
+							"credit": "USA Today"
+						},
+						"guid": "f21f6d26-2163-11e8-8401-ed4dfe8ebc2c"
 					},
-					"guid": "f21f6d26-2163-11e8-8401-ed4dfe8ebc2c"
-				},
-				{
-					"headline": "Incredibles 2",
-					"summary": "Bob Parr (Mr. Incredible) is left to care for Jack-Jack while Helen (Elastigirl) is out saving the world.",
-					"pub_date": "Tue, 08 May 2018 09:00:00 EDT",
-					"lead_media": {
-						"type": "image",
-						"path": "http://www.rtodd.net/swift/images/reviews-movies/related/incredibles01.jpg",
-						"title": "Incredibles 2",
-						"caption": "Bob Parr (Mr. Incredible) is left to care for Jack-Jack while Helen (Elastigirl) is out saving the world.",
-						"credit": "USA Today"
-					},
-					"guid": "f21f6d26-2163-11e8-8401-ed4dfe8ebc2c"
-				}
-			]
+					{
+						"headline": "Incredibles 2",
+						"summary": "Bob Parr (Mr. Incredible) is left to care for Jack-Jack while Helen (Elastigirl) is out saving the world.",
+						"pub_date": "Tue, 08 May 2018 09:00:00 EDT",
+						"lead_media": {
+							"type": "image",
+							"path": "http://www.rtodd.net/swift/images/reviews-movies/related/incredibles01.jpg",
+							"title": "Incredibles 2",
+							"caption": "Bob Parr (Mr. Incredible) is left to care for Jack-Jack while Helen (Elastigirl) is out saving the world.",
+							"credit": "USA Today"
+						},
+						"guid": "f21f6d26-2163-11e8-8401-ed4dfe8ebc2c"
+					}
+				]
+			}
 		}
 	]
 }
