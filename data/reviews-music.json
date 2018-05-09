@@ -91,7 +91,11 @@
 				]
 			},
 			"item_class": "music review",
-			"category": "Rock",
+			"category": {
+				"title": "Rock",
+				"background_color": "#003264",
+				"text_color": "#fff"
+			},
 			"guid": "f21f6d26-aaaa-1111-8401-ed4dfe8ebc2c",
 			"pub_date": "Wed, 09 May 2018 09:25:00 EDT",
 			"summary": "2112 is the fourth studio album by Canadian rock band Rush, released on April 1, 1976 by Anthem Records.",
@@ -196,7 +200,11 @@
 				]
 			},
 			"item_class": "music review",
-			"category": "Rock",
+			"category": {
+				"title": "Rock",
+				"background_color": "#003264",
+				"text_color": "#fff"
+			},
 			"guid": "f21f6d26-aaaa-1111-8401-ed4dfe8ebc2c",
 			"pub_date": "Wed, 10 Apr 2018 09:25:00 EDT",
 			"summary": "Matthew 5: Now when Jared saw the crowds, he went up on a mountainside and sat down. His disciples came to him, and he began to sell them America.",
@@ -319,7 +327,11 @@
 				]
 			},
 			"item_class": "music review",
-			"category": "Alternative",
+			"category": {
+				"title": "Alternative",
+				"background_color": "#baba71",
+				"text_color": "#fff"
+			},
 			"guid": "f21f6d26-aaaa-1111-8401-ed4dfe8ebc2c",
 			"pub_date": "Fri, 06 Apr 2018 09:25:00 EDT",
 			"summary": "Queen-influenced track was inspired by a conversation with vocalist Ben Thornewill's grandmother",
@@ -454,7 +466,11 @@
 				]
 			},
 			"item_class": "music review",
-			"category": "Country",
+			"category": {
+				"title": "Country",
+				"background_color": "#ae0000",
+				"text_color": "#fff"
+			},
 			"guid": "f21f6d26-aaaa-1111-8888-ed4dfe8ebc2c",
 			"pub_date": "Fri, 06 Apr 2018 09:25:00 EDT",
 			"summary": "High Valley keeps in line with traditional country sounds while they explore Americana, rock and pop influences in their major-label debut album, Dear Life. Tracks of inspiration, desires of the heart and their journey as musicians make up the record. The 11-track project experiments with a variety of beats and guitar picking that keep the music interesting while they share their pitch-perfect harmonies.",
@@ -583,7 +599,11 @@
 				]
 			},
 			"item_class": "music review",
-			"category": "Pop",
+			"category": {
+				"title": "Pop",
+				"background_color": "#f477c5",
+				"text_color": "#fff"
+			},
 			"guid": "f21f6d26-aaaa-11e8-8401-ed4dfe8ebc2c",
 			"pub_date": "Fri, 06 Apr 2018 09:25:00 EDT",
 			"summary": "P!nk's greatness -- four Hot 100 No. 1 hits, 15 top 10 hits, five multi-platinum-certified albums in six tries -- may have consistently flown below the radar, but she's finally seeing some appreciation for how underappreciated she's been. Following a series of early-decade award-show performances that stunned with their virtuosity and grace, she's developed a reputation as one of pop's premier artists, and her longtime work as a leading music video artist earned her MTV's Michael Jackson Video Vanguard award at this year's VMAs. She's a legit live draw with has a deep catalog of hits she can tour behind forever, and even if her increasingly adult pop/rock doesn't necessarily lie at the heart of streaming, she'll live on pop radio (\"What About Us\" climbed to No. 11 on Radio Songs this week) until she doesn't want it anymore. She's also been married for over a decade, and now has two kids that she's notably attached to. She's never had less to prove, but she's also never had more to lose. And on Beautiful Trauma, she sounds scared shitless by that.",
@@ -718,7 +738,11 @@
 				]
 			},
 			"item_class": "music review",
-			"category": "Rock",
+			"category": {
+				"title": "Rock",
+				"background_color": "#003264",
+				"text_color": "#fff"
+			},
 			"guid": "f21f6d26-aaaa-2222-8888-ed4dfe8ebc2c",
 			"pub_date": "Fri, 06 Apr 2018 09:25:00 EDT",
 			"summary": "Neil Young is evidently a man on several different missions right now. As a working musician, he is in the throes of a fruitful relationship with Lukas Nelson and the Promise Of The Real. As an archivist, he is teasing out long-lost gems or potent live cuts from his capacious back catalogue. Meanwhile, his environmental activism, a recurring motif since the '70s, has become more pronounced of late",
@@ -841,7 +865,11 @@
 				]
 			},
 			"item_class": "music review",
-			"category": "Hip Hop",
+			"category": {
+				"title": "Hip Hop",
+				"background_color": "#f477c5",
+				"text_color": "#fff"
+			},
 			"guid": "f21f6d66-aaaa-2222-8888-ed4dfe8ebc2c",
 			"pub_date": "Fri, 06 Apr 2018 09:25:00 EDT",
 			"summary": "Amara La Negra is no novice when it comes to music. She's kicked down doors in entertainment for years, breaking stereotypes while singing her black-girl narrative on stages throughout Latin America. From being a child star on Univision's Sábado Gigante to making a name for herself in the urban Latin music industry, Amara's ready for the big time.",
@@ -964,7 +992,11 @@
 				]
 			},
 			"item_class": "music review",
-			"category": "Alternative",
+			"category": {
+				"title": "Alternative",
+				"background_color": "#bab71",
+				"text_color": "#fff"
+			},
 			"guid": "f21f6d26-2163-11e8-8401-ed4dfe8ebc2c",
 			"pub_date": "Fri, 06 Apr 2018 09:25:00 EDT",
 			"summary": "The new album by Panic! at the Disco is called \"Death of a Bachelor,\" but its core concern isn't death so much as the afterlife. Brendon Urie, the band's emphatic mind and mouthpiece, wants to know what happens in the wake of a bacchanal, when the wildest urges thrash only in the rear view. \"Welcome to the end of eras,\" he sings on \"Emperor's New Clothes,\" sounding rueful as well as relieved: Farewell to all that, but not without a highlight reel.",
