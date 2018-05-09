@@ -83,7 +83,11 @@
 				]
 			},
 			"item_class": "story",
-			"category": "Georgia football",
+			"category": {
+				"title": "Georgia football",
+				"background_color": "#d31c1e",
+				"text_color": "#fff"
+			},
 			"guid": "f21f6d26-aaaa-1111-8401-ed4dfe8ebc2c",
 			"pub_date": "Tue, 08 May 2018 07:13:00 EDT",
 			"summary": "In college football, defensive lines win championships. If Georgia wants to perennially earn a place in the College Football Playoff and compete for a national title, it needs a D-line that is as deep as it is talented. Kirby Smart knows this well, which is why you should take him seriously when he voices concerns about the state of Georgia's defensive front.",
@@ -139,60 +143,63 @@
 					"name": "University of Georgia"
 				}
 			],
-			"related_content": [
-				{
-					"headline": "Georgia's defensive line has a lot riding on it — and a lot to prove in 2018",
-					"summary": "In college football, defensive lines win championships. If Georgia wants to perennially earn a place in the College Football Playoff and compete for a national title, it needs a D-line that is as deep as it is talented. Kirby Smart knows this well, which is why you should take him seriously when he voices concerns about the state of Georgia's defensive front.",
-					"pub_date": "Tue, 08 May 2018 07:00:00 EDT",
-					"lead_media": {
-						"type": "image",
-						"path": "http://www.rtodd.net/swift/images/dawgnation/related/related01.jpg",
-						"title": "Georgia's defensive line has a lot riding on it — and a lot to prove in 2018",
-						"caption": "In college football, defensive lines win championships. If Georgia wants to perennially earn a place in the College Football Playoff and compete for a national title, it needs a D-line that is as deep as it is talented. Kirby Smart knows this well, which is why you should take him seriously when he voices concerns about the state of Georgia's defensive front.",
-						"credit": "Dawgnation"
+			"related_content": {
+				"title": "More Movies",
+				"items": [
+					{
+						"headline": "Georgia's defensive line has a lot riding on it — and a lot to prove in 2018",
+						"summary": "In college football, defensive lines win championships. If Georgia wants to perennially earn a place in the College Football Playoff and compete for a national title, it needs a D-line that is as deep as it is talented. Kirby Smart knows this well, which is why you should take him seriously when he voices concerns about the state of Georgia's defensive front.",
+						"pub_date": "Tue, 08 May 2018 07:00:00 EDT",
+						"lead_media": {
+							"type": "image",
+							"path": "http://www.rtodd.net/swift/images/dawgnation/related/related01.jpg",
+							"title": "Georgia's defensive line has a lot riding on it — and a lot to prove in 2018",
+							"caption": "In college football, defensive lines win championships. If Georgia wants to perennially earn a place in the College Football Playoff and compete for a national title, it needs a D-line that is as deep as it is talented. Kirby Smart knows this well, which is why you should take him seriously when he voices concerns about the state of Georgia's defensive front.",
+							"credit": "Dawgnation"
+						},
+						"guid": "f21f6d26-2163-11e8-8401-ed4dfe8ebc2c"
 					},
-					"guid": "f21f6d26-2163-11e8-8401-ed4dfe8ebc2c"
-				},
-				{
-					"headline": "Why that 'Big 6' nickname fits Georgia target Jammie Robinson so well",
-					"summary": "Jammie \"Big 6\" Robinson is considering the chance to play at Notre Dame and Vanderbilt, among those other big-name options.",
-					"pub_date": "Mon, 07 May 2018 23:00:00 EDT",
-					"lead_media": {
-						"type": "image",
-						"path": "http://www.rtodd.net/swift/images/dawgnation/related/related02.jpg",
-						"title": "Why that 'Big 6' nickname fits Georgia target Jammie Robinson so well",
-						"caption": "Jammie \"Big 6\" Robinson is considering the chance to play at Notre Dame and Vanderbilt, among those other big-name options.",
-						"credit": "Dawgnation"
+					{
+						"headline": "Why that 'Big 6' nickname fits Georgia target Jammie Robinson so well",
+						"summary": "Jammie \"Big 6\" Robinson is considering the chance to play at Notre Dame and Vanderbilt, among those other big-name options.",
+						"pub_date": "Mon, 07 May 2018 23:00:00 EDT",
+						"lead_media": {
+							"type": "image",
+							"path": "http://www.rtodd.net/swift/images/dawgnation/related/related02.jpg",
+							"title": "Why that 'Big 6' nickname fits Georgia target Jammie Robinson so well",
+							"caption": "Jammie \"Big 6\" Robinson is considering the chance to play at Notre Dame and Vanderbilt, among those other big-name options.",
+							"credit": "Dawgnation"
+						},
+						"guid": "f21f6d26-2163-11e8-8401-ed4dfe8ebc2c"
 					},
-					"guid": "f21f6d26-2163-11e8-8401-ed4dfe8ebc2c"
-				},
-				{
-					"headline": "Will money and team-apparel influences expose college football to more corruption?",
-					"summary": "There certainly has been much evidence of corruption in college basketball recruiting. That was apparent even before the FBI launched its ongoing investigation and started arresting college assistant coaches. Paying out money to land the best recruits in the county to suit up for State U is nothing new, but what takes this up a notch is this is the first time the federal government has gotten involved.",
-					"pub_date": "Mon, 07 May 2018 16:00:00 EDT",
-					"lead_media": {
-						"type": "image",
-						"path": "http://www.rtodd.net/swift/images/dawgnation/related/related03.jpg",
-						"title": "Will money and team-apparel influences expose college football to more corruption?",
-						"caption": "There certainly has been much evidence of corruption in college basketball recruiting. That was apparent even before the FBI launched its ongoing investigation and started arresting college assistant coaches. Paying out money to land the best recruits in the county to suit up for State U is nothing new, but what takes this up a notch is this is the first time the federal government has gotten involved.",
-						"credit": "Dawgnation"
+					{
+						"headline": "Will money and team-apparel influences expose college football to more corruption?",
+						"summary": "There certainly has been much evidence of corruption in college basketball recruiting. That was apparent even before the FBI launched its ongoing investigation and started arresting college assistant coaches. Paying out money to land the best recruits in the county to suit up for State U is nothing new, but what takes this up a notch is this is the first time the federal government has gotten involved.",
+						"pub_date": "Mon, 07 May 2018 16:00:00 EDT",
+						"lead_media": {
+							"type": "image",
+							"path": "http://www.rtodd.net/swift/images/dawgnation/related/related03.jpg",
+							"title": "Will money and team-apparel influences expose college football to more corruption?",
+							"caption": "There certainly has been much evidence of corruption in college basketball recruiting. That was apparent even before the FBI launched its ongoing investigation and started arresting college assistant coaches. Paying out money to land the best recruits in the county to suit up for State U is nothing new, but what takes this up a notch is this is the first time the federal government has gotten involved.",
+							"credit": "Dawgnation"
+						},
+						"guid": "f21f6d26-2163-11e8-8401-ed4dfe8ebc2c"
 					},
-					"guid": "f21f6d26-2163-11e8-8401-ed4dfe8ebc2c"
-				},
-				{
-					"headline": "Former UGA OL Pat Allen announces transfer to Southeastern Louisiana",
-					"summary": "Former Georgia offensive lineman Pat Allen has made his decision on life after the Bulldogs.",
-					"pub_date": "Tue, 08 May 2018 09:11:00 EDT",
-					"lead_media": {
-						"type": "image",
-						"path": "http://www.rtodd.net/swift/images/dawgnation/related/related04.jpg",
-						"title": "Former UGA OL Pat Allen announces transfer to Southeastern Louisiana",
-						"caption": "Former Georgia offensive lineman Pat Allen has made his decision on life after the Bulldogs.",
-						"credit": "Dawgnation"
-					},
-					"guid": "f21f6d26-2163-11e8-8401-ed4dfe8ebc2c"
-				}
-			]
+					{
+						"headline": "Former UGA OL Pat Allen announces transfer to Southeastern Louisiana",
+						"summary": "Former Georgia offensive lineman Pat Allen has made his decision on life after the Bulldogs.",
+						"pub_date": "Tue, 08 May 2018 09:11:00 EDT",
+						"lead_media": {
+							"type": "image",
+							"path": "http://www.rtodd.net/swift/images/dawgnation/related/related04.jpg",
+							"title": "Former UGA OL Pat Allen announces transfer to Southeastern Louisiana",
+							"caption": "Former Georgia offensive lineman Pat Allen has made his decision on life after the Bulldogs.",
+							"credit": "Dawgnation"
+						},
+						"guid": "f21f6d26-2163-11e8-8401-ed4dfe8ebc2c"
+					}
+				]
+			}
 		},
 		{
 			"headline": "UGA recruiting: What will nation's No. 1 class mean to 2018 team?",
@@ -217,7 +224,11 @@
 				]
 			},
 			"item_class": "story",
-			"category": "Georgia recruiting",
+			"category": {
+				"title": "Georgia recruiting",
+				"background_color": "#d31c1e",
+				"text_color": "#fff"
+			},
 			"guid": "f21f6d26-aaaa-1111-8401-ed4dfe8ebc2c",
 			"pub_date": "Tue, 01 May 2018 13:25:00 EDT",
 			"summary": "Georgia finished first in the recruiting rankings in the 2018 class. Expect the Bulldogs to be at the top in 2019, too. DawgNation's Jeff Sentell will answer a Recruiting Question of the Day on Tuesdays and Thursdays. You can ask him your questions on Twitter or the DawgNation Message board forum. Previous QODs can be found on our question of the day archives page. ",
@@ -273,60 +284,63 @@
 					"name": "University of Georgia"
 				}
 			],
-			"related_content": [
-				{
-					"headline": "Georgia's defensive line has a lot riding on it — and a lot to prove in 2018",
-					"summary": "In college football, defensive lines win championships. If Georgia wants to perennially earn a place in the College Football Playoff and compete for a national title, it needs a D-line that is as deep as it is talented. Kirby Smart knows this well, which is why you should take him seriously when he voices concerns about the state of Georgia's defensive front.",
-					"pub_date": "Tue, 08 May 2018 07:00:00 EDT",
-					"lead_media": {
-						"type": "image",
-						"path": "http://www.rtodd.net/swift/images/dawgnation/related/related01.jpg",
-						"title": "Georgia's defensive line has a lot riding on it — and a lot to prove in 2018",
-						"caption": "In college football, defensive lines win championships. If Georgia wants to perennially earn a place in the College Football Playoff and compete for a national title, it needs a D-line that is as deep as it is talented. Kirby Smart knows this well, which is why you should take him seriously when he voices concerns about the state of Georgia's defensive front.",
-						"credit": "Dawgnation"
+			"related_content": {
+				"title": "More Movies",
+				"items": [
+					{
+						"headline": "Georgia's defensive line has a lot riding on it — and a lot to prove in 2018",
+						"summary": "In college football, defensive lines win championships. If Georgia wants to perennially earn a place in the College Football Playoff and compete for a national title, it needs a D-line that is as deep as it is talented. Kirby Smart knows this well, which is why you should take him seriously when he voices concerns about the state of Georgia's defensive front.",
+						"pub_date": "Tue, 08 May 2018 07:00:00 EDT",
+						"lead_media": {
+							"type": "image",
+							"path": "http://www.rtodd.net/swift/images/dawgnation/related/related01.jpg",
+							"title": "Georgia's defensive line has a lot riding on it — and a lot to prove in 2018",
+							"caption": "In college football, defensive lines win championships. If Georgia wants to perennially earn a place in the College Football Playoff and compete for a national title, it needs a D-line that is as deep as it is talented. Kirby Smart knows this well, which is why you should take him seriously when he voices concerns about the state of Georgia's defensive front.",
+							"credit": "Dawgnation"
+						},
+						"guid": "f21f6d26-2163-11e8-8401-ed4dfe8ebc2c"
 					},
-					"guid": "f21f6d26-2163-11e8-8401-ed4dfe8ebc2c"
-				},
-				{
-					"headline": "Why that 'Big 6' nickname fits Georgia target Jammie Robinson so well",
-					"summary": "Jammie \"Big 6\" Robinson is considering the chance to play at Notre Dame and Vanderbilt, among those other big-name options.",
-					"pub_date": "Mon, 07 May 2018 23:00:00 EDT",
-					"lead_media": {
-						"type": "image",
-						"path": "http://www.rtodd.net/swift/images/dawgnation/related/related02.jpg",
-						"title": "Why that 'Big 6' nickname fits Georgia target Jammie Robinson so well",
-						"caption": "Jammie \"Big 6\" Robinson is considering the chance to play at Notre Dame and Vanderbilt, among those other big-name options.",
-						"credit": "Dawgnation"
+					{
+						"headline": "Why that 'Big 6' nickname fits Georgia target Jammie Robinson so well",
+						"summary": "Jammie \"Big 6\" Robinson is considering the chance to play at Notre Dame and Vanderbilt, among those other big-name options.",
+						"pub_date": "Mon, 07 May 2018 23:00:00 EDT",
+						"lead_media": {
+							"type": "image",
+							"path": "http://www.rtodd.net/swift/images/dawgnation/related/related02.jpg",
+							"title": "Why that 'Big 6' nickname fits Georgia target Jammie Robinson so well",
+							"caption": "Jammie \"Big 6\" Robinson is considering the chance to play at Notre Dame and Vanderbilt, among those other big-name options.",
+							"credit": "Dawgnation"
+						},
+						"guid": "f21f6d26-2163-11e8-8401-ed4dfe8ebc2c"
 					},
-					"guid": "f21f6d26-2163-11e8-8401-ed4dfe8ebc2c"
-				},
-				{
-					"headline": "Will money and team-apparel influences expose college football to more corruption?",
-					"summary": "There certainly has been much evidence of corruption in college basketball recruiting. That was apparent even before the FBI launched its ongoing investigation and started arresting college assistant coaches. Paying out money to land the best recruits in the county to suit up for State U is nothing new, but what takes this up a notch is this is the first time the federal government has gotten involved.",
-					"pub_date": "Mon, 07 May 2018 16:00:00 EDT",
-					"lead_media": {
-						"type": "image",
-						"path": "http://www.rtodd.net/swift/images/dawgnation/related/related03.jpg",
-						"title": "Will money and team-apparel influences expose college football to more corruption?",
-						"caption": "There certainly has been much evidence of corruption in college basketball recruiting. That was apparent even before the FBI launched its ongoing investigation and started arresting college assistant coaches. Paying out money to land the best recruits in the county to suit up for State U is nothing new, but what takes this up a notch is this is the first time the federal government has gotten involved.",
-						"credit": "Dawgnation"
+					{
+						"headline": "Will money and team-apparel influences expose college football to more corruption?",
+						"summary": "There certainly has been much evidence of corruption in college basketball recruiting. That was apparent even before the FBI launched its ongoing investigation and started arresting college assistant coaches. Paying out money to land the best recruits in the county to suit up for State U is nothing new, but what takes this up a notch is this is the first time the federal government has gotten involved.",
+						"pub_date": "Mon, 07 May 2018 16:00:00 EDT",
+						"lead_media": {
+							"type": "image",
+							"path": "http://www.rtodd.net/swift/images/dawgnation/related/related03.jpg",
+							"title": "Will money and team-apparel influences expose college football to more corruption?",
+							"caption": "There certainly has been much evidence of corruption in college basketball recruiting. That was apparent even before the FBI launched its ongoing investigation and started arresting college assistant coaches. Paying out money to land the best recruits in the county to suit up for State U is nothing new, but what takes this up a notch is this is the first time the federal government has gotten involved.",
+							"credit": "Dawgnation"
+						},
+						"guid": "f21f6d26-2163-11e8-8401-ed4dfe8ebc2c"
 					},
-					"guid": "f21f6d26-2163-11e8-8401-ed4dfe8ebc2c"
-				},
-				{
-					"headline": "Former UGA OL Pat Allen announces transfer to Southeastern Louisiana",
-					"summary": "Former Georgia offensive lineman Pat Allen has made his decision on life after the Bulldogs.",
-					"pub_date": "Tue, 08 May 2018 09:11:00 EDT",
-					"lead_media": {
-						"type": "image",
-						"path": "http://www.rtodd.net/swift/images/dawgnation/related/related04.jpg",
-						"title": "Former UGA OL Pat Allen announces transfer to Southeastern Louisiana",
-						"caption": "Former Georgia offensive lineman Pat Allen has made his decision on life after the Bulldogs.",
-						"credit": "Dawgnation"
-					},
-					"guid": "f21f6d26-2163-11e8-8401-ed4dfe8ebc2c"
-				}
-			]
+					{
+						"headline": "Former UGA OL Pat Allen announces transfer to Southeastern Louisiana",
+						"summary": "Former Georgia offensive lineman Pat Allen has made his decision on life after the Bulldogs.",
+						"pub_date": "Tue, 08 May 2018 09:11:00 EDT",
+						"lead_media": {
+							"type": "image",
+							"path": "http://www.rtodd.net/swift/images/dawgnation/related/related04.jpg",
+							"title": "Former UGA OL Pat Allen announces transfer to Southeastern Louisiana",
+							"caption": "Former Georgia offensive lineman Pat Allen has made his decision on life after the Bulldogs.",
+							"credit": "Dawgnation"
+						},
+						"guid": "f21f6d26-2163-11e8-8401-ed4dfe8ebc2c"
+					}
+				]
+			}
 		},
 		{
 			"headline": "Nick Chubb on Georgia football in 2018: ‘I think they can win it all'",
@@ -351,7 +365,11 @@
 				]
 			},
 			"item_class": "story",
-			"category": "Football",
+			"category": {
+				"title": "Football",
+				"background_color": "#d31c1e",
+				"text_color": "#fff"
+			},
 			"guid": "f21f6d26-aaaa-1111-8401-ed4dfe8ebc2c",
 			"pub_date": "Mon, 30 Apr 2018 09:25:00 EDT",
 			"summary": "With the NFL draft now in the rear-view mirror, it's safe to say that the decisions made by Nick Chubb, Sony Michel, Lorenzo Carter and Davin Bellamy to return for their senior seasons worked out for all parties involved. That's everyone, the players, the 2017 team and - according to Chubb - the future of the Georgia football program.",
@@ -393,60 +411,63 @@
 					"name": "University of Georgia"
 				}
 			],
-			"related_content": [
-				{
-					"headline": "Georgia's defensive line has a lot riding on it — and a lot to prove in 2018",
-					"summary": "In college football, defensive lines win championships. If Georgia wants to perennially earn a place in the College Football Playoff and compete for a national title, it needs a D-line that is as deep as it is talented. Kirby Smart knows this well, which is why you should take him seriously when he voices concerns about the state of Georgia's defensive front.",
-					"pub_date": "Tue, 08 May 2018 07:00:00 EDT",
-					"lead_media": {
-						"type": "image",
-						"path": "http://www.rtodd.net/swift/images/dawgnation/related/related01.jpg",
-						"title": "Georgia's defensive line has a lot riding on it — and a lot to prove in 2018",
-						"caption": "In college football, defensive lines win championships. If Georgia wants to perennially earn a place in the College Football Playoff and compete for a national title, it needs a D-line that is as deep as it is talented. Kirby Smart knows this well, which is why you should take him seriously when he voices concerns about the state of Georgia's defensive front.",
-						"credit": "Dawgnation"
+			"related_content": {
+				"title": "More Movies",
+				"items": [
+					{
+						"headline": "Georgia's defensive line has a lot riding on it — and a lot to prove in 2018",
+						"summary": "In college football, defensive lines win championships. If Georgia wants to perennially earn a place in the College Football Playoff and compete for a national title, it needs a D-line that is as deep as it is talented. Kirby Smart knows this well, which is why you should take him seriously when he voices concerns about the state of Georgia's defensive front.",
+						"pub_date": "Tue, 08 May 2018 07:00:00 EDT",
+						"lead_media": {
+							"type": "image",
+							"path": "http://www.rtodd.net/swift/images/dawgnation/related/related01.jpg",
+							"title": "Georgia's defensive line has a lot riding on it — and a lot to prove in 2018",
+							"caption": "In college football, defensive lines win championships. If Georgia wants to perennially earn a place in the College Football Playoff and compete for a national title, it needs a D-line that is as deep as it is talented. Kirby Smart knows this well, which is why you should take him seriously when he voices concerns about the state of Georgia's defensive front.",
+							"credit": "Dawgnation"
+						},
+						"guid": "f21f6d26-2163-11e8-8401-ed4dfe8ebc2c"
 					},
-					"guid": "f21f6d26-2163-11e8-8401-ed4dfe8ebc2c"
-				},
-				{
-					"headline": "Why that 'Big 6' nickname fits Georgia target Jammie Robinson so well",
-					"summary": "Jammie \"Big 6\" Robinson is considering the chance to play at Notre Dame and Vanderbilt, among those other big-name options.",
-					"pub_date": "Mon, 07 May 2018 23:00:00 EDT",
-					"lead_media": {
-						"type": "image",
-						"path": "http://www.rtodd.net/swift/images/dawgnation/related/related02.jpg",
-						"title": "Why that 'Big 6' nickname fits Georgia target Jammie Robinson so well",
-						"caption": "Jammie \"Big 6\" Robinson is considering the chance to play at Notre Dame and Vanderbilt, among those other big-name options.",
-						"credit": "Dawgnation"
+					{
+						"headline": "Why that 'Big 6' nickname fits Georgia target Jammie Robinson so well",
+						"summary": "Jammie \"Big 6\" Robinson is considering the chance to play at Notre Dame and Vanderbilt, among those other big-name options.",
+						"pub_date": "Mon, 07 May 2018 23:00:00 EDT",
+						"lead_media": {
+							"type": "image",
+							"path": "http://www.rtodd.net/swift/images/dawgnation/related/related02.jpg",
+							"title": "Why that 'Big 6' nickname fits Georgia target Jammie Robinson so well",
+							"caption": "Jammie \"Big 6\" Robinson is considering the chance to play at Notre Dame and Vanderbilt, among those other big-name options.",
+							"credit": "Dawgnation"
+						},
+						"guid": "f21f6d26-2163-11e8-8401-ed4dfe8ebc2c"
 					},
-					"guid": "f21f6d26-2163-11e8-8401-ed4dfe8ebc2c"
-				},
-				{
-					"headline": "Will money and team-apparel influences expose college football to more corruption?",
-					"summary": "There certainly has been much evidence of corruption in college basketball recruiting. That was apparent even before the FBI launched its ongoing investigation and started arresting college assistant coaches. Paying out money to land the best recruits in the county to suit up for State U is nothing new, but what takes this up a notch is this is the first time the federal government has gotten involved.",
-					"pub_date": "Mon, 07 May 2018 16:00:00 EDT",
-					"lead_media": {
-						"type": "image",
-						"path": "http://www.rtodd.net/swift/images/dawgnation/related/related03.jpg",
-						"title": "Will money and team-apparel influences expose college football to more corruption?",
-						"caption": "There certainly has been much evidence of corruption in college basketball recruiting. That was apparent even before the FBI launched its ongoing investigation and started arresting college assistant coaches. Paying out money to land the best recruits in the county to suit up for State U is nothing new, but what takes this up a notch is this is the first time the federal government has gotten involved.",
-						"credit": "Dawgnation"
+					{
+						"headline": "Will money and team-apparel influences expose college football to more corruption?",
+						"summary": "There certainly has been much evidence of corruption in college basketball recruiting. That was apparent even before the FBI launched its ongoing investigation and started arresting college assistant coaches. Paying out money to land the best recruits in the county to suit up for State U is nothing new, but what takes this up a notch is this is the first time the federal government has gotten involved.",
+						"pub_date": "Mon, 07 May 2018 16:00:00 EDT",
+						"lead_media": {
+							"type": "image",
+							"path": "http://www.rtodd.net/swift/images/dawgnation/related/related03.jpg",
+							"title": "Will money and team-apparel influences expose college football to more corruption?",
+							"caption": "There certainly has been much evidence of corruption in college basketball recruiting. That was apparent even before the FBI launched its ongoing investigation and started arresting college assistant coaches. Paying out money to land the best recruits in the county to suit up for State U is nothing new, but what takes this up a notch is this is the first time the federal government has gotten involved.",
+							"credit": "Dawgnation"
+						},
+						"guid": "f21f6d26-2163-11e8-8401-ed4dfe8ebc2c"
 					},
-					"guid": "f21f6d26-2163-11e8-8401-ed4dfe8ebc2c"
-				},
-				{
-					"headline": "Former UGA OL Pat Allen announces transfer to Southeastern Louisiana",
-					"summary": "Former Georgia offensive lineman Pat Allen has made his decision on life after the Bulldogs.",
-					"pub_date": "Tue, 08 May 2018 09:11:00 EDT",
-					"lead_media": {
-						"type": "image",
-						"path": "http://www.rtodd.net/swift/images/dawgnation/related/related04.jpg",
-						"title": "Former UGA OL Pat Allen announces transfer to Southeastern Louisiana",
-						"caption": "Former Georgia offensive lineman Pat Allen has made his decision on life after the Bulldogs.",
-						"credit": "Dawgnation"
-					},
-					"guid": "f21f6d26-2163-11e8-8401-ed4dfe8ebc2c"
-				}
-			]
+					{
+						"headline": "Former UGA OL Pat Allen announces transfer to Southeastern Louisiana",
+						"summary": "Former Georgia offensive lineman Pat Allen has made his decision on life after the Bulldogs.",
+						"pub_date": "Tue, 08 May 2018 09:11:00 EDT",
+						"lead_media": {
+							"type": "image",
+							"path": "http://www.rtodd.net/swift/images/dawgnation/related/related04.jpg",
+							"title": "Former UGA OL Pat Allen announces transfer to Southeastern Louisiana",
+							"caption": "Former Georgia offensive lineman Pat Allen has made his decision on life after the Bulldogs.",
+							"credit": "Dawgnation"
+						},
+						"guid": "f21f6d26-2163-11e8-8401-ed4dfe8ebc2c"
+					}
+				]
+			}
 		},
 		{
 			"headline": "Who are Georgia football's top 2019 NFL Draft prospects?",
@@ -471,7 +492,11 @@
 				]
 			},
 			"item_class": "story",
-			"category": "Football",
+			"category": {
+				"title": "Football",
+				"background_color": "#d31c1e",
+				"text_color": "#fff"
+			},
 			"guid": "f21f6d26-aaaa-1111-8401-ed4dfe8ebc2c",
 			"pub_date": "Mon, 30 Apr 2018 09:25:00 EDT",
 			"summary": "With the NFL draft now in the rear-view mirror, it's safe to say that the decisions made by Nick Chubb, Sony Michel, Lorenzo Carter and Davin Bellamy to return for their senior seasons worked out for all parties involved. That's everyone, the players, the 2017 team and - according to Chubb - the future of the Georgia football program.",
@@ -520,60 +545,63 @@
 					"name": "University of Georgia"
 				}
 			],
-			"related_content": [
-				{
-					"headline": "Georgia's defensive line has a lot riding on it — and a lot to prove in 2018",
-					"summary": "In college football, defensive lines win championships. If Georgia wants to perennially earn a place in the College Football Playoff and compete for a national title, it needs a D-line that is as deep as it is talented. Kirby Smart knows this well, which is why you should take him seriously when he voices concerns about the state of Georgia's defensive front.",
-					"pub_date": "Tue, 08 May 2018 07:00:00 EDT",
-					"lead_media": {
-						"type": "image",
-						"path": "http://www.rtodd.net/swift/images/dawgnation/related/related01.jpg",
-						"title": "Georgia's defensive line has a lot riding on it — and a lot to prove in 2018",
-						"caption": "In college football, defensive lines win championships. If Georgia wants to perennially earn a place in the College Football Playoff and compete for a national title, it needs a D-line that is as deep as it is talented. Kirby Smart knows this well, which is why you should take him seriously when he voices concerns about the state of Georgia's defensive front.",
-						"credit": "Dawgnation"
+			"related_content": {
+				"title": "More Movies",
+				"items": [
+					{
+						"headline": "Georgia's defensive line has a lot riding on it — and a lot to prove in 2018",
+						"summary": "In college football, defensive lines win championships. If Georgia wants to perennially earn a place in the College Football Playoff and compete for a national title, it needs a D-line that is as deep as it is talented. Kirby Smart knows this well, which is why you should take him seriously when he voices concerns about the state of Georgia's defensive front.",
+						"pub_date": "Tue, 08 May 2018 07:00:00 EDT",
+						"lead_media": {
+							"type": "image",
+							"path": "http://www.rtodd.net/swift/images/dawgnation/related/related01.jpg",
+							"title": "Georgia's defensive line has a lot riding on it — and a lot to prove in 2018",
+							"caption": "In college football, defensive lines win championships. If Georgia wants to perennially earn a place in the College Football Playoff and compete for a national title, it needs a D-line that is as deep as it is talented. Kirby Smart knows this well, which is why you should take him seriously when he voices concerns about the state of Georgia's defensive front.",
+							"credit": "Dawgnation"
+						},
+						"guid": "f21f6d26-2163-11e8-8401-ed4dfe8ebc2c"
 					},
-					"guid": "f21f6d26-2163-11e8-8401-ed4dfe8ebc2c"
-				},
-				{
-					"headline": "Why that 'Big 6' nickname fits Georgia target Jammie Robinson so well",
-					"summary": "Jammie \"Big 6\" Robinson is considering the chance to play at Notre Dame and Vanderbilt, among those other big-name options.",
-					"pub_date": "Mon, 07 May 2018 23:00:00 EDT",
-					"lead_media": {
-						"type": "image",
-						"path": "http://www.rtodd.net/swift/images/dawgnation/related/related02.jpg",
-						"title": "Why that 'Big 6' nickname fits Georgia target Jammie Robinson so well",
-						"caption": "Jammie \"Big 6\" Robinson is considering the chance to play at Notre Dame and Vanderbilt, among those other big-name options.",
-						"credit": "Dawgnation"
+					{
+						"headline": "Why that 'Big 6' nickname fits Georgia target Jammie Robinson so well",
+						"summary": "Jammie \"Big 6\" Robinson is considering the chance to play at Notre Dame and Vanderbilt, among those other big-name options.",
+						"pub_date": "Mon, 07 May 2018 23:00:00 EDT",
+						"lead_media": {
+							"type": "image",
+							"path": "http://www.rtodd.net/swift/images/dawgnation/related/related02.jpg",
+							"title": "Why that 'Big 6' nickname fits Georgia target Jammie Robinson so well",
+							"caption": "Jammie \"Big 6\" Robinson is considering the chance to play at Notre Dame and Vanderbilt, among those other big-name options.",
+							"credit": "Dawgnation"
+						},
+						"guid": "f21f6d26-2163-11e8-8401-ed4dfe8ebc2c"
 					},
-					"guid": "f21f6d26-2163-11e8-8401-ed4dfe8ebc2c"
-				},
-				{
-					"headline": "Will money and team-apparel influences expose college football to more corruption?",
-					"summary": "There certainly has been much evidence of corruption in college basketball recruiting. That was apparent even before the FBI launched its ongoing investigation and started arresting college assistant coaches. Paying out money to land the best recruits in the county to suit up for State U is nothing new, but what takes this up a notch is this is the first time the federal government has gotten involved.",
-					"pub_date": "Mon, 07 May 2018 16:00:00 EDT",
-					"lead_media": {
-						"type": "image",
-						"path": "http://www.rtodd.net/swift/images/dawgnation/related/related03.jpg",
-						"title": "Will money and team-apparel influences expose college football to more corruption?",
-						"caption": "There certainly has been much evidence of corruption in college basketball recruiting. That was apparent even before the FBI launched its ongoing investigation and started arresting college assistant coaches. Paying out money to land the best recruits in the county to suit up for State U is nothing new, but what takes this up a notch is this is the first time the federal government has gotten involved.",
-						"credit": "Dawgnation"
+					{
+						"headline": "Will money and team-apparel influences expose college football to more corruption?",
+						"summary": "There certainly has been much evidence of corruption in college basketball recruiting. That was apparent even before the FBI launched its ongoing investigation and started arresting college assistant coaches. Paying out money to land the best recruits in the county to suit up for State U is nothing new, but what takes this up a notch is this is the first time the federal government has gotten involved.",
+						"pub_date": "Mon, 07 May 2018 16:00:00 EDT",
+						"lead_media": {
+							"type": "image",
+							"path": "http://www.rtodd.net/swift/images/dawgnation/related/related03.jpg",
+							"title": "Will money and team-apparel influences expose college football to more corruption?",
+							"caption": "There certainly has been much evidence of corruption in college basketball recruiting. That was apparent even before the FBI launched its ongoing investigation and started arresting college assistant coaches. Paying out money to land the best recruits in the county to suit up for State U is nothing new, but what takes this up a notch is this is the first time the federal government has gotten involved.",
+							"credit": "Dawgnation"
+						},
+						"guid": "f21f6d26-2163-11e8-8401-ed4dfe8ebc2c"
 					},
-					"guid": "f21f6d26-2163-11e8-8401-ed4dfe8ebc2c"
-				},
-				{
-					"headline": "Former UGA OL Pat Allen announces transfer to Southeastern Louisiana",
-					"summary": "Former Georgia offensive lineman Pat Allen has made his decision on life after the Bulldogs.",
-					"pub_date": "Tue, 08 May 2018 09:11:00 EDT",
-					"lead_media": {
-						"type": "image",
-						"path": "http://www.rtodd.net/swift/images/dawgnation/related/related04.jpg",
-						"title": "Former UGA OL Pat Allen announces transfer to Southeastern Louisiana",
-						"caption": "Former Georgia offensive lineman Pat Allen has made his decision on life after the Bulldogs.",
-						"credit": "Dawgnation"
-					},
-					"guid": "f21f6d26-2163-11e8-8401-ed4dfe8ebc2c"
-				}
-			]
+					{
+						"headline": "Former UGA OL Pat Allen announces transfer to Southeastern Louisiana",
+						"summary": "Former Georgia offensive lineman Pat Allen has made his decision on life after the Bulldogs.",
+						"pub_date": "Tue, 08 May 2018 09:11:00 EDT",
+						"lead_media": {
+							"type": "image",
+							"path": "http://www.rtodd.net/swift/images/dawgnation/related/related04.jpg",
+							"title": "Former UGA OL Pat Allen announces transfer to Southeastern Louisiana",
+							"caption": "Former Georgia offensive lineman Pat Allen has made his decision on life after the Bulldogs.",
+							"credit": "Dawgnation"
+						},
+						"guid": "f21f6d26-2163-11e8-8401-ed4dfe8ebc2c"
+					}
+				]
+			}
 		},
 		{
 			"headline": "Georgia joins Golden State Warriors, Notre Dame in concussion monitoring efforts",
@@ -598,7 +626,11 @@
 				]
 			},
 			"item_class": "story",
-			"category": "Football",
+			"category": {
+				"title": "Football",
+				"background_color": "#d31c1e",
+				"text_color": "#fff"
+			},
 			"guid": "f21f6d26-aaaa-1111-8401-ed4dfe8ebc2c",
 			"pub_date": "Mon, 30 Apr 2018 09:25:00 EDT",
 			"summary": "All 19 of Georgia's athletic programs will have an added layer of concussion monitoring following an agreement with California-based company SyncThink.",
@@ -640,60 +672,63 @@
 					"name": "University of Georgia"
 				}
 			],
-			"related_content": [
-				{
-					"headline": "Georgia's defensive line has a lot riding on it — and a lot to prove in 2018",
-					"summary": "In college football, defensive lines win championships. If Georgia wants to perennially earn a place in the College Football Playoff and compete for a national title, it needs a D-line that is as deep as it is talented. Kirby Smart knows this well, which is why you should take him seriously when he voices concerns about the state of Georgia's defensive front.",
-					"pub_date": "Tue, 08 May 2018 07:00:00 EDT",
-					"lead_media": {
-						"type": "image",
-						"path": "http://www.rtodd.net/swift/images/dawgnation/related/related01.jpg",
-						"title": "Georgia's defensive line has a lot riding on it — and a lot to prove in 2018",
-						"caption": "In college football, defensive lines win championships. If Georgia wants to perennially earn a place in the College Football Playoff and compete for a national title, it needs a D-line that is as deep as it is talented. Kirby Smart knows this well, which is why you should take him seriously when he voices concerns about the state of Georgia's defensive front.",
-						"credit": "Dawgnation"
+			"related_content": {
+				"title": "More Movies",
+				"items": [
+					{
+						"headline": "Georgia's defensive line has a lot riding on it — and a lot to prove in 2018",
+						"summary": "In college football, defensive lines win championships. If Georgia wants to perennially earn a place in the College Football Playoff and compete for a national title, it needs a D-line that is as deep as it is talented. Kirby Smart knows this well, which is why you should take him seriously when he voices concerns about the state of Georgia's defensive front.",
+						"pub_date": "Tue, 08 May 2018 07:00:00 EDT",
+						"lead_media": {
+							"type": "image",
+							"path": "http://www.rtodd.net/swift/images/dawgnation/related/related01.jpg",
+							"title": "Georgia's defensive line has a lot riding on it — and a lot to prove in 2018",
+							"caption": "In college football, defensive lines win championships. If Georgia wants to perennially earn a place in the College Football Playoff and compete for a national title, it needs a D-line that is as deep as it is talented. Kirby Smart knows this well, which is why you should take him seriously when he voices concerns about the state of Georgia's defensive front.",
+							"credit": "Dawgnation"
+						},
+						"guid": "f21f6d26-2163-11e8-8401-ed4dfe8ebc2c"
 					},
-					"guid": "f21f6d26-2163-11e8-8401-ed4dfe8ebc2c"
-				},
-				{
-					"headline": "Why that 'Big 6' nickname fits Georgia target Jammie Robinson so well",
-					"summary": "Jammie \"Big 6\" Robinson is considering the chance to play at Notre Dame and Vanderbilt, among those other big-name options.",
-					"pub_date": "Mon, 07 May 2018 23:00:00 EDT",
-					"lead_media": {
-						"type": "image",
-						"path": "http://www.rtodd.net/swift/images/dawgnation/related/related02.jpg",
-						"title": "Why that 'Big 6' nickname fits Georgia target Jammie Robinson so well",
-						"caption": "Jammie \"Big 6\" Robinson is considering the chance to play at Notre Dame and Vanderbilt, among those other big-name options.",
-						"credit": "Dawgnation"
+					{
+						"headline": "Why that 'Big 6' nickname fits Georgia target Jammie Robinson so well",
+						"summary": "Jammie \"Big 6\" Robinson is considering the chance to play at Notre Dame and Vanderbilt, among those other big-name options.",
+						"pub_date": "Mon, 07 May 2018 23:00:00 EDT",
+						"lead_media": {
+							"type": "image",
+							"path": "http://www.rtodd.net/swift/images/dawgnation/related/related02.jpg",
+							"title": "Why that 'Big 6' nickname fits Georgia target Jammie Robinson so well",
+							"caption": "Jammie \"Big 6\" Robinson is considering the chance to play at Notre Dame and Vanderbilt, among those other big-name options.",
+							"credit": "Dawgnation"
+						},
+						"guid": "f21f6d26-2163-11e8-8401-ed4dfe8ebc2c"
 					},
-					"guid": "f21f6d26-2163-11e8-8401-ed4dfe8ebc2c"
-				},
-				{
-					"headline": "Will money and team-apparel influences expose college football to more corruption?",
-					"summary": "There certainly has been much evidence of corruption in college basketball recruiting. That was apparent even before the FBI launched its ongoing investigation and started arresting college assistant coaches. Paying out money to land the best recruits in the county to suit up for State U is nothing new, but what takes this up a notch is this is the first time the federal government has gotten involved.",
-					"pub_date": "Mon, 07 May 2018 16:00:00 EDT",
-					"lead_media": {
-						"type": "image",
-						"path": "http://www.rtodd.net/swift/images/dawgnation/related/related03.jpg",
-						"title": "Will money and team-apparel influences expose college football to more corruption?",
-						"caption": "There certainly has been much evidence of corruption in college basketball recruiting. That was apparent even before the FBI launched its ongoing investigation and started arresting college assistant coaches. Paying out money to land the best recruits in the county to suit up for State U is nothing new, but what takes this up a notch is this is the first time the federal government has gotten involved.",
-						"credit": "Dawgnation"
+					{
+						"headline": "Will money and team-apparel influences expose college football to more corruption?",
+						"summary": "There certainly has been much evidence of corruption in college basketball recruiting. That was apparent even before the FBI launched its ongoing investigation and started arresting college assistant coaches. Paying out money to land the best recruits in the county to suit up for State U is nothing new, but what takes this up a notch is this is the first time the federal government has gotten involved.",
+						"pub_date": "Mon, 07 May 2018 16:00:00 EDT",
+						"lead_media": {
+							"type": "image",
+							"path": "http://www.rtodd.net/swift/images/dawgnation/related/related03.jpg",
+							"title": "Will money and team-apparel influences expose college football to more corruption?",
+							"caption": "There certainly has been much evidence of corruption in college basketball recruiting. That was apparent even before the FBI launched its ongoing investigation and started arresting college assistant coaches. Paying out money to land the best recruits in the county to suit up for State U is nothing new, but what takes this up a notch is this is the first time the federal government has gotten involved.",
+							"credit": "Dawgnation"
+						},
+						"guid": "f21f6d26-2163-11e8-8401-ed4dfe8ebc2c"
 					},
-					"guid": "f21f6d26-2163-11e8-8401-ed4dfe8ebc2c"
-				},
-				{
-					"headline": "Former UGA OL Pat Allen announces transfer to Southeastern Louisiana",
-					"summary": "Former Georgia offensive lineman Pat Allen has made his decision on life after the Bulldogs.",
-					"pub_date": "Tue, 08 May 2018 09:11:00 EDT",
-					"lead_media": {
-						"type": "image",
-						"path": "http://www.rtodd.net/swift/images/dawgnation/related/related04.jpg",
-						"title": "Former UGA OL Pat Allen announces transfer to Southeastern Louisiana",
-						"caption": "Former Georgia offensive lineman Pat Allen has made his decision on life after the Bulldogs.",
-						"credit": "Dawgnation"
-					},
-					"guid": "f21f6d26-2163-11e8-8401-ed4dfe8ebc2c"
-				}
-			]
+					{
+						"headline": "Former UGA OL Pat Allen announces transfer to Southeastern Louisiana",
+						"summary": "Former Georgia offensive lineman Pat Allen has made his decision on life after the Bulldogs.",
+						"pub_date": "Tue, 08 May 2018 09:11:00 EDT",
+						"lead_media": {
+							"type": "image",
+							"path": "http://www.rtodd.net/swift/images/dawgnation/related/related04.jpg",
+							"title": "Former UGA OL Pat Allen announces transfer to Southeastern Louisiana",
+							"caption": "Former Georgia offensive lineman Pat Allen has made his decision on life after the Bulldogs.",
+							"credit": "Dawgnation"
+						},
+						"guid": "f21f6d26-2163-11e8-8401-ed4dfe8ebc2c"
+					}
+				]
+			}
 		},
 		{
 			"headline": "What Power 5 opponent would you like to see the Dawgs play?",
@@ -718,7 +753,11 @@
 				]
 			},
 			"item_class": "story",
-			"category": "Football",
+			"category": {
+				"title": "Football",
+				"background_color": "#d31c1e",
+				"text_color": "#fff"
+			},
 			"guid": "f21f6d26-aaaa-1111-8401-ed4dfe8ebc2c",
 			"pub_date": "Mon, 30 Apr 2018 09:25:00 EDT",
 			"summary": "The scheduling of future nonconference opponents for the Dawgs, the quarterback competition between Jake Fromm and Justin Fields, and the one glaring deficiency at G-Day are just some of what UGA fans are talking about as we head into the long offseason.",
@@ -760,60 +799,63 @@
 					"name": "University of Georgia"
 				}
 			],
-			"related_content": [
-				{
-					"headline": "Georgia's defensive line has a lot riding on it — and a lot to prove in 2018",
-					"summary": "In college football, defensive lines win championships. If Georgia wants to perennially earn a place in the College Football Playoff and compete for a national title, it needs a D-line that is as deep as it is talented. Kirby Smart knows this well, which is why you should take him seriously when he voices concerns about the state of Georgia's defensive front.",
-					"pub_date": "Tue, 08 May 2018 07:00:00 EDT",
-					"lead_media": {
-						"type": "image",
-						"path": "http://www.rtodd.net/swift/images/dawgnation/related/related01.jpg",
-						"title": "Georgia's defensive line has a lot riding on it — and a lot to prove in 2018",
-						"caption": "In college football, defensive lines win championships. If Georgia wants to perennially earn a place in the College Football Playoff and compete for a national title, it needs a D-line that is as deep as it is talented. Kirby Smart knows this well, which is why you should take him seriously when he voices concerns about the state of Georgia's defensive front.",
-						"credit": "Dawgnation"
+			"related_content": {
+				"title": "More Movies",
+				"items": [
+					{
+						"headline": "Georgia's defensive line has a lot riding on it — and a lot to prove in 2018",
+						"summary": "In college football, defensive lines win championships. If Georgia wants to perennially earn a place in the College Football Playoff and compete for a national title, it needs a D-line that is as deep as it is talented. Kirby Smart knows this well, which is why you should take him seriously when he voices concerns about the state of Georgia's defensive front.",
+						"pub_date": "Tue, 08 May 2018 07:00:00 EDT",
+						"lead_media": {
+							"type": "image",
+							"path": "http://www.rtodd.net/swift/images/dawgnation/related/related01.jpg",
+							"title": "Georgia's defensive line has a lot riding on it — and a lot to prove in 2018",
+							"caption": "In college football, defensive lines win championships. If Georgia wants to perennially earn a place in the College Football Playoff and compete for a national title, it needs a D-line that is as deep as it is talented. Kirby Smart knows this well, which is why you should take him seriously when he voices concerns about the state of Georgia's defensive front.",
+							"credit": "Dawgnation"
+						},
+						"guid": "f21f6d26-2163-11e8-8401-ed4dfe8ebc2c"
 					},
-					"guid": "f21f6d26-2163-11e8-8401-ed4dfe8ebc2c"
-				},
-				{
-					"headline": "Why that 'Big 6' nickname fits Georgia target Jammie Robinson so well",
-					"summary": "Jammie \"Big 6\" Robinson is considering the chance to play at Notre Dame and Vanderbilt, among those other big-name options.",
-					"pub_date": "Mon, 07 May 2018 23:00:00 EDT",
-					"lead_media": {
-						"type": "image",
-						"path": "http://www.rtodd.net/swift/images/dawgnation/related/related02.jpg",
-						"title": "Why that 'Big 6' nickname fits Georgia target Jammie Robinson so well",
-						"caption": "Jammie \"Big 6\" Robinson is considering the chance to play at Notre Dame and Vanderbilt, among those other big-name options.",
-						"credit": "Dawgnation"
+					{
+						"headline": "Why that 'Big 6' nickname fits Georgia target Jammie Robinson so well",
+						"summary": "Jammie \"Big 6\" Robinson is considering the chance to play at Notre Dame and Vanderbilt, among those other big-name options.",
+						"pub_date": "Mon, 07 May 2018 23:00:00 EDT",
+						"lead_media": {
+							"type": "image",
+							"path": "http://www.rtodd.net/swift/images/dawgnation/related/related02.jpg",
+							"title": "Why that 'Big 6' nickname fits Georgia target Jammie Robinson so well",
+							"caption": "Jammie \"Big 6\" Robinson is considering the chance to play at Notre Dame and Vanderbilt, among those other big-name options.",
+							"credit": "Dawgnation"
+						},
+						"guid": "f21f6d26-2163-11e8-8401-ed4dfe8ebc2c"
 					},
-					"guid": "f21f6d26-2163-11e8-8401-ed4dfe8ebc2c"
-				},
-				{
-					"headline": "Will money and team-apparel influences expose college football to more corruption?",
-					"summary": "There certainly has been much evidence of corruption in college basketball recruiting. That was apparent even before the FBI launched its ongoing investigation and started arresting college assistant coaches. Paying out money to land the best recruits in the county to suit up for State U is nothing new, but what takes this up a notch is this is the first time the federal government has gotten involved.",
-					"pub_date": "Mon, 07 May 2018 16:00:00 EDT",
-					"lead_media": {
-						"type": "image",
-						"path": "http://www.rtodd.net/swift/images/dawgnation/related/related03.jpg",
-						"title": "Will money and team-apparel influences expose college football to more corruption?",
-						"caption": "There certainly has been much evidence of corruption in college basketball recruiting. That was apparent even before the FBI launched its ongoing investigation and started arresting college assistant coaches. Paying out money to land the best recruits in the county to suit up for State U is nothing new, but what takes this up a notch is this is the first time the federal government has gotten involved.",
-						"credit": "Dawgnation"
+					{
+						"headline": "Will money and team-apparel influences expose college football to more corruption?",
+						"summary": "There certainly has been much evidence of corruption in college basketball recruiting. That was apparent even before the FBI launched its ongoing investigation and started arresting college assistant coaches. Paying out money to land the best recruits in the county to suit up for State U is nothing new, but what takes this up a notch is this is the first time the federal government has gotten involved.",
+						"pub_date": "Mon, 07 May 2018 16:00:00 EDT",
+						"lead_media": {
+							"type": "image",
+							"path": "http://www.rtodd.net/swift/images/dawgnation/related/related03.jpg",
+							"title": "Will money and team-apparel influences expose college football to more corruption?",
+							"caption": "There certainly has been much evidence of corruption in college basketball recruiting. That was apparent even before the FBI launched its ongoing investigation and started arresting college assistant coaches. Paying out money to land the best recruits in the county to suit up for State U is nothing new, but what takes this up a notch is this is the first time the federal government has gotten involved.",
+							"credit": "Dawgnation"
+						},
+						"guid": "f21f6d26-2163-11e8-8401-ed4dfe8ebc2c"
 					},
-					"guid": "f21f6d26-2163-11e8-8401-ed4dfe8ebc2c"
-				},
-				{
-					"headline": "Former UGA OL Pat Allen announces transfer to Southeastern Louisiana",
-					"summary": "Former Georgia offensive lineman Pat Allen has made his decision on life after the Bulldogs.",
-					"pub_date": "Tue, 08 May 2018 09:11:00 EDT",
-					"lead_media": {
-						"type": "image",
-						"path": "http://www.rtodd.net/swift/images/dawgnation/related/related04.jpg",
-						"title": "Former UGA OL Pat Allen announces transfer to Southeastern Louisiana",
-						"caption": "Former Georgia offensive lineman Pat Allen has made his decision on life after the Bulldogs.",
-						"credit": "Dawgnation"
-					},
-					"guid": "f21f6d26-2163-11e8-8401-ed4dfe8ebc2c"
-				}
-			]
+					{
+						"headline": "Former UGA OL Pat Allen announces transfer to Southeastern Louisiana",
+						"summary": "Former Georgia offensive lineman Pat Allen has made his decision on life after the Bulldogs.",
+						"pub_date": "Tue, 08 May 2018 09:11:00 EDT",
+						"lead_media": {
+							"type": "image",
+							"path": "http://www.rtodd.net/swift/images/dawgnation/related/related04.jpg",
+							"title": "Former UGA OL Pat Allen announces transfer to Southeastern Louisiana",
+							"caption": "Former Georgia offensive lineman Pat Allen has made his decision on life after the Bulldogs.",
+							"credit": "Dawgnation"
+						},
+						"guid": "f21f6d26-2163-11e8-8401-ed4dfe8ebc2c"
+					}
+				]
+			}
 		}
 	]
 }
