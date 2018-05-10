@@ -109,7 +109,25 @@
 			},
 			"media": [
 				{
-					"path": "http://www.rtodd.net/swift/images/reviews-music/deadmansparty.jpg",
+					"path": "http://www.rtodd.net/swift/images/reviews-music/related/oingo-boingo01.jpg",
+					"title": "Dead Man's Party - Oingo Boingo",
+					"caption": "Dead Man's Party is the fifth album by American new wave band Oingo Boingo, released in 1985. The album cover art is an homage to the Mexican holiday Día de Muertos.",
+					"credit": "Rolling Stone"
+				},
+				{
+					"path": "http://www.rtodd.net/swift/images/reviews-music/related/oingo-boingo02.jpg",
+					"title": "Dead Man's Party - Oingo Boingo",
+					"caption": "Dead Man's Party is the fifth album by American new wave band Oingo Boingo, released in 1985. The album cover art is an homage to the Mexican holiday Día de Muertos.",
+					"credit": "Rolling Stone"
+				},
+				{
+					"path": "http://www.rtodd.net/swift/images/reviews-music/related/oingo-boingo03.jpg",
+					"title": "Dead Man's Party - Oingo Boingo",
+					"caption": "Dead Man's Party is the fifth album by American new wave band Oingo Boingo, released in 1985. The album cover art is an homage to the Mexican holiday Día de Muertos.",
+					"credit": "Rolling Stone"
+				},
+				{
+					"path": "http://www.rtodd.net/swift/images/reviews-music/related/oingo-boingo04.jpg",
 					"title": "Dead Man's Party - Oingo Boingo",
 					"caption": "Dead Man's Party is the fifth album by American new wave band Oingo Boingo, released in 1985. The album cover art is an homage to the Mexican holiday Día de Muertos.",
 					"credit": "Rolling Stone"
