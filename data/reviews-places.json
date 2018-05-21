@@ -2,8 +2,8 @@
 	"version": "2.0",
 	"title": "Places",
 	"branding": {
-		"logo": "http://www.rtodd.net/swift/images/reviews-music/logo.png",
-		"color_main": "#003264"
+		"logo": "http://www.rtodd.net/swift/images/reviews-places/what-to-do.png",
+		"color_main": "#603765"
 	},
 	"menu_items": [
 		{
@@ -56,8 +56,8 @@
 			},
 			"item_class": "place review",
 			"category": {
-				"title": "Vacation",
-				"background_color": "#003264",
+				"title": "What To Do",
+				"background_color": "#603765",
 				"text_color": "#fff"
 			},
 			"guid": "f21f6d26-aaaa-1111-8401-ed4dfe8ebc2c",
@@ -153,8 +153,8 @@
 			},
 			"item_class": "place review",
 			"category": {
-				"title": "Vacation",
-				"background_color": "#003264",
+				"title": "What To Do",
+				"background_color": "#603765",
 				"text_color": "#fff"
 			},
 			"guid": "f21f6d26-aaaa-1111-8401-ed4dfe8ebc2c",
