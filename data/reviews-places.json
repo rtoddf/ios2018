@@ -73,7 +73,19 @@
 			},
 			"media": [
 				{
+					"path": "http://www.rtodd.net/swift/images/reviews-places/islands-of-adventure06.jpg",
+					"title": "Universal's Islands of Adventure",
+					"caption": "Universal's Islands of Adventure",
+					"credit": "Universal"
+				},
+				{
 					"path": "http://www.rtodd.net/swift/images/reviews-places/islands-of-adventure01.jpg",
+					"title": "Universal's Islands of Adventure",
+					"caption": "Universal's Islands of Adventure",
+					"credit": "Universal"
+				},
+				{
+					"path": "http://www.rtodd.net/swift/images/reviews-places/islands-of-adventure07.jpg",
 					"title": "Universal's Islands of Adventure",
 					"caption": "Universal's Islands of Adventure",
 					"credit": "Universal"
@@ -170,7 +182,7 @@
 			},
 			"media": [
 				{
-					"path": "http://www.rtodd.net/swift/images/reviews-places/epcot-food-and-wine01",
+					"path": "http://www.rtodd.net/swift/images/reviews-places/epcot-food-and-wine01.jpg",
 					"title": "Epcot International Food & Wine Festival",
 					"caption": "The Epcot International Food & Wine Festival is an annual food festival at Epcot",
 					"credit": "Orlando Vistors Bureau"
