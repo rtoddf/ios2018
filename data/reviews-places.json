@@ -1,0 +1,133 @@
+{
+	"version": "2.0",
+	"title": "Places",
+	"branding": {
+		"logo": "http://www.rtodd.net/swift/images/reviews-music/logo.png",
+		"color_main": "#003264"
+	},
+	"menu_items": [
+		{
+			"title": "Home",
+			"view": ""
+		},
+		{
+			"title": "Menu01",
+			"view": ""
+		},
+		{
+			"title": "Menu01",
+			"view": ""
+		},
+		{
+			"title": "Menu01",
+			"view": ""
+		},
+		{
+			"title": "Menu01",
+			"view": ""
+		},
+		{
+			"title": "Menu01",
+			"view": ""
+		}
+	],
+	"items": [
+		{
+			"headline": "Universal's Islands of Adventure",
+			"subhead": "",
+			"creator": {
+				"name": "Kara Driscoll - Staff Writer",
+				"title": "Staff Writer",
+				"image": "http://www.rtodd.net/swift/images/dawgnation/creators/karadriscoll.jpg",
+				"social": [
+					{
+						"network": "facebook",
+						"user": ""
+					},
+					{
+						"network": "twitter",
+						"user": "https://twitter.com/karaddriscoll"
+					},
+					{
+						"network": "instagram",
+						"user": ""
+					}
+				]
+			},
+			"item_class": "place review",
+			"category": {
+				"title": "Vacation",
+				"background_color": "#003264",
+				"text_color": "#fff"
+			},
+			"guid": "f21f6d26-aaaa-1111-8401-ed4dfe8ebc2c",
+			"pub_date": "Mon, 21 May 2018 09:25:00 EDT",
+			"summary": "Universal's Islands of Adventure (formally Universal Studios Islands of Adventure, and commonly known as Islands of Adventure) is a theme park in Orlando, Florida. It opened on May 28, 1999, along with CityWalk, as part of an expansion that converted Universal Studios Florida into the Universal Orlando Resort. The slogan for this theme park, along with Universal Studios Florida, is Vacation Like You Mean It, introduced in 2013 as Universal Orlando Resort.",
+			"full_text": "<p>Universal's Islands of Adventure (formally Universal Studios Islands of Adventure, and commonly known as Islands of Adventure) is a theme park in Orlando, Florida. It opened on May 28, 1999, along with CityWalk, as part of an expansion that converted Universal Studios Florida into the Universal Orlando Resort. The slogan for this theme park, along with Universal Studios Florida, is Vacation Like You Mean It, introduced in 2013 as Universal Orlando Resort.</p><p>The park's overall theme is that of a journey of exploration, where guests depart from a main port to visit themed islands, all emphasizing adventure. Initially, the park had six islands. On June 18, 2010, the seventh island, The Wizarding World of Harry Potter (themed to the popular Harry Potter franchise), officially opened at the park. This is Universal's largest investment since opening. In 2013, Islands of Adventure hosted approximately 8.1 million guests, ranking it seventh among United States parks and eleventh worldwide. The eighth island, Skull Island, opened on July 13, 2016.</p><p>Marvel Super Hero Island is based on the superhero characters featured in Marvel Comics. The area features comic-book styled architecture; many of the building interiors are created in comic book perspective, with exaggerated lines and angles. Many exteriors are painted in a special paint which appears to change color based on the angle from which it is viewed - sometimes purple, sometimes orange. The buildings are all labelled generically: \"Store,\" \"Shop,\" \"Food,\" and \"Comics\", etc.</p><p>Toon Lagoon is based on the cartoon characters of King Features Syndicate and Jay Ward. The area focuses on water-based rides (hence the name) and features three counter-service restaurants.</p><p>Skull Island is the most recently opened island at the theme park. The area's sole attraction, Skull Island: Reign of Kong, opened on July 13, 2016. This attraction and island marks the return of the King Kong character to the Universal Orlando Resort, after the Kongfrontation attraction closed at Universal Studios Florida in 2002.</p><p>Jurassic Park is themed to the film series of the same name. Set after the events of the first film, the area undertakes the guise of the John Hammond's dinosaur theme park featured in the series. As such, the area is filled with the attractions and exhibits one would find in the \"real\" Jurassic Park, including thrill rides and discovery-based exhibits.</p>",
+			"lead_media": {
+					"type": "image",
+					"path": "http://www.rtodd.net/swift/images/reviews-places/islands-of-adventure.jpg",
+					"title": "Universal's Islands of Adventure",
+					"caption": "Universal's Islands of Adventure (formally Universal Studios Islands of Adventure",
+					"credit": "Orlando Vistors Bureau"
+			},
+			"media": [
+				{
+					"path": "http://www.rtodd.net/swift/images/reviews-places/islands-of-adventure01.jpg",
+					"title": "Universal's Islands of Adventure",
+					"caption": "Universal's Islands of Adventure",
+					"credit": "Universal"
+				},
+				{
+					"path": "hhttp://www.rtodd.net/swift/images/reviews-places/islands-of-adventure02.jpg",
+					"title": "Universal's Islands of Adventure",
+					"caption": "Universal's Islands of Adventure",
+					"credit": "Universal"
+				},
+				{
+					"path": "http://www.rtodd.net/swift/images/reviews-places/islands-of-adventure03.jpg",
+					"title": "Universal's Islands of Adventure",
+					"caption": "Universal's Islands of Adventure",
+					"credit": "Universal"
+				},
+				{
+					"path": "http://www.rtodd.net/swift/images/reviews-places/islands-of-adventure04.jpg",
+					"title": "Universal's Islands of Adventure",
+					"caption": "Universal's Islands of Adventure",
+					"credit": "Universal"
+				},
+				{
+					"path": "http://www.rtodd.net/swift/images/reviews-places/islands-of-adventure05.jpg",
+					"title": "Universal's Islands of Adventure",
+					"caption": "Universal's Islands of Adventure",
+					"credit": "Universal"
+				}
+			],
+			"locations": [
+				{
+					"latitude": 28.474321,
+					"longitude": -81.467819,
+					"name": "Universal's Islands of Adventure"
+				}
+			],
+			"related_content": {
+				"title": "More Albums",
+				"items": [
+					{
+						"headline": "2112 - Rush",
+						"summary": "2112 is the fourth studio album by Canadian rock band Rush, released on April 1, 1976 by Anthem Records. After they finished touring their previous album, Caress of Steel, in early 1976, the band were in financial hardship due to the album's disappointing sales, unfavourable critical reception, and a decline in numbers at their shows.",
+						"pub_date": "Wed, 09 May 2018 09:25:00 EDT",
+						"lead_media": {
+							"type": "image",
+							"path": "http://www.rtodd.net/swift/images/reviews-music/related/2112.jpg",
+							"title": "2112 - Rush",
+							"caption": "2112 is the fourth studio album by Canadian rock band Rush, released on April 1, 1976 by Anthem Records. After they finished touring their previous album, Caress of Steel, in early 1976, the band were in financial hardship due to the album's disappointing sales, unfavourable critical reception, and a decline in numbers at their shows.",
+							"credit": "Rolling Stone"
+						},
+						"guid": "f21f6d26-2163-11e8-8401-ed4dfe8ebc2c"
+					}
+				]
+			}
+		}
+	]
+}
