@@ -111,7 +111,92 @@
 				}
 			],
 			"related_content": {
-				"title": "More Albums",
+				"title": "More Things to Do",
+				"items": [
+					{
+						"headline": "2112 - Rush",
+						"summary": "2112 is the fourth studio album by Canadian rock band Rush, released on April 1, 1976 by Anthem Records. After they finished touring their previous album, Caress of Steel, in early 1976, the band were in financial hardship due to the album's disappointing sales, unfavourable critical reception, and a decline in numbers at their shows.",
+						"pub_date": "Wed, 09 May 2018 09:25:00 EDT",
+						"lead_media": {
+							"type": "image",
+							"path": "http://www.rtodd.net/swift/images/reviews-music/related/2112.jpg",
+							"title": "2112 - Rush",
+							"caption": "2112 is the fourth studio album by Canadian rock band Rush, released on April 1, 1976 by Anthem Records. After they finished touring their previous album, Caress of Steel, in early 1976, the band were in financial hardship due to the album's disappointing sales, unfavourable critical reception, and a decline in numbers at their shows.",
+							"credit": "Rolling Stone"
+						},
+						"guid": "f21f6d26-2163-11e8-8401-ed4dfe8ebc2c"
+					}
+				]
+			}
+		},
+		{
+			"headline": "Epcot International Food & Wine Festival",
+			"subhead": "",
+			"creator": {
+				"name": "Kara Driscoll - Staff Writer",
+				"title": "Staff Writer",
+				"image": "http://www.rtodd.net/swift/images/dawgnation/creators/karadriscoll.jpg",
+				"social": [
+					{
+						"network": "facebook",
+						"user": ""
+					},
+					{
+						"network": "twitter",
+						"user": "https://twitter.com/karaddriscoll"
+					},
+					{
+						"network": "instagram",
+						"user": ""
+					}
+				]
+			},
+			"item_class": "place review",
+			"category": {
+				"title": "Vacation",
+				"background_color": "#003264",
+				"text_color": "#fff"
+			},
+			"guid": "f21f6d26-aaaa-1111-8401-ed4dfe8ebc2c",
+			"pub_date": "Mon, 21 May 2018 09:25:00 EDT",
+			"summary": "The Epcot International Food & Wine Festival is an annual food festival at Epcot, in the Walt Disney World Resort in Orlando, Florida, typically from late September to mid-November, though in recent years the start date has moved forward to late August. Special kiosks are set up around the World Showcase with food and drinks that reflect various countries. The activities, themes and corporate sponsors have changed over the years since the festival began in 1995.",
+			"full_text": "<p>The Epcot International Food & Wine Festival is an annual food festival at Epcot, in the Walt Disney World Resort in Orlando, Florida, typically from late September to mid-November, though in recent years the start date has moved forward to late August. Special kiosks are set up around the World Showcase with food and drinks that reflect various countries. The activities, themes and corporate sponsors have changed over the years since the festival began in 1995.</p><p>Admission to the basic festival is included with park admission, but guests must purchase the food and drink separately. Activities have included concerts, books signings and demonstrations. Certain special events require a separate admission pass.</p>",
+			"lead_media": {
+					"type": "image",
+					"path": "http://www.rtodd.net/swift/images/reviews-places/epcot-food-and-wine.jpg",
+					"title": "Epcot International Food & Wine Festival",
+					"caption": "The Epcot International Food & Wine Festival is an annual food festival at Epcot",
+					"credit": "Orlando Vistors Bureau"
+			},
+			"media": [
+				{
+					"path": "http://www.rtodd.net/swift/images/reviews-places/epcot-food-and-wine01",
+					"title": "Epcot International Food & Wine Festival",
+					"caption": "The Epcot International Food & Wine Festival is an annual food festival at Epcot",
+					"credit": "Orlando Vistors Bureau"
+				},
+				{
+					"path": "hhttp://www.rtodd.net/swift/images/reviews-places/islands-of-adventure02.jpg",
+					"title": "Epcot International Food & Wine Festival",
+					"caption": "The Epcot International Food & Wine Festival is an annual food festival at Epcot",
+					"credit": "Orlando Vistors Bureau"
+				},
+				{
+					"path": "http://www.rtodd.net/swift/images/reviews-places/islands-of-adventure03.jpg",
+					"title": "Epcot International Food & Wine Festival",
+					"caption": "The Epcot International Food & Wine Festival is an annual food festival at Epcot",
+					"credit": "Orlando Vistors Bureau"
+				}
+			],
+			"locations": [
+				{
+					"latitude": 28.374694, 
+					"longitude": -81.549404,
+					"name": "Epcot International Food & Wine Festival"
+				}
+			],
+			"related_content": {
+				"title": "More Things to Do",
 				"items": [
 					{
 						"headline": "2112 - Rush",
