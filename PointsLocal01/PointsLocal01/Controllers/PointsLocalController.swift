@@ -12,7 +12,11 @@ class PointsLocalController:UICollectionViewController, UICollectionViewDelegate
         
         collectionView?.register(ItemCell.self, forCellWithReuseIdentifier: cellId)
         
-        Feed.downloadData { (items) in
+//        let feedSource = ""
+//        let version = ""
+        let feed = "https://dayton.pointslocal.com/api/v1/events?date_format=F%20j,%20Y&time_format=g:i%20a&search=festival&tag=&category=&latitude=39.7794694&longitude=-84.2721968&radius=25&start=today&end=+30%20days&count=6"
+        
+        Feed.downloadData(feedUrl: feed) { (items) in
             self.items = items
             self.collectionView?.reloadData()
         }
