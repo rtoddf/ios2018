@@ -2,6 +2,7 @@ import UIKit
 
 class PointsLocalController:UICollectionViewController, UICollectionViewDelegateFlowLayout {
     let largeCellId = "largeCellId"
+    let cellIdLeft = "cellIdLeft"
     let imageTopCellId = "imageTopCellId"
     var items:[Item]?
     
@@ -12,6 +13,7 @@ class PointsLocalController:UICollectionViewController, UICollectionViewDelegate
         navigationItem.title = "Points Local"
         
         collectionView?.register(LargeStoryCell.self, forCellWithReuseIdentifier: largeCellId)
+        collectionView?.register(ArticleImageLeftCell.self, forCellWithReuseIdentifier: cellIdLeft)
         collectionView?.register(ImageTopCell.self, forCellWithReuseIdentifier: imageTopCellId)
         
         let feedBase = "https://dayton.pointslocal.com/api/v1/events?"
@@ -44,25 +46,29 @@ class PointsLocalController:UICollectionViewController, UICollectionViewDelegate
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        
-        if indexPath.item % 3 == 0 {
+        if indexPath.item % 5 == 0 {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: largeCellId, for: indexPath) as! LargeStoryCell
             cell.item = items?[indexPath.item]
             return cell
         }
         
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: imageTopCellId, for: indexPath) as! ImageTopCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellIdLeft, for: indexPath) as! ArticleImageLeftCell
         cell.item = items?[indexPath.item]
+        
+//        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: imageTopCellId, for: indexPath) as! ImageTopCell
+//        cell.item = items?[indexPath.item]
         
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        if indexPath.item % 3 == 0 {
+        if indexPath.item % 5 == 0 {
             return CGSize(width: view.frame.width, height: 370)
         }
         
-        return CGSize(width: (collectionView.frame.width/2)-5, height: 250)
+        return CGSize(width: view.frame.width, height: 90)
+        
+//        return CGSize(width: (collectionView.frame.width/2)-5, height: 250)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {

@@ -13,6 +13,7 @@ class ImageTopCell:BaseCell {
             
             leadImageView.loadPointsLocalImageUsingParentId(imageId: parentId)
             categoryLabel.text = parentCategoryName
+            categoryLabel.backgroundColor = UIColor(hexString: getCategoryColor(category: parentCategoryName))
             headlineLabel.text = headline
             detailsLabel.text = date + "\n" + startTime + "-" + endTime + "\n" + venueName
         }

@@ -2,7 +2,7 @@ import UIKit
 
 extension UIFont {
     static var bodyFont:UIFont {
-        guard let font = UIFont(name: "Helvetica", size: 14) else { return UIFont.systemFont(ofSize: 14) }
+        guard let font = UIFont(name: "Helvetica", size: 13) else { return UIFont.systemFont(ofSize: 13) }
         return font
     }
     
@@ -33,6 +33,11 @@ extension UIFont {
 }
 
 extension String {
+    /// Converts HTML string to a `NSAttributedString`
+    var htmlAttributedString: NSAttributedString? {
+        return try? NSAttributedString(data: Data(utf8), options: [.documentType: NSAttributedString.DocumentType.html, .characterEncoding: String.Encoding.utf8.rawValue], documentAttributes: nil)
+    }
+    
     func convertHtml() -> NSAttributedString{
         guard let data = data(using: .utf8) else { return NSAttributedString() }
         do {
