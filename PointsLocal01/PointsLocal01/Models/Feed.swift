@@ -13,8 +13,11 @@ struct Feed:Decodable {
                 
                 do {
                     let decoder = JSONDecoder()
+                    decoder.keyDecodingStrategy = .convertFromSnakeCase
                     let feed = try decoder.decode(Feed.self, from: data)
                     guard let items = feed.items else { return }
+                    
+                    print("items: \(items)")
                     
                     DispatchQueue.main.async {
                         completion(items)
@@ -29,13 +32,13 @@ struct Feed:Decodable {
 }
 
 struct Item:Decodable {
-    let parent_id:String?
+    let parentId:String?
     let title:String?
     let date:String?
-    let venue_name:String?
-    let venue_address:String?
-    let start_time:String?
-    let end_time:String?
-    let parent_category_name:String?
+    let venueName:String?
+    let venueAddress:String?
+    let startTime:String?
+    let endTime:String?
+    let parentCategoryName:String?
     let description:String?
 }

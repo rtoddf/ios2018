@@ -3,13 +3,13 @@ import UIKit
 class ItemCell:BaseCell {
     var item:Item? {
         didSet {
-            guard let parentId = item?.parent_id else { return }
+            guard let parentId = item?.parentId else { return }
             guard let title = item?.title else { return }
             guard let date = item?.date else { return }
-            guard let startTime = item?.start_time else { return }
-            guard let endTime = item?.end_time else { return }
-            guard let venueName = item?.venue_name else { return }
-            guard let parentCategoryName = item?.parent_category_name else { return }
+            guard let startTime = item?.startTime else { return }
+            guard let endTime = item?.endTime else { return }
+            guard let venueName = item?.venueName else { return }
+            guard let parentCategoryName = item?.parentCategoryName else { return }
             
             imageView.loadPointsLocalImageUsingParentId(imageId: parentId)
             categoryLabel.text = parentCategoryName
