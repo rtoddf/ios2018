@@ -25,7 +25,7 @@ class PointsLocalController:UICollectionViewController, UICollectionViewDelegate
         let radius = "25"
         let start = "today"
         let end = "+30%20days"
-        let count = "6"
+        let count = "10"
         
         let feed = "\(feedBase)date_format=\(date_format)&time_format=\(time_format)&search=\(search)&tag=\(tag)&category=\(category)&latitude=\(latitude)&longitude=\(longitude)&radius=\(radius)&start=\(start)&end=\(end)&count=\(count)"
         
