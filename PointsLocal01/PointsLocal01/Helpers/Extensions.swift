@@ -61,10 +61,10 @@ extension UIColor {
 }
 
 class InsetLabel: UILabel {
-    let topInset = CGFloat(5)
-    let bottomInset = CGFloat(5)
-    let leftInset = CGFloat(5)
-    let rightInset = CGFloat(5)
+    var topInset = CGFloat(3)
+    var bottomInset = CGFloat(3)
+    var leftInset = CGFloat(8)
+    var rightInset = CGFloat(8)
     
     override func drawText(in rect: CGRect) {
         let insets: UIEdgeInsets = UIEdgeInsets(top: topInset, left: leftInset, bottom: bottomInset, right: rightInset)

@@ -1,6 +1,6 @@
 import UIKit
 
-class ItemCell:BaseCell {
+class ImageTopCell:BaseCell {
     var item:Item? {
         didSet {
             guard let parentId = item?.parentId else { return }
@@ -63,7 +63,7 @@ class ItemCell:BaseCell {
         addConstraintsWithFormat(format: "H:|[v0]|", views: leadImageView)
         addConstraintsWithFormat(format: "H:|-8-[v0]-8-|", views: headlineLabel)
         addConstraintsWithFormat(format: "H:|-8-[v0]-8-|", views: detailsLabel)
-        addConstraintsWithFormat(format: "V:|[v0][v1(\(imageHeight))]-8-[v2]-4-[v3]", views: categoryLabel, leadImageView, headlineLabel, detailsLabel)
+        addConstraintsWithFormat(format: "V:|[v0(\(imageHeight))][v1(18)]-8-[v2]-4-[v3]", views: leadImageView, categoryLabel, headlineLabel, detailsLabel)
     }
 }
 

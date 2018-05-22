@@ -31,3 +31,60 @@ extension UIFont {
         return font
     }
 }
+
+extension String {
+    func convertHtml() -> NSAttributedString{
+        guard let data = data(using: .utf8) else { return NSAttributedString() }
+        do {
+            return try NSAttributedString(data: data, options: [.documentType: NSAttributedString.DocumentType.html], documentAttributes: nil)
+        } catch {
+            return NSAttributedString()
+        }
+    }
+    
+    func wrapHTML(width:CGFloat) -> String {
+        let fontSize:String = "13"
+        let margin:String = "10px 0 10px 0"
+        let width:String = String(format:"%.2f", width)
+        let color:String = "#666"
+        
+        var headHtml = """
+        <html>
+        <head>
+        <meta name=\"viewport\" content=\"width=device-width, user-scalable=no, shrink-to-fit=no\">
+        <style type=\"text/css\">
+        body {
+        -webkit-text-size-adjust: 100%;
+        font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+        width: 100%;
+        font-size: \(fontSize)px;
+        color: \(color);
+        word-wrap: break-word;
+        height: auto;
+        margin: 0;
+        padding: 0;
+        }
+        h1,h2,h3,h4,h5,h6 {
+        display: block;
+        margin: \(margin);
+        padding-top: 100px;
+        }
+        table {width: 100%;}
+        img {
+        width: \(width)px;
+        height: auto;
+        }
+        </style>
+        </head>
+        """
+        //        iframe {
+        //            width: 100%;
+        //            height: auto;
+        //        }
+        //        .wp-caption[style]{width:100% !important;height:auto;}
+        //        .wp-caption-text{color:#7a7a7a;font-style:italic;-webkit-text-size-adjust:%ld%;}
+        
+        headHtml.append("<body>\(self)</body></html>")
+        return headHtml
+    }
+}
