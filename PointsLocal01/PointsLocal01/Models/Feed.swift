@@ -17,8 +17,6 @@ struct Feed:Decodable {
                     let feed = try decoder.decode(Feed.self, from: data)
                     guard let items = feed.items else { return }
                     
-                    print("items: \(items)")
-                    
                     DispatchQueue.main.async {
                         completion(items)
                     }

@@ -14,6 +14,8 @@
 		AD148928207D538900867CF4 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD148927207D538900867CF4 /* Extensions.swift */; };
 		AD14892B207D543500867CF4 /* Feed.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD14892A207D543500867CF4 /* Feed.swift */; };
 		AD14892E207D5B5D00867CF4 /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD14892D207D5B5D00867CF4 /* ItemCell.swift */; };
+		ADA3E0AF20B490BD002E8299 /* LargeStoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA3E0AE20B490BD002E8299 /* LargeStoryCell.swift */; };
+		ADA3E0B120B49180002E8299 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA3E0B020B49180002E8299 /* StringExtensions.swift */; };
 		ADA77BAA207E6E170051FC23 /* ItemDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA77BA9207E6E170051FC23 /* ItemDetailViewController.swift */; };
 		ADA77BAC207E7A0D0051FC23 /* ItemDetailHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA77BAB207E7A0D0051FC23 /* ItemDetailHeaderCell.swift */; };
 		ADE7A48820801454000D3B3B /* ItemDetailTextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE7A48720801454000D3B3B /* ItemDetailTextCell.swift */; };
@@ -29,6 +31,8 @@
 		AD148927207D538900867CF4 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		AD14892A207D543500867CF4 /* Feed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feed.swift; sourceTree = "<group>"; };
 		AD14892D207D5B5D00867CF4 /* ItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
+		ADA3E0AE20B490BD002E8299 /* LargeStoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeStoryCell.swift; sourceTree = "<group>"; };
+		ADA3E0B020B49180002E8299 /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
 		ADA77BA9207E6E170051FC23 /* ItemDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailViewController.swift; sourceTree = "<group>"; };
 		ADA77BAB207E7A0D0051FC23 /* ItemDetailHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailHeaderCell.swift; sourceTree = "<group>"; };
 		ADE7A48720801454000D3B3B /* ItemDetailTextCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailTextCell.swift; sourceTree = "<group>"; };
@@ -64,8 +68,8 @@
 		AD148912207D524300867CF4 /* PointsLocal01 */ = {
 			isa = PBXGroup;
 			children = (
-				AD14892C207D5B5000867CF4 /* Views */,
 				AD148929207D541C00867CF4 /* Models */,
+				AD14892C207D5B5000867CF4 /* Views */,
 				AD148926207D537B00867CF4 /* Helpers */,
 				AD148925207D52C500867CF4 /* Controllers */,
 				AD148913207D524300867CF4 /* AppDelegate.swift */,
@@ -89,6 +93,7 @@
 			isa = PBXGroup;
 			children = (
 				AD148927207D538900867CF4 /* Extensions.swift */,
+				ADA3E0B020B49180002E8299 /* StringExtensions.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -104,6 +109,7 @@
 		AD14892C207D5B5000867CF4 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				ADA3E0AE20B490BD002E8299 /* LargeStoryCell.swift */,
 				AD14892D207D5B5D00867CF4 /* ItemCell.swift */,
 				ADA77BAB207E7A0D0051FC23 /* ItemDetailHeaderCell.swift */,
 				ADE7A48720801454000D3B3B /* ItemDetailTextCell.swift */,
@@ -182,6 +188,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				AD148916207D524300867CF4 /* PointsLocalController.swift in Sources */,
+				ADA3E0AF20B490BD002E8299 /* LargeStoryCell.swift in Sources */,
+				ADA3E0B120B49180002E8299 /* StringExtensions.swift in Sources */,
 				ADA77BAC207E7A0D0051FC23 /* ItemDetailHeaderCell.swift in Sources */,
 				ADE7A48820801454000D3B3B /* ItemDetailTextCell.swift in Sources */,
 				AD14892B207D543500867CF4 /* Feed.swift in Sources */,
