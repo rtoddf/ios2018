@@ -16,7 +16,7 @@ class ArticleImageLeftCell:BaseCell {
             categoryLabel.text = parentCategoryName
             detailsLabel.text = date + "\n" + startTime + "-" + endTime + "\n" + venueName
 
-            categoryLabel.backgroundColor = UIColor(hexString: getCategoryColor(category: parentCategoryName))
+            categoryLabel.backgroundColor = UIColor(hexString: getCategoryColor(group: group, category: parentCategoryName))
         }
     }
 

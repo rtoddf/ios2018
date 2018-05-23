@@ -12,9 +12,9 @@ class PointsLocalController:UICollectionViewController, UICollectionViewDelegate
         collectionView?.backgroundColor = UIColor(hexString: "#ffffff")
         navigationItem.title = "Points Local"
         
-        collectionView?.register(LargeStoryCell.self, forCellWithReuseIdentifier: imageLargeCellId)
+        collectionView?.register(ArticleImageLargeCell.self, forCellWithReuseIdentifier: imageLargeCellId)
         collectionView?.register(ArticleImageLeftCell.self, forCellWithReuseIdentifier: imageLeftCellId)
-        collectionView?.register(ImageTopCell.self, forCellWithReuseIdentifier: imageTopCellId)
+        collectionView?.register(ArticleImageTopCell.self, forCellWithReuseIdentifier: imageTopCellId)
         
         let feedBase = "https://dayton.pointslocal.com/api/v1/events?"
         let date_format = "F%20j,%20Y"
@@ -47,7 +47,7 @@ class PointsLocalController:UICollectionViewController, UICollectionViewDelegate
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if indexPath.item % 5 == 0 {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: imageLargeCellId, for: indexPath) as! LargeStoryCell
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: imageLargeCellId, for: indexPath) as! ArticleImageLargeCell
             cell.item = items?[indexPath.item]
             return cell
         }
@@ -58,7 +58,7 @@ class PointsLocalController:UICollectionViewController, UICollectionViewDelegate
             return cell
         }
         
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: imageTopCellId, for: indexPath) as! ImageTopCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: imageTopCellId, for: indexPath) as! ArticleImageTopCell
         cell.item = items?[indexPath.item]
         
         return cell
@@ -66,14 +66,10 @@ class PointsLocalController:UICollectionViewController, UICollectionViewDelegate
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-        print("remainder: \(indexPath.item % 5)")
-        
         if indexPath.item % 5 == 0 {
             return CGSize(width: view.frame.width, height: 370)
         }
-        
-        
-        
+
         if indexPath.item % 5 == 1 || indexPath.item % 5 == 2 {
             return CGSize(width: view.frame.width, height: 90)
         }
