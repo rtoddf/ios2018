@@ -14,14 +14,14 @@ class ArticleImageLargeCell:BaseCell {
             guard let summary = item?.description else { return }
             
             leadImageView.loadPointsLocalImageUsingParentId(imageId: parentId)
-            headlineLabel.text = headline
+//            headlineLabel.text = headline
             categoryLabel.text = parentCategoryName
             categoryLabel.backgroundColor = UIColor(hexString: getCategoryColor(group: group, category: parentCategoryName))
 
-            guard let summaryText = summary.htmlAttributedString else { return }
-            textLabel.text = summaryText.string
-            
-            detailsLabel.text = date + "\n" + startTime + "-" + endTime + " @ " + venueName
+//            guard let summaryText = summary.htmlAttributedString else { return }
+//            textLabel.text = summaryText.string
+//
+//            detailsLabel.text = date + "\n" + startTime + "-" + endTime + " @ " + venueName
         }
     }
 
@@ -38,6 +38,12 @@ class ArticleImageLargeCell:BaseCell {
         label.backgroundColor = UIColor(hexString: "#d31c1e")
         label.textColor = UIColor(hexString: "#fff")
         return label
+    }()
+    
+    let leadArticleInfoView:UIView = {
+        let view = UIView()
+        view.backgroundColor = UIColor(hexString: "#444")
+        return view
     }()
     
     let headlineLabel:UILabel = {
@@ -67,19 +73,21 @@ class ArticleImageLargeCell:BaseCell {
     override func setupViews(){
         addSubview(leadImageView)
         addSubview(categoryLabel)
-        addSubview(headlineLabel)
-        addSubview(textLabel)
-        addSubview(detailsLabel)
+        addSubview(leadArticleInfoView)
+//        addSubview(headlineLabel)
+//        addSubview(textLabel)
+//        addSubview(detailsLabel)
         
         let imageWidth = frame.width
         let imageHeight = (9 / 16) * imageWidth
         
         addConstraintsWithFormat(format: "H:|[v0]|", views: leadImageView)
         addConstraintsWithFormat(format: "H:|[v0]|", views: categoryLabel)
-        addConstraintsWithFormat(format: "H:|-8-[v0]-8-|", views: headlineLabel)
-        addConstraintsWithFormat(format: "H:|-8-[v0]-8-|", views: textLabel)
-        addConstraintsWithFormat(format: "H:|-8-[v0]-8-|", views: detailsLabel)
-        addConstraintsWithFormat(format: "V:|[v0(\(imageHeight))][v1(18)]-8-[v2]-4-[v3]-8-[v4]", views: leadImageView, categoryLabel, headlineLabel, textLabel, detailsLabel)
+        addConstraintsWithFormat(format: "H:|[v0]|", views: leadArticleInfoView)
+//        addConstraintsWithFormat(format: "H:|-8-[v0]-8-|", views: headlineLabel)
+//        addConstraintsWithFormat(format: "H:|-8-[v0]-8-|", views: textLabel)
+//        addConstraintsWithFormat(format: "H:|-8-[v0]-8-|", views: detailsLabel)
+        addConstraintsWithFormat(format: "V:|[v0(200)][v1(22)][v2]-20-|", views: leadImageView, categoryLabel, leadArticleInfoView)
         
     }
 

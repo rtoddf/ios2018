@@ -6,6 +6,8 @@ class PointsLocalController:UICollectionViewController, UICollectionViewDelegate
     let imageTopCellId = "imageTopCellId"
     var items:[Item]?
     
+    var categoryCellHeightDiff:CGFloat = 0.0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -67,7 +69,7 @@ class PointsLocalController:UICollectionViewController, UICollectionViewDelegate
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
         if indexPath.item % 5 == 0 {
-            return CGSize(width: view.frame.width, height: 370)
+            return CGSize(width: view.frame.width, height: 304 - categoryCellHeightDiff)
         }
 
         if indexPath.item % 5 == 1 || indexPath.item % 5 == 2 {
