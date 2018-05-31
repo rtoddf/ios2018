@@ -33,6 +33,8 @@ class PointsLocalController:UICollectionViewController, UICollectionViewDelegate
         
         let feed = "\(feedBase)date_format=\(date_format)&time_format=\(time_format)&search=\(search)&tag=\(tag)&category=\(category)&latitude=\(latitude)&longitude=\(longitude)&radius=\(radius)&start=\(start)&end=\(end)&count=\(count)"
         
+        print("feed: \(feed)")
+        
         Feed.downloadData(feedUrl: feed) { (items) in
             self.items = items
             self.collectionView?.reloadData()
