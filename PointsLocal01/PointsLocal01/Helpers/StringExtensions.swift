@@ -41,6 +41,11 @@ extension UIFont {
         guard let font = UIFont(name: "Helvetica", size: 13) else { return UIFont.systemFont(ofSize: 13) }
         return font
     }
+    
+    static var eventBodyFont:UIFont {
+        guard let font = UIFont(name: "Helvetica", size: 15) else { return UIFont.systemFont(ofSize: 15) }
+        return font
+    }
 }
 
 extension String {

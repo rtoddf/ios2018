@@ -23,7 +23,9 @@ class ArticleImageTopCell:BaseCell {
         let iv = UIImageView()
         iv.contentMode = .scaleAspectFit
         iv.clipsToBounds = true
-        iv.backgroundColor = UIColor(hexString: "#333333")
+        iv.backgroundColor = UIColor(hexString: "#333")
+        iv.layer.borderWidth = 0.5
+        iv.layer.borderColor = UIColor(hexString: "#333")?.cgColor
         return iv
     }()
     

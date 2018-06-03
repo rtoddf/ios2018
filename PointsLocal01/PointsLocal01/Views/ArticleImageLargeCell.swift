@@ -7,21 +7,20 @@ class ArticleImageLargeCell:BaseCell {
             guard let headline = item?.headline else { return }
             guard let date = item?.date else { return }
             guard let startTime = item?.startTime else { return }
-            guard let endTime = item?.endTime else { return }
+//            guard let endTime = item?.endTime else { return }
             guard let venueName = item?.venueName else { return }
             guard let parentCategoryName = item?.parentCategoryName else { return }
             
-            guard let summary = item?.fullText else { return }
+            guard let fullText = item?.fullText else { return }
             
             leadImageView.loadPointsLocalImageUsingParentId(imageId: parentId)
-//            headlineLabel.text = headline
+            headlineLabel.text = headline
             categoryLabel.text = parentCategoryName
-            categoryLabel.backgroundColor = UIColor(hexString: getCategoryColor(group: group, category: parentCategoryName))
+            categoryLabel.textColor = UIColor(hexString: getCategoryColor(group: group, category: parentCategoryName))
+            detailsLabel.text = date + ", " + startTime + " @ " + venueName
 
-//            guard let summaryText = summary.htmlAttributedString else { return }
-//            textLabel.text = summaryText.string
-//
-//            detailsLabel.text = date + "\n" + startTime + "-" + endTime + " @ " + venueName
+            guard let summaryText = fullText.htmlAttributedString else { return }
+            textLabel.text = summaryText.string
         }
     }
 
@@ -29,26 +28,22 @@ class ArticleImageLargeCell:BaseCell {
         let iv = UIImageView()
         iv.contentMode = .scaleAspectFill
         iv.clipsToBounds = true
+        iv.backgroundColor = UIColor(hexString: "#333")
+        iv.layer.borderWidth = 0.5
+        iv.layer.borderColor = UIColor(hexString: "#333")?.cgColor
         return iv
     }()
     
-    let categoryLabel:InsetLabel = {
-        let label = InsetLabel()
+    let categoryLabel:UILabel = {
+        let label = UILabel()
         label.font = .boldLabelFont
-        label.backgroundColor = UIColor(hexString: "#d31c1e")
-        label.textColor = UIColor(hexString: "#fff")
+        label.textColor = UIColor(hexString: "#000")
         return label
-    }()
-    
-    let leadArticleInfoView:UIView = {
-        let view = UIView()
-        view.backgroundColor = UIColor(hexString: "#444")
-        return view
     }()
     
     let headlineLabel:UILabel = {
         let label = UILabel()
-        label.font = .titleFont
+        label.font = .eventHeadlineFont
         label.numberOfLines = 2
         label.textColor = UIColor(hexString: "#000")
         return label
@@ -56,16 +51,16 @@ class ArticleImageLargeCell:BaseCell {
     
     let textLabel:UILabel = {
         let label = UILabel()
-        label.numberOfLines = 3
-        label.font = .bodyFont
-        label.textColor = UIColor(hexString: "#444")
+        label.numberOfLines = 2
+        label.font = .eventBodyFont
+        label.textColor = UIColor(hexString: "#222")
         return label
     }()
     
     let detailsLabel:UILabel = {
         let label = UILabel()
-        label.font = .bodyFont
-        label.textColor = UIColor(hexString: "#444")
+        label.font = .eventDetailsFont
+        label.textColor = UIColor(hexString: "#666")
         label.numberOfLines = 4
         return label
     }()
@@ -73,21 +68,20 @@ class ArticleImageLargeCell:BaseCell {
     override func setupViews(){
         addSubview(leadImageView)
         addSubview(categoryLabel)
-        addSubview(leadArticleInfoView)
-//        addSubview(headlineLabel)
-//        addSubview(textLabel)
-//        addSubview(detailsLabel)
-        
+        addSubview(headlineLabel)
+        addSubview(detailsLabel)
+        addSubview(textLabel)
+
         let imageWidth = frame.width
         let imageHeight = (9 / 16) * imageWidth
         
-        addConstraintsWithFormat(format: "H:|[v0]|", views: leadImageView)
-        addConstraintsWithFormat(format: "H:|[v0]|", views: categoryLabel)
-        addConstraintsWithFormat(format: "H:|[v0]|", views: leadArticleInfoView)
-//        addConstraintsWithFormat(format: "H:|-8-[v0]-8-|", views: headlineLabel)
-//        addConstraintsWithFormat(format: "H:|-8-[v0]-8-|", views: textLabel)
-//        addConstraintsWithFormat(format: "H:|-8-[v0]-8-|", views: detailsLabel)
-        addConstraintsWithFormat(format: "V:|[v0(200)][v1(22)][v2]-20-|", views: leadImageView, categoryLabel, leadArticleInfoView)
+        addConstraintsWithFormat(format: "H:|-12-[v0]-12-|", views: leadImageView)
+        addConstraintsWithFormat(format: "H:|-12-[v0]-12-|", views: categoryLabel)
+        addConstraintsWithFormat(format: "H:|-12-[v0]-12-|", views: headlineLabel)
+        addConstraintsWithFormat(format: "H:|-12-[v0]-12-|", views: detailsLabel)
+        addConstraintsWithFormat(format: "H:|-12-[v0]-12-|", views: textLabel)
+        
+        addConstraintsWithFormat(format: "V:|-12-[v0(\(imageHeight))]-4-[v1]-2-[v2]-2-[v3]-4-[v4]", views: leadImageView, categoryLabel, headlineLabel, textLabel, detailsLabel)
         
     }
 

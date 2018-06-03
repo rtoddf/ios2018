@@ -56,19 +56,19 @@ class PointsLocalController:UICollectionViewController, UICollectionViewDelegate
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        if indexPath.item % 7 == 0 {
+        if indexPath.item % 9 == 0 {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: imageLargeCellId, for: indexPath) as! ArticleImageLargeCell
             cell.item = items?[indexPath.item]
             return cell
         }
         
-        if indexPath.item % 7 == 1 || indexPath.item % 7 == 2 {
+        if indexPath.item % 9 == 1 || indexPath.item % 9 == 2 {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: imageRightCellId, for: indexPath) as! ArticleImageRightCell
             cell.item = items?[indexPath.item]
             return cell
         }
         
-        if indexPath.item % 7 == 3 || indexPath.item % 7 == 4 {
+        if indexPath.item % 9 == 3 || indexPath.item % 9 == 4 {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: imageLeftCellId, for: indexPath) as! ArticleImageLeftCell
             cell.item = items?[indexPath.item]
             return cell
@@ -82,15 +82,15 @@ class PointsLocalController:UICollectionViewController, UICollectionViewDelegate
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-        if indexPath.item % 7 == 0 {
-            return CGSize(width: view.frame.width, height: 304 - categoryCellHeightDiff)
+        if indexPath.item % 9 == 0 {
+            return CGSize(width: view.frame.width, height: 325 - categoryCellHeightDiff)
         }
 
-        if indexPath.item % 7 == 1 || indexPath.item % 7 == 2 {
+        if indexPath.item % 9 == 1 || indexPath.item % 9 == 2 {
             return CGSize(width: view.frame.width, height: 120)
         }
         
-        if indexPath.item % 7 == 3 || indexPath.item % 7 == 4 {
+        if indexPath.item % 9 == 3 || indexPath.item % 9 == 4 {
             return CGSize(width: view.frame.width, height: 120)
         }
         
