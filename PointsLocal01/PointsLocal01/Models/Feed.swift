@@ -29,9 +29,42 @@ struct Feed:Decodable {
     }
 }
 
+struct Events:Decodable {
+    private enum CodingKeys:String, CodingKey {
+        case events = "items"
+    }
+    
+    let events:[Item]?
+
+    static func downloadData(feedUrl:String, completion: @escaping ([Item]) -> Void) {
+        let urlString = feedUrl
+        let url = URL(string: urlString)
+        
+        if let urlObject = url {
+            URLSession.shared.dataTask(with: urlObject) { (data, ressponse, error) in
+                guard let data = data else { return }
+                
+                do {
+                    let decoder = JSONDecoder()
+                    decoder.keyDecodingStrategy = .convertFromSnakeCase
+                    let feed = try decoder.decode(Events.self, from: data)
+                    guard let events = feed.events else { return }
+                    
+                    DispatchQueue.main.async {
+                        completion(events)
+                    }
+                    
+                } catch let jsonErr {
+                    print("we got an error \(jsonErr)")
+                }
+                }.resume()
+        }
+    }
+}
+
 struct Item:Decodable {
     let parentId:String?
-    let title:String?
+    let headline:String?
     let date:String?
     let venueName:String?
     let venueAddress:String?
@@ -39,4 +72,9 @@ struct Item:Decodable {
     let endTime:String?
     let parentCategoryName:String?
     let description:String?
+    
+    private enum CodingKeys:String, CodingKey {
+        case parentId, date, venueName, venueAddress, startTime, endTime, parentCategoryName, description
+        case headline = "title"
+    }
 }

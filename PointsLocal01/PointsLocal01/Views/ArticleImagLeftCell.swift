@@ -4,7 +4,7 @@ class ArticleImageLeftCell:BaseCell {
     var item:Item? {
         didSet {
             guard let parentId = item?.parentId else { return }
-            guard let headline = item?.title else { return }
+            guard let headline = item?.headline else { return }
             guard let date = item?.date else { return }
             guard let startTime = item?.startTime else { return }
             guard let endTime = item?.endTime else { return }
