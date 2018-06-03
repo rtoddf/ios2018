@@ -11,7 +11,7 @@ class ArticleImageLargeCell:BaseCell {
             guard let venueName = item?.venueName else { return }
             guard let parentCategoryName = item?.parentCategoryName else { return }
             
-            guard let fullText = item?.fullText else { return }
+            guard let summary = item?.fullText else { return }
             
             leadImageView.loadPointsLocalImageUsingParentId(imageId: parentId)
 //            headlineLabel.text = headline

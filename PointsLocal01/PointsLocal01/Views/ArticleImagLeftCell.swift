@@ -16,24 +16,23 @@ class ArticleImageLeftCell:BaseCell {
             categoryLabel.text = parentCategoryName
             detailsLabel.text = date + "\n" + startTime + "-" + endTime + "\n" + venueName
 
-            categoryLabel.backgroundColor = UIColor(hexString: getCategoryColor(group: group, category: parentCategoryName))
+            categoryLabel.textColor = UIColor(hexString: getCategoryColor(group: group, category: parentCategoryName))
         }
     }
 
     let headlineLabel:UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.font = .titleFont
+        label.font = .eventHeadlineFont
         label.numberOfLines = 3
         return label
     }()
     
     let detailsLabel:UILabel = {
         let label = UILabel()
-        label.font = .labelFont
+        label.font = .eventDetailsFont
         label.textColor = UIColor(hexString: "#666")
-        label.numberOfLines = 4
-        label.backgroundColor = .purple
+        label.numberOfLines = 3
         return label
     }()
     
@@ -42,15 +41,21 @@ class ArticleImageLeftCell:BaseCell {
         iv.backgroundColor = UIColor(hexString: "#333")
         iv.contentMode = .scaleAspectFill
         iv.clipsToBounds = true
+        iv.layer.borderWidth = 0.5
+        iv.layer.borderColor = UIColor(hexString: "#333")?.cgColor
         return iv
     }()
     
-    let categoryLabel:InsetLabel = {
-        let label = InsetLabel()
+    let categoryLabel:UILabel = {
+        let label = UILabel()
         label.font = UIFont.boldSystemFont(ofSize: 10)
-        label.backgroundColor = UIColor(hexString: "#d31c1e")
-        label.textColor = UIColor(hexString: "#fff")
+        label.textColor = UIColor(hexString: "#000")
         return label
+    }()
+    
+    let detailView:UIView = {
+        let view = UIView()
+        return view
     }()
     
     let dividerView:UIView = {
@@ -61,25 +66,23 @@ class ArticleImageLeftCell:BaseCell {
     
     override func setupViews() {
         addSubview(leadImageView)
-        addSubview(categoryLabel)
-        addSubview(headlineLabel)
-        addSubview(detailsLabel)
+        addSubview(detailView)
+        
+        detailView.addSubview(headlineLabel)
+        detailView.addSubview(detailsLabel)
+        detailView.addSubview(categoryLabel)
         
         let imageWidth = frame.width / 3
         let textWidth = (imageWidth * 2) - 36
         
-        addConstraintsWithFormat(format: "H:|[v0(\(imageWidth))]-12-|", views: leadImageView)
-        addConstraintsWithFormat(format: "H:|[v0(\(imageWidth))]-12-|", views: categoryLabel)
-        addConstraintsWithFormat(format: "V:|[v0][v1(14)]-12-|", views: leadImageView, categoryLabel)
+        addConstraintsWithFormat(format: "H:|-12-[v0(\(imageWidth))]-12-[v1(\(textWidth))]-12-|", views: leadImageView, detailView)
+        addConstraintsWithFormat(format: "V:|[v0]-12-|", views: detailView)
+        addConstraintsWithFormat(format: "V:|[v0]-12-|", views: leadImageView)
         
-        addConstraint(NSLayoutConstraint(item: headlineLabel,  attribute: .left, relatedBy: .equal, toItem: leadImageView, attribute: .right, multiplier: 1, constant: 12))
-        addConstraint(NSLayoutConstraint(item: headlineLabel,  attribute: .top, relatedBy: .equal, toItem: leadImageView, attribute: .top, multiplier: 1, constant: 0))
-        addConstraint(NSLayoutConstraint(item: headlineLabel,  attribute: .width, relatedBy: .equal, toItem: nil, attribute: .width, multiplier: 1, constant: textWidth))
-        
-//        addConstraint(NSLayoutConstraint(item: detailsLabel, attribute: .top, relatedBy: .equal, toItem: headlineLabel, attribute: .bottom, multiplier: 1, constant: 12))
-//        addConstraint(NSLayoutConstraint(item: detailsLabel, attribute: .top, relatedBy: .equal, toItem: leadImageView, attribute: .top, multiplier: 1, constant: 0))
-//        addConstraint(NSLayoutConstraint(item: detailsLabel, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .width, multiplier: 1, constant: textWidth))
-//        addConstraint(NSLayoutConstraint(item: detailsLabel, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .height, multiplier: 1, constant: 50))
+        addConstraintsWithFormat(format: "H:|-2-[v0]-2-|", views: categoryLabel)
+        addConstraintsWithFormat(format: "H:|-2-[v0]-2-|", views: headlineLabel)
+        addConstraintsWithFormat(format: "H:|-2-[v0]-2-|", views: detailsLabel)
+        addConstraintsWithFormat(format: "V:|-2-[v0]-2-[v1]-4-[v2]", views: categoryLabel, headlineLabel, detailsLabel)
     }
 
 }
