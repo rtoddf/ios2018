@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		00EBA6A420C363E300093B34 /* Events.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00EBA6A320C363E300093B34 /* Events.swift */; };
 		AD148914207D524300867CF4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD148913207D524300867CF4 /* AppDelegate.swift */; };
 		AD148916207D524300867CF4 /* PointsLocalController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD148915207D524300867CF4 /* PointsLocalController.swift */; };
 		AD14891B207D524400867CF4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD14891A207D524400867CF4 /* Assets.xcassets */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		00EBA6A320C363E300093B34 /* Events.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Events.swift; sourceTree = "<group>"; };
 		AD148910207D524300867CF4 /* PointsLocal01.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PointsLocal01.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD148913207D524300867CF4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AD148915207D524300867CF4 /* PointsLocalController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointsLocalController.swift; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				AD14892A207D543500867CF4 /* Feed.swift */,
+				00EBA6A320C363E300093B34 /* Events.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -193,6 +196,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00EBA6A420C363E300093B34 /* Events.swift in Sources */,
 				AD148916207D524300867CF4 /* PointsLocalController.swift in Sources */,
 				ADA3E0AF20B490BD002E8299 /* ArticleImageLargeCell.swift in Sources */,
 				ADA3E0B120B49180002E8299 /* StringExtensions.swift in Sources */,

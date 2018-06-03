@@ -5,6 +5,7 @@ class PointsLocalController:UICollectionViewController, UICollectionViewDelegate
     let imageLeftCellId = "imageLeftCellId"
     let imageTopCellId = "imageTopCellId"
     var items:[Item]?
+    var events:[Events]?
     
     var categoryCellHeightDiff:CGFloat = 0.0
     
@@ -33,11 +34,15 @@ class PointsLocalController:UICollectionViewController, UICollectionViewDelegate
         
         let feed = "\(feedBase)date_format=\(date_format)&time_format=\(time_format)&search=\(search)&tag=\(tag)&category=\(category)&latitude=\(latitude)&longitude=\(longitude)&radius=\(radius)&start=\(start)&end=\(end)&count=\(count)"
         
-        print("feed: \(feed)")
-        
         Feed.downloadData(feedUrl: feed) { (items) in
             self.items = items
             self.collectionView?.reloadData()
+        }
+        
+        Events.downloadData(feedUrl: feed) { (events) in
+            print("events: \(events)")
+//            self.items = items
+//            self.collectionView?.reloadData()
         }
 
         collectionView?.dataSource = self
