@@ -71,18 +71,15 @@ class ArticleImageRightCell:BaseCell {
         detailView.addSubview(categoryLabel)
         detailView.addSubview(headlineLabel)
         detailView.addSubview(detailsLabel)
-        
-        let imageWidth = frame.width / 3
-        let textWidth = (imageWidth * 2) - 36
-        
-        addConstraintsWithFormat(format: "H:|-12-[v0(\(textWidth))]-12-[v1(\(imageWidth))]-12-|", views: detailView, leadImageView)
+
+        addConstraintsWithFormat(format: "H:|-12-[v0]-12-[v1(\(frame.width / 3))]-12-|", views: detailView, leadImageView)
         addConstraintsWithFormat(format: "V:|[v0]-12-|", views: detailView)
         addConstraintsWithFormat(format: "V:|[v0]-12-|", views: leadImageView)
         
         addConstraintsWithFormat(format: "H:|-2-[v0]-2-|", views: categoryLabel)
         addConstraintsWithFormat(format: "H:|-2-[v0]-2-|", views: headlineLabel)
         addConstraintsWithFormat(format: "H:|-2-[v0]-2-|", views: detailsLabel)
-        addConstraintsWithFormat(format: "V:|-2-[v0]-2-[v1]-2-[v2]", views: categoryLabel, headlineLabel, detailsLabel)
+        addConstraintsWithFormat(format: "V:|[v0]-2-[v1]-2-[v2]", views: categoryLabel, headlineLabel, detailsLabel)
     }
     
 }
