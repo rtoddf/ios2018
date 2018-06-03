@@ -24,6 +24,7 @@ class ArticleImageLeftCell:BaseCell {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = .eventHeadlineFont
+        label.textColor = UIColor(hexString: "#222")
         label.numberOfLines = 3
         return label
     }()

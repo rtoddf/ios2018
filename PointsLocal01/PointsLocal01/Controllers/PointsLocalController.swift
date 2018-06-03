@@ -94,7 +94,7 @@ class PointsLocalController:UICollectionViewController, UICollectionViewDelegate
             return CGSize(width: view.frame.width, height: 120)
         }
         
-        return CGSize(width: (view.frame.width/2), height: 250)
+        return CGSize(width: view.frame.width/2, height: 250)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
