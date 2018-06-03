@@ -71,10 +71,11 @@ struct Item:Decodable {
     let startTime:String?
     let endTime:String?
     let parentCategoryName:String?
-    let description:String?
+    let fullText:String?
     
     private enum CodingKeys:String, CodingKey {
-        case parentId, date, venueName, venueAddress, startTime, endTime, parentCategoryName, description
+        case parentId, date, venueName, venueAddress, startTime, endTime, parentCategoryName
         case headline = "title"
+        case fullText = "description"
     }
 }

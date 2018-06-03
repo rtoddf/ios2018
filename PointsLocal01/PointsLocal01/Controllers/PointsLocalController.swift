@@ -3,6 +3,7 @@ import UIKit
 class PointsLocalController:UICollectionViewController, UICollectionViewDelegateFlowLayout {
     let imageLargeCellId = "imageLargeCellId"
     let imageLeftCellId = "imageLeftCellId"
+    let imageRightCellId = "imageRightCellId"
     let imageTopCellId = "imageTopCellId"
     var items:[Item]?
     var events:[Item]?
@@ -17,6 +18,7 @@ class PointsLocalController:UICollectionViewController, UICollectionViewDelegate
         
         collectionView?.register(ArticleImageLargeCell.self, forCellWithReuseIdentifier: imageLargeCellId)
         collectionView?.register(ArticleImageLeftCell.self, forCellWithReuseIdentifier: imageLeftCellId)
+        collectionView?.register(ArticleImageRightCell.self, forCellWithReuseIdentifier: imageRightCellId)
         collectionView?.register(ArticleImageTopCell.self, forCellWithReuseIdentifier: imageTopCellId)
         
         let feedBase = "https://dayton.pointslocal.com/api/v1/events?"
@@ -30,7 +32,7 @@ class PointsLocalController:UICollectionViewController, UICollectionViewDelegate
         let radius = "25"
         let start = "today"
         let end = "+30%20days"
-        let count = "10"
+        let count = "14"
         
         let feed = "\(feedBase)date_format=\(date_format)&time_format=\(time_format)&search=\(search)&tag=\(tag)&category=\(category)&latitude=\(latitude)&longitude=\(longitude)&radius=\(radius)&start=\(start)&end=\(end)&count=\(count)"
         
@@ -40,7 +42,6 @@ class PointsLocalController:UICollectionViewController, UICollectionViewDelegate
 //        }
         
         Events.downloadData(feedUrl: feed) { (items) in
-            print("items: \(items)")
             self.items = items
             self.collectionView?.reloadData()
         }
@@ -55,13 +56,19 @@ class PointsLocalController:UICollectionViewController, UICollectionViewDelegate
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        if indexPath.item % 5 == 0 {
+        if indexPath.item % 7 == 0 {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: imageLargeCellId, for: indexPath) as! ArticleImageLargeCell
             cell.item = items?[indexPath.item]
             return cell
         }
         
-        if indexPath.item % 5 == 1 || indexPath.item % 5 == 2 {
+        if indexPath.item % 7 == 1 || indexPath.item % 7 == 2 {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: imageRightCellId, for: indexPath) as! ArticleImageRightCell
+            cell.item = items?[indexPath.item]
+            return cell
+        }
+        
+        if indexPath.item % 7 == 3 || indexPath.item % 7 == 4 {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: imageLeftCellId, for: indexPath) as! ArticleImageLeftCell
             cell.item = items?[indexPath.item]
             return cell
@@ -75,12 +82,16 @@ class PointsLocalController:UICollectionViewController, UICollectionViewDelegate
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-        if indexPath.item % 5 == 0 {
+        if indexPath.item % 7 == 0 {
             return CGSize(width: view.frame.width, height: 304 - categoryCellHeightDiff)
         }
 
-        if indexPath.item % 5 == 1 || indexPath.item % 5 == 2 {
-            return CGSize(width: view.frame.width, height: 90)
+        if indexPath.item % 7 == 1 || indexPath.item % 7 == 2 {
+            return CGSize(width: view.frame.width, height: 120)
+        }
+        
+        if indexPath.item % 7 == 3 || indexPath.item % 7 == 4 {
+            return CGSize(width: view.frame.width, height: 120)
         }
         
         return CGSize(width: (collectionView.frame.width/2)-5, height: 250)

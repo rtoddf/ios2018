@@ -3,7 +3,7 @@ import UIKit
 class ItemDetailTextCell:BaseCell {
     var item:Item? {
         didSet {
-            guard let description = item?.description else { return }
+            guard let fullText = item?.fullText else { return }
 
             let paragraphStyle = NSMutableParagraphStyle()
             paragraphStyle.lineSpacing = 5
@@ -14,7 +14,7 @@ class ItemDetailTextCell:BaseCell {
                 .foregroundColor: UIColor(hexString: "#777777")
             ]
 
-            let rawHTML = Data(description.utf8)
+            let rawHTML = Data(fullText.utf8)
             guard let attributedString = try? NSMutableAttributedString(data: rawHTML, options: [.documentType: NSAttributedString.DocumentType.html], documentAttributes: nil) else { return }
             let attributedText = NSMutableAttributedString(string: attributedString.string, attributes: textAttributes)
             // add the styled attributed text to the textView

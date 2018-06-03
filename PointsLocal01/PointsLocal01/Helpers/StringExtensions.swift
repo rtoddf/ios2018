@@ -30,6 +30,17 @@ extension UIFont {
         guard let font = UIFont(name: "Helvetica-Bold", size: 18) else { return UIFont.boldSystemFont(ofSize: 18) }
         return font
     }
+    
+    // events stuff
+    static var eventHeadlineFont:UIFont {
+        guard let font = UIFont(name: "Helvetica-Bold", size: 16) else { return UIFont.boldSystemFont(ofSize: 16) }
+        return font
+    }
+    
+    static var eventDetailsFont:UIFont {
+        guard let font = UIFont(name: "Helvetica", size: 13) else { return UIFont.systemFont(ofSize: 13) }
+        return font
+    }
 }
 
 extension String {
