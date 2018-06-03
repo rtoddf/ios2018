@@ -1,5 +1,40 @@
 import UIKit
 
+struct MenuItems:Decodable {
+    let menuItems:[Menu]?
+    
+    static func downloadData(feedUrl:String) {
+        let urlString = feedUrl
+        let url = URL(string: urlString)
+        
+        if let urlObject = url {
+            URLSession.shared.dataTask(with: urlObject) { (data, ressponse, error) in
+                guard let data = data else { return }
+                
+                do {
+                    let decoder = JSONDecoder()
+                    decoder.keyDecodingStrategy = .convertFromSnakeCase
+                    let menu = try decoder.decode(MenuItems.self, from: data)
+                    print("menu: \(menu)")
+                    
+//                    guard let items = feed.items else { return }
+                    
+//                    DispatchQueue.main.async {
+//                        completion(items)
+//                    }
+                    
+                } catch let jsonErr {
+                    print("we got an error \(jsonErr)")
+                }
+                }.resume()
+        }
+    }
+}
+
+struct Menu:Decodable {
+    let title:String?
+}
+
 struct Feed:Decodable {
     let items:[Item]?
     

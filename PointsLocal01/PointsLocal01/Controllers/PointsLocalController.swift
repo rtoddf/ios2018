@@ -41,6 +41,8 @@ class PointsLocalController:UICollectionViewController, UICollectionViewDelegate
 //            self.collectionView?.reloadData()
 //        }
         
+        MenuItems.downloadData(feedUrl: "http://rtodd.net/swift/data/menu-pointslocal.json")
+        
         Events.downloadData(feedUrl: feed) { (items) in
             self.items = items
             self.collectionView?.reloadData()
