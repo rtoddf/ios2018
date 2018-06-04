@@ -25,7 +25,7 @@ class MenuLauncher:NSObject, UICollectionViewDataSource, UICollectionViewDelegat
             }
         }
     }
-    
+
     let collectionView:UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
@@ -90,6 +90,22 @@ class MenuLauncher:NSObject, UICollectionViewDataSource, UICollectionViewDelegat
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 0
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let item = items?[indexPath.item] else { return }
+        print("menu tap: \(item.title)")
+        
+        UIView.animate(withDuration: 0.35, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .curveEaseOut, animations: {
+            self.blackView.alpha = 0
+            guard let window = UIApplication.shared.keyWindow else { return }
+            self.collectionView.frame = CGRect(x: (window.frame.width/2) * -1, y: 20, width: window.frame.width * 0.40, height: window.frame.height)
+        }) { (completed:Bool) in
+            
+            
+            
+        }
+    }
+    //    https://www.youtube.com/watch?v=DYsfAD01fYk&index=9&list=PL0dzCUj1L5JGKdVUtA5xds1zcyzsz7HLj @ about 5:00 and stopped at 6:08
     
     override init() {
         super.init()

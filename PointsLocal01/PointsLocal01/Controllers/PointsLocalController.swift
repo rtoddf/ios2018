@@ -46,6 +46,11 @@ class PointsLocalController:UICollectionViewController, UICollectionViewDelegate
 //        }
         
         MenuItems.downloadData(feedUrl: menuFeed) {  menu in
+            self.menu = menu
+            guard let menuItems = self.menu else { return }
+            self.menuLauncher.items = menuItems
+            self.setupNavBarButtons()
+            
             print("menu: \(menu)")
         }
         
@@ -56,6 +61,22 @@ class PointsLocalController:UICollectionViewController, UICollectionViewDelegate
 
         collectionView?.dataSource = self
         collectionView?.delegate = self
+    }
+    
+    func setupNavBarButtons() {
+        // imaged for UIBarButtonItems must me at size
+        let searchBarButtonItem = UIBarButtonItem(image: UIImage(named: "search")?.withRenderingMode(.alwaysOriginal), style: .plain, target: self, action: #selector(handleSearch))
+        let menuButtonItem = UIBarButtonItem(image: UIImage(named: "bars")?.withRenderingMode(.alwaysOriginal), style: .plain, target: self, action: #selector(showMenu))
+        navigationItem.leftBarButtonItems = [menuButtonItem]
+        navigationItem.rightBarButtonItems = [searchBarButtonItem]
+    }
+    
+    @objc func showMenu(){
+        menuLauncher.showMenu()
+    }
+    
+    @objc func handleSearch(){
+        print("search")
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -114,7 +135,7 @@ class PointsLocalController:UICollectionViewController, UICollectionViewDelegate
     }
 
 //    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-//        return UIEdgeInsetsMake(0, 0, 0, 0)
+//        return UIEdgeInsetsMake(100, 0, 100, 0)
 //    }
     
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
