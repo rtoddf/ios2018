@@ -9,7 +9,7 @@ class PointsLocalController:UICollectionViewController, UICollectionViewDelegate
     var events:[Item]?
     
     var menu:[Menu]?
-    let menuLauncher = MenuLauncher()
+//    let menuLauncher = MenuLauncher()
     
     var categoryCellHeightDiff:CGFloat = 0.0
     
@@ -71,8 +71,22 @@ class PointsLocalController:UICollectionViewController, UICollectionViewDelegate
         navigationItem.rightBarButtonItems = [searchBarButtonItem]
     }
     
+    lazy var menuLauncher: MenuLauncher = {
+        let launcher = MenuLauncher()
+        launcher.pointsLocalController = self
+        return launcher
+    }()
+    
     @objc func showMenu(){
         menuLauncher.showMenu()
+        menuLauncher.pointsLocalController = self
+//        showController()
+    }
+    
+    func showController(item: Menu){
+        print("item: \(item)")
+        let dummyViewController = UIViewController()
+        navigationController?.pushViewController(dummyViewController, animated: true)
     }
     
     @objc func handleSearch(){

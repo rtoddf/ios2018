@@ -12,9 +12,12 @@ class MenuItem:NSObject {
     }
 }
 
+var pointsLocalController = PointsLocalController()
+
 class MenuLauncher:NSObject, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     let blackView = UIView()
-    
+    var pointsLocalController: PointsLocalController?
+
     var items:[Menu]? {
         didSet {
             guard let allItems = items else { return }
@@ -90,18 +93,17 @@ class MenuLauncher:NSObject, UICollectionViewDataSource, UICollectionViewDelegat
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 0
     }
-    
+
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        guard let item = items?[indexPath.item] else { return }
-        print("menu tap: \(item.title)")
-        
+
         UIView.animate(withDuration: 0.35, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .curveEaseOut, animations: {
             self.blackView.alpha = 0
             guard let window = UIApplication.shared.keyWindow else { return }
             self.collectionView.frame = CGRect(x: (window.frame.width/2) * -1, y: 20, width: window.frame.width * 0.40, height: window.frame.height)
         }) { (completed:Bool) in
-            
-            
+
+            guard let item = self.items?[indexPath.item] else { return }
+            self.pointsLocalController?.showController(item: item)
             
         }
     }

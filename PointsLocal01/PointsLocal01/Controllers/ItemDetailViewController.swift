@@ -9,7 +9,6 @@ class ItemDetailViewController:UICollectionViewController, UICollectionViewDeleg
     
     let headerCellId = "headerCellId"
     let textCellId = "textCellId"
-    
     var cellHeight:CGFloat = 22.0
 
     override func viewDidLoad() {
