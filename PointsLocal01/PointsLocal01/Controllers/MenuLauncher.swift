@@ -12,8 +12,6 @@ class MenuItem:NSObject {
     }
 }
 
-var pointsLocalController = PointsLocalController()
-
 class MenuLauncher:NSObject, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     let blackView = UIView()
     var pointsLocalController: PointsLocalController?
