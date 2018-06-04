@@ -114,3 +114,70 @@ struct Item:Decodable {
         case fullText = "description"
     }
 }
+
+struct Weather:Decodable {
+    let daily : DAILY
+//    let City:City?
+//    let currentConditions:CurrentConditions?
+    
+    static func downloadData(feedUrl:String) {
+        let urlString = feedUrl
+        let url = URL(string: urlString)
+        
+        if let urlObject = url {
+            URLSession.shared.dataTask(with: urlObject) { (data, ressponse, error) in
+                guard let data = data else { return }
+                
+//                print("data: \(data)")
+                
+                do {
+                    let decoder = JSONDecoder()
+                    decoder.keyDecodingStrategy = .convertFromSnakeCase
+                    let feed = try decoder.decode(Weather.self, from: data)
+                    
+                    let daily = feed.daily
+//                    let city = feed.City
+//                    let cc = feed.currentConditions
+                    
+                    print("daily: \(daily)")
+                    print(type(of: daily))
+
+//                    print("city: \(city)")
+//                    print("currentConditions: \(cc)")
+                    
+//                    DispatchQueue.main.async {
+//                        guard let dataMenu = menu else { return }
+//
+//                        completion(dataMenu)
+//                    }
+                    
+                } catch let jsonErr {
+                    print("we got an error \(jsonErr)")
+                }
+                }.resume()
+        }
+    }
+}
+
+struct City:Decodable {
+    let Name:String?
+}
+
+struct CurrentConditions:Decodable {
+    let TempC:Int?
+}
+
+struct DAILY:Decodable {
+    private enum CodingKeys : String, CodingKey {
+        case zero = "0"
+        case one = "1"
+    }
+    let zero:Day
+    let one:Day
+}
+
+struct Day:Decodable {
+    let SkyCode:Int?
+    let SkyText:String?
+    let ValidDateLocal:String?
+}

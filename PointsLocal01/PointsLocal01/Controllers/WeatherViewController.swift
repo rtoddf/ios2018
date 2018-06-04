@@ -16,6 +16,9 @@ class WeatherViewController:UICollectionViewController, UICollectionViewDelegate
         collectionView?.alwaysBounceVertical = true
         
         self.navigationController?.navigationBar.tintColor = .white
+        
+        let weatherFeed = "http://weather.cmgdigital.com/USOH0245/"
+        Weather.downloadData(feedUrl: weatherFeed)
     }
 
 }
