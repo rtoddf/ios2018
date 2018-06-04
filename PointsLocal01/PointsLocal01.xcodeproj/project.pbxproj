@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		00D2248520C4B660003B71D3 /* MenuLauncher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D2248420C4B660003B71D3 /* MenuLauncher.swift */; };
+		00D2248720C4B689003B71D3 /* MenuItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D2248620C4B689003B71D3 /* MenuItemCell.swift */; };
 		00EBA6A620C36FBB00093B34 /* ArticleImageRightCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00EBA6A520C36FBB00093B34 /* ArticleImageRightCell.swift */; };
 		AD148914207D524300867CF4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD148913207D524300867CF4 /* AppDelegate.swift */; };
 		AD148916207D524300867CF4 /* PointsLocalController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD148915207D524300867CF4 /* PointsLocalController.swift */; };
@@ -25,6 +27,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		00D2248420C4B660003B71D3 /* MenuLauncher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuLauncher.swift; sourceTree = "<group>"; };
+		00D2248620C4B689003B71D3 /* MenuItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemCell.swift; sourceTree = "<group>"; };
 		00EBA6A520C36FBB00093B34 /* ArticleImageRightCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleImageRightCell.swift; sourceTree = "<group>"; };
 		AD148910207D524300867CF4 /* PointsLocal01.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PointsLocal01.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD148913207D524300867CF4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -91,6 +95,7 @@
 			children = (
 				AD148915207D524300867CF4 /* PointsLocalController.swift */,
 				ADA77BA9207E6E170051FC23 /* ItemDetailViewController.swift */,
+				00D2248420C4B660003B71D3 /* MenuLauncher.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -122,6 +127,7 @@
 				AD14892D207D5B5D00867CF4 /* ArticleImageTopCell.swift */,
 				ADA77BAB207E7A0D0051FC23 /* ItemDetailHeaderCell.swift */,
 				ADE7A48720801454000D3B3B /* ItemDetailTextCell.swift */,
+				00D2248620C4B689003B71D3 /* MenuItemCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -199,6 +205,7 @@
 				AD148916207D524300867CF4 /* PointsLocalController.swift in Sources */,
 				ADA3E0AF20B490BD002E8299 /* ArticleImageLargeCell.swift in Sources */,
 				ADA3E0B120B49180002E8299 /* StringExtensions.swift in Sources */,
+				00D2248720C4B689003B71D3 /* MenuItemCell.swift in Sources */,
 				ADA77BAC207E7A0D0051FC23 /* ItemDetailHeaderCell.swift in Sources */,
 				ADE7A48820801454000D3B3B /* ItemDetailTextCell.swift in Sources */,
 				00EBA6A620C36FBB00093B34 /* ArticleImageRightCell.swift in Sources */,
@@ -206,6 +213,7 @@
 				ADA3E0B520B4C089002E8299 /* Utilities.swift in Sources */,
 				ADA77BAA207E6E170051FC23 /* ItemDetailViewController.swift in Sources */,
 				AD148928207D538900867CF4 /* Extensions.swift in Sources */,
+				00D2248520C4B660003B71D3 /* MenuLauncher.swift in Sources */,
 				AD148914207D524300867CF4 /* AppDelegate.swift in Sources */,
 				AD14892E207D5B5D00867CF4 /* ArticleImageTopCell.swift in Sources */,
 				ADA3E0B320B4A5F5002E8299 /* ArticleImagLeftCell.swift in Sources */,

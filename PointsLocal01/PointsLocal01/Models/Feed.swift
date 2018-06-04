@@ -3,7 +3,7 @@ import UIKit
 struct MenuItems:Decodable {
     let menuItems:[Menu]?
     
-    static func downloadData(feedUrl:String) {
+    static func downloadData(feedUrl:String, completion: @escaping ([Menu]) -> Void) {
         let urlString = feedUrl
         let url = URL(string: urlString)
         
@@ -14,14 +14,14 @@ struct MenuItems:Decodable {
                 do {
                     let decoder = JSONDecoder()
                     decoder.keyDecodingStrategy = .convertFromSnakeCase
-                    let menu = try decoder.decode(MenuItems.self, from: data)
-                    print("menu: \(menu)")
-                    
-//                    guard let items = feed.items else { return }
-                    
-//                    DispatchQueue.main.async {
-//                        completion(items)
-//                    }
+                    let feed = try decoder.decode(MenuItems.self, from: data)
+                    let menu = feed.menuItems
+
+                    DispatchQueue.main.async {
+                        guard let dataMenu = menu else { return }
+                        
+                        completion(dataMenu)
+                    }
                     
                 } catch let jsonErr {
                     print("we got an error \(jsonErr)")

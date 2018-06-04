@@ -8,6 +8,9 @@ class PointsLocalController:UICollectionViewController, UICollectionViewDelegate
     var items:[Item]?
     var events:[Item]?
     
+    var menu:[Menu]?
+    let menuLauncher = MenuLauncher()
+    
     var categoryCellHeightDiff:CGFloat = 0.0
     
     override func viewDidLoad() {
@@ -35,13 +38,16 @@ class PointsLocalController:UICollectionViewController, UICollectionViewDelegate
         let count = "14"
         
         let feed = "\(feedBase)date_format=\(date_format)&time_format=\(time_format)&search=\(search)&tag=\(tag)&category=\(category)&latitude=\(latitude)&longitude=\(longitude)&radius=\(radius)&start=\(start)&end=\(end)&count=\(count)"
+        let menuFeed = "http://rtodd.net/swift/data/menu-pointslocal.json"
         
 //        Feed.downloadData(feedUrl: feed) { (items) in
 //            self.items = items
 //            self.collectionView?.reloadData()
 //        }
         
-        MenuItems.downloadData(feedUrl: "http://rtodd.net/swift/data/menu-pointslocal.json")
+        MenuItems.downloadData(feedUrl: menuFeed) {  menu in
+            print("menu: \(menu)")
+        }
         
         Events.downloadData(feedUrl: feed) { (items) in
             self.items = items
