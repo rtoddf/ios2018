@@ -84,13 +84,19 @@ class PointsLocalController:UICollectionViewController, UICollectionViewDelegate
     }
     
     func showController(item: Menu){
-        print("item: \(item)")
-        let dummyViewController = UIViewController()
-        dummyViewController.navigationItem.title = item.title
-        navigationController?.navigationBar.tintColor = .white
-        dummyViewController.view.backgroundColor = .white
+//        let dummyViewController = UIViewController()
+//        dummyViewController.navigationItem.title = item.title
+//        navigationController?.navigationBar.tintColor = .white
+//        dummyViewController.view.backgroundColor = .white
+//        
+//        navigationController?.pushViewController(dummyViewController, animated: true)
         
-        navigationController?.pushViewController(dummyViewController, animated: true)
+        
+        let layout = UICollectionViewFlowLayout()
+        let weatherViewController = WeatherViewController(collectionViewLayout: layout)
+        weatherViewController.menu = item
+        navigationController?.pushViewController(weatherViewController, animated: true)
+        
     }
     
     @objc func handleSearch(){

@@ -17,6 +17,7 @@
 		AD148928207D538900867CF4 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD148927207D538900867CF4 /* Extensions.swift */; };
 		AD14892B207D543500867CF4 /* Feed.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD14892A207D543500867CF4 /* Feed.swift */; };
 		AD14892E207D5B5D00867CF4 /* ArticleImageTopCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD14892D207D5B5D00867CF4 /* ArticleImageTopCell.swift */; };
+		AD5A279F20C5A01B00C99DD8 /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5A279E20C5A01B00C99DD8 /* WeatherViewController.swift */; };
 		ADA3E0AF20B490BD002E8299 /* ArticleImageLargeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA3E0AE20B490BD002E8299 /* ArticleImageLargeCell.swift */; };
 		ADA3E0B120B49180002E8299 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA3E0B020B49180002E8299 /* StringExtensions.swift */; };
 		ADA3E0B320B4A5F5002E8299 /* ArticleImagLeftCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA3E0B220B4A5F5002E8299 /* ArticleImagLeftCell.swift */; };
@@ -39,6 +40,7 @@
 		AD148927207D538900867CF4 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		AD14892A207D543500867CF4 /* Feed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feed.swift; sourceTree = "<group>"; };
 		AD14892D207D5B5D00867CF4 /* ArticleImageTopCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleImageTopCell.swift; sourceTree = "<group>"; };
+		AD5A279E20C5A01B00C99DD8 /* WeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
 		ADA3E0AE20B490BD002E8299 /* ArticleImageLargeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleImageLargeCell.swift; sourceTree = "<group>"; };
 		ADA3E0B020B49180002E8299 /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
 		ADA3E0B220B4A5F5002E8299 /* ArticleImagLeftCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleImagLeftCell.swift; sourceTree = "<group>"; };
@@ -96,6 +98,7 @@
 				AD148915207D524300867CF4 /* PointsLocalController.swift */,
 				ADA77BA9207E6E170051FC23 /* ItemDetailViewController.swift */,
 				00D2248420C4B660003B71D3 /* MenuLauncher.swift */,
+				AD5A279E20C5A01B00C99DD8 /* WeatherViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -207,6 +210,7 @@
 				ADA3E0B120B49180002E8299 /* StringExtensions.swift in Sources */,
 				00D2248720C4B689003B71D3 /* MenuItemCell.swift in Sources */,
 				ADA77BAC207E7A0D0051FC23 /* ItemDetailHeaderCell.swift in Sources */,
+				AD5A279F20C5A01B00C99DD8 /* WeatherViewController.swift in Sources */,
 				ADE7A48820801454000D3B3B /* ItemDetailTextCell.swift in Sources */,
 				00EBA6A620C36FBB00093B34 /* ArticleImageRightCell.swift in Sources */,
 				AD14892B207D543500867CF4 /* Feed.swift in Sources */,
