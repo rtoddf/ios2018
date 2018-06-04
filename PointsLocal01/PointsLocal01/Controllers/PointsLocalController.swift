@@ -86,6 +86,10 @@ class PointsLocalController:UICollectionViewController, UICollectionViewDelegate
     func showController(item: Menu){
         print("item: \(item)")
         let dummyViewController = UIViewController()
+        dummyViewController.navigationItem.title = item.title
+        navigationController?.navigationBar.tintColor = .white
+        dummyViewController.view.backgroundColor = .white
+        
         navigationController?.pushViewController(dummyViewController, animated: true)
     }
     
