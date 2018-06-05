@@ -1,6 +1,9 @@
 import UIKit
 
 class WeatherViewController:UICollectionViewController, UICollectionViewDelegateFlowLayout {
+    var dailyConditions:[Day]?
+    var currentConditions:CurrentConditions?
+    
     var menu:Menu? {
         didSet {
             
@@ -18,7 +21,12 @@ class WeatherViewController:UICollectionViewController, UICollectionViewDelegate
         self.navigationController?.navigationBar.tintColor = .white
         
         let weatherFeed = "http://weather.cmgdigital.com/USOH0245/"
-        Weather.downloadData(feedUrl: weatherFeed)
+        Weather.downloadData(feedUrl: weatherFeed) { (currentConditions, dailyConditions) in
+            self.currentConditions = currentConditions
+            self.dailyConditions = dailyConditions
+            print("currentConditions: \(currentConditions)")
+//            print("dailyConditions: \(dailyConditions)")
+        }
     }
 
 }
