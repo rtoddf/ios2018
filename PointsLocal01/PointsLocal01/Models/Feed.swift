@@ -125,7 +125,7 @@ struct Weather:Decodable {
         case city = "City"
     }
     
-    static func downloadData(feedUrl:String, completion: @escaping (CurrentConditions, [Day]) -> Void) {
+    static func downloadData(feedUrl:String, completion: @escaping (City, CurrentConditions, [Day]) -> Void) {
         let urlString = feedUrl
         let url = URL(string: urlString)
         
@@ -154,11 +154,13 @@ struct Weather:Decodable {
                     dailyConditions.append(daily.eight)
                     dailyConditions.append(daily.nine)
 
-//                    print("city: \(city)")
-                    
                     DispatchQueue.main.async {
+                        guard let city = city else { return }
                         guard let currentConditions = currentConditions else { return }
-                        completion(currentConditions, dailyConditions)
+                        
+                        print("city in dispatch: \(city)")
+                        
+                        completion(city, currentConditions, dailyConditions)
                     }
                     
                 } catch let jsonErr {
