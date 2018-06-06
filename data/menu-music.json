@@ -7,19 +7,63 @@
 	},
 	"menu_items": [
 		{
-			"title": "What to Know",
+			"title": "Home",
 			"view": ""
 		},
 		{
-			"title": "What to Do",
+			"title": "Alternative",
 			"view": ""
 		},
 		{
-			"title": "What to Love",
+			"title": "Blues",
 			"view": ""
 		},
 		{
-			"title": "Weather",
+			"title": "Classical",
+			"view": ""
+		},
+		{
+			"title": "Comedy",
+			"view": ""
+		},
+		{
+			"title": "Country",
+			"view": ""
+		},
+		{
+			"title": "Dance",
+			"view": ""
+		},
+		{
+			"title": "Electronic",
+			"view": ""
+		},
+		{
+			"title": "Hip Hop/Rap",
+			"view": ""
+		},
+		{
+			"title": "Jazz",
+			"view": ""
+		},
+		{
+			"title": "K-Pop",
+			"view": ""
+		},
+		{
+			"title": "Latino",
+			"view": ""
+		},
+		{
+			"title": "Metal",
+			"view": ""
+		},
+		{
+			"title": "Pop",
+			"view": ""
+		},
+		{
+			"title": "Soundtrack",
 			"view": ""
 		}
 	]
