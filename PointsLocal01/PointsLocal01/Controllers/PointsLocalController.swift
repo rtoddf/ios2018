@@ -95,9 +95,11 @@ class PointsLocalController:UICollectionViewController, UICollectionViewDelegate
             navigationController?.pushViewController(weatherViewController, animated: true)
         } else {
             print("menu item: \(menuTitle)")
-            let whatToLoveViewController = WhatToLoveViewController(collectionViewLayout: layout)
-            whatToLoveViewController.menu = item
-            navigationController?.pushViewController(whatToLoveViewController, animated: true)
+            let videoLauncher = VideoLauncher()
+            videoLauncher.showVideoPlayer()
+//            let whatToLoveViewController = WhatToLoveViewController(collectionViewLayout: layout)
+//            whatToLoveViewController.menu = item
+//            navigationController?.pushViewController(whatToLoveViewController, animated: true)
         }
     }
     
