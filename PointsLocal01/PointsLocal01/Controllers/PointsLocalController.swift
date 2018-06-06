@@ -83,10 +83,22 @@ class PointsLocalController:UICollectionViewController, UICollectionViewDelegate
     }
     
     func showController(item: Menu){
+        guard let menuTitle = item.title else { return }
+        
+        var controllerToBePushed:Any
         let layout = UICollectionViewFlowLayout()
-        let weatherViewController = WeatherViewController(collectionViewLayout: layout)
-        weatherViewController.menu = item
-        navigationController?.pushViewController(weatherViewController, animated: true)
+
+        if menuTitle == "Weather" {
+            print("menu item: \(menuTitle)")
+            let weatherViewController = WeatherViewController(collectionViewLayout: layout)
+            weatherViewController.menu = item
+            navigationController?.pushViewController(weatherViewController, animated: true)
+        } else {
+            print("menu item: \(menuTitle)")
+            let whatToLoveViewController = WhatToLoveViewController(collectionViewLayout: layout)
+            whatToLoveViewController.menu = item
+            navigationController?.pushViewController(whatToLoveViewController, animated: true)
+        }
     }
     
     @objc func handleSearch(){

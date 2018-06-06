@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0042153B20C83E48007A8CD8 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0042153A20C83E48007A8CD8 /* Weather.swift */; };
+		0042154020C842D0007A8CD8 /* WhatToLoveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0042153F20C842D0007A8CD8 /* WhatToLoveViewController.swift */; };
 		00D2248520C4B660003B71D3 /* MenuLauncher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D2248420C4B660003B71D3 /* MenuLauncher.swift */; };
 		00D2248720C4B689003B71D3 /* MenuItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D2248620C4B689003B71D3 /* MenuItemCell.swift */; };
 		00EBA6A620C36FBB00093B34 /* ArticleImageRightCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00EBA6A520C36FBB00093B34 /* ArticleImageRightCell.swift */; };
@@ -31,6 +32,7 @@
 
 /* Begin PBXFileReference section */
 		0042153A20C83E48007A8CD8 /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
+		0042153F20C842D0007A8CD8 /* WhatToLoveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatToLoveViewController.swift; sourceTree = "<group>"; };
 		00D2248420C4B660003B71D3 /* MenuLauncher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuLauncher.swift; sourceTree = "<group>"; };
 		00D2248620C4B689003B71D3 /* MenuItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemCell.swift; sourceTree = "<group>"; };
 		00EBA6A520C36FBB00093B34 /* ArticleImageRightCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleImageRightCell.swift; sourceTree = "<group>"; };
@@ -81,6 +83,14 @@
 			path = Menu;
 			sourceTree = "<group>";
 		};
+		0042153E20C842AE007A8CD8 /* WhatToLove */ = {
+			isa = PBXGroup;
+			children = (
+				0042153F20C842D0007A8CD8 /* WhatToLoveViewController.swift */,
+			);
+			path = WhatToLove;
+			sourceTree = "<group>";
+		};
 		AD148907207D524300867CF4 = {
 			isa = PBXGroup;
 			children = (
@@ -115,6 +125,7 @@
 		AD148925207D52C500867CF4 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				0042153E20C842AE007A8CD8 /* WhatToLove */,
 				AD148915207D524300867CF4 /* PointsLocalController.swift */,
 				ADA77BA9207E6E170051FC23 /* ItemDetailViewController.swift */,
 				0042153D20C83EAB007A8CD8 /* Menu */,
@@ -256,6 +267,7 @@
 				AD14892B207D543500867CF4 /* Feed.swift in Sources */,
 				ADA3E0B520B4C089002E8299 /* Utilities.swift in Sources */,
 				ADA77BAA207E6E170051FC23 /* ItemDetailViewController.swift in Sources */,
+				0042154020C842D0007A8CD8 /* WhatToLoveViewController.swift in Sources */,
 				AD148928207D538900867CF4 /* Extensions.swift in Sources */,
 				00D2248520C4B660003B71D3 /* MenuLauncher.swift in Sources */,
 				AD148914207D524300867CF4 /* AppDelegate.swift in Sources */,
