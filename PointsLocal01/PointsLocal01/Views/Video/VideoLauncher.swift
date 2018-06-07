@@ -41,24 +41,49 @@ class VideoPlayerView:UIView {
         return view
     }()
     
+    let videoCurrentTimeLabel:UILabel = {
+        let label = UILabel()
+        label.text = "00:00"
+        label.font = UIFont.boldSystemFont(ofSize: 13)
+        label.textColor = .white
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+    
     let videoLengthLabel:UILabel = {
         let label = UILabel()
         label.text = "00:00"
-        label.font = UIFont.boldSystemFont(ofSize: 14)
+        label.font = UIFont.boldSystemFont(ofSize: 13)
         label.textColor = .white
         label.textAlignment = .right
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
     
-    let videoSlider:UISlider = {
+    lazy var videoSlider:UISlider = {
         let slider = UISlider()
         slider.minimumTrackTintColor = .orange
         slider.maximumTrackTintColor = .white
         slider.setThumbImage(UIImage(named: "thumb"), for: .normal)
         slider.translatesAutoresizingMaskIntoConstraints = false
+        
+        slider.addTarget(self, action: #selector(handleSliderChanged), for: .valueChanged)
+        
         return slider
     }()
+    
+    @objc func handleSliderChanged(){
+        print(videoSlider.value)
+        
+        guard let duration  = player?.currentItem?.duration else { return }
+        let totalSeconds = CMTimeGetSeconds(duration)
+        let value = Float(totalSeconds) * videoSlider.value
+        let seekTime = CMTime(value: CMTimeValue(value), timescale: 1)
+        
+        player?.seek(to: seekTime, completionHandler: { (completedSeek) in
+            // do other things
+        })
+    }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -82,6 +107,12 @@ class VideoPlayerView:UIView {
         pausePlayButton.widthAnchor.constraint(equalToConstant: 50).isActive = true
         pausePlayButton.heightAnchor.constraint(equalToConstant: 50).isActive = true
         
+        controlsContainerView.addSubview(videoCurrentTimeLabel)
+        videoCurrentTimeLabel.leftAnchor.constraint(equalTo: leftAnchor, constant: 8).isActive = true
+        videoCurrentTimeLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: 4).isActive = true
+        videoCurrentTimeLabel.widthAnchor.constraint(equalToConstant: 50).isActive = true
+        videoCurrentTimeLabel.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        
         controlsContainerView.addSubview(videoLengthLabel)
         videoLengthLabel.rightAnchor.constraint(equalTo: rightAnchor, constant: -8).isActive = true
         videoLengthLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: 4).isActive = true
@@ -89,9 +120,9 @@ class VideoPlayerView:UIView {
         videoLengthLabel.heightAnchor.constraint(equalToConstant: 50).isActive = true
         
         controlsContainerView.addSubview(videoSlider)
-        videoSlider.bottomAnchor.constraint(equalTo: bottomAnchor, constant: 0).isActive = true
+        videoSlider.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -6).isActive = true
         videoSlider.rightAnchor.constraint(equalTo: videoLengthLabel.leftAnchor, constant: 0).isActive = true
-        videoSlider.leftAnchor.constraint(equalTo: leftAnchor, constant: 0).isActive = true
+        videoSlider.leftAnchor.constraint(equalTo: videoCurrentTimeLabel.rightAnchor, constant: 0).isActive = true
         videoSlider.heightAnchor.constraint(equalToConstant: 30).isActive = true
     }
     
@@ -121,6 +152,15 @@ class VideoPlayerView:UIView {
             controlsContainerView.backgroundColor = .clear
             pausePlayButton.isHidden = false
             isPLaying = true
+            
+            // this gives you a CMTime reference
+            guard let duration = player?.currentItem?.duration else { return }
+            let seconds = CMTimeGetSeconds(duration)
+            
+            let minuteText = String(format: "%02d", Int(seconds) / 60)
+            let secondsText = Int(seconds) % 60
+            
+            videoLengthLabel.text = "\(minuteText):\(secondsText)"
         }
     }
 
