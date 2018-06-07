@@ -41,12 +41,34 @@ class VideoPlayerView:UIView {
         return view
     }()
     
+    let videoLengthLabel:UILabel = {
+        let label = UILabel()
+        label.text = "00:00"
+        label.font = UIFont.boldSystemFont(ofSize: 14)
+        label.textColor = .white
+        label.textAlignment = .right
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+    
+    let videoSlider:UISlider = {
+        let slider = UISlider()
+        slider.minimumTrackTintColor = .orange
+        slider.maximumTrackTintColor = .white
+        slider.setThumbImage(UIImage(named: "thumb"), for: .normal)
+        slider.translatesAutoresizingMaskIntoConstraints = false
+        return slider
+    }()
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
-        
+
         backgroundColor = .black
         setupPlayerView()
-        
+        setupUIElements()
+    }
+    
+    func setupUIElements(){
         controlsContainerView.frame = frame
         addSubview(controlsContainerView)
         
@@ -59,6 +81,18 @@ class VideoPlayerView:UIView {
         pausePlayButton.centerYAnchor.constraint(equalTo: centerYAnchor, constant: 0).isActive = true
         pausePlayButton.widthAnchor.constraint(equalToConstant: 50).isActive = true
         pausePlayButton.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        
+        controlsContainerView.addSubview(videoLengthLabel)
+        videoLengthLabel.rightAnchor.constraint(equalTo: rightAnchor, constant: -8).isActive = true
+        videoLengthLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: 4).isActive = true
+        videoLengthLabel.widthAnchor.constraint(equalToConstant: 50).isActive = true
+        videoLengthLabel.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        
+        controlsContainerView.addSubview(videoSlider)
+        videoSlider.bottomAnchor.constraint(equalTo: bottomAnchor, constant: 0).isActive = true
+        videoSlider.rightAnchor.constraint(equalTo: videoLengthLabel.leftAnchor, constant: 0).isActive = true
+        videoSlider.leftAnchor.constraint(equalTo: leftAnchor, constant: 0).isActive = true
+        videoSlider.heightAnchor.constraint(equalToConstant: 30).isActive = true
     }
     
     var player:AVPlayer?
