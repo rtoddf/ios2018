@@ -3,7 +3,8 @@ import AVFoundation
 
 // things to do
 /*
-1 - at the end of the video, turn the pause button back to play
+1 - at the end of the video, turn the pause button back to play - DONE
+ 6 - at the end of hte video, change the play button to replay. If the user clicks it - it goes back to 00:00
 2 - add an x and animate the view back out
 3 - once the video starts playing, fade out the controls
 4 - it user taps on the video while playing, fade the controls back in
