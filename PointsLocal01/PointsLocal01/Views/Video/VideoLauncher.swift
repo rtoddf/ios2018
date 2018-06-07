@@ -1,6 +1,18 @@
 import UIKit
 import AVFoundation
 
+// things to do
+/*
+1 - at the end of the video, turn the pause button back to play
+2 - add an x and animate the view back out
+3 - once the video starts playing, fade out the controls
+4 - it user taps on the video while playing, fade the controls back in
+ 5 - make sure you remove the observers - removeObserver(self, forKeyPath: #keyPath(PlayerViewController.player.currentItem.duration), context: &playerViewControllerKVOContext)
+ 
+ 
+ https://developer.apple.com/library/archive/samplecode/AVFoundationSimplePlayer-iOS/Listings/Swift_AVFoundationSimplePlayer_iOS_PlayerViewController_swift.html
+*/
+
 class VideoPlayerView:UIView {
     
     let activityIndicatorView:UIActivityIndicatorView = {
@@ -21,10 +33,10 @@ class VideoPlayerView:UIView {
         return btn
     }()
     
-    var isPLaying:Bool = false
+    var isPlaying:Bool = false
     
     @objc func handlePause(){
-        if isPLaying {
+        if isPlaying {
             player?.pause()
             pausePlayButton.setImage(UIImage(named: "play"), for: .normal)
         } else {
@@ -32,7 +44,7 @@ class VideoPlayerView:UIView {
             pausePlayButton.setImage(UIImage(named: "pause"), for: .normal)
         }
 
-        isPLaying = !isPLaying
+        isPlaying = !isPlaying
     }
     
     let controlsContainerView:UIView = {
@@ -66,15 +78,12 @@ class VideoPlayerView:UIView {
         slider.maximumTrackTintColor = .white
         slider.setThumbImage(UIImage(named: "thumb"), for: .normal)
         slider.translatesAutoresizingMaskIntoConstraints = false
-        
         slider.addTarget(self, action: #selector(handleSliderChanged), for: .valueChanged)
         
         return slider
     }()
     
     @objc func handleSliderChanged(){
-        print(videoSlider.value)
-        
         guard let duration  = player?.currentItem?.duration else { return }
         let totalSeconds = CMTimeGetSeconds(duration)
         let value = Float(totalSeconds) * videoSlider.value
@@ -90,6 +99,7 @@ class VideoPlayerView:UIView {
 
         backgroundColor = .black
         setupPlayerView()
+        setupGradientLayer()
         setupUIElements()
     }
     
@@ -137,9 +147,43 @@ class VideoPlayerView:UIView {
             playerLayer.frame = self.frame
             player?.play()
             
-            
             player?.addObserver(self, forKeyPath: "currentItem.loadedTimeRanges", options: .new, context: nil)
+            // can end be done hte same way?
+            
+            
+            
+            // track player progress
+            let interval = CMTime(value: 1, timescale: 2)
+            player?.addPeriodicTimeObserver(forInterval: interval, queue: DispatchQueue.main, using: { (progressTime) in
+                
+                let seconds = CMTimeGetSeconds(progressTime)
+                let secondsString = String(format: "%02d", Int(seconds) % 60)
+                let minutesString = String(format: "%02d", Int(seconds) / 60)
+                self.videoCurrentTimeLabel.text = "\(minutesString):\(secondsString)"
+                
+                // move the slider
+                guard let duration = self.player?.currentItem?.duration else { return }
+                let durationSeconds = CMTimeGetSeconds(duration)
+                self.videoSlider.value = Float(seconds / durationSeconds)
+            })
+            
+            NotificationCenter.default.addObserver(self, selector: #selector(playw), name:NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: nil)
+            
+//            player?.actionAtItemEnd(
         }
+    }
+    
+    @objc func playw() {
+        self.isPlaying = false
+        self.pausePlayButton.setImage(UIImage(named: "play"), for: .normal)
+    }
+    
+    func setupGradientLayer() {
+        let gradientLayer = CAGradientLayer()
+        gradientLayer.frame = bounds
+        gradientLayer.colors = [UIColor.clear.cgColor, UIColor.black.cgColor]
+        gradientLayer.locations = [0.7, 1.2]
+        controlsContainerView.layer.addSublayer(gradientLayer)
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -151,7 +195,7 @@ class VideoPlayerView:UIView {
             activityIndicatorView.stopAnimating()
             controlsContainerView.backgroundColor = .clear
             pausePlayButton.isHidden = false
-            isPLaying = true
+            isPlaying = true
             
             // this gives you a CMTime reference
             guard let duration = player?.currentItem?.duration else { return }
@@ -168,8 +212,6 @@ class VideoPlayerView:UIView {
 
 class VideoLauncher:NSObject {
     func showVideoPlayer() {
-        print("show video player")
-        
         // we con't have access to views because we're using NSOnject
         // so we need to access keywindow
         if let keyWindow = UIApplication.shared.keyWindow {
