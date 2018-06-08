@@ -84,6 +84,16 @@ class VideoPlayerView:UIView {
         return slider
     }()
     
+    let dismissViewButton:UIButton = {
+        let btn = UIButton(type: .system)
+        let image = UIImage(named: "dismiss")
+        btn.setImage(image, for: .normal)
+        btn.tintColor = .white
+        btn.translatesAutoresizingMaskIntoConstraints = false
+        btn.addTarget(self, action: #selector(dismissView), for: .touchUpInside)
+        return btn
+    }()
+    
     @objc func handleSliderChanged(){
         guard let duration  = player?.currentItem?.duration else { return }
         let totalSeconds = CMTimeGetSeconds(duration)
@@ -93,6 +103,10 @@ class VideoPlayerView:UIView {
         player?.seek(to: seekTime, completionHandler: { (completedSeek) in
             // do other things
         })
+    }
+    
+    @objc func dismissView(){
+        print("dismiss")
     }
     
     override init(frame: CGRect) {
@@ -135,6 +149,12 @@ class VideoPlayerView:UIView {
         videoSlider.rightAnchor.constraint(equalTo: videoLengthLabel.leftAnchor, constant: 0).isActive = true
         videoSlider.leftAnchor.constraint(equalTo: videoCurrentTimeLabel.rightAnchor, constant: 0).isActive = true
         videoSlider.heightAnchor.constraint(equalToConstant: 30).isActive = true
+        
+        controlsContainerView.addSubview(dismissViewButton)
+        dismissViewButton.topAnchor.constraint(equalTo: topAnchor, constant: 8).isActive = true
+        dismissViewButton.rightAnchor.constraint(equalTo: rightAnchor, constant: -8).isActive = true
+        dismissViewButton.widthAnchor.constraint(equalToConstant: 25).isActive = true
+        dismissViewButton.heightAnchor.constraint(equalToConstant: 25).isActive = true
     }
     
     var player:AVPlayer?
