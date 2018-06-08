@@ -8,6 +8,9 @@ class PointsLocalController:UICollectionViewController, UICollectionViewDelegate
     var items:[Item]?
     var events:[Item]?
     
+    var menu:[Menu]?
+//    let menuLauncher = MenuLauncher()
+    
     var categoryCellHeightDiff:CGFloat = 0.0
     
     override func viewDidLoad() {
@@ -35,11 +38,21 @@ class PointsLocalController:UICollectionViewController, UICollectionViewDelegate
         let count = "14"
         
         let feed = "\(feedBase)date_format=\(date_format)&time_format=\(time_format)&search=\(search)&tag=\(tag)&category=\(category)&latitude=\(latitude)&longitude=\(longitude)&radius=\(radius)&start=\(start)&end=\(end)&count=\(count)"
+        let menuFeed = "http://rtodd.net/swift/data/menu-pointslocal.json"
         
 //        Feed.downloadData(feedUrl: feed) { (items) in
 //            self.items = items
 //            self.collectionView?.reloadData()
 //        }
+        
+        MenuItems.downloadData(feedUrl: menuFeed) {  menu in
+            self.menu = menu
+            guard let menuItems = self.menu else { return }
+            self.menuLauncher.items = menuItems
+            self.setupNavBarButtons()
+            
+            print("menu: \(menu)")
+        }
         
         Events.downloadData(feedUrl: feed) { (items) in
             self.items = items
@@ -48,6 +61,50 @@ class PointsLocalController:UICollectionViewController, UICollectionViewDelegate
 
         collectionView?.dataSource = self
         collectionView?.delegate = self
+    }
+    
+    func setupNavBarButtons() {
+        // imaged for UIBarButtonItems must me at size
+        let searchBarButtonItem = UIBarButtonItem(image: UIImage(named: "search")?.withRenderingMode(.alwaysOriginal), style: .plain, target: self, action: #selector(handleSearch))
+        let menuButtonItem = UIBarButtonItem(image: UIImage(named: "bars")?.withRenderingMode(.alwaysOriginal), style: .plain, target: self, action: #selector(showMenu))
+        navigationItem.leftBarButtonItems = [menuButtonItem]
+        navigationItem.rightBarButtonItems = [searchBarButtonItem]
+    }
+    
+    lazy var menuLauncher: MenuLauncher = {
+        let launcher = MenuLauncher()
+        launcher.pointsLocalController = self
+        return launcher
+    }()
+    
+    @objc func showMenu(){
+        menuLauncher.showMenu()
+        menuLauncher.pointsLocalController = self
+    }
+    
+    func showController(item: Menu){
+        guard let menuTitle = item.title else { return }
+        
+        var controllerToBePushed:Any
+        let layout = UICollectionViewFlowLayout()
+
+        if menuTitle == "Weather" {
+            print("menu item: \(menuTitle)")
+            let weatherViewController = WeatherViewController(collectionViewLayout: layout)
+            weatherViewController.menu = item
+            navigationController?.pushViewController(weatherViewController, animated: true)
+        } else {
+            print("menu item: \(menuTitle)")
+            let videoLauncher = VideoLauncher()
+            videoLauncher.showVideoPlayer()
+//            let whatToLoveViewController = WhatToLoveViewController(collectionViewLayout: layout)
+//            whatToLoveViewController.menu = item
+//            navigationController?.pushViewController(whatToLoveViewController, animated: true)
+        }
+    }
+    
+    @objc func handleSearch(){
+        print("search")
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -94,7 +151,7 @@ class PointsLocalController:UICollectionViewController, UICollectionViewDelegate
             return CGSize(width: view.frame.width, height: 120)
         }
         
-        return CGSize(width: (view.frame.width/2), height: 250)
+        return CGSize(width: view.frame.width/2, height: 250)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
@@ -106,7 +163,7 @@ class PointsLocalController:UICollectionViewController, UICollectionViewDelegate
     }
 
 //    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-//        return UIEdgeInsetsMake(0, 0, 0, 0)
+//        return UIEdgeInsetsMake(100, 0, 100, 0)
 //    }
     
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
