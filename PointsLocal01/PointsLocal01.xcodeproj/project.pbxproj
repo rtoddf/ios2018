@@ -29,6 +29,7 @@
 		ADA77BAA207E6E170051FC23 /* ItemDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA77BA9207E6E170051FC23 /* ItemDetailViewController.swift */; };
 		ADA77BAC207E7A0D0051FC23 /* ItemDetailHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA77BAB207E7A0D0051FC23 /* ItemDetailHeaderCell.swift */; };
 		ADE7A48820801454000D3B3B /* ItemDetailTextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE7A48720801454000D3B3B /* ItemDetailTextCell.swift */; };
+		ADFEB8B620CAE6780084D561 /* VideoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFEB8B520CAE6780084D561 /* VideoCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +57,7 @@
 		ADA77BA9207E6E170051FC23 /* ItemDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailViewController.swift; sourceTree = "<group>"; };
 		ADA77BAB207E7A0D0051FC23 /* ItemDetailHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailHeaderCell.swift; sourceTree = "<group>"; };
 		ADE7A48720801454000D3B3B /* ItemDetailTextCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailTextCell.swift; sourceTree = "<group>"; };
+		ADFEB8B520CAE6780084D561 /* VideoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				0042154220C84E1E007A8CD8 /* VideoLauncher.swift */,
+				ADFEB8B520CAE6780084D561 /* VideoCell.swift */,
 			);
 			path = Video;
 			sourceTree = "<group>";
@@ -273,6 +276,7 @@
 				00D2248720C4B689003B71D3 /* MenuItemCell.swift in Sources */,
 				ADA77BAC207E7A0D0051FC23 /* ItemDetailHeaderCell.swift in Sources */,
 				0042154320C84E1E007A8CD8 /* VideoLauncher.swift in Sources */,
+				ADFEB8B620CAE6780084D561 /* VideoCell.swift in Sources */,
 				AD5A279F20C5A01B00C99DD8 /* WeatherViewController.swift in Sources */,
 				ADE7A48820801454000D3B3B /* ItemDetailTextCell.swift in Sources */,
 				00EBA6A620C36FBB00093B34 /* ArticleImageRightCell.swift in Sources */,
