@@ -15,6 +15,7 @@ import AVFoundation
 */
 
 class VideoPlayerView:UIView {
+    let videoLauncher = VideoLauncher()
     
     let activityIndicatorView:UIActivityIndicatorView = {
         let aiv = UIActivityIndicatorView(activityIndicatorStyle: .whiteLarge)
@@ -106,7 +107,9 @@ class VideoPlayerView:UIView {
     }
     
     @objc func dismissView(){
-        print("dismiss")
+        player?.pause()
+        videoLauncher.dismissVideoPlayer()
+//        player?.isMuted = true
     }
     
     override init(frame: CGRect) {
@@ -232,27 +235,51 @@ class VideoPlayerView:UIView {
 }
 
 class VideoLauncher:NSObject {
+    
+    
     func showVideoPlayer() {
-        // we con't have access to views because we're using NSOnject
+        // we don't have access to views because we're using NSOnject
         // so we need to access keywindow
-        if let keyWindow = UIApplication.shared.keyWindow {
-            let view = UIView(frame: keyWindow.frame)
-            view.backgroundColor = .white
-            
-            let videoHeight = keyWindow.frame.width * 9 / 16
-            let videoPlayerView = VideoPlayerView(frame: CGRect(x: 0, y: 0, width: keyWindow.frame.width, height: videoHeight))
-            view.addSubview(videoPlayerView)
-            
-            // animations need a beginning and ending frame
-            view.frame = CGRect(x: keyWindow.frame.width - 10, y: keyWindow.frame.height - 10, width: 10, height: 10)
-            
-            keyWindow.addSubview(view)
-            
-            UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .curveEaseOut, animations: {
-                view.frame = keyWindow.frame
-            }) { (completedAnimation) in
-                UIApplication.shared.isStatusBarHidden = true
-            }
+        
+        guard let keyWindow = UIApplication.shared.keyWindow else { return }
+        let view = UIView(frame: keyWindow.frame)
+        view.backgroundColor = .white
+        
+        let videoHeight = keyWindow.frame.width * 9 / 16
+        let videoPlayerView = VideoPlayerView(frame: CGRect(x: 0, y: 0, width: keyWindow.frame.width, height: videoHeight))
+        view.addSubview(videoPlayerView)
+        
+        // animations need a beginning and ending frame
+        view.frame = CGRect(x: keyWindow.frame.width - 10, y: keyWindow.frame.height - 10, width: 10, height: 10)
+        
+        keyWindow.addSubview(view)
+        
+        UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .curveEaseOut, animations: {
+           view.frame = keyWindow.frame
+        }) { (completedAnimation) in
+            UIApplication.shared.isStatusBarHidden = true
+        }
+    }
+    
+    func dismissVideoPlayer() {
+        print("dismiss in videolauncher class")
+        guard let keyWindow = UIApplication.shared.keyWindow else { return }
+        let view = UIView(frame: keyWindow.frame)
+        view.frame = CGRect(x: keyWindow.frame.width - 10, y: keyWindow.frame.height - 10, width: 10, height: 10)
+        view.backgroundColor = .orange
+        keyWindow.addSubview(view)
+        
+        UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .curveEaseOut, animations: {
+            print("animate")
+            view.frame = keyWindow.frame
+        }) { (completedAnimation) in
+            UIApplication.shared.isStatusBarHidden = false
         }
     }
 }
+
+
+
+
+
+
