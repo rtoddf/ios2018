@@ -3,6 +3,7 @@ import AVFoundation
 
 // things to do
 /*
+ 0 - video needs to stop if user hits back*******
  1 - at the end of the video, turn the pause button back to play - DONE
 2 - add a mute and unmute button
  3 - once the video starts playing, fade out the controls
