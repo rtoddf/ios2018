@@ -8,7 +8,7 @@ class DailyConditionsCell:BaseCell, UICollectionViewDataSource, UICollectionView
         let layout = UICollectionViewFlowLayout()
         let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
         cv.backgroundColor = .clear
-        layout.scrollDirection = .horizontal
+//        layout.scrollDirection = .horizontal
         return cv
     }()
     
@@ -24,18 +24,13 @@ class DailyConditionsCell:BaseCell, UICollectionViewDataSource, UICollectionView
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "dayCellId", for: indexPath) as! DayCell
         
         if let hiTempF = dailyConditions?[indexPath.item].hiTempF,
+            let loTempF = dailyConditions?[indexPath.item].loTempF,
             let precipChance = dailyConditions?[indexPath.item].precipChance,
             let dateLocal = dailyConditions?[indexPath.item].validDateLocal {
             
             cell.dateLabel.text = dateLocal.toDateString(inputDateFormat: "MM/dd/yyyy h:mm:ss a", ouputDateFormat: "E, MMM dd")
-            cell.tempLabel.text = String(hiTempF)
+            cell.tempLabel.text = String(hiTempF) + " / " + String(loTempF)
             cell.precipChanceLabel.text = "Rain: " + String(precipChance) + "%"
-        }
-        
-        if let count = dailyConditions?.count {
-            if indexPath.item == count - 1 {
-                cell.dividerLineView.backgroundColor = .clear
-            }
         }
 
         if indexPath.item % 2 == 1 {
@@ -61,10 +56,7 @@ class DailyConditionsCell:BaseCell, UICollectionViewDataSource, UICollectionView
     }()
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let width = frame.width * 0.22
-        let height = width
-        
-        return CGSize(width: width, height: height)
+        return CGSize(width: frame.width, height: 75)
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
@@ -88,7 +80,6 @@ class DailyConditionsCell:BaseCell, UICollectionViewDataSource, UICollectionView
         collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.register(DayCell.self, forCellWithReuseIdentifier: dayCellId)
-        collectionView.alwaysBounceHorizontal = false
         
         let weatherFeed = "http://weather.cmgdigital.com/USOH0245/"
         Weather.downloadDailyWeather(feedUrl: weatherFeed) { dailyConditions in
@@ -96,16 +87,12 @@ class DailyConditionsCell:BaseCell, UICollectionViewDataSource, UICollectionView
             self.collectionView.reloadData()
         }
         
-        collectionView.dataSource = self
-        collectionView.delegate = self
-        collectionView.showsHorizontalScrollIndicator = false
-        
         addSubview(headerLabel)
         addSubview(topDividerLineView)
         addSubview(collectionView)
         addSubview(bottomDividerLineView)
 
-        addConstraintsWithFormat(format: "H:|-14-[v0]-14-|", views: headerLabel)
+        addConstraintsWithFormat(format: "H:|-8-[v0]-8-|", views: headerLabel)
         addConstraintsWithFormat(format: "H:|[v0]|", views: topDividerLineView)
         addConstraintsWithFormat(format: "H:|[v0]|", views: collectionView)
         addConstraintsWithFormat(format: "H:|[v0]|", views: bottomDividerLineView)
@@ -124,14 +111,12 @@ class DayCell:BaseCell {
     var dateLabel:UILabel = {
         let label = UILabel()
         label.font = .weatherDailyDateFont
-        label.textAlignment = .center
         return label
     }()
     
     let tempLabel:UILabel = {
         let label = UILabel()
         label.font = .weatherDailyTempFont
-        label.textAlignment = .center
         return label
     }()
     
@@ -156,16 +141,19 @@ class DayCell:BaseCell {
 
         dataView.addSubview(dateLabel)
         dataView.addSubview(tempLabel)
-        dataView.addSubview(precipChanceLabel)
+//        dataView.addSubview(precipChanceLabel)
         
-        addConstraintsWithFormat(format: "H:|[v0][v1(0.5)]|", views: dataView, dividerLineView)
-        addConstraintsWithFormat(format: "V:|[v0]|", views: dataView)
-        addConstraintsWithFormat(format: "V:|[v0]|", views: dividerLineView)
+        let quarterWidth = frame.width * 0.3
         
-        addConstraintsWithFormat(format: "H:|[v0]|", views: dateLabel)
-        addConstraintsWithFormat(format: "H:|[v0]|", views: tempLabel)
-        addConstraintsWithFormat(format: "H:|[v0]|", views: precipChanceLabel)
-        addConstraintsWithFormat(format: "V:|-8-[v0]-4-[v1]-4-[v2]", views: dateLabel, tempLabel, precipChanceLabel)
+        addConstraintsWithFormat(format: "H:|[v0]|", views: dataView)
+        addConstraintsWithFormat(format: "V:|[v0][v1(0.75)]|", views: dataView, dividerLineView)
+
+        addConstraintsWithFormat(format: "H:|-8-[v0(\(quarterWidth))]|", views: dateLabel)
+        addConstraintsWithFormat(format: "H:|-8-[v0(\(quarterWidth))]|", views: tempLabel)
+        addConstraintsWithFormat(format: "V:|-8-[v0]-4-[v1]", views: dateLabel, tempLabel)
+        
+//        addConstraintsWithFormat(format: "H:|[v0]|", views: precipChanceLabel)
+//        addConstraintsWithFormat(format: "V:|-8-[v0]-4-[v1]-4-[v2]", views: dateLabel, tempLabel, precipChanceLabel)
     }
 }
 

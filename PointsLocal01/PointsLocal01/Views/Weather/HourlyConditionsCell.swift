@@ -104,7 +104,7 @@ class HourlyConditionsCell:BaseCell, UICollectionViewDataSource, UICollectionVie
         addSubview(collectionView)
         addSubview(bottomDividerLineView)
         
-        addConstraintsWithFormat(format: "H:|-14-[v0]-14-|", views: headerLabel)
+        addConstraintsWithFormat(format: "H:|-8-[v0]-8-|", views: headerLabel)
         addConstraintsWithFormat(format: "H:|[v0]|", views: topDividerLineView)
         addConstraintsWithFormat(format: "H:|[v0]|", views: collectionView)
         addConstraintsWithFormat(format: "H:|[v0]|", views: bottomDividerLineView)
@@ -128,7 +128,7 @@ class HourCell:BaseCell {
     
     let tempLabel:UILabel = {
         let label = UILabel()
-        label.font = .weatherDailyTempFont
+        label.font = .weatherHourlyTempFont
         label.textAlignment = .center
         return label
     }()
