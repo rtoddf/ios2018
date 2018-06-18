@@ -5,6 +5,7 @@ class WeatherViewController:UICollectionViewController, UICollectionViewDelegate
     var dailyConditions:[Day]?
     var currentConditions:CurrentConditions?
     let currentConditionsCellId = "currentConditionsCellId"
+    let dailyConditionsCellId = "dailyConditionsCellId"
     
     var menu:Menu? {
         didSet {
@@ -22,6 +23,7 @@ class WeatherViewController:UICollectionViewController, UICollectionViewDelegate
         self.navigationController?.navigationBar.tintColor = .white
 
         collectionView?.register(CurrentConditionsCell.self, forCellWithReuseIdentifier: currentConditionsCellId)
+        collectionView?.register(DailyConditionsCell.self, forCellWithReuseIdentifier: dailyConditionsCellId)
         
         let weatherFeed = "http://weather.cmgdigital.com/USOH0245/"
         Weather.downloadData(feedUrl: weatherFeed) { (city, currentConditions, dailyConditions) in
@@ -36,28 +38,27 @@ class WeatherViewController:UICollectionViewController, UICollectionViewDelegate
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 1
+        return 2
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-//        if indexPath.item == 0 {
-//            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: headerCellId, for: indexPath) as! ItemDetailHeaderCell
+        if indexPath.item == 1 {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: dailyConditionsCellId, for: indexPath) as! DailyConditionsCell
 //            cell.item = item
-//            return cell
-//        }
+            return cell
+        }
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: currentConditionsCellId, for: indexPath) as! CurrentConditionsCell        
         cell.city = city
         cell.currentConditions = currentConditions
-//        cell.city = city
         return cell
         
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-//        if indexPath.item == 0 {
-//            return CGSize(width: view.frame.width, height: (9 / 16) * view.frame.width + 200)
-//        }
+        if indexPath.item == 1 {
+            return CGSize(width: view.frame.width, height: 120)
+        }
         
         return CGSize(width: view.frame.width, height: 220)
     }

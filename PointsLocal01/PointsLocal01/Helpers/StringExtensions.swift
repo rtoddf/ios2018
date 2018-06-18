@@ -52,6 +52,16 @@ extension UIFont {
         guard let font = UIFont(name: "Helvetica-Bold", size: 96) else { return UIFont.boldSystemFont(ofSize: 96) }
         return font
     }
+    
+    static var weatherDailyDateFont:UIFont {
+        guard let font = UIFont(name: "Helvetica", size: 12) else { return UIFont.systemFont(ofSize: 12) }
+        return font
+    }
+    
+    static var weatherDailyTempFont:UIFont {
+        guard let font = UIFont(name: "Helvetica-Bold", size: 24) else { return UIFont.boldSystemFont(ofSize: 24) }
+        return font
+    }
 }
 
 extension String {
