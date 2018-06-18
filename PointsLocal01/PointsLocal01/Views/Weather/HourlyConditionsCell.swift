@@ -1,9 +1,9 @@
 import UIKit
 
-class DailyConditionsCell:BaseCell, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
-    var dailyConditions:[Day]?
-    let dayCellId = "dayCellId"
-
+class HourlyConditionsCell:BaseCell, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+    var hourlyConditions:[Hour]?
+    let hourCellId = "hourCellId"
+    
     let collectionView:UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
@@ -13,7 +13,7 @@ class DailyConditionsCell:BaseCell, UICollectionViewDataSource, UICollectionView
     }()
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        if let count = dailyConditions?.count {
+        if let count = hourlyConditions?.count {
             return count
         }
         
@@ -21,18 +21,18 @@ class DailyConditionsCell:BaseCell, UICollectionViewDataSource, UICollectionView
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "dayCellId", for: indexPath) as! DayCell
-        
-        if let hiTempF = dailyConditions?[indexPath.item].hiTempF,
-            let precipChance = dailyConditions?[indexPath.item].precipChance,
-            let dateLocal = dailyConditions?[indexPath.item].validDateLocal {
-            
-            cell.dateLabel.text = dateLocal.toDateString(inputDateFormat: "MM/dd/yyyy h:mm:ss a", ouputDateFormat: "E, MMM dd")
-            cell.tempLabel.text = String(hiTempF)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "hourCellId", for: indexPath) as! HourCell
+
+        if let tempF = hourlyConditions?[indexPath.item].tempF,
+            let precipChance = hourlyConditions?[indexPath.item].precipChance,
+            let dateLocal = hourlyConditions?[indexPath.item].validDateLocal {
+
+            cell.dateLabel.text = dateLocal.toDateString(inputDateFormat: "MM/dd/yyyy h:mm:ss a", ouputDateFormat: "h a").lowercased()
+            cell.tempLabel.text = String(tempF)
             cell.precipChanceLabel.text = "Rain: " + String(precipChance) + "%"
         }
-        
-        if let count = dailyConditions?.count {
+
+        if let count = hourlyConditions?.count {
             if indexPath.item == count - 1 {
                 cell.dividerLineView.backgroundColor = .clear
             }
@@ -41,9 +41,9 @@ class DailyConditionsCell:BaseCell, UICollectionViewDataSource, UICollectionView
         if indexPath.item % 2 == 1 {
             cell.backgroundColor = UIColor(hexString: "#dfdfdf")
         }
-
-//        cell.layer.borderWidth = 1.0
-//        cell.layer.borderColor = UIColor(hexString: "#333")?.cgColor
+        
+        //        cell.layer.borderWidth = 1.0
+        //        cell.layer.borderColor = UIColor(hexString: "#333")?.cgColor
         
         return cell
     }
@@ -59,14 +59,14 @@ class DailyConditionsCell:BaseCell, UICollectionViewDataSource, UICollectionView
         view.backgroundColor = UIColor(hexString: "#333")
         return view
     }()
-
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let width = frame.width * 0.22
         let height = width
         
         return CGSize(width: width, height: height)
     }
-
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 0
     }
@@ -77,7 +77,7 @@ class DailyConditionsCell:BaseCell, UICollectionViewDataSource, UICollectionView
     
     let headerLabel:UILabel = {
         let label = UILabel()
-        label.text = "Daily Weather"
+        label.text = "Hourly Weather"
         label.font = .extraLargeFont
         return label
     }()
@@ -87,12 +87,11 @@ class DailyConditionsCell:BaseCell, UICollectionViewDataSource, UICollectionView
         
         collectionView.dataSource = self
         collectionView.delegate = self
-        collectionView.register(DayCell.self, forCellWithReuseIdentifier: dayCellId)
-        collectionView.alwaysBounceHorizontal = false
+        collectionView.register(HourCell.self, forCellWithReuseIdentifier: hourCellId)
         
         let weatherFeed = "http://weather.cmgdigital.com/USOH0245/"
-        Weather.downloadDailyWeather(feedUrl: weatherFeed) { dailyConditions in
-            self.dailyConditions = dailyConditions
+        Weather.downloadHourlyWeather(feedUrl: weatherFeed) { hourlyConditions in
+            self.hourlyConditions = hourlyConditions
             self.collectionView.reloadData()
         }
         
@@ -104,7 +103,7 @@ class DailyConditionsCell:BaseCell, UICollectionViewDataSource, UICollectionView
         addSubview(topDividerLineView)
         addSubview(collectionView)
         addSubview(bottomDividerLineView)
-
+        
         addConstraintsWithFormat(format: "H:|-14-[v0]-14-|", views: headerLabel)
         addConstraintsWithFormat(format: "H:|[v0]|", views: topDividerLineView)
         addConstraintsWithFormat(format: "H:|[v0]|", views: collectionView)
@@ -114,10 +113,9 @@ class DailyConditionsCell:BaseCell, UICollectionViewDataSource, UICollectionView
     
 }
 
-class DayCell:BaseCell {
+class HourCell:BaseCell {
     let dataView:UIView = {
         let view = UIView()
-        
         return view
     }()
     
@@ -157,22 +155,14 @@ class DayCell:BaseCell {
         dataView.addSubview(dateLabel)
         dataView.addSubview(tempLabel)
         dataView.addSubview(precipChanceLabel)
-        
+
         addConstraintsWithFormat(format: "H:|[v0][v1(0.5)]|", views: dataView, dividerLineView)
         addConstraintsWithFormat(format: "V:|[v0]|", views: dataView)
         addConstraintsWithFormat(format: "V:|[v0]|", views: dividerLineView)
-        
+
         addConstraintsWithFormat(format: "H:|[v0]|", views: dateLabel)
         addConstraintsWithFormat(format: "H:|[v0]|", views: tempLabel)
         addConstraintsWithFormat(format: "H:|[v0]|", views: precipChanceLabel)
         addConstraintsWithFormat(format: "V:|-8-[v0]-4-[v1]-4-[v2]", views: dateLabel, tempLabel, precipChanceLabel)
     }
 }
-
-
-
-
-
-
-
-

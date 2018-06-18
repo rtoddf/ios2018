@@ -5,6 +5,7 @@ class WeatherViewController:UICollectionViewController, UICollectionViewDelegate
     var currentConditions:CurrentConditions?
     let currentConditionsCellId = "currentConditionsCellId"
     let dailyConditionsCellId = "dailyConditionsCellId"
+    let hourlyConditionsCellId = "hourlyConditionsCellId"
     
     var menu:Menu? {
         didSet {
@@ -23,6 +24,7 @@ class WeatherViewController:UICollectionViewController, UICollectionViewDelegate
 
         collectionView?.register(CurrentConditionsCell.self, forCellWithReuseIdentifier: currentConditionsCellId)
         collectionView?.register(DailyConditionsCell.self, forCellWithReuseIdentifier: dailyConditionsCellId)
+        collectionView?.register(HourlyConditionsCell.self, forCellWithReuseIdentifier: hourlyConditionsCellId)
         
         let weatherFeed = "http://weather.cmgdigital.com/USOH0245/"
         Weather.downloadData(feedUrl: weatherFeed) { (city, currentConditions) in
@@ -36,12 +38,17 @@ class WeatherViewController:UICollectionViewController, UICollectionViewDelegate
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 2
+        return 3
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if indexPath.item == 1 {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: dailyConditionsCellId, for: indexPath) as! DailyConditionsCell
+            return cell
+        }
+        
+        if indexPath.item == 2 {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: hourlyConditionsCellId, for: indexPath) as! HourlyConditionsCell
             return cell
         }
         
@@ -53,7 +60,7 @@ class WeatherViewController:UICollectionViewController, UICollectionViewDelegate
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        if indexPath.item == 1 {
+        if indexPath.item == 1 || indexPath.item == 2 {
             let height = view.frame.width * 0.22
             return CGSize(width: view.frame.width, height: height + 26)
         }

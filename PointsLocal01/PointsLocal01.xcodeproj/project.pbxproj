@@ -27,6 +27,7 @@
 		ADA3E0B320B4A5F5002E8299 /* ArticleImagLeftCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA3E0B220B4A5F5002E8299 /* ArticleImagLeftCell.swift */; };
 		ADA3E0B520B4C089002E8299 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA3E0B420B4C089002E8299 /* Utilities.swift */; };
 		ADA6505820D811930012A801 /* DailyConditionsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA6505720D811930012A801 /* DailyConditionsCell.swift */; };
+		ADA6505A20D864160012A801 /* HourlyConditionsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA6505920D864160012A801 /* HourlyConditionsCell.swift */; };
 		ADA77BAA207E6E170051FC23 /* ItemDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA77BA9207E6E170051FC23 /* ItemDetailViewController.swift */; };
 		ADA77BAC207E7A0D0051FC23 /* ItemDetailHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA77BAB207E7A0D0051FC23 /* ItemDetailHeaderCell.swift */; };
 		ADE7A48820801454000D3B3B /* ItemDetailTextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE7A48720801454000D3B3B /* ItemDetailTextCell.swift */; };
@@ -56,6 +57,7 @@
 		ADA3E0B220B4A5F5002E8299 /* ArticleImagLeftCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleImagLeftCell.swift; sourceTree = "<group>"; };
 		ADA3E0B420B4C089002E8299 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		ADA6505720D811930012A801 /* DailyConditionsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyConditionsCell.swift; sourceTree = "<group>"; };
+		ADA6505920D864160012A801 /* HourlyConditionsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourlyConditionsCell.swift; sourceTree = "<group>"; };
 		ADA77BA9207E6E170051FC23 /* ItemDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailViewController.swift; sourceTree = "<group>"; };
 		ADA77BAB207E7A0D0051FC23 /* ItemDetailHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailHeaderCell.swift; sourceTree = "<group>"; };
 		ADE7A48720801454000D3B3B /* ItemDetailTextCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailTextCell.swift; sourceTree = "<group>"; };
@@ -197,6 +199,7 @@
 			children = (
 				ADA062B720C6F14A005C8E4B /* CurrentConditionsCell.swift */,
 				ADA6505720D811930012A801 /* DailyConditionsCell.swift */,
+				ADA6505920D864160012A801 /* HourlyConditionsCell.swift */,
 			);
 			path = Weather;
 			sourceTree = "<group>";
@@ -290,6 +293,7 @@
 				0042154020C842D0007A8CD8 /* WhatToLoveViewController.swift in Sources */,
 				AD148928207D538900867CF4 /* Extensions.swift in Sources */,
 				00D2248520C4B660003B71D3 /* MenuLauncher.swift in Sources */,
+				ADA6505A20D864160012A801 /* HourlyConditionsCell.swift in Sources */,
 				AD148914207D524300867CF4 /* AppDelegate.swift in Sources */,
 				AD14892E207D5B5D00867CF4 /* ArticleImageTopCell.swift in Sources */,
 				ADA3E0B320B4A5F5002E8299 /* ArticleImagLeftCell.swift in Sources */,
