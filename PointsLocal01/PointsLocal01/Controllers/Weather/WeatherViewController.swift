@@ -54,7 +54,8 @@ class WeatherViewController:UICollectionViewController, UICollectionViewDelegate
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         if indexPath.item == 1 {
-            return CGSize(width: view.frame.width, height: 120)
+            let height = view.frame.width * 0.22
+            return CGSize(width: view.frame.width, height: height + 26)
         }
         
         return CGSize(width: view.frame.width, height: 220)

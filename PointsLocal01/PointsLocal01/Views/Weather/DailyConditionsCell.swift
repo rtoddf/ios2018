@@ -1,19 +1,9 @@
 import UIKit
 
 class DailyConditionsCell:BaseCell, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
-
     var dailyConditions:[Day]?
     let dayCellId = "dayCellId"
-    
-//    var dailyConditions:[Day]? {
-//        didSet {
-////            guard let tempf = currentConditions?.tempF else { return }
-////            guard let sky = currentConditions?.sky else { return }
-////            tempLabel.text = String(tempf) + "°"
-////            skyLabel.text = sky
-//        }
-//    }
-    
+
     let collectionView:UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
@@ -40,14 +30,40 @@ class DailyConditionsCell:BaseCell, UICollectionViewDataSource, UICollectionView
             cell.dateLabel.text = dateLocal.toDateString(inputDateFormat: "MM/dd/yyyy h:mm:ss a", ouputDateFormat: "E, MMM dd")
             cell.tempLabel.text = String(hiTempF)
             cell.precipChanceLabel.text = "Rain: " + String(precipChance) + "%"
-        
         }
+        
+        if let count = dailyConditions?.count {
+            if indexPath.item == count - 1 {
+                cell.dividerLineView.backgroundColor = .clear
+            }
+        }
+
+        if indexPath.item % 2 == 1 {
+            cell.backgroundColor = UIColor(hexString: "#dfdfdf")
+        }
+
+//        cell.layer.borderWidth = 1.0
+//        cell.layer.borderColor = UIColor(hexString: "#333")?.cgColor
         
         return cell
     }
     
+    let topDividerLineView:UIView = {
+        let view = UIView()
+        view.backgroundColor = UIColor(hexString: "#333")
+        return view
+    }()
+    
+    let bottomDividerLineView:UIView = {
+        let view = UIView()
+        view.backgroundColor = UIColor(hexString: "#333")
+        return view
+    }()
+    
+    
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let width = frame.width * 0.25
+        let width = frame.width * 0.22
         let height = width
         
         return CGSize(width: width, height: height)
@@ -60,6 +76,13 @@ class DailyConditionsCell:BaseCell, UICollectionViewDataSource, UICollectionView
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return 0
     }
+    
+    let headerLabel:UILabel = {
+        let label = UILabel()
+        label.text = "Daily Weather"
+        label.font = .extraLargeFont
+        return label
+    }()
     
     override func setupViews() {
         super.setupViews()
@@ -76,32 +99,31 @@ class DailyConditionsCell:BaseCell, UICollectionViewDataSource, UICollectionView
         
         collectionView.dataSource = self
         collectionView.delegate = self
+        collectionView.showsHorizontalScrollIndicator = false
         
-//        collectionView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.animateView)))
-        
-//        addSubview(headerLabel)
+        addSubview(headerLabel)
+        addSubview(topDividerLineView)
         addSubview(collectionView)
-        
-//        addConstraintsWithFormat(format: "H:|-14-[v0]-14-|", views: headerLabel)
+        addSubview(bottomDividerLineView)
+
+        addConstraintsWithFormat(format: "H:|-14-[v0]-14-|", views: headerLabel)
+        addConstraintsWithFormat(format: "H:|[v0]|", views: topDividerLineView)
         addConstraintsWithFormat(format: "H:|[v0]|", views: collectionView)
-        addConstraintsWithFormat(format: "V:|[v0]|", views: collectionView)
+        addConstraintsWithFormat(format: "H:|[v0]|", views: bottomDividerLineView)
+        addConstraintsWithFormat(format: "V:|[v3]-4-[v0(0.5)][v1][v2(0.5)]|", views: topDividerLineView, collectionView, bottomDividerLineView, headerLabel)
     }
     
 }
 
 class DayCell:BaseCell {
-//    let articleImageView:UIImageView = {
-//        let iv = UIImageView()
-//        iv.contentMode = .scaleAspectFit
-//        iv.clipsToBounds = true
-//        iv.backgroundColor = UIColor(hexString: "#333")
-//        iv.isUserInteractionEnabled = true
-//        return iv
-//    }()
+    let dataView:UIView = {
+        let view = UIView()
+        
+        return view
+    }()
     
     var dateLabel:UILabel = {
         let label = UILabel()
-        label.text = "Mon Jun 8"
         label.font = .weatherDailyDateFont
         label.textAlignment = .center
         return label
@@ -109,7 +131,6 @@ class DayCell:BaseCell {
     
     let tempLabel:UILabel = {
         let label = UILabel()
-        label.text = "85°"
         label.font = .weatherDailyTempFont
         label.textAlignment = .center
         return label
@@ -117,25 +138,35 @@ class DayCell:BaseCell {
     
     let precipChanceLabel:UILabel = {
         let label = UILabel()
-        label.text = "Rain: 20%"
         label.font = .weatherDailyDateFont
         label.textAlignment = .center
         return label
     }()
     
+    let dividerLineView:UIView = {
+        let view = UIView()
+        view.backgroundColor = UIColor(hexString: "#333")
+        return view
+    }()
+    
     override func setupViews() {
         super.setupViews()
+        
+        addSubview(dataView)
+        addSubview(dividerLineView)
 
-        addSubview(dateLabel)
-        addSubview(tempLabel)
-        addSubview(precipChanceLabel)
+        dataView.addSubview(dateLabel)
+        dataView.addSubview(tempLabel)
+        dataView.addSubview(precipChanceLabel)
+        
+        addConstraintsWithFormat(format: "H:|[v0][v1(0.5)]|", views: dataView, dividerLineView)
+        addConstraintsWithFormat(format: "V:|[v0]|", views: dataView)
+        addConstraintsWithFormat(format: "V:|[v0]|", views: dividerLineView)
         
         addConstraintsWithFormat(format: "H:|[v0]|", views: dateLabel)
         addConstraintsWithFormat(format: "H:|[v0]|", views: tempLabel)
         addConstraintsWithFormat(format: "H:|[v0]|", views: precipChanceLabel)
-        
-        
-        addConstraintsWithFormat(format: "V:|[v0]-4-[v1]-4-[v2]", views: dateLabel, tempLabel, precipChanceLabel)
+        addConstraintsWithFormat(format: "V:|-8-[v0]-4-[v1]-4-[v2]", views: dateLabel, tempLabel, precipChanceLabel)
     }
 }
 
