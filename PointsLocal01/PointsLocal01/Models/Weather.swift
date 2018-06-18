@@ -10,10 +10,10 @@ struct Weather:Decodable {
         case city = "City"
     }
     
-    static func downloadData(feedUrl:String, completion: @escaping (City, CurrentConditions, [Day]) -> Void) {
+    static func downloadDailyWeather(feedUrl:String, completion: @escaping ([Day]) -> Void) {
         let urlString = feedUrl
         let url = URL(string: urlString)
-        
+
         if let urlObject = url {
             URLSession.shared.dataTask(with: urlObject) { (data, ressponse, error) in
                 guard let data = data else { return }
@@ -24,8 +24,6 @@ struct Weather:Decodable {
                     let feed = try decoder.decode(Weather.self, from: data)
                     
                     let daily = feed.daily
-                    let city = feed.city
-                    let currentConditions = feed.currentConditions
                     
                     var dailyConditions = [Day]()
                     dailyConditions.append(daily.zero)
@@ -40,12 +38,36 @@ struct Weather:Decodable {
                     dailyConditions.append(daily.nine)
                     
                     DispatchQueue.main.async {
+                        completion(dailyConditions)
+                    }
+                    
+                } catch let jsonErr {
+                    print("we got an error \(jsonErr)")
+                }
+                }.resume()
+        }
+    }
+    
+    static func downloadData(feedUrl:String, completion: @escaping (City, CurrentConditions) -> Void) {
+        let urlString = feedUrl
+        let url = URL(string: urlString)
+        
+        if let urlObject = url {
+            URLSession.shared.dataTask(with: urlObject) { (data, ressponse, error) in
+                guard let data = data else { return }
+                
+                do {
+                    let decoder = JSONDecoder()
+                    decoder.keyDecodingStrategy = .convertFromSnakeCase
+                    let feed = try decoder.decode(Weather.self, from: data)
+                    let city = feed.city
+                    let currentConditions = feed.currentConditions
+                    
+                    DispatchQueue.main.async {
                         guard let city = city else { return }
                         guard let currentConditions = currentConditions else { return }
-                        
-                        print("city in dispatch: \(city)")
-                        
-                        completion(city, currentConditions, dailyConditions)
+
+                        completion(city, currentConditions)
                     }
                     
                 } catch let jsonErr {

@@ -2,7 +2,6 @@ import UIKit
 
 class WeatherViewController:UICollectionViewController, UICollectionViewDelegateFlowLayout {
     var city:City?
-    var dailyConditions:[Day]?
     var currentConditions:CurrentConditions?
     let currentConditionsCellId = "currentConditionsCellId"
     let dailyConditionsCellId = "dailyConditionsCellId"
@@ -26,10 +25,9 @@ class WeatherViewController:UICollectionViewController, UICollectionViewDelegate
         collectionView?.register(DailyConditionsCell.self, forCellWithReuseIdentifier: dailyConditionsCellId)
         
         let weatherFeed = "http://weather.cmgdigital.com/USOH0245/"
-        Weather.downloadData(feedUrl: weatherFeed) { (city, currentConditions, dailyConditions) in
+        Weather.downloadData(feedUrl: weatherFeed) { (city, currentConditions) in
             self.city = city
             self.currentConditions = currentConditions
-//            self.dailyConditions = dailyConditions
             self.collectionView?.reloadData()
         }
 
@@ -44,7 +42,6 @@ class WeatherViewController:UICollectionViewController, UICollectionViewDelegate
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if indexPath.item == 1 {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: dailyConditionsCellId, for: indexPath) as! DailyConditionsCell
-//            cell.item = item
             return cell
         }
         

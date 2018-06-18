@@ -2,7 +2,17 @@ import UIKit
 
 class DailyConditionsCell:BaseCell, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
 
+    var dailyConditions:[Day]?
     let dayCellId = "dayCellId"
+    
+//    var dailyConditions:[Day]? {
+//        didSet {
+////            guard let tempf = currentConditions?.tempF else { return }
+////            guard let sky = currentConditions?.sky else { return }
+////            tempLabel.text = String(tempf) + "°"
+////            skyLabel.text = sky
+//        }
+//    }
     
     let collectionView:UICollectionView = {
         let layout = UICollectionViewFlowLayout()
@@ -13,11 +23,11 @@ class DailyConditionsCell:BaseCell, UICollectionViewDataSource, UICollectionView
     }()
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-//        if let count = article?.media?.count {
-//            return count
-//        }
+        if let count = dailyConditions?.count {
+            return count
+        }
         
-        return 10
+        return 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -46,11 +56,7 @@ class DailyConditionsCell:BaseCell, UICollectionViewDataSource, UICollectionView
         
         return CGSize(width: width, height: height)
     }
-    
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-//        return UIEdgeInsetsMake(0, 0, 0, 0)
-//    }
-    
+
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 0
     }
@@ -65,6 +71,17 @@ class DailyConditionsCell:BaseCell, UICollectionViewDataSource, UICollectionView
         collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.register(DayCell.self, forCellWithReuseIdentifier: dayCellId)
+        
+        let weatherFeed = "http://weather.cmgdigital.com/USOH0245/"
+        Weather.downloadDailyWeather(feedUrl: weatherFeed) { dailyConditions in
+            print("dailyConditions in view, inside the callback: \(dailyConditions)")
+            self.dailyConditions = dailyConditions
+            
+            self.collectionView.reloadData()
+        }
+        
+        collectionView.dataSource = self
+        collectionView.delegate = self
         
 //        collectionView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.animateView)))
         
