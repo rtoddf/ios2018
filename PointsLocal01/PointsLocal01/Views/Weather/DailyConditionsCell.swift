@@ -33,19 +33,15 @@ class DailyConditionsCell:BaseCell, UICollectionViewDataSource, UICollectionView
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "dayCellId", for: indexPath) as! DayCell
         
-//        if let image = article?.media![indexPath.item].path,
-//            let title = article?.media![indexPath.item].title,
-//            let caption = article?.media![indexPath.item].caption,
-//            let credit = article?.media![indexPath.item].credit {
-//
-//            cell.articleImageView.loadImageUsingUrlString(imageUrl: image)
-//            let tappy = MyTapGesture(target: self, action: #selector(self.animateView))
-//            tappy.title = title
-//            tappy.caption = caption
-//            tappy.credit = credit
-//
-//            cell.articleImageView.addGestureRecognizer(tappy)
-//        }
+        if let hiTempF = dailyConditions?[indexPath.item].hiTempF,
+            let precipChance = dailyConditions?[indexPath.item].precipChance,
+            let dateLocal = dailyConditions?[indexPath.item].validDateLocal {
+            
+            cell.dateLabel.text = dateLocal.toDateString(inputDateFormat: "MM/dd/yyyy h:mm:ss a", ouputDateFormat: "E, MMM dd")
+            cell.tempLabel.text = String(hiTempF)
+            cell.precipChanceLabel.text = "Rain: " + String(precipChance) + "%"
+        
+        }
         
         return cell
     }
@@ -74,9 +70,7 @@ class DailyConditionsCell:BaseCell, UICollectionViewDataSource, UICollectionView
         
         let weatherFeed = "http://weather.cmgdigital.com/USOH0245/"
         Weather.downloadDailyWeather(feedUrl: weatherFeed) { dailyConditions in
-            print("dailyConditions in view, inside the callback: \(dailyConditions)")
             self.dailyConditions = dailyConditions
-            
             self.collectionView.reloadData()
         }
         
@@ -105,7 +99,7 @@ class DayCell:BaseCell {
 //        return iv
 //    }()
     
-    let dateLabel:UILabel = {
+    var dateLabel:UILabel = {
         let label = UILabel()
         label.text = "Mon Jun 8"
         label.font = .weatherDailyDateFont

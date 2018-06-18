@@ -70,6 +70,15 @@ extension String {
         return try? NSAttributedString(data: Data(utf8), options: [.documentType: NSAttributedString.DocumentType.html, .characterEncoding: String.Encoding.utf8.rawValue], documentAttributes: nil)
     }
     
+    // http://nsdateformatter.com/
+    func toDateString( inputDateFormat inputFormat  : String,  ouputDateFormat outputFormat  : String ) -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = inputFormat
+        let date = dateFormatter.date(from: self)
+        dateFormatter.dateFormat = outputFormat
+        return dateFormatter.string(from: date!)
+    }
+    
     func convertHtml() -> NSAttributedString{
         guard let data = data(using: .utf8) else { return NSAttributedString() }
         do {
