@@ -49,12 +49,17 @@ extension UIFont {
     
     // weather stuff
     static var weatherTempFont:UIFont {
-        guard let font = UIFont(name: "Helvetica-Bold", size: 96) else { return UIFont.boldSystemFont(ofSize: 96) }
+        guard let font = UIFont(name: "Helvetica-Bold", size: 36) else { return UIFont.boldSystemFont(ofSize: 36) }
         return font
     }
     
     static var weatherDailyDateFont:UIFont {
         guard let font = UIFont(name: "Helvetica", size: 12) else { return UIFont.systemFont(ofSize: 12) }
+        return font
+    }
+    
+    static var weatherDailyTextFont:UIFont {
+        guard let font = UIFont(name: "Helvetica", size: 14) else { return UIFont.systemFont(ofSize: 14) }
         return font
     }
     

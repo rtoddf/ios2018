@@ -29,7 +29,7 @@ class DailyConditionsCell:BaseCell, UICollectionViewDataSource, UICollectionView
             let dateLocal = dailyConditions?[indexPath.item].validDateLocal {
             
             cell.dateLabel.text = dateLocal.toDateString(inputDateFormat: "MM/dd/yyyy h:mm:ss a", ouputDateFormat: "E, MMM dd")
-            cell.tempLabel.text = String(hiTempF) + " / " + String(loTempF)
+            cell.tempLabel.text = String(loTempF) + " / " + String(hiTempF)
             cell.precipChanceLabel.text = "Rain: " + String(precipChance) + "%"
         }
 

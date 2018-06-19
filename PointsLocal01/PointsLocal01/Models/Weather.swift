@@ -194,6 +194,7 @@ struct Day:Decodable {
     let skyCode:Int?
     let skyText:String?
     let validDateLocal:String?
+    let dayText:String?
     let iconCode:Int?
     let windSpeedMph:Int?
     let hiTempF:Int?
@@ -206,6 +207,7 @@ struct Day:Decodable {
         case skyCode = "SkyCode"
         case skyText = "SkyText"
         case validDateLocal = "ValidDateLocal"
+        case dayText = "dayText"
         case iconCode = "IconCode"
         case windSpeedMph = "WindSpeedMph"
         case hiTempF = "HiTempF"
