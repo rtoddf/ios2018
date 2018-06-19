@@ -1,30 +1,43 @@
 import UIKit
 
 class CurrentConditionsCell:BaseCell {
+    var dailyConditions:[Day]? {
+        didSet {
+            guard let dailyConditions = dailyConditions?[0] else { return }
+            guard let hiTempF = dailyConditions.hiTempF else { return }
+            guard let skyText = dailyConditions.skyText else { return }
+            
+            dateLabel.text = Date().toString(dateFormat: "E, MMM dd")
+            tempLabel.text = String(hiTempF) + "°"
+            skyLabel.text = skyText
+        }
+    }
     
     var city:City? {
         didSet {
             guard let name = city?.name else { return }
             guard let state = city?.stateAbbreviation else { return }
-            
+
             cityLabel.text = name + ", " + state + " Weather"
         }
     }
     
     var currentConditions:CurrentConditions? {
         didSet {
-            guard let tempf = currentConditions?.tempF else { return }
-            guard let sky = currentConditions?.sky else { return }
-            tempLabel.text = String(tempf) + "°"
-            skyLabel.text = sky
+
         }
     }
 
     let cityLabel:UILabel = {
         let label = UILabel()
-        label.textAlignment = .center
         label.textColor = UIColor(hexString: "#fff")
         label.font = .eventHeadlineFont
+        return label
+    }()
+    
+    let dateLabel:UILabel = {
+        let label = UILabel()
+        label.textColor = UIColor(hexString: "#fff")
         return label
     }()
     
@@ -63,6 +76,11 @@ class CurrentConditionsCell:BaseCell {
     }()
     
     override func setupViews() {
+        let weatherFeed = "http://weather.cmgdigital.com/USOH0245/"
+        Weather.downloadDailyWeather(feedUrl: weatherFeed) { dailyConditions in
+            self.dailyConditions = dailyConditions
+        }
+        
         super.setupViews()
         
         let gradient = CAGradientLayer()
@@ -71,16 +89,18 @@ class CurrentConditionsCell:BaseCell {
         self.layer.insertSublayer(gradient, at: 0)
 
         addSubview(cityLabel)
+        addSubview(dateLabel)
         addSubview(tempIconView)
         addSubview(skyLabel)
         addSubview(dividerLineView)
 
         addConstraintsWithFormat(format: "H:|-12-[v0]-12-|", views: cityLabel)
+        addConstraintsWithFormat(format: "H:|-12-[v0]-12-|", views: dateLabel)
         addConstraintsWithFormat(format: "H:|-12-[v0]-12-|", views: tempIconView)
         addConstraintsWithFormat(format: "H:|-12-[v0]-12-|", views: skyLabel)
         addConstraintsWithFormat(format: "H:|[v0]|", views: dividerLineView)
         
-        addConstraintsWithFormat(format: "V:|-12-[v0]-4-[v1]-4-[v2]-12-[v3(0.5)]|", views: cityLabel, tempIconView, skyLabel, dividerLineView)
+        addConstraintsWithFormat(format: "V:|-12-[v0]-4-[v3]-4-[v1]-4-[v2]|", views: cityLabel, tempIconView, skyLabel, dateLabel)
         
         tempIconView.addSubview(tempLabel)
         tempIconView.addSubview(iconImageView)

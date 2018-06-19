@@ -150,14 +150,13 @@ struct CurrentConditions:Decodable {
     let tempF:Int?
     let sky:String?
     let feelsLikeF:Int?
-    let report_time_utc:String?
     let iconCode:Int?
     //    let gust:Int?
     let visibility:Int?
     let humidity:Int?
     
     private enum CodingKeys:String, CodingKey {
-        case report_time_utc, visibility, humidity
+        case visibility, humidity
         case tempF = "TempF"
         case sky = "Sky"
         case feelsLikeF = "FeelsLikeF"
