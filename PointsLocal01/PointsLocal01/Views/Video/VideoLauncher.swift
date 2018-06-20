@@ -173,9 +173,7 @@ class VideoPlayerView:UIView {
             
             player?.addObserver(self, forKeyPath: "currentItem.loadedTimeRanges", options: .new, context: nil)
             // can end be done hte same way?
-            
-            
-            
+
             // track player progress
             let interval = CMTime(value: 1, timescale: 2)
             player?.addPeriodicTimeObserver(forInterval: interval, queue: DispatchQueue.main, using: { (progressTime) in

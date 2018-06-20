@@ -89,17 +89,15 @@ class PointsLocalController:UICollectionViewController, UICollectionViewDelegate
         let layout = UICollectionViewFlowLayout()
 
         if menuTitle == "Weather" {
-            print("menu item: \(menuTitle)")
             let weatherViewController = WeatherViewController(collectionViewLayout: layout)
             weatherViewController.menu = item
             navigationController?.pushViewController(weatherViewController, animated: true)
         } else {
-            print("menu item: \(menuTitle)")
-            let videoLauncher = VideoLauncher()
-            videoLauncher.showVideoPlayer()
-//            let whatToLoveViewController = WhatToLoveViewController(collectionViewLayout: layout)
-//            whatToLoveViewController.menu = item
-//            navigationController?.pushViewController(whatToLoveViewController, animated: true)
+//            let videoLauncher = VideoLauncher()
+//            videoLauncher.showVideoPlayer()
+            let whatToLoveViewController = WhatToLoveViewController(collectionViewLayout: layout)
+            whatToLoveViewController.menu = item
+            navigationController?.pushViewController(whatToLoveViewController, animated: true)
         }
     }
     
