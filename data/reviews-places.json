@@ -3,6 +3,638 @@
 	"title": "Places",
 	"items": [
 		{
+			"headline": "The Grand Ole Opry",
+			"subhead": "",
+			"creator": {
+				"name": "Kara Driscoll - Staff Writer",
+				"title": "Staff Writer",
+				"image": "http://www.rtodd.net/swift/images/reviews-places/creators/karadriscoll.jpg",
+				"social": [
+					{
+						"network": "facebook",
+						"user": ""
+					},
+					{
+						"network": "twitter",
+						"user": "https://twitter.com/karaddriscoll"
+					},
+					{
+						"network": "instagram",
+						"user": ""
+					}
+				]
+			},
+			"item_class": "place review",
+			"category": {
+				"title": "What To Do",
+				"background_color": "#603765",
+				"text_color": "#fff"
+			},
+			"guid": "f21f6d26-aaaa-1111-8401-ed4dfe8ebc2c",
+			"pub_date": "Fri, 22 Jun 2018 09:25:00 EDT",
+			"summary": "The Grand Ole Opry is a weekly country-music stage concert in Nashville, Tennessee, which was founded on November 28, 1925, by George D. Hay as a one-hour radio \"barn dance\" on WSM. Currently owned and operated by Opry Entertainment (a division of Ryman Hospitality Properties, Inc.), it is the longest-running radio broadcast in US history. Dedicated to honoring country music and its history, the Opry showcases a mix of famous singers and contemporary chart-toppers performing country, bluegrass, Americana, folk, gospel, and comedic performances and skits.",
+			"full_text": "<p>The Grand Ole Opry is a weekly country-music stage concert in Nashville, Tennessee, which was founded on November 28, 1925, by George D. Hay as a one-hour radio \"barn dance\" on WSM. Currently owned and operated by Opry Entertainment (a division of Ryman Hospitality Properties, Inc.), it is the longest-running radio broadcast in US history. Dedicated to honoring country music and its history, the Opry showcases a mix of famous singers and contemporary chart-toppers performing country, bluegrass, Americana, folk, gospel, and comedic performances and skits. It attracts hundreds of thousands of visitors from around the world and millions of radio and Internet listeners.</p><p>In the 1930s the show began hiring professionals and expanded to four hours; and WSM, broadcasting by then with 50,000 watts, made the program a Saturday night musical tradition in nearly 30 states. In 1939, it debuted nationally on NBC Radio. The Opry moved to a permanent home, the Ryman Auditorium, in 1943. As it developed in importance, so did the city of Nashville, which became America's \"country music capital\". The Grand Ole Opry holds such significance in Nashville that its name is included on the city/county line signs on all major roadways. The signs read \"Music City|Metropolitan Nashville Davidson County|Home of the Grand Ole Opry\".</p><p>Membership in the Opry remains one of country music's crowning achievements. Such country music legends as Hank Williams, Johnny Cash, Patsy Cline, Marty Robbins, Roy Acuff, the Carter family, Bill Monroe, Ernest Tubb, Kitty Wells, and Minnie Pearl became regulars on the Opry's stage. In recent decades, the Opry has hosted such contemporary country stars as Dolly Parton, Loretta Lynn, Alan Jackson, Garth Brooks, Reba McEntire, Josh Turner, Carrie Underwood, Brad Paisley, Rascal Flatts, Dierks Bentley, Little Big Town, Blake Shelton, Chris Young, and Ricky Skaggs. Since 1974, the show has been broadcast from the Grand Ole Opry House east of downtown Nashville, with an annual three-month winter foray back to the Ryman since 1999. Performances have been sporadically televised in addition to the radio programs.</p>",
+			"lead_media": {
+				"type": "image",
+				"path": "http://www.rtodd.net/swift/images/reviews-places/the-grand-ole-opry.jpg",
+				"title": "The Grand Ole Opry",
+				"caption": "The Grand Ole Opry",
+				"credit": "The Grand Ole Opry"
+			},
+			"media": [
+				{
+					"path": "http://www.rtodd.net/swift/images/reviews-places/the-grand-ole-opry01.jpg",
+					"title": "The Grand Ole Opry",
+					"caption": "The Grand Ole Opry",
+					"credit": "The Grand Ole Opry"
+				},
+				{
+					"path": "http://www.rtodd.net/swift/images/reviews-places/the-grand-ole-opry02.jpg",
+					"title": "The Grand Ole Opry",
+					"caption": "The Grand Ole Opry",
+					"credit": "The Grand Ole Opry"
+				},
+				{
+					"path": "http://www.rtodd.net/swift/images/reviews-places/the-grand-ole-opry03.jpg",
+					"title": "The Grand Ole Opry",
+					"caption": "The Grand Ole Opry",
+					"credit": "The Grand Ole Opry"
+				},
+				{
+					"path": "http://www.rtodd.net/swift/images/reviews-places/the-grand-ole-opry04.jpg",
+					"title": "The Grand Ole Opry",
+					"caption": "The Grand Ole Opry",
+					"credit": "The Grand Ole Opry"
+				}
+			],
+			"locations": [
+				{
+					"latitude": 36.206857,
+					"longitude": -86.692109,
+					"name": "The Grand Ole Opry"
+				}
+			],
+			"related_content": {
+				"title": "More Things to Do",
+				"items": [
+					{
+						"headline": "The London Eye",
+						"summary": "The London Eye, known for sponsorship reasons as the Coca-Cola London Eye, is a giant Ferris wheel on the South Bank of the River Thames in London.",
+						"pub_date": "Fri, 22 Jun 2018 09:25:00 EDT",
+						"lead_media": {
+							"type": "image",
+							"path": "http://www.rtodd.net/swift/images/reviews-places/related/the-london-eye.jpg",
+							"title": "The London Eye",
+							"caption": "The London Eye, known for sponsorship reasons as the Coca-Cola London Eye, is a giant Ferris wheel on the South Bank of the River Thames in London.",
+							"credit": "London Tourism Board"
+						},
+						"guid": "f21f6d26-2163-11e8-8401-ed4dfe8ebc2c"
+					},
+					{
+						"headline": "The Eiffel Tower",
+						"summary": "The Eiffel Tower is a wrought iron lattice tower on the Champ de Mars in Paris, France. It is named after the engineer Gustave Eiffel, whose company designed and built the tower.",
+						"pub_date": "Fri, 22 Jun 2018 09:25:00 EDT",
+						"lead_media": {
+							"type": "image",
+							"path": "http://www.rtodd.net/swift/images/reviews-places/related/the-eiffel-tower.jpg",
+							"title": "The Eiffel Tower",
+							"caption": "The London Eye, known for sponsorship reasons as the Coca-Cola London Eye, is a giant Ferris wheel on the South Bank of the River Thames in London.",
+							"credit": "Paris Tourism Board"
+						},
+						"guid": "f21f6d26-2163-11e8-8401-ed4dfe8ebc2c"
+					},
+					{
+						"headline": "Sydney Opera House",
+						"summary": "The Sydney Opera House is a multi-venue performing arts centre in Sydney, New South Wales, Australia. It is one of the 20th century's most famous and distinctive buildings.",
+						"pub_date": "Fri, 22 Jun 2018 09:25:00 EDT",
+						"lead_media": {
+							"type": "image",
+							"path": "http://www.rtodd.net/swift/images/reviews-places/related/sydney-opera-house.jpg",
+							"title": "Sydney Opera House",
+							"caption": "The Sydney Opera House is a multi-venue performing arts centre in Sydney, New South Wales, Australia. It is one of the 20th century's most famous and distinctive buildings.",
+							"credit": "Sydney Tourism Board"
+						},
+						"guid": "f21f6d26-2163-11e8-8401-ed4dfe8ebc2c"
+					},
+					{
+						"headline": "Trevi Fountain",
+						"summary": "The Trevi Fountain is a fountain in the Trevi district in Rome, Italy, designed by Italian architect Nicola Salvi and completed by Giuseppe Pannini.",
+						"pub_date": "Fri, 22 Jun 2018 09:25:00 EDT",
+						"lead_media": {
+							"type": "image",
+							"path": "http://www.rtodd.net/swift/images/reviews-places/related/trevi-fountain.jpg",
+							"title": "Trevi Fountain",
+							"caption": "The Trevi Fountain is a fountain in the Trevi district in Rome, Italy, designed by Italian architect Nicola Salvi and completed by Giuseppe Pannini.",
+							"credit": "Rome Tourism Board"
+						},
+						"guid": "f21f6d26-2163-11e8-8401-ed4dfe8ebc2c"
+					}
+				]
+			}
+		},
+		{
+			"headline": "Jackson Square",
+			"subhead": "",
+			"creator": {
+				"name": "Kara Driscoll - Staff Writer",
+				"title": "Staff Writer",
+				"image": "http://www.rtodd.net/swift/images/reviews-places/creators/karadriscoll.jpg",
+				"social": [
+					{
+						"network": "facebook",
+						"user": ""
+					},
+					{
+						"network": "twitter",
+						"user": "https://twitter.com/karaddriscoll"
+					},
+					{
+						"network": "instagram",
+						"user": ""
+					}
+				]
+			},
+			"item_class": "place review",
+			"category": {
+				"title": "What To Do",
+				"background_color": "#603765",
+				"text_color": "#fff"
+			},
+			"guid": "f21f6d26-aaaa-1111-8401-ed4dfe8ebc2c",
+			"pub_date": "Fri, 22 Jun 2018 09:25:00 EDT",
+			"summary": "Sprinkled with lazing loungers, surrounded by sketch artists, fortune tellers and traveling performers, and watched over by cathedrals, offices and shops plucked from a Parisian fantasy, Jackson Sq is one of America’s great town greens and the heart of the Quarter. The identical, block-long Pontalba Buildings overlook the scene, and the nearly identical Cabildo and Presbytere structures flank the impressive St Louis Cathedral, which fronts the square.",
+			"full_text": "<p>Sprinkled with lazing loungers, surrounded by sketch artists, fortune tellers and traveling performers, and watched over by cathedrals, offices and shops plucked from a Parisian fantasy, Jackson Sq is one of America's great town greens and the heart of the Quarter. The identical, block-long Pontalba Buildings overlook the scene, and the nearly identical Cabildo and Presbytere structures flank the impressive St Louis Cathedral, which fronts the square.</p><p>In the middle of the park stands the Jackson monument - Clark Mills' bronze equestrian statue of the hero of the Battle of New Orleans, Andrew Jackson, which was unveiled in 1856. The inscription on the Jackson statue, 'The Union Must and Shall be Preserved,' was added by General Benjamin Butler, Union military governor of New Orleans during the Civil War, ostensibly to rub it into the occupied city’s face (it worked). Free music is performed here, or near here, on a fairly regular basis.</p>",
+			"lead_media": {
+				"type": "image",
+				"path": "http://www.rtodd.net/swift/images/reviews-places/jackson-square.jpg",
+				"title": "Jackson Square",
+				"caption": "Jackson Square",
+				"credit": "Jackson Square"
+			},
+			"media": [
+				{
+					"path": "http://www.rtodd.net/swift/images/reviews-places/jackson-square01.jpg",
+					"title": "Jackson Square",
+					"caption": "Jackson Square",
+					"credit": "Jackson Square"
+				},
+				{
+					"path": "http://www.rtodd.net/swift/images/reviews-places/jackson-square02.jpg",
+					"title": "Jackson Square",
+					"caption": "Jackson Square",
+					"credit": "Jackson Square"
+				},
+				{
+					"path": "http://www.rtodd.net/swift/images/reviews-places/jackson-square03.jpg",
+					"title": "Jackson Square",
+					"caption": "Jackson Square",
+					"credit": "Jackson Square"
+				},
+				{
+					"path": "http://www.rtodd.net/swift/images/reviews-places/jackson-square04.jpg",
+					"title": "Jackson Square",
+					"caption": "Jackson Square",
+					"credit": "Jackson Square"
+				}
+			],
+			"locations": [
+				{
+					"latitude": 35.047691,
+					"longitude": -90.026049,
+					"name": "Jackson Square"
+				}
+			],
+			"related_content": {
+				"title": "More Things to Do",
+				"items": [
+					{
+						"headline": "The London Eye",
+						"summary": "The London Eye, known for sponsorship reasons as the Coca-Cola London Eye, is a giant Ferris wheel on the South Bank of the River Thames in London.",
+						"pub_date": "Fri, 22 Jun 2018 09:25:00 EDT",
+						"lead_media": {
+							"type": "image",
+							"path": "http://www.rtodd.net/swift/images/reviews-places/related/the-london-eye.jpg",
+							"title": "The London Eye",
+							"caption": "The London Eye, known for sponsorship reasons as the Coca-Cola London Eye, is a giant Ferris wheel on the South Bank of the River Thames in London.",
+							"credit": "London Tourism Board"
+						},
+						"guid": "f21f6d26-2163-11e8-8401-ed4dfe8ebc2c"
+					},
+					{
+						"headline": "The Eiffel Tower",
+						"summary": "The Eiffel Tower is a wrought iron lattice tower on the Champ de Mars in Paris, France. It is named after the engineer Gustave Eiffel, whose company designed and built the tower.",
+						"pub_date": "Fri, 22 Jun 2018 09:25:00 EDT",
+						"lead_media": {
+							"type": "image",
+							"path": "http://www.rtodd.net/swift/images/reviews-places/related/the-eiffel-tower.jpg",
+							"title": "The Eiffel Tower",
+							"caption": "The London Eye, known for sponsorship reasons as the Coca-Cola London Eye, is a giant Ferris wheel on the South Bank of the River Thames in London.",
+							"credit": "Paris Tourism Board"
+						},
+						"guid": "f21f6d26-2163-11e8-8401-ed4dfe8ebc2c"
+					},
+					{
+						"headline": "Sydney Opera House",
+						"summary": "The Sydney Opera House is a multi-venue performing arts centre in Sydney, New South Wales, Australia. It is one of the 20th century's most famous and distinctive buildings.",
+						"pub_date": "Fri, 22 Jun 2018 09:25:00 EDT",
+						"lead_media": {
+							"type": "image",
+							"path": "http://www.rtodd.net/swift/images/reviews-places/related/sydney-opera-house.jpg",
+							"title": "Sydney Opera House",
+							"caption": "The Sydney Opera House is a multi-venue performing arts centre in Sydney, New South Wales, Australia. It is one of the 20th century's most famous and distinctive buildings.",
+							"credit": "Sydney Tourism Board"
+						},
+						"guid": "f21f6d26-2163-11e8-8401-ed4dfe8ebc2c"
+					},
+					{
+						"headline": "Trevi Fountain",
+						"summary": "The Trevi Fountain is a fountain in the Trevi district in Rome, Italy, designed by Italian architect Nicola Salvi and completed by Giuseppe Pannini.",
+						"pub_date": "Fri, 22 Jun 2018 09:25:00 EDT",
+						"lead_media": {
+							"type": "image",
+							"path": "http://www.rtodd.net/swift/images/reviews-places/related/trevi-fountain.jpg",
+							"title": "Trevi Fountain",
+							"caption": "The Trevi Fountain is a fountain in the Trevi district in Rome, Italy, designed by Italian architect Nicola Salvi and completed by Giuseppe Pannini.",
+							"credit": "Rome Tourism Board"
+						},
+						"guid": "f21f6d26-2163-11e8-8401-ed4dfe8ebc2c"
+					}
+				]
+			}
+		},
+		{
+			"headline": "Jackson Square",
+			"subhead": "",
+			"creator": {
+				"name": "Kara Driscoll - Staff Writer",
+				"title": "Staff Writer",
+				"image": "http://www.rtodd.net/swift/images/reviews-places/creators/karadriscoll.jpg",
+				"social": [
+					{
+						"network": "facebook",
+						"user": ""
+					},
+					{
+						"network": "twitter",
+						"user": "https://twitter.com/karaddriscoll"
+					},
+					{
+						"network": "instagram",
+						"user": ""
+					}
+				]
+			},
+			"item_class": "place review",
+			"category": {
+				"title": "What To Do",
+				"background_color": "#603765",
+				"text_color": "#fff"
+			},
+			"guid": "f21f6d26-aaaa-1111-8401-ed4dfe8ebc2c",
+			"pub_date": "Fri, 22 Jun 2018 09:25:00 EDT",
+			"summary": "Sprinkled with lazing loungers, surrounded by sketch artists, fortune tellers and traveling performers, and watched over by cathedrals, offices and shops plucked from a Parisian fantasy, Jackson Sq is one of America’s great town greens and the heart of the Quarter. The identical, block-long Pontalba Buildings overlook the scene, and the nearly identical Cabildo and Presbytere structures flank the impressive St Louis Cathedral, which fronts the square.",
+			"full_text": "<p>Sprinkled with lazing loungers, surrounded by sketch artists, fortune tellers and traveling performers, and watched over by cathedrals, offices and shops plucked from a Parisian fantasy, Jackson Sq is one of America's great town greens and the heart of the Quarter. The identical, block-long Pontalba Buildings overlook the scene, and the nearly identical Cabildo and Presbytere structures flank the impressive St Louis Cathedral, which fronts the square.</p><p>In the middle of the park stands the Jackson monument - Clark Mills' bronze equestrian statue of the hero of the Battle of New Orleans, Andrew Jackson, which was unveiled in 1856. The inscription on the Jackson statue, 'The Union Must and Shall be Preserved,' was added by General Benjamin Butler, Union military governor of New Orleans during the Civil War, ostensibly to rub it into the occupied city’s face (it worked). Free music is performed here, or near here, on a fairly regular basis.</p>",
+			"lead_media": {
+				"type": "image",
+				"path": "http://www.rtodd.net/swift/images/reviews-places/jackson-square.jpg",
+				"title": "Jackson Square",
+				"caption": "Jackson Square",
+				"credit": "Jackson Square"
+			},
+			"media": [
+				{
+					"path": "http://www.rtodd.net/swift/images/reviews-places/jackson-square.jpg",
+					"title": "Jackson Square",
+					"caption": "Jackson Square",
+					"credit": "Jackson Square"
+				}
+			],
+			"locations": [
+				{
+					"latitude": 35.047691,
+					"longitude": -90.026049,
+					"name": "Jackson Square"
+				}
+			],
+			"related_content": {
+				"title": "More Things to Do",
+				"items": [
+					{
+						"headline": "The London Eye",
+						"summary": "The London Eye, known for sponsorship reasons as the Coca-Cola London Eye, is a giant Ferris wheel on the South Bank of the River Thames in London.",
+						"pub_date": "Fri, 22 Jun 2018 09:25:00 EDT",
+						"lead_media": {
+							"type": "image",
+							"path": "http://www.rtodd.net/swift/images/reviews-places/related/the-london-eye.jpg",
+							"title": "The London Eye",
+							"caption": "The London Eye, known for sponsorship reasons as the Coca-Cola London Eye, is a giant Ferris wheel on the South Bank of the River Thames in London.",
+							"credit": "London Tourism Board"
+						},
+						"guid": "f21f6d26-2163-11e8-8401-ed4dfe8ebc2c"
+					},
+					{
+						"headline": "The Eiffel Tower",
+						"summary": "The Eiffel Tower is a wrought iron lattice tower on the Champ de Mars in Paris, France. It is named after the engineer Gustave Eiffel, whose company designed and built the tower.",
+						"pub_date": "Fri, 22 Jun 2018 09:25:00 EDT",
+						"lead_media": {
+							"type": "image",
+							"path": "http://www.rtodd.net/swift/images/reviews-places/related/the-eiffel-tower.jpg",
+							"title": "The Eiffel Tower",
+							"caption": "The London Eye, known for sponsorship reasons as the Coca-Cola London Eye, is a giant Ferris wheel on the South Bank of the River Thames in London.",
+							"credit": "Paris Tourism Board"
+						},
+						"guid": "f21f6d26-2163-11e8-8401-ed4dfe8ebc2c"
+					},
+					{
+						"headline": "Sydney Opera House",
+						"summary": "The Sydney Opera House is a multi-venue performing arts centre in Sydney, New South Wales, Australia. It is one of the 20th century's most famous and distinctive buildings.",
+						"pub_date": "Fri, 22 Jun 2018 09:25:00 EDT",
+						"lead_media": {
+							"type": "image",
+							"path": "http://www.rtodd.net/swift/images/reviews-places/related/sydney-opera-house.jpg",
+							"title": "Sydney Opera House",
+							"caption": "The Sydney Opera House is a multi-venue performing arts centre in Sydney, New South Wales, Australia. It is one of the 20th century's most famous and distinctive buildings.",
+							"credit": "Sydney Tourism Board"
+						},
+						"guid": "f21f6d26-2163-11e8-8401-ed4dfe8ebc2c"
+					},
+					{
+						"headline": "Trevi Fountain",
+						"summary": "The Trevi Fountain is a fountain in the Trevi district in Rome, Italy, designed by Italian architect Nicola Salvi and completed by Giuseppe Pannini.",
+						"pub_date": "Fri, 22 Jun 2018 09:25:00 EDT",
+						"lead_media": {
+							"type": "image",
+							"path": "http://www.rtodd.net/swift/images/reviews-places/related/trevi-fountain.jpg",
+							"title": "Trevi Fountain",
+							"caption": "The Trevi Fountain is a fountain in the Trevi district in Rome, Italy, designed by Italian architect Nicola Salvi and completed by Giuseppe Pannini.",
+							"credit": "Rome Tourism Board"
+						},
+						"guid": "f21f6d26-2163-11e8-8401-ed4dfe8ebc2c"
+					}
+				]
+			}
+		},
+		{
+			"headline": "Churchill Downs",
+			"subhead": "",
+			"creator": {
+				"name": "Kara Driscoll - Staff Writer",
+				"title": "Staff Writer",
+				"image": "http://www.rtodd.net/swift/images/reviews-places/creators/karadriscoll.jpg",
+				"social": [
+					{
+						"network": "facebook",
+						"user": ""
+					},
+					{
+						"network": "twitter",
+						"user": "https://twitter.com/karaddriscoll"
+					},
+					{
+						"network": "instagram",
+						"user": ""
+					}
+				]
+			},
+			"item_class": "place review",
+			"category": {
+				"title": "What To Do",
+				"background_color": "#603765",
+				"text_color": "#fff"
+			},
+			"guid": "f21f6d26-aaaa-1111-8401-ed4dfe8ebc2c",
+			"pub_date": "Fri, 22 Jun 2018 09:25:00 EDT",
+			"summary": "On the first Saturday in May, a who's who of upper-crust America puts on their seersucker suits and most flamboyant hats and descends for the 'greatest two minutes in sports': the Kentucky Derby, the longest-running continuous sporting event in North America.",
+			"full_text": "<p>On the first Saturday in May, a who's who of upper-crust America puts on their seersucker suits and most flamboyant hats and descends for the 'greatest two minutes in sports': the Kentucky Derby, the longest-running continuous sporting event in North America.</p><p>After the race, the crowd sings 'My Old Kentucky Home' and watches as the winning horse is covered in a blanket of roses. Then they party. Actually, they've been partying for a while. The Kentucky Derby Festival, which includes a balloon race, a marathon and the largest fireworks display in North America, starts two weeks before the big event. Most seats at the derby are by invitation only or have been reserved years in advance. On Derby Day, $80 gets you into the infield (from $60 when purchased in advance), which is a debaucherous rave with no seats, as well as the classier Paddock Area, where you can see the horses getting ready for each race. It's crowded and it was previously hard to see races, but the 4K video board (the world's largest) has alleviated that minor detail. If you are a connoisseur of the thoroughbreds, warm-ups and other races take place from April to June and again in September and November, where it's possible to snag $3 seats.</p>",
+			"lead_media": {
+				"type": "image",
+				"path": "http://www.rtodd.net/swift/images/reviews-places/churchill-downs.jpg",
+				"title": "Churchill Downs",
+				"caption": "Churchill Downs",
+				"credit": "Churchill Downs"
+			},
+			"media": [
+				{
+					"path": "http://www.rtodd.net/swift/images/reviews-places/churchill-downs01.jpg",
+					"title": "Churchill Downs",
+					"caption": "Churchill Downs",
+					"credit": "Churchill Downs"
+				},
+				{
+					"path": "http://www.rtodd.net/swift/images/reviews-places/churchill-downs02.jpg",
+					"title": "Churchill Downs",
+					"caption": "Churchill Downs",
+					"credit": "Churchill Downs"
+				},
+				{
+					"path": "http://www.rtodd.net/swift/images/reviews-places/churchill-downs03.jpg",
+					"title": "Churchill Downs",
+					"caption": "Churchill Downs",
+					"credit": "Churchill Downs"
+				},
+				{
+					"path": "http://www.rtodd.net/swift/images/reviews-places/churchill-downs04.jpg",
+					"title": "Churchill Downs",
+					"caption": "Churchill Downs",
+					"credit": "Churchill Downs"
+				}
+			],
+			"locations": [
+				{
+					"latitude": 38.202973,
+					"longitude": -85.770038,
+					"name": "Churchill Downs"
+				}
+			],
+			"related_content": {
+				"title": "More Things to Do",
+				"items": [
+					{
+						"headline": "The London Eye",
+						"summary": "The London Eye, known for sponsorship reasons as the Coca-Cola London Eye, is a giant Ferris wheel on the South Bank of the River Thames in London.",
+						"pub_date": "Fri, 22 Jun 2018 09:25:00 EDT",
+						"lead_media": {
+							"type": "image",
+							"path": "http://www.rtodd.net/swift/images/reviews-places/related/the-london-eye.jpg",
+							"title": "The London Eye",
+							"caption": "The London Eye, known for sponsorship reasons as the Coca-Cola London Eye, is a giant Ferris wheel on the South Bank of the River Thames in London.",
+							"credit": "London Tourism Board"
+						},
+						"guid": "f21f6d26-2163-11e8-8401-ed4dfe8ebc2c"
+					},
+					{
+						"headline": "The Eiffel Tower",
+						"summary": "The Eiffel Tower is a wrought iron lattice tower on the Champ de Mars in Paris, France. It is named after the engineer Gustave Eiffel, whose company designed and built the tower.",
+						"pub_date": "Fri, 22 Jun 2018 09:25:00 EDT",
+						"lead_media": {
+							"type": "image",
+							"path": "http://www.rtodd.net/swift/images/reviews-places/related/the-eiffel-tower.jpg",
+							"title": "The Eiffel Tower",
+							"caption": "The London Eye, known for sponsorship reasons as the Coca-Cola London Eye, is a giant Ferris wheel on the South Bank of the River Thames in London.",
+							"credit": "Paris Tourism Board"
+						},
+						"guid": "f21f6d26-2163-11e8-8401-ed4dfe8ebc2c"
+					},
+					{
+						"headline": "Sydney Opera House",
+						"summary": "The Sydney Opera House is a multi-venue performing arts centre in Sydney, New South Wales, Australia. It is one of the 20th century's most famous and distinctive buildings.",
+						"pub_date": "Fri, 22 Jun 2018 09:25:00 EDT",
+						"lead_media": {
+							"type": "image",
+							"path": "http://www.rtodd.net/swift/images/reviews-places/related/sydney-opera-house.jpg",
+							"title": "Sydney Opera House",
+							"caption": "The Sydney Opera House is a multi-venue performing arts centre in Sydney, New South Wales, Australia. It is one of the 20th century's most famous and distinctive buildings.",
+							"credit": "Sydney Tourism Board"
+						},
+						"guid": "f21f6d26-2163-11e8-8401-ed4dfe8ebc2c"
+					},
+					{
+						"headline": "Trevi Fountain",
+						"summary": "The Trevi Fountain is a fountain in the Trevi district in Rome, Italy, designed by Italian architect Nicola Salvi and completed by Giuseppe Pannini.",
+						"pub_date": "Fri, 22 Jun 2018 09:25:00 EDT",
+						"lead_media": {
+							"type": "image",
+							"path": "http://www.rtodd.net/swift/images/reviews-places/related/trevi-fountain.jpg",
+							"title": "Trevi Fountain",
+							"caption": "The Trevi Fountain is a fountain in the Trevi district in Rome, Italy, designed by Italian architect Nicola Salvi and completed by Giuseppe Pannini.",
+							"credit": "Rome Tourism Board"
+						},
+						"guid": "f21f6d26-2163-11e8-8401-ed4dfe8ebc2c"
+					}
+				]
+			}
+		},
+		{
+			"headline": "Graceland",
+			"subhead": "",
+			"creator": {
+				"name": "Kara Driscoll - Staff Writer",
+				"title": "Staff Writer",
+				"image": "http://www.rtodd.net/swift/images/reviews-places/creators/karadriscoll.jpg",
+				"social": [
+					{
+						"network": "facebook",
+						"user": ""
+					},
+					{
+						"network": "twitter",
+						"user": "https://twitter.com/karaddriscoll"
+					},
+					{
+						"network": "instagram",
+						"user": ""
+					}
+				]
+			},
+			"item_class": "place review",
+			"category": {
+				"title": "What To Do",
+				"background_color": "#603765",
+				"text_color": "#fff"
+			},
+			"guid": "f21f6d26-aaaa-1111-8401-ed4dfe8ebc2c",
+			"pub_date": "Fri, 22 Jun 2018 09:25:00 EDT",
+			"summary": "If you only make one stop in Memphis, it should be here: the sublimely kitschy, gloriously bizarre home of the King of Rock and Roll. Though born in Mississippi, Elvis Presley was a true son of Memphis, raised in the Lauderdale Courts public housing projects, inspired by blues clubs on Beale St, and discovered at Sun Studio.",
+			"full_text": "<p>If you only make one stop in Memphis, it should be here: the sublimely kitschy, gloriously bizarre home of the King of Rock and Roll. Though born in Mississippi, Elvis Presley was a true son of Memphis, raised in the Lauderdale Courts public housing projects, inspired by blues clubs on Beale St, and discovered at Sun Studio. In the spring of 1957, the already-famous 22-year-old spent $100,000 on a Colonial-style mansion, named Graceland by its previous owners.</p><p>The King himself had the place, ahem, redecorated in 1974. With a 15ft couch, fake waterfall, yellow vinyl walls and green shag-carpet ceiling, it's a virtual textbook of ostentatious '70s style. You'll begin your tour at the brand-spanking new $45 million entertainment complex and visitor center, Elvis Presley's Memphis, on the other side of Elvis Presley Blvd, which now houses Presley's car museum and additional exhibits that run an extra $18.75 for adults. Tack on $5 extra to access two custom planes (check out the blue and gold private bathroom on the Lisa Marie, a Convair 880 Jet). Book ahead in the busy season (June to August and important Elvis dates) to ensure a prompt tour time. The basic self-guided mansion tour comes with an engaging multimedia iPad narration by John Stamos.</p><p>Priscilla Presley (who divorced Elvis in 1973) opened Graceland to tours in 1982, and now millions come here to pay homage to the King, who died here (in the upstairs bathroom) from heart failure in 1977. Throngs of fans still weep at his grave, next to the swimming pool out back. Graceland is 9 miles south of downtown on US 51, also called 'Elvis Presley Blvd.' A free shuttle runs from Sun Studio. Parking costs $10.</p>",
+			"lead_media": {
+					"type": "image",
+					"path": "http://www.rtodd.net/swift/images/reviews-places/graceland.jpg",
+					"title": "Graceland",
+					"caption": "Graceland",
+					"credit": "Graceland"
+			},
+			"media": [
+				{
+					"path": "http://www.rtodd.net/swift/images/reviews-places/graceland01.jpg",
+					"title": "Graceland",
+					"caption": "Graceland",
+					"credit": "Graceland"
+				},
+				{
+					"path": "http://www.rtodd.net/swift/images/reviews-places/graceland02.jpg",
+					"title": "Graceland",
+					"caption": "Graceland",
+					"credit": "Graceland"
+				},
+				{
+					"path": "http://www.rtodd.net/swift/images/reviews-places/graceland03.jpg",
+					"title": "Graceland",
+					"caption": "Graceland",
+					"credit": "Graceland"
+				},
+				{
+					"path": "http://www.rtodd.net/swift/images/reviews-places/graceland04.jpg",
+					"title": "Graceland",
+					"caption": "Graceland",
+					"credit": "Graceland"
+				}
+			],
+			"locations": [
+				{
+					"latitude": 35.047691,
+					"longitude": -90.026049,
+					"name": "Graceland"
+				}
+			],
+			"related_content": {
+				"title": "More Things to Do",
+				"items": [
+					{
+						"headline": "The London Eye",
+						"summary": "The London Eye, known for sponsorship reasons as the Coca-Cola London Eye, is a giant Ferris wheel on the South Bank of the River Thames in London.",
+						"pub_date": "Fri, 22 Jun 2018 09:25:00 EDT",
+						"lead_media": {
+							"type": "image",
+							"path": "http://www.rtodd.net/swift/images/reviews-places/related/the-london-eye.jpg",
+							"title": "The London Eye",
+							"caption": "The London Eye, known for sponsorship reasons as the Coca-Cola London Eye, is a giant Ferris wheel on the South Bank of the River Thames in London.",
+							"credit": "London Tourism Board"
+						},
+						"guid": "f21f6d26-2163-11e8-8401-ed4dfe8ebc2c"
+					},
+					{
+						"headline": "The Eiffel Tower",
+						"summary": "The Eiffel Tower is a wrought iron lattice tower on the Champ de Mars in Paris, France. It is named after the engineer Gustave Eiffel, whose company designed and built the tower.",
+						"pub_date": "Fri, 22 Jun 2018 09:25:00 EDT",
+						"lead_media": {
+							"type": "image",
+							"path": "http://www.rtodd.net/swift/images/reviews-places/related/the-eiffel-tower.jpg",
+							"title": "The Eiffel Tower",
+							"caption": "The London Eye, known for sponsorship reasons as the Coca-Cola London Eye, is a giant Ferris wheel on the South Bank of the River Thames in London.",
+							"credit": "Paris Tourism Board"
+						},
+						"guid": "f21f6d26-2163-11e8-8401-ed4dfe8ebc2c"
+					},
+					{
+						"headline": "Sydney Opera House",
+						"summary": "The Sydney Opera House is a multi-venue performing arts centre in Sydney, New South Wales, Australia. It is one of the 20th century's most famous and distinctive buildings.",
+						"pub_date": "Fri, 22 Jun 2018 09:25:00 EDT",
+						"lead_media": {
+							"type": "image",
+							"path": "http://www.rtodd.net/swift/images/reviews-places/related/sydney-opera-house.jpg",
+							"title": "Sydney Opera House",
+							"caption": "The Sydney Opera House is a multi-venue performing arts centre in Sydney, New South Wales, Australia. It is one of the 20th century's most famous and distinctive buildings.",
+							"credit": "Sydney Tourism Board"
+						},
+						"guid": "f21f6d26-2163-11e8-8401-ed4dfe8ebc2c"
+					},
+					{
+						"headline": "Trevi Fountain",
+						"summary": "The Trevi Fountain is a fountain in the Trevi district in Rome, Italy, designed by Italian architect Nicola Salvi and completed by Giuseppe Pannini.",
+						"pub_date": "Fri, 22 Jun 2018 09:25:00 EDT",
+						"lead_media": {
+							"type": "image",
+							"path": "http://www.rtodd.net/swift/images/reviews-places/related/trevi-fountain.jpg",
+							"title": "Trevi Fountain",
+							"caption": "The Trevi Fountain is a fountain in the Trevi district in Rome, Italy, designed by Italian architect Nicola Salvi and completed by Giuseppe Pannini.",
+							"credit": "Rome Tourism Board"
+						},
+						"guid": "f21f6d26-2163-11e8-8401-ed4dfe8ebc2c"
+					}
+				]
+			}
+		},
+		{
 			"headline": "Universal's Islands of Adventure",
 			"subhead": "",
 			"creator": {
@@ -96,15 +728,54 @@
 				"title": "More Things to Do",
 				"items": [
 					{
-						"headline": "2112 - Rush",
-						"summary": "2112 is the fourth studio album by Canadian rock band Rush, released on April 1, 1976 by Anthem Records. After they finished touring their previous album, Caress of Steel, in early 1976, the band were in financial hardship due to the album's disappointing sales, unfavourable critical reception, and a decline in numbers at their shows.",
-						"pub_date": "Wed, 09 May 2018 09:25:00 EDT",
+						"headline": "The London Eye",
+						"summary": "The London Eye, known for sponsorship reasons as the Coca-Cola London Eye, is a giant Ferris wheel on the South Bank of the River Thames in London.",
+						"pub_date": "Fri, 22 Jun 2018 09:25:00 EDT",
 						"lead_media": {
 							"type": "image",
-							"path": "http://www.rtodd.net/swift/images/reviews-music/related/2112.jpg",
-							"title": "2112 - Rush",
-							"caption": "2112 is the fourth studio album by Canadian rock band Rush, released on April 1, 1976 by Anthem Records. After they finished touring their previous album, Caress of Steel, in early 1976, the band were in financial hardship due to the album's disappointing sales, unfavourable critical reception, and a decline in numbers at their shows.",
-							"credit": "Rolling Stone"
+							"path": "http://www.rtodd.net/swift/images/reviews-places/related/the-london-eye.jpg",
+							"title": "The London Eye",
+							"caption": "The London Eye, known for sponsorship reasons as the Coca-Cola London Eye, is a giant Ferris wheel on the South Bank of the River Thames in London.",
+							"credit": "London Tourism Board"
+						},
+						"guid": "f21f6d26-2163-11e8-8401-ed4dfe8ebc2c"
+					},
+					{
+						"headline": "The Eiffel Tower",
+						"summary": "The Eiffel Tower is a wrought iron lattice tower on the Champ de Mars in Paris, France. It is named after the engineer Gustave Eiffel, whose company designed and built the tower.",
+						"pub_date": "Fri, 22 Jun 2018 09:25:00 EDT",
+						"lead_media": {
+							"type": "image",
+							"path": "http://www.rtodd.net/swift/images/reviews-places/related/the-eiffel-tower.jpg",
+							"title": "The Eiffel Tower",
+							"caption": "The London Eye, known for sponsorship reasons as the Coca-Cola London Eye, is a giant Ferris wheel on the South Bank of the River Thames in London.",
+							"credit": "Paris Tourism Board"
+						},
+						"guid": "f21f6d26-2163-11e8-8401-ed4dfe8ebc2c"
+					},
+					{
+						"headline": "Sydney Opera House",
+						"summary": "The Sydney Opera House is a multi-venue performing arts centre in Sydney, New South Wales, Australia. It is one of the 20th century's most famous and distinctive buildings.",
+						"pub_date": "Fri, 22 Jun 2018 09:25:00 EDT",
+						"lead_media": {
+							"type": "image",
+							"path": "http://www.rtodd.net/swift/images/reviews-places/related/sydney-opera-house.jpg",
+							"title": "Sydney Opera House",
+							"caption": "The Sydney Opera House is a multi-venue performing arts centre in Sydney, New South Wales, Australia. It is one of the 20th century's most famous and distinctive buildings.",
+							"credit": "Sydney Tourism Board"
+						},
+						"guid": "f21f6d26-2163-11e8-8401-ed4dfe8ebc2c"
+					},
+					{
+						"headline": "Trevi Fountain",
+						"summary": "The Trevi Fountain is a fountain in the Trevi district in Rome, Italy, designed by Italian architect Nicola Salvi and completed by Giuseppe Pannini.",
+						"pub_date": "Fri, 22 Jun 2018 09:25:00 EDT",
+						"lead_media": {
+							"type": "image",
+							"path": "http://www.rtodd.net/swift/images/reviews-places/related/trevi-fountain.jpg",
+							"title": "Trevi Fountain",
+							"caption": "The Trevi Fountain is a fountain in the Trevi district in Rome, Italy, designed by Italian architect Nicola Salvi and completed by Giuseppe Pannini.",
+							"credit": "Rome Tourism Board"
 						},
 						"guid": "f21f6d26-2163-11e8-8401-ed4dfe8ebc2c"
 					}
@@ -181,15 +852,54 @@
 				"title": "More Things to Do",
 				"items": [
 					{
-						"headline": "2112 - Rush",
-						"summary": "2112 is the fourth studio album by Canadian rock band Rush, released on April 1, 1976 by Anthem Records. After they finished touring their previous album, Caress of Steel, in early 1976, the band were in financial hardship due to the album's disappointing sales, unfavourable critical reception, and a decline in numbers at their shows.",
-						"pub_date": "Wed, 09 May 2018 09:25:00 EDT",
+						"headline": "The London Eye",
+						"summary": "The London Eye, known for sponsorship reasons as the Coca-Cola London Eye, is a giant Ferris wheel on the South Bank of the River Thames in London.",
+						"pub_date": "Fri, 22 Jun 2018 09:25:00 EDT",
 						"lead_media": {
 							"type": "image",
-							"path": "http://www.rtodd.net/swift/images/reviews-music/related/2112.jpg",
-							"title": "2112 - Rush",
-							"caption": "2112 is the fourth studio album by Canadian rock band Rush, released on April 1, 1976 by Anthem Records. After they finished touring their previous album, Caress of Steel, in early 1976, the band were in financial hardship due to the album's disappointing sales, unfavourable critical reception, and a decline in numbers at their shows.",
-							"credit": "Rolling Stone"
+							"path": "http://www.rtodd.net/swift/images/reviews-places/related/the-london-eye.jpg",
+							"title": "The London Eye",
+							"caption": "The London Eye, known for sponsorship reasons as the Coca-Cola London Eye, is a giant Ferris wheel on the South Bank of the River Thames in London.",
+							"credit": "London Tourism Board"
+						},
+						"guid": "f21f6d26-2163-11e8-8401-ed4dfe8ebc2c"
+					},
+					{
+						"headline": "The Eiffel Tower",
+						"summary": "The Eiffel Tower is a wrought iron lattice tower on the Champ de Mars in Paris, France. It is named after the engineer Gustave Eiffel, whose company designed and built the tower.",
+						"pub_date": "Fri, 22 Jun 2018 09:25:00 EDT",
+						"lead_media": {
+							"type": "image",
+							"path": "http://www.rtodd.net/swift/images/reviews-places/related/the-eiffel-tower.jpg",
+							"title": "The Eiffel Tower",
+							"caption": "The London Eye, known for sponsorship reasons as the Coca-Cola London Eye, is a giant Ferris wheel on the South Bank of the River Thames in London.",
+							"credit": "Paris Tourism Board"
+						},
+						"guid": "f21f6d26-2163-11e8-8401-ed4dfe8ebc2c"
+					},
+					{
+						"headline": "Sydney Opera House",
+						"summary": "The Sydney Opera House is a multi-venue performing arts centre in Sydney, New South Wales, Australia. It is one of the 20th century's most famous and distinctive buildings.",
+						"pub_date": "Fri, 22 Jun 2018 09:25:00 EDT",
+						"lead_media": {
+							"type": "image",
+							"path": "http://www.rtodd.net/swift/images/reviews-places/related/sydney-opera-house.jpg",
+							"title": "Sydney Opera House",
+							"caption": "The Sydney Opera House is a multi-venue performing arts centre in Sydney, New South Wales, Australia. It is one of the 20th century's most famous and distinctive buildings.",
+							"credit": "Sydney Tourism Board"
+						},
+						"guid": "f21f6d26-2163-11e8-8401-ed4dfe8ebc2c"
+					},
+					{
+						"headline": "Trevi Fountain",
+						"summary": "The Trevi Fountain is a fountain in the Trevi district in Rome, Italy, designed by Italian architect Nicola Salvi and completed by Giuseppe Pannini.",
+						"pub_date": "Fri, 22 Jun 2018 09:25:00 EDT",
+						"lead_media": {
+							"type": "image",
+							"path": "http://www.rtodd.net/swift/images/reviews-places/related/trevi-fountain.jpg",
+							"title": "Trevi Fountain",
+							"caption": "The Trevi Fountain is a fountain in the Trevi district in Rome, Italy, designed by Italian architect Nicola Salvi and completed by Giuseppe Pannini.",
+							"credit": "Rome Tourism Board"
 						},
 						"guid": "f21f6d26-2163-11e8-8401-ed4dfe8ebc2c"
 					}
